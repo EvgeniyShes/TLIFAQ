@@ -44,6 +44,12 @@ const SOURCES = [
     votes: { S: "thea_01 carino_01 rosa_02 gemma_02 rehan_02 sage_01",
              A: "erika_01 youga_03 youga_02 iris_02 bing_02 selena_01 thea_03 bing_01 youga_01 rehan_01 gemma_01 carino_02 carino_03",
              B: "selena_02 gemma_03 thea_02 erika_02 erika_03" } },
+  { id: "coffeebns", name: "CoffeeBns, «Tartarus Tier List SS14 | NEW KINGS ON TOP» (YouTube)", w: 2, lists: ["start", "end"],
+    // героев опознал по артам (сошлись все 28)
+    votes: { S: "youga_03 bing_02 erika_01 selena_01 selena_02",
+             A: "rosa_02 rehan_02 gemma_02 erika_02 carino_03 gemma_03 iris_01 iris_02 erika_03 thea_01 sage_01",
+             B: "rehan_01 youga_02 rosa_01 bing_01 carino_01 carino_02 moto_02",
+             C: "moto_01 gemma_01 thea_02 thea_03 youga_01" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },

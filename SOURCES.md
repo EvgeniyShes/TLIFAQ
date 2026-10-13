@@ -61,6 +61,9 @@
 - **13.10.2026, SephGoesGaming** — видео «S14 Builds Are Ready!» (10.10.2026) и два гайда на tlicompendium: Iris 2 Erosion Magus и Youga 1 Ice Lances, оба «кампания → Profound». Вес 1,5, оба списка, голос A за каждый. Добавлены два билда. Итог: Iris 2 S → A на старте (3,46) и в эндгейме (3,45) — на волосок ниже порога S.
 - **13.10.2026, MinMaxedARPG, «META: Tierlist Torchlight Infinite Tartarus Season 14»** (YouTube, скриншот от владельца). Вес 2, оба списка. Героев опознал по артам (сошлись все 28); «unsure» (Moto 1/2, Rosa 1, Iris 1) — без голоса.
   Изменения: старт — Carino 1, Carino 3, Thea 3 → A, Gemma 3 C → B, Erika 3 A → B, Selena 1 S → A (3,46); эндгейм — Gemma 2 A → S, Carino 3 и Thea 1 → A, Carino 1 C → B.
+- **13.10.2026, CoffeeBns, «Tartarus Tier List SS14 | NEW KINGS ON TOP»** (YouTube, скриншот от владельца). Вес 2, оба списка, героев опознал по артам (сошлись все 28).
+  Изменения: старт — Selena 1 A → S (3,53), Erika 3 B → A, Rosa 1 C → B, Thea 3 A → B; эндгейм — Gemma 2 S → A (3,40), Rosa 1 и Iris 1 C → B.
+  Примечание: Selena 1 и Gemma 2 колеблются у порога 3,5 — каждый новый источник может сдвинуть их на тир.
 
 ## Проверенные страницы
 
@@ -85,6 +88,7 @@
 | [satu1kaa — лигстартеры SS14 (YouTube)](https://www.youtube.com/watch?v=CeWW7KZI9Co) | 13.10.2026 | ✅ | Рекомендации стартеров + коды билдов в описании. Описание YouTube видно только через браузер владельца (без входа — проверка «не бот») |
 | [SephGoesGaming — S14 Builds Are Ready (YouTube)](https://www.youtube.com/watch?v=0hBikw3DX68) | 13.10.2026 | ✅ | Гайды Iris 2 Erosion Magus и Youga 1 Ice Lances (tlicompendium) |
 | [MinMaxedARPG — META: Tierlist SS14 (YouTube)](https://www.youtube.com/watch?v=OACr2W8p1pE) | 13.10.2026 | ✅ | Тир-лист S/A/B/unsure, все 28 трейтов. Вес 2 |
+| [CoffeeBns — Tartarus Tier List SS14 (YouTube)](https://www.youtube.com/watch?v=KtqpvLn2ANE) | 13.10.2026 | ✅ | Тир-лист S/A/B/C, все 28 трейтов. Вес 2 |
 | [Smith — Selena 1 Scorching Beam (tlicompendium)](https://tlicompendium.com/en/build-guides/scorching-ignite-deep-space-mapping) | 13.10.2026 | 🔁 | Гайд SS13 (05.09.2026), фарм Deep Space |
 | Travic — PDF «TLI Tartarus Leaguestarter, Part 1» ([Twitch](https://www.twitch.tv/travic)) | 13.10.2026 | 🔁 | Rehan 1, 4 этапа до 250M. Автор обещает Part 2+ и новые редакции — проверять номер редакции. YouTube-канал автора не найден |
 | [Marcus Nordstrom (YouTube)](https://www.youtube.com/@marcusnordstrom9251) | 13.10.2026 | 🔁 | Видео по Rehan 1 и ответы на вопросы с Reddit (цены билдов) |
