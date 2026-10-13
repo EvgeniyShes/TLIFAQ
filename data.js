@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T14:20:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T16:08:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -67,7 +67,7 @@ window.DATA = {
           ["gemma_02",  "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
           ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }],
           ["iris_01",   "", { ru: "Саммонер, доводит до T8, хорош для фарма Flame Elementium", en: "Summoner, carries to T8, good for Flame Elementium farming" }],
-          ["iris_02",   "", { ru: "Стабильный и удобный", en: "Stable and comfortable" }],
+          ["iris_02",   "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
           ["carino_02", "", { ru: "Надёжный проджектайл-стартер", en: "Reliable projectile starter" }]
         ],
         B: [
@@ -105,7 +105,7 @@ window.DATA = {
       rows: {
         S: [
           ["bing_01",  "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }],
-          ["iris_02",  "", { ru: "Vigilant Breeze: стабильный урон по боссам", en: "Vigilant Breeze: steady boss damage" }],
+          ["iris_02",  "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }],
           ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }],
           ["carino_03", "", { ru: "Zealot of War: в топе по данным 3-го дня SS13", en: "Zealot of War: top tier in SS13 day-3 data" }]
         ],
@@ -179,8 +179,18 @@ window.DATA = {
     { hero: "bing_01", name: "Blast Nova", skill: { ru: "Бомбы-проджектайлы", en: "Projectile bombs" }, tier: "S", stage: "end", budget: 3, diff: 2, trend: "",
       pros: { ru: "Несколько бомб за каст, топ фарма", en: "Multiple bombs per cast, top farming" },
       cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" }, src: "musabots, IGGM" },
-    { hero: "iris_02", name: "Vigilant Breeze", skill: "Spirit Magus", tier: "S", stage: "end", budget: 2, diff: 2, trend: "",
-      pros: { ru: "Стабильный урон по боссам", en: "Steady boss damage" }, cons: "—", src: "musabots" },
+    { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" },
+      skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" },
+      tier: "S", stage: "both", budget: 3, diff: 3, trend: "",
+      pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее",
+              en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
+      cons: { ru: "Дорогие питомцы (Anubis на максимуме примерно удваивает урон), сложная механика Магусов, урон растёт хуже, чем у Rosa и Rehan; ловкость и сила должны быть равны",
+              en: "Expensive pets (maxed Anubis roughly doubles damage), complex Magus mechanics, damage scales worse than Rosa and Rehan; Dexterity and Strength must stay equal" },
+      src: { ru: "musabots, гайд instinct (SS13)", en: "musabots, instinct's guide (SS13)" },
+      links: [
+        [{ ru: "Гайд instinct: прогрессия Iris 2 (Google Docs)", en: "instinct's guide: Iris 2 progression (Google Docs)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
+        [{ ru: "Стримы instinct (Twitch)", en: "instinct's streams (Twitch)" }, "https://www.twitch.tv/instinct_t"]
+      ] },
     { hero: "iris_01", name: "Growing Breeze Summoner", skill: "Spirit Magi", tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
       cons: { ru: "Не самый быстрый", en: "Not the fastest" }, src: "IGGM" },
@@ -243,6 +253,7 @@ window.DATA = {
     [{ ru: "Bilibili — превью S14, Youga 3", en: "Bilibili — S14 preview, Youga 3" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"],
     [{ ru: "233leyuan — билды SS13", en: "233leyuan — SS13 builds" }, "https://www.233leyuan.com/post-detail/2077457185859616768"],
     [{ ru: "minmaxed — гайды S14", en: "minmaxed — S14 guides" }, "https://minmaxedarpg.com/games/tli/seasons/s14"],
+    [{ ru: "instinct — гайд по прогрессии Iris 2 (SS13)", en: "instinct — Iris 2 progression guide (SS13)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
     [{ ru: "tlidb — база героев (портреты)", en: "tlidb — hero database (portraits)" }, "https://tlidb.com/en/Hero"]
   ]
 };
