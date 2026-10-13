@@ -133,15 +133,12 @@ tr.more .pc .c b{color:var(--down)}
 
 .src{columns:2 300px;padding-left:18px;font-size:14px}
 .src li{margin-bottom:6px}
-/* Чаевые: маленькая плавающая кнопка, полупрозрачная до наведения */
-.tip{position:fixed;right:16px;bottom:16px;z-index:20;display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;
-  background:#1a171ee6;border:1px solid var(--line);color:var(--muted);font:600 12px Inter;text-decoration:none;opacity:.8;
-  backdrop-filter:blur(6px);box-shadow:0 4px 16px #0006;transition:.2s}
-.tip:hover{opacity:1;color:var(--fire2);border-color:#ff8a2b66;transform:translateY(-2px)}
-.tip .cup{font-size:15px}
-footer{padding:40px 0 64px;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:40px}
+footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:40px}
 .views{margin-top:8px;font-size:11px;opacity:.6}
-.like{position:relative;margin-top:20px;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid #ff8a2b55;background:#ff8a2b14;color:var(--text);font:600 14px Inter;cursor:pointer;transition:.15s}
+.actions{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 18px;margin-top:20px}
+.tip{color:var(--muted);font-size:13px;text-decoration:none;border-bottom:1px dashed #9a91a366}
+.tip:hover{color:var(--fire2);border-color:var(--fire2)}
+.like{position:relative;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid #ff8a2b55;background:#ff8a2b14;color:var(--text);font:600 14px Inter;cursor:pointer;transition:.15s}
 .like:hover{background:#ff8a2b2a;transform:translateY(-1px)}
 .like .heart{position:relative;display:inline-block;color:var(--muted);font-size:16px;transition:.15s}
 .like.on{border-color:var(--S);background:#ff4d4d1f}
@@ -197,7 +194,10 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:13px;text-align:center;b
     <p class="upd"><span class="dot"></span><span data-i="updEvery"></span> · <span data-i="lastUpd"></span> <b id="sUpd"></b> <span id="sAgo"></span></p>
     <p class="sub" style="margin-top:18px"><span data-i="seasonStart"></span>: <b style="color:var(--fire2)" id="sStart"></b></p>
     <div class="countdown" id="cd"></div>
+    <div class="actions">
     <button class="like" id="likeBtn" hidden><span class="heart">♥</span> <span data-i="like"></span> <b id="likeN"></b></button>
+      <a class="tip" id="tip" href="https://pay.cloudtips.ru/p/1d7ab283" target="_blank" rel="noopener">☕ <span data-i="tip"></span></a>
+    </div>
     <p class="note" id="sNote"></p>
   </div>
 </header>
@@ -247,7 +247,6 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:13px;text-align:center;b
 </main>
 
 <footer class="wrap"><span data-i="footer"></span><div class="views" id="views" hidden></div></footer>
-<a class="tip" id="tip" href="https://pay.cloudtips.ru/p/1d7ab283" target="_blank" rel="noopener"><span class="cup">☕</span><span data-i="tip"></span></a>
 
 <script src="data.js"></script>
 <script>
@@ -268,7 +267,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", like: "Нравится", tip: "На кофе автору", tipTitle: "Поддержите проект — оставьте чаевые", views: "уникальных просмотров", empty: "Ничего не найдено",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", like: "Нравится", tip: "поддержать автора", tipTitle: "Поддержите проект — оставьте чаевые", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
@@ -280,7 +279,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", like: "Like", tip: "Buy me a coffee", tipTitle: "Support the project — leave a tip", views: "unique views", empty: "Nothing found",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", like: "Like", tip: "buy me a coffee", tipTitle: "Support the project — leave a tip", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
