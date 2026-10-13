@@ -81,7 +81,6 @@ h2 svg{width:22px;height:22px;color:var(--fire)}
 .detail.show{display:flex}
 .detail img{width:96px;height:96px;border-radius:14px;flex:none;border:2px solid var(--fire)}
 .detail h3{margin:0 0 2px;font-size:18px}
-.detail .cn{color:var(--muted);font-size:13px}
 .pills{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
 .pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:#ffffff0d;border:1px solid var(--line)}
 .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);margin:6px 0 4px}
@@ -162,6 +161,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
     <span class="badge" id="sBadge"></span>
     <h1>Torchlight: Infinite</h1>
     <p class="sub">Тир-листы героев и билдов · данные от <span id="sUpd"></span></p>
+    <p class="sub" style="margin-top:18px">Старт сезона: <b style="color:var(--fire2)" id="sStart"></b></p>
     <div class="countdown" id="cd"></div>
     <p class="note" id="sNote"></p>
   </div>
@@ -187,7 +187,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
     <div class="filters">
       <div class="seg" id="stageSeg"></div>
       <select id="heroSel"><option value="">Все герои</option></select>
-      <input id="q" type="search" placeholder="Поиск: скилл, билд, 冰2…">
+      <input id="q" type="search" placeholder="Поиск: скилл, билд…">
     </div>
     <table class="tbl">
       <thead><tr>
@@ -222,8 +222,9 @@ const img = id => `img/${id}.webp`;
 const dots = n => "●".repeat(n) + `<i>${"●".repeat(3-n)}</i>`;
 
 // Шапка
-$("#sBadge").textContent = `Сезон ${D.season.code} · ${D.season.name} · ${D.season.nameCn}`;
+$("#sBadge").textContent = `Сезон ${D.season.code} · ${D.season.name}`;
 $("#sUpd").textContent = D.season.updated;
+$("#sStart").textContent = D.season.startRu;
 $("#sNote").textContent = D.season.note;
 const embers = $("#embers");
 for (let i = 0; i < 28; i++) {
@@ -278,9 +279,7 @@ function showDetail(id) {
   $("#detail").innerHTML = `
     <img src="${img(id)}" alt="">
     <div>
-      <h3 class="serif">${label(id)} · ${esc(h.trait)}</h3>
-      <div class="cn">Китайское название: ${esc(h.cn)}</div>
-      <div class="pills">${pill("Старт", st)}${pill("Эндгейм", en)}</div>
+      <h3 class="serif">${label(id)} · ${esc(h.trait)}</h3>      <div class="pills">${pill("Старт", st)}${pill("Эндгейм", en)}</div>
       <div>${cur ? esc(cur.r[2]) : ""}</div>
       ${builds.length ? `<div class="pills">${builds.map(b => `<a class="pill" href="#builds" data-hero="${id}">⚔ ${esc(b.name)}</a>`).join("")}</div>` : ""}
     </div>`;
@@ -307,7 +306,7 @@ function renderBuilds() {
   const rows = D.builds.map((b, i) => ({...b, i}))
     .filter(b => stage === "all" || b.stage === stage || b.stage === "both")
     .filter(b => !hero || b.hero === hero)
-    .filter(b => !q || [label(b.hero), H[b.hero].trait, H[b.hero].cn, b.name, b.skill, b.pros, b.cons].join(" ").toLowerCase().includes(q))
+    .filter(b => !q || [label(b.hero), H[b.hero].trait, b.name, b.skill, b.pros, b.cons].join(" ").toLowerCase().includes(q))
     .sort((a, b) => { const x = sortVal[sortK](a), y = sortVal[sortK](b);
       return (x > y ? 1 : x < y ? -1 : TIER_ORDER[a.tier] - TIER_ORDER[b.tier]) * sortDir; });
   document.querySelectorAll(".tbl th[data-k]").forEach(th =>
@@ -324,7 +323,7 @@ function renderBuilds() {
       <td class="c-trend">${b.trend==="up"?'<span class="tr-up">▲ бафф</span>':b.trend==="down"?'<span class="tr-down">▼ нерф</span>':"—"}</td>
     </tr>
     ${open.has(b.i) ? `<tr class="more"><td colspan="8"><div class="pc"><div class="p">${esc(b.pros)}</div><div class="c">${esc(b.cons)}</div></div>
-      <div style="margin-top:8px;color:var(--muted);font-size:12px">Китайское название: ${esc(H[b.hero].cn)} · Источник: ${esc(b.src)}</div></td></tr>` : ""}`).join("")
+      <div style="margin-top:8px;color:var(--muted);font-size:12px">Источник: ${esc(b.src)}</div></td></tr>` : ""}`).join("")
     : `<tr><td colspan="8" class="empty">Ничего не найдено</td></tr>`;
 }
 $("#tbody").onclick = e => { const r = e.target.closest("tr.row"); if (!r) return;
