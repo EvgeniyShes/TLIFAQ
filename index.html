@@ -47,6 +47,8 @@ h1{position:relative;margin:16px 0 6px;font-size:clamp(30px,6vw,56px);font-weigh
 nav{position:sticky;top:0;z-index:10;background:#0b0a0dcc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 nav a{flex:none;padding:14px 14px;color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;border-bottom:2px solid transparent}
+nav .lang{margin:6px 0 6px auto;flex:none;position:sticky;right:0;box-shadow:-12px 0 12px var(--bg)}
+nav .lang button{padding:5px 10px;font-size:12px}
 nav a:hover,nav a.on{color:var(--text);border-color:var(--fire)}
 
 section{padding:40px 0 8px}
@@ -110,9 +112,9 @@ input:focus,select:focus{outline:2px solid var(--fire);outline-offset:-1px}
 .tr-up{color:var(--up);font-weight:700}.tr-down{color:var(--down);font-weight:700}
 tr.more td{background:#120f15;font-size:14px;color:#cfc6d6}
 tr.more .pc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-tr.more .pc div::before{font-weight:700;display:block;margin-bottom:2px}
-tr.more .pc .p::before{content:"Плюсы";color:var(--up)}
-tr.more .pc .c::before{content:"Минусы";color:var(--down)}
+tr.more .pc b{display:block;margin-bottom:2px}
+tr.more .pc .p b{color:var(--up)}
+tr.more .pc .c b{color:var(--down)}
 .empty{text-align:center;color:var(--muted);padding:30px}
 
 /* Изменения */
@@ -160,72 +162,103 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
   <div class="wrap">
     <span class="badge" id="sBadge"></span>
     <h1>Torchlight: Infinite</h1>
-    <p class="sub">Тир-листы героев и билдов · данные от <span id="sUpd"></span></p>
-    <p class="sub" style="margin-top:18px">Старт сезона: <b style="color:var(--fire2)" id="sStart"></b></p>
+    <p class="sub"><span data-i="subtitle"></span> · <span data-i="dataFrom"></span> <span id="sUpd"></span></p>
+    <p class="sub" style="margin-top:18px"><span data-i="seasonStart"></span>: <b style="color:var(--fire2)" id="sStart"></b></p>
     <div class="countdown" id="cd"></div>
     <p class="note" id="sNote"></p>
   </div>
 </header>
 
 <nav><div class="wrap">
-  <a href="#tiers">Тир-листы</a><a href="#builds">Билды</a><a href="#changes">Изменения SS14</a><a href="#sources">Источники</a>
+  <a href="#tiers" data-i="navTiers"></a><a href="#builds" data-i="navBuilds"></a><a href="#changes" data-i="navChanges"></a><a href="#sources" data-i="navSources"></a>
+  <div class="seg lang" id="langSeg"></div>
 </div></nav>
 
 <main class="wrap">
   <section id="tiers">
-    <h2><svg><use href="#i-crown"/></svg>Тир-лист героев</h2>
+    <h2><svg><use href="#i-crown"/></svg><span data-i="tiersTitle"></span></h2>
     <p class="lead" id="tierHint"></p>
     <div class="seg" id="tierSeg"></div>
-    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b>бафф или новинка SS14</span><span><b style="background:var(--down);color:#3b0909">▼</b>нерф в SS14</span><span>Нажми на героя, чтобы открыть подробности</span></div>
+    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp"></span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown"></span></span><span data-i="legendClick"></span></div>
     <div id="tierList"></div>
     <div class="detail" id="detail"></div>
   </section>
 
   <section id="builds">
-    <h2><svg><use href="#i-sword"/></svg>Сводная таблица билдов</h2>
-    <p class="lead">Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.</p>
+    <h2><svg><use href="#i-sword"/></svg><span data-i="buildsTitle"></span></h2>
+    <p class="lead" data-i="buildsLead"></p>
     <div class="filters">
       <div class="seg" id="stageSeg"></div>
-      <select id="heroSel"><option value="">Все герои</option></select>
-      <input id="q" type="search" placeholder="Поиск: скилл, билд…">
+      <select id="heroSel"></select>
+      <input id="q" type="search">
     </div>
     <table class="tbl">
       <thead><tr>
-        <th data-k="hero">Герой</th><th data-k="tier">Тир</th><th data-k="name">Билд</th><th>Ключевой скилл</th>
-        <th data-k="stage">Этап</th><th data-k="budget">Бюджет</th><th data-k="diff">Сложность</th><th data-k="trend">SS14</th>
+        <th data-k="hero" data-i="thHero"></th><th data-k="tier" data-i="thTier"></th><th data-k="name" data-i="thBuild"></th><th data-i="thSkill"></th>
+        <th data-k="stage" data-i="thStage"></th><th data-k="budget" data-i="thBudget"></th><th data-k="diff" data-i="thDiff"></th><th data-k="trend">SS14</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
   </section>
 
   <section id="changes">
-    <h2><svg><use href="#i-bolt"/></svg>Что изменилось в SS14</h2>
-    <p class="lead">Ключевые правки по официальному патчноуту и превью сезона</p>
+    <h2><svg><use href="#i-bolt"/></svg><span data-i="changesTitle"></span></h2>
+    <p class="lead" data-i="changesLead"></p>
     <div class="changes" id="chList"></div>
   </section>
 
   <section id="sources">
-    <h2><svg><use href="#i-book"/></svg>Источники</h2>
+    <h2><svg><use href="#i-book"/></svg><span data-i="sourcesTitle"></span></h2>
     <ul class="src" id="srcList"></ul>
   </section>
 </main>
 
-<footer class="wrap">Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры.</footer>
+<footer class="wrap" data-i="footer"></footer>
 
 <script src="data.js"></script>
 <script>
 const D = window.DATA, H = D.heroes, $ = s => document.querySelector(s);
-const TIER_ORDER = {S:0,A:1,B:2,C:3}, STAGE = {start:"Старт", end:"Эндгейм", both:"Старт + эндгейм"};
+const TIER_ORDER = {S:0,A:1,B:2,C:3};
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const label = id => `${H[id].hero} ${H[id].n}`;
 const img = id => `img/${id}.webp`;
 const dots = n => "●".repeat(n) + `<i>${"●".repeat(3-n)}</i>`;
 
+// Переводы интерфейса
+const I18N = {
+  ru: {
+    title: "TLI FAQ — тир-листы Torchlight: Infinite", season: "Сезон", subtitle: "Тир-листы героев и билдов", dataFrom: "данные от",
+    seasonStart: "Старт сезона", running: "Сезон идёт", units: ["дней","часов","минут","секунд"],
+    navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
+    tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendClick: "Нажми на героя, чтобы открыть подробности",
+    start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
+    buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
+    search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", empty: "Ничего не найдено",
+    changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
+    footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
+  },
+  en: {
+    title: "TLI FAQ — Torchlight: Infinite tier lists", season: "Season", subtitle: "Hero and build tier lists", dataFrom: "data as of",
+    seasonStart: "Season start", running: "Season is live", units: ["days","hours","min","sec"],
+    navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
+    tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendClick: "Click a hero for details",
+    start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
+    buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
+    search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", empty: "Nothing found",
+    changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
+    footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
+  }
+};
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+                set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+let lang = new URLSearchParams(location.search).get("lang") || store.get("lang") || (navigator.language.startsWith("ru") ? "ru" : "en");
+if (!I18N[lang]) lang = "ru";
+const t = k => I18N[lang][k];
+const L = x => x && typeof x === "object" ? (x[lang] ?? x.ru) : x; // текст из data.js
+
 // Шапка
-$("#sBadge").textContent = `Сезон ${D.season.code} · ${D.season.name}`;
-$("#sUpd").textContent = D.season.updated;
-$("#sStart").textContent = D.season.startRu;
-$("#sNote").textContent = D.season.note;
 const embers = $("#embers");
 for (let i = 0; i < 28; i++) {
   const e = document.createElement("i");
@@ -234,31 +267,29 @@ for (let i = 0; i < 28; i++) {
 }
 function tick() {
   const ms = new Date(D.season.start) - Date.now();
-  if (ms <= 0) { $("#cd").innerHTML = `<div style="min-width:auto;padding:10px 18px"><b>Сезон идёт</b></div>`; return; }
+  if (ms <= 0) { $("#cd").innerHTML = `<div style="min-width:auto;padding:10px 18px"><b>${t("running")}</b></div>`; return; }
   const p = [Math.floor(ms/864e5), Math.floor(ms/36e5)%24, Math.floor(ms/6e4)%60, Math.floor(ms/1e3)%60];
-  $("#cd").innerHTML = p.map((v,i) => `<div><b>${String(v).padStart(2,"0")}</b><span>${["дней","часов","минут","секунд"][i]}</span></div>`).join("");
-  setTimeout(tick, 1000);
+  $("#cd").innerHTML = p.map((v,i) => `<div><b>${String(v).padStart(2,"0")}</b><span>${t("units")[i]}</span></div>`).join("");
 }
-tick();
+setInterval(tick, 1000);
 
-// Тир-листы
-let mode = "starter", selected = null;
 function seg(el, opts, cur, onPick) {
-  el.innerHTML = opts.map(([k,t]) => `<button data-k="${k}" class="${k===cur?"on":""}">${t}</button>`).join("");
+  el.innerHTML = opts.map(([k,txt]) => `<button data-k="${k}" class="${k===cur?"on":""}">${txt}</button>`).join("");
   el.onclick = e => { const b = e.target.closest("button"); if (!b) return;
     el.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); onPick(b.dataset.k); };
 }
-seg($("#tierSeg"), Object.entries(D.tiers).map(([k,v]) => [k, v.title]), mode, k => { mode = k; renderTiers(); });
 
+// Тир-листы
+let mode = "starter", selected = null;
 function tierOf(list, id) {
-  for (const [t, arr] of Object.entries(D.tiers[list].rows)) { const r = arr.find(x => x[0] === id); if (r) return {t, r}; }
+  for (const [tier, arr] of Object.entries(D.tiers[list].rows)) { const r = arr.find(x => x[0] === id); if (r) return {t: tier, r}; }
 }
 function renderTiers() {
   const T = D.tiers[mode];
-  $("#tierHint").textContent = T.hint;
-  $("#tierList").innerHTML = Object.entries(T.rows).map(([t, arr]) => `
-    <div class="tier" style="--tc:var(--${t})">
-      <div class="tier-label" style="background:var(--${t})">${t}</div>
+  $("#tierHint").textContent = L(T.hint);
+  $("#tierList").innerHTML = Object.entries(T.rows).map(([tier, arr]) => `
+    <div class="tier" style="--tc:var(--${tier})">
+      <div class="tier-label" style="background:var(--${tier})">${tier}</div>
       <div class="tier-items">${arr.map(([id, tr]) => `
         <button class="hcard ${id===selected?"sel":""}" data-id="${id}" title="${esc(H[id].trait)}">
           <div class="portrait"><img src="${img(id)}" alt="${label(id)}" loading="lazy"></div>
@@ -279,26 +310,23 @@ function showDetail(id) {
   $("#detail").innerHTML = `
     <img src="${img(id)}" alt="">
     <div>
-      <h3 class="serif">${label(id)} · ${esc(h.trait)}</h3>      <div class="pills">${pill("Старт", st)}${pill("Эндгейм", en)}</div>
-      <div>${cur ? esc(cur.r[2]) : ""}</div>
-      ${builds.length ? `<div class="pills">${builds.map(b => `<a class="pill" href="#builds" data-hero="${id}">⚔ ${esc(b.name)}</a>`).join("")}</div>` : ""}
+      <h3 class="serif">${label(id)} · ${esc(h.trait)}</h3>
+      <div class="pills">${pill(t("start"), st)}${pill(t("end"), en)}</div>
+      <div>${cur ? esc(L(cur.r[2])) : ""}</div>
+      ${builds.length ? `<div class="pills">${builds.map(b => `<a class="pill" href="#builds" data-hero="${id}">⚔ ${esc(L(b.name))}</a>`).join("")}</div>` : ""}
     </div>`;
   $("#detail").classList.add("show");
 }
 $("#detail").onclick = e => { const a = e.target.closest("[data-hero]"); if (a) { $("#heroSel").value = a.dataset.hero; renderBuilds(); } };
-renderTiers();
 
 // Таблица билдов
 let stage = "all", sortK = "tier", sortDir = 1, open = new Set();
-seg($("#stageSeg"), [["all","Все"],["start","Старт"],["end","Эндгейм"]], stage, k => { stage = k; renderBuilds(); });
-[...new Set(D.builds.map(b => b.hero))].sort().forEach(id =>
-  $("#heroSel").insertAdjacentHTML("beforeend", `<option value="${id}">${label(id)} — ${esc(H[id].trait)}</option>`));
 $("#heroSel").onchange = $("#q").oninput = () => renderBuilds();
 document.querySelector(".tbl thead").onclick = e => { const th = e.target.closest("th[data-k]"); if (!th) return;
   sortDir = sortK === th.dataset.k ? -sortDir : 1; sortK = th.dataset.k; renderBuilds(); };
 
 const sortVal = {
-  hero: b => label(b.hero), tier: b => TIER_ORDER[b.tier], name: b => b.name, stage: b => b.stage,
+  hero: b => label(b.hero), tier: b => TIER_ORDER[b.tier], name: b => L(b.name), stage: b => b.stage,
   budget: b => b.budget, diff: b => b.diff, trend: b => ({up:0,"":1,down:2})[b.trend]
 };
 function renderBuilds() {
@@ -306,33 +334,51 @@ function renderBuilds() {
   const rows = D.builds.map((b, i) => ({...b, i}))
     .filter(b => stage === "all" || b.stage === stage || b.stage === "both")
     .filter(b => !hero || b.hero === hero)
-    .filter(b => !q || [label(b.hero), H[b.hero].trait, b.name, b.skill, b.pros, b.cons].join(" ").toLowerCase().includes(q))
+    .filter(b => !q || [label(b.hero), H[b.hero].trait, L(b.name), L(b.skill), L(b.pros), L(b.cons)].join(" ").toLowerCase().includes(q))
     .sort((a, b) => { const x = sortVal[sortK](a), y = sortVal[sortK](b);
       return (x > y ? 1 : x < y ? -1 : TIER_ORDER[a.tier] - TIER_ORDER[b.tier]) * sortDir; });
   document.querySelectorAll(".tbl th[data-k]").forEach(th =>
-    th.innerHTML = th.textContent.replace(/[▲▼]/g, "").trim() + (th.dataset.k === sortK ? ` <span class="arr">${sortDir>0?"▲":"▼"}</span>` : ""));
+    th.innerHTML = (th.dataset.i ? t(th.dataset.i) : "SS14") + (th.dataset.k === sortK ? ` <span class="arr">${sortDir>0?"▲":"▼"}</span>` : ""));
   $("#tbody").innerHTML = rows.length ? rows.map(b => `
     <tr class="row" data-i="${b.i}" style="--tc:var(--${b.tier})">
       <td class="c-who"><div class="who"><img src="${img(b.hero)}" alt="" loading="lazy"><div><b>${label(b.hero)}</b><small>${esc(H[b.hero].trait)}</small></div></div></td>
       <td class="c-tier"><span class="tb" style="background:var(--${b.tier})">${b.tier}</span></td>
-      <td class="c-name">${esc(b.name)}</td>
-      <td class="c-skill">${esc(b.skill)}</td>
-      <td class="c-stage"><span class="tag">${STAGE[b.stage]}</span></td>
-      <td class="c-budget" title="Бюджет"><span class="dots">${dots(b.budget)}</span></td>
-      <td class="c-diff" title="Сложность"><span class="tag">${["","Легко","Средне","Сложно"][b.diff]}</span></td>
-      <td class="c-trend">${b.trend==="up"?'<span class="tr-up">▲ бафф</span>':b.trend==="down"?'<span class="tr-down">▼ нерф</span>':"—"}</td>
+      <td class="c-name">${esc(L(b.name))}</td>
+      <td class="c-skill">${esc(L(b.skill))}</td>
+      <td class="c-stage"><span class="tag">${t(b.stage)}</span></td>
+      <td class="c-budget" title="${t("thBudget")}"><span class="dots">${dots(b.budget)}</span></td>
+      <td class="c-diff" title="${t("thDiff")}"><span class="tag">${t("diff")[b.diff]}</span></td>
+      <td class="c-trend">${b.trend==="up"?`<span class="tr-up">▲ ${t("buff")}</span>`:b.trend==="down"?`<span class="tr-down">▼ ${t("nerf")}</span>`:"—"}</td>
     </tr>
-    ${open.has(b.i) ? `<tr class="more"><td colspan="8"><div class="pc"><div class="p">${esc(b.pros)}</div><div class="c">${esc(b.cons)}</div></div>
-      <div style="margin-top:8px;color:var(--muted);font-size:12px">Источник: ${esc(b.src)}</div></td></tr>` : ""}`).join("")
-    : `<tr><td colspan="8" class="empty">Ничего не найдено</td></tr>`;
+    ${open.has(b.i) ? `<tr class="more"><td colspan="8"><div class="pc"><div class="p"><b>${t("pros")}</b>${esc(L(b.pros))}</div><div class="c"><b>${t("cons")}</b>${esc(L(b.cons))}</div></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:12px">${t("source")}: ${esc(L(b.src))}</div></td></tr>` : ""}`).join("")
+    : `<tr><td colspan="8" class="empty">${t("empty")}</td></tr>`;
 }
 $("#tbody").onclick = e => { const r = e.target.closest("tr.row"); if (!r) return;
   const i = +r.dataset.i; open.has(i) ? open.delete(i) : open.add(i); renderBuilds(); };
-renderBuilds();
 
-// Изменения и источники
-$("#chList").innerHTML = D.changes.map(c => `<div class="ch ${c.type}"><span class="ic">${{up:"▲",down:"▼",new:"✦"}[c.type]}</span><span>${esc(c.text)}</span></div>`).join("");
-$("#srcList").innerHTML = D.sources.map(([t,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+// Перерисовка всего при смене языка
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t("title");
+  document.querySelectorAll("[data-i]:not([data-k])").forEach(el => el.textContent = t(el.dataset.i));
+  $("#sBadge").textContent = `${t("season")} ${D.season.code} · ${D.season.name}`;
+  $("#sUpd").textContent = D.season.updated;
+  $("#sStart").textContent = L(D.season.startLabel);
+  $("#sNote").textContent = L(D.season.note);
+  $("#q").placeholder = t("search");
+  const h = $("#heroSel").value;
+  $("#heroSel").innerHTML = `<option value="">${t("allHeroes")}</option>` + [...new Set(D.builds.map(b => b.hero))].sort()
+    .map(id => `<option value="${id}">${label(id)} — ${esc(H[id].trait)}</option>`).join("");
+  $("#heroSel").value = h;
+  seg($("#tierSeg"), Object.entries(D.tiers).map(([k,v]) => [k, L(v.title)]), mode, k => { mode = k; renderTiers(); });
+  seg($("#stageSeg"), [["all",t("all")],["start",t("start")],["end",t("end")]], stage, k => { stage = k; renderBuilds(); });
+  $("#chList").innerHTML = D.changes.map(c => `<div class="ch ${c.type}"><span class="ic">${{up:"▲",down:"▼",new:"✦"}[c.type]}</span><span>${esc(L(c.text))}</span></div>`).join("");
+  $("#srcList").innerHTML = D.sources.map(([s,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(L(s))}</a></li>`).join("");
+  tick(); renderTiers(); renderBuilds();
+}
+seg($("#langSeg"), [["ru","RU"],["en","EN"]], lang, k => { lang = k; store.set("lang", k); applyLang(); });
+applyLang();
 
 // Подсветка пункта меню
 const links = [...document.querySelectorAll("nav a")];

@@ -1,13 +1,17 @@
 // Данные сайта. Правь здесь — страница перерисуется сама.
+// Текст на двух языках: { ru: "...", en: "..." }. Если en нет — покажется ru.
 // trend: "up" — бафф/новинка в SS14, "down" — нерф в SS14, "" — без изменений.
 window.DATA = {
   season: {
     code: "SS14",
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
-    startRu: "16 октября, 05:00 МСК",
+    startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
     updated: "13.10.2026",
-    note: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона."
+    note: {
+      ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
+      en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
+    }
   },
 
   // Герои и трейты. id = имя файла портрета в img/
@@ -45,65 +49,67 @@ window.DATA = {
   // Тир-листы героев: [id, trend, комментарий]
   tiers: {
     starter: {
-      title: "Старт сезона",
-      hint: "Кампания и ранний Netherrealm без шмота, бюджет, скорость прогресса",
+      title: { ru: "Старт сезона", en: "League start" },
+      hint: { ru: "Кампания и ранний Netherrealm без шмота, бюджет, скорость прогресса",
+              en: "Campaign and early Netherrealm with no gear, budget, progression speed" },
       rows: {
         S: [
-          ["youga_02", "", "Бюджетный убийца боссов, DoT от Twisted Spacetime"],
-          ["erika_01", "", "Самый быстрый фарм валюты на старте; хрупкая"],
-          ["youga_03", "up", "Новый трейт SS14: на Bilibili — «с нуля до U8», «K8 за день»"],
-          ["thea_03",  "", "Erosion-урон, сильна в начале и середине"]
+          ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
+          ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
+          ["youga_03", "up", { ru: "Новый трейт SS14: на Bilibili — «с нуля до U8», «K8 за день»", en: "New SS14 trait: Bilibili creators claim \"zero to U8\" and \"K8 in a day\"" }],
+          ["thea_03",  "", { ru: "Erosion-урон, сильна в начале и середине", en: "Erosion damage, strong early and mid game" }]
         ],
         A: [
-          ["gemma_02",  "up", "Заморозка упрощает старт; нерф freeze её не задел"],
-          ["selena_02", "down", "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal"],
-          ["iris_01",   "", "Саммонер, доводит до T8, хорош для фарма Flame Elementium"],
-          ["iris_02",   "", "Стабильный и удобный"],
-          ["carino_02", "", "Надёжный проджектайл-стартер"]
+          ["gemma_02",  "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
+          ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }],
+          ["iris_01",   "", { ru: "Саммонер, доводит до T8, хорош для фарма Flame Elementium", en: "Summoner, carries to T8, good for Flame Elementium farming" }],
+          ["iris_02",   "", { ru: "Стабильный и удобный", en: "Stable and comfortable" }],
+          ["carino_02", "", { ru: "Надёжный проджектайл-стартер", en: "Reliable projectile starter" }]
         ],
         B: [
-          ["sage_01",  "down", "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов"],
-          ["moto_02",  "down", "Самоподрыв войск; задет нерфами SS14"],
-          ["rehan_02", "down", "Бонус ярости урезан: 20–44% → 10–34%"],
-          ["bing_01",  "", "Раскрывается после вложений в шмот"],
-          ["gemma_03", "", "Нужны вложения"],
-          ["rosa_01",  "", "Быстро валит боссов, но требует скилла"]
+          ["sage_01",  "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
+          ["moto_02",  "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }],
+          ["rehan_02", "down", { ru: "Бонус ярости урезан: 20–44% → 10–34%", en: "Rage bonus cut: 20–44% → 10–34%" }],
+          ["bing_01",  "", { ru: "Раскрывается после вложений в шмот", en: "Comes online after gear investment" }],
+          ["gemma_03", "", { ru: "Нужны вложения", en: "Needs investment" }],
+          ["rosa_01",  "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }]
         ],
         C: [
-          ["rosa_02",   "down", "Не для старта: нужны редкие перчатки из Deep Space"],
-          ["gemma_01",  "", "Много деталей, собирается долго"],
-          ["youga_01",  "", "Играбельно, но Youga 2/3 делают то же лучше"],
-          ["moto_01",   "", "Слабее Moto 2"],
-          ["carino_01", "", "Слабее Carino 2"]
+          ["rosa_02",   "down", { ru: "Не для старта: нужны редкие перчатки из Deep Space", en: "Not a starter: needs rare gloves from Deep Space" }],
+          ["gemma_01",  "", { ru: "Много деталей, собирается долго", en: "Many moving parts, slow to assemble" }],
+          ["youga_01",  "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
+          ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
+          ["carino_01", "", { ru: "Слабее Carino 2", en: "Weaker than Carino 2" }]
         ]
       }
     },
     endgame: {
-      title: "Эндгейм",
-      hint: "Частота в топах Divine Ascent и Supreme Showdown, фарм и урон по боссам",
+      title: { ru: "Эндгейм", en: "Endgame" },
+      hint: { ru: "Частота в топах Divine Ascent и Supreme Showdown, фарм и урон по боссам",
+              en: "Presence in top Divine Ascent and Supreme Showdown ranks, farming and boss damage" },
       rows: {
         S: [
-          ["bing_01",  "", "Blast Nova: связки бомб, топ фарм"],
-          ["iris_02",  "", "Vigilant Breeze: стабильный урон по боссам"],
-          ["gemma_02", "up", "Frostbitten Heart: единственный freeze, не задетый нерфом"]
+          ["bing_01",  "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }],
+          ["iris_02",  "", { ru: "Vigilant Breeze: стабильный урон по боссам", en: "Vigilant Breeze: steady boss damage" }],
+          ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }]
         ],
         A: [
-          ["rosa_02",  "down", "Был S; бонус Silver stance урезан 20–48% → 10–34%"],
-          ["sage_01",  "down", "Был S; нерф эликсиров (100–180% → 30–70%)"],
-          ["youga_03", "up", "Новинка: потолок ещё неизвестен, хайп у стримеров"],
-          ["erika_01", "", "Не нужно пересобираться к эндгейму"],
-          ["erika_03", "", "Vendetta's Sting"],
-          ["bing_02",  "", "Creative Genius: спеллбёрсты"]
+          ["rosa_02",  "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
+          ["sage_01",  "down", { ru: "Был S; нерф эликсиров (100–180% → 30–70%)", en: "Was S; elixirs nerfed (100–180% → 30–70%)" }],
+          ["youga_03", "up", { ru: "Новинка: потолок ещё неизвестен, хайп у стримеров", en: "New: ceiling unknown yet, lots of streamer hype" }],
+          ["erika_01", "", { ru: "Не нужно пересобираться к эндгейму", en: "No respec needed for endgame" }],
+          ["erika_03", "", { ru: "Vendetta's Sting", en: "Vendetta's Sting" }],
+          ["bing_02",  "", { ru: "Creative Genius: спеллбёрсты", en: "Creative Genius: Spell Bursts" }]
         ],
         B: [
-          ["selena_02", "down", "Отлично чистила карты, но нерф ground-скиллов"],
-          ["rehan_02",  "down", "Нерф ярости"],
-          ["moto_02",   "down", "Нерф в блюпосте SS14"],
-          ["thea_03",   "", "Сильна до мид-гейма, потолок ниже"],
-          ["youga_02",  "", "Стартер, в эндгейме уступает"]
+          ["selena_02", "down", { ru: "Отлично чистила карты, но нерф ground-скиллов", en: "Great map clear, but ground skills nerfed" }],
+          ["rehan_02",  "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
+          ["moto_02",   "down", { ru: "Нерф в блюпосте SS14", en: "Nerfed in the SS14 blue post" }],
+          ["thea_03",   "", { ru: "Сильна до мид-гейма, потолок ниже", en: "Strong until mid game, lower ceiling" }],
+          ["youga_02",  "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }]
         ],
         C: [
-          ["thea_02", "", "Хуже всех в Divine Ascent по данным SS13"]
+          ["thea_02", "", { ru: "Хуже всех в Divine Ascent по данным SS13", en: "Worst Divine Ascent performer in SS13 data" }]
         ]
       }
     }
@@ -111,70 +117,89 @@ window.DATA = {
 
   // Билды. stage: start | end | both; budget: 1–3; diff: 1–3
   builds: [
-    { hero: "youga_03", name: "Охотничьи клыки", skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
-      pros: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", cons: "Новый трейт, цифры не проверены на живом сезоне", src: "Bilibili" },
-    { hero: "youga_03", name: "Династия", skill: "Spacetime Dictator, снаряды", tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
-      pros: "«K8 за день», снаряды пробивают и возвращаются от стен, 70% урона по тебе откладывается", cons: "Облачный билд до старта сезона", src: "Bilibili" },
+    { hero: "youga_03", name: { ru: "Охотничьи клыки", en: "Hound Fangs" }, skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
+      pros: { ru: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", en: "Auto-cast spells, crits reduce cooldowns; author claims zero to U8" },
+      cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" }, src: "Bilibili" },
+    { hero: "youga_03", name: { ru: "Династия", en: "Dynasty" }, skill: { ru: "Spacetime Dictator, снаряды", en: "Spacetime Dictator, projectiles" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
+      pros: { ru: "«K8 за день», снаряды пробивают и возвращаются от стен, 70% урона по тебе откладывается", en: "\"K8 in a day\", projectiles pierce and bounce off walls, 70% of damage taken is delayed" },
+      cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" }, src: "Bilibili" },
     { hero: "youga_02", name: "Spacetime Elapse DoT", skill: "Mind Control + Channeled Depths", tier: "S", stage: "start", budget: 1, diff: 1, trend: "",
-      pros: "Дешёвый, сильный по боссам, +2 стака канала", cons: "Позже съедает слот саппорта", src: "IGGM, musabots" },
+      pros: { ru: "Дешёвый, сильный по боссам, +2 стака канала", en: "Cheap, strong vs bosses, +2 channel stacks" },
+      cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" }, src: "IGGM, musabots" },
     { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
-      pros: "Очень быстрая, не нужно пересобираться к эндгейму", cons: "Хрупкая, частые смерти у новичков", src: "IGGM, musabots, TreyexGaming" },
+      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму", en: "Very fast, no respec needed for endgame" },
+      cons: { ru: "Хрупкая, частые смерти у новичков", en: "Fragile, frequent deaths for new players" }, src: "IGGM, musabots, TreyexGaming" },
     { hero: "thea_03", name: "Blasphemer Erosion", skill: "Haunting Abomination / Mind Control", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
-      pros: "Топ в начале и середине сезона", cons: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", src: "IGGM, musabots" },
-    { hero: "gemma_02", name: "Frost Core / ледяные осколки", skill: "Frost Core, Chromatic Shot (Cold Tangle)", tier: "S", stage: "both", budget: 1, diff: 1, trend: "up",
-      pros: "Контроль заморозкой, «всё T2 — стабильные 200E», нерф freeze в SS14 не задел", cons: "Энтанглмент-версия ослаблена (убран лимит стаков)", src: "minmaxed, Bilibili, 233leyuan" },
-    { hero: "bing_01", name: "Blast Nova", skill: "Бомбы-проджектайлы", tier: "S", stage: "end", budget: 3, diff: 2, trend: "",
-      pros: "Несколько бомб за каст, топ фарма", cons: "Нужны вложения, на старте средне", src: "musabots, IGGM" },
+      pros: { ru: "Топ в начале и середине сезона", en: "Top tier early and mid season" },
+      cons: { ru: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", en: "Erosion and Ruinous Star nerfed in SS13, lower ceiling" }, src: "IGGM, musabots" },
+    { hero: "gemma_02", name: { ru: "Frost Core / ледяные осколки", en: "Frost Core / Ice Shards" }, skill: "Frost Core, Chromatic Shot (Cold Tangle)", tier: "S", stage: "both", budget: 1, diff: 1, trend: "up",
+      pros: { ru: "Контроль заморозкой, «всё T2 — стабильные 200E», нерф freeze в SS14 не задел", en: "Freeze control, \"full T2 gear — stable 200E\", untouched by the SS14 freeze nerf" },
+      cons: { ru: "Энтанглмент-версия ослаблена (убран лимит стаков)", en: "Entanglement version weakened (stack cap removed)" }, src: "minmaxed, Bilibili, 233leyuan" },
+    { hero: "bing_01", name: "Blast Nova", skill: { ru: "Бомбы-проджектайлы", en: "Projectile bombs" }, tier: "S", stage: "end", budget: 3, diff: 2, trend: "",
+      pros: { ru: "Несколько бомб за каст, топ фарма", en: "Multiple bombs per cast, top farming" },
+      cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" }, src: "musabots, IGGM" },
     { hero: "iris_02", name: "Vigilant Breeze", skill: "Spirit Magus", tier: "S", stage: "end", budget: 2, diff: 2, trend: "",
-      pros: "Стабильный урон по боссам", cons: "—", src: "musabots" },
+      pros: { ru: "Стабильный урон по боссам", en: "Steady boss damage" }, cons: "—", src: "musabots" },
     { hero: "iris_01", name: "Growing Breeze Summoner", skill: "Spirit Magi", tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
-      pros: "Дотягивает до T8, хорош для фарма Flame Elementium", cons: "Не самый быстрый", src: "IGGM" },
+      pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
+      cons: { ru: "Не самый быстрый", en: "Not the fastest" }, src: "IGGM" },
     { hero: "selena_02", name: "Ground Autowalk", skill: "Thorns Domain / Tidal Spring / Meteor", tier: "A", stage: "both", budget: 1, diff: 1, trend: "down",
-      pros: "Дешёвый «автобег» по картам; Meteor в SS14 бафнут", cons: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", src: "IGGM, патчноут SS14" },
-    { hero: "sage_01", name: "Licorice Note Elixirs", skill: "Эликсиры + саммоны", tier: "A", stage: "end", budget: 2, diff: 2, trend: "down",
-      pros: "Хорошая защита, саммоны забирают урон", cons: "Главная жертва нерфов SS14", src: "musabots, Bilibili, патчноут SS14" },
+      pros: { ru: "Дешёвый «автобег» по картам; Meteor в SS14 бафнут", en: "Cheap auto-walk map clearing; Meteor buffed in SS14" },
+      cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" } },
+    { hero: "sage_01", name: "Licorice Note Elixirs", skill: { ru: "Эликсиры + саммоны", en: "Elixirs + summons" }, tier: "A", stage: "end", budget: 2, diff: 2, trend: "down",
+      pros: { ru: "Хорошая защита, саммоны забирают урон", en: "Good defense, summons absorb damage" },
+      cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" }, src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" } },
     { hero: "rosa_02", name: "Unsullied Blade", skill: "Mana stacking", tier: "A", stage: "end", budget: 3, diff: 3, trend: "down",
-      pros: "Один из самых высоких потолков в игре", cons: "Дорогие перчатки из Deep Space, нерф Silver stance", src: "musabots, IGGM" },
+      pros: { ru: "Один из самых высоких потолков в игре", en: "One of the highest ceilings in the game" },
+      cons: { ru: "Дорогие перчатки из Deep Space, нерф Silver stance", en: "Expensive Deep Space gloves, Silver stance nerfed" }, src: "musabots, IGGM" },
     { hero: "bing_02", name: "Creative Genius Spellburst", skill: "Spell Burst", tier: "A", stage: "end", budget: 3, diff: 2, trend: "",
-      pros: "Синергия спеллбёрста и питомцев", cons: "Шмот дорожает из-за популярности", src: "ProGameGuides, musabots" },
-    { hero: "carino_02", name: "Lethal Flash", skill: "Проджектайлы, Deflection", tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
-      pros: "Надёжный и удобный", cons: "Медленнее S-стартеров", src: "musabots" },
-    { hero: "moto_02", name: "Самоподрыв двух генералов", skill: "Synthetic Troop, самоподрыв", tier: "B", stage: "start", budget: 1, diff: 1, trend: "down",
-      pros: "Импорт кода билда, «пятиугольный боец»", cons: "Задет нерфами SS14", src: "233leyuan, Bilibili" },
-    { hero: "moto_01", name: "Паучий танк без затрат", skill: "Synthetic Troop", tier: "C", stage: "start", budget: 1, diff: 1, trend: "",
-      pros: "Почти бесплатный", cons: "Слабее Moto 2", src: "233leyuan" },
+      pros: { ru: "Синергия спеллбёрста и питомцев", en: "Spell Burst and pet synergy" },
+      cons: { ru: "Шмот дорожает из-за популярности", en: "Gear prices rise with popularity" }, src: "ProGameGuides, musabots" },
+    { hero: "carino_02", name: "Lethal Flash", skill: { ru: "Проджектайлы, Deflection", en: "Projectiles, Deflection" }, tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
+      pros: { ru: "Надёжный и удобный", en: "Reliable and comfortable" },
+      cons: { ru: "Медленнее S-стартеров", en: "Slower than S-tier starters" }, src: "musabots" },
+    { hero: "moto_02", name: { ru: "Самоподрыв двух генералов", en: "Twin Generals Self-Destruct" }, skill: { ru: "Synthetic Troop, самоподрыв", en: "Synthetic Troop, self-destruct" }, tier: "B", stage: "start", budget: 1, diff: 1, trend: "down",
+      pros: { ru: "Импорт кода билда, сбалансирован во всём", en: "Importable build code, well-rounded" },
+      cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" }, src: "233leyuan, Bilibili" },
+    { hero: "moto_01", name: { ru: "Паучий танк без затрат", en: "Zero-Cost Spider Tank" }, skill: "Synthetic Troop", tier: "C", stage: "start", budget: 1, diff: 1, trend: "",
+      pros: { ru: "Почти бесплатный", en: "Almost free" },
+      cons: { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }, src: "233leyuan" },
     { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "B", stage: "both", budget: 2, diff: 2, trend: "down",
-      pros: "Без штрафа к скорости атаки, быстрый темп", cons: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", src: "IGGM, патчноут SS14" },
-    { hero: "gemma_01", name: "Ice-Fire Fusion", skill: "Скиллы + шмот + таланты", tier: "C", stage: "end", budget: 3, diff: 3, trend: "",
-      pros: "Силён в полной сборке", cons: "Долго и сложно собирается", src: "IGGM" }
+      pros: { ru: "Без штрафа к скорости атаки, быстрый темп", en: "No attack speed penalty, fast pace" },
+      cons: { ru: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", en: "Rage nerfed, Dexterity removed from Whirlwind and Berserking Blade" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" } },
+    { hero: "gemma_01", name: "Ice-Fire Fusion", skill: { ru: "Скиллы + шмот + таланты", en: "Skills + gear + talents" }, tier: "C", stage: "end", budget: 3, diff: 3, trend: "",
+      pros: { ru: "Силён в полной сборке", en: "Strong when fully assembled" },
+      cons: { ru: "Долго и сложно собирается", en: "Slow and hard to assemble" }, src: "IGGM" }
   ],
 
   // Изменения SS14
   changes: [
-    { type: "up",   text: "Youga 3 «The Ultimate One»: новый трейт. Заклинания на Clockwork Core кастуются сами, крит сокращает кулдауны, ветки Dictator / Conqueror / Overlord" },
-    { type: "up",   text: "Meteor: базовый урон 332–616 → 465–863" },
-    { type: "up",   text: "Electric Overload: бонус молнии 15% → 16%" },
-    { type: "down", text: "Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%" },
-    { type: "down", text: "Selena: ground-урон трейта +0–20% → −20–0%; второй трейт даёт −30% скорости бега" },
-    { type: "down", text: "Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%" },
-    { type: "down", text: "Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%" },
-    { type: "down", text: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен" },
-    { type: "down", text: "Whirlwind / Berserking Blade: ловкость больше не основной атрибут; Arrow Rain: бонус от скорости снаряда ограничен 200%" },
-    { type: "down", text: "Freeze-билды: нерф колец на заморозку (Gemma 2 по тестам не задета)" },
-    { type: "new",  text: "Тюрьма Tartarus: 16 камер, заключённые поглощают друг друга и растут, в конце бунт с лутом" },
-    { type: "new",  text: "Followers: наёмники из заключённых. Связка «шесть проклятий» через Поэта (цепная молния → паралич → проклятия)" },
-    { type: "new",  text: "Divine Ascent: 150 этажей, прыжки до 5 этажей, награда Pactspirit перенесена с 35 на 50 этаж" }
+    { type: "up", text: {
+      ru: "Youga 3 «The Ultimate One»: новый трейт. Заклинания на Clockwork Core кастуются сами, крит сокращает кулдауны, ветки Dictator / Conqueror / Overlord",
+      en: "Youga 3 \"The Ultimate One\": new trait. Spells on the Clockwork Core auto-cast, crits reduce cooldowns, Dictator / Conqueror / Overlord branches" } },
+    { type: "up", text: { ru: "Meteor: базовый урон 332–616 → 465–863", en: "Meteor: base damage 332–616 → 465–863" } },
+    { type: "up", text: { ru: "Electric Overload: бонус молнии 15% → 16%", en: "Electric Overload: lightning bonus 15% → 16%" } },
+    { type: "down", text: { ru: "Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%", en: "Rehan: rage bonus 20–44% → 10–34%, Berserk 50–78% → 40–68%" } },
+    { type: "down", text: { ru: "Selena: ground-урон трейта +0–20% → −20–0%; второй трейт даёт −30% скорости бега", en: "Selena: trait ground damage +0–20% → −20–0%; second trait adds −30% movement speed" } },
+    { type: "down", text: { ru: "Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%", en: "Rosa: elemental bonus 5–9% → 4–8% (cap 50–90% → 40–80%), Silver stance 20–48% → 10–34%" } },
+    { type: "down", text: { ru: "Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%", en: "Sage: leaves and spores weakened, elixir effect 100–180% → 30–70%" } },
+    { type: "down", text: { ru: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен", en: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: damage reduced" } },
+    { type: "down", text: { ru: "Whirlwind / Berserking Blade: ловкость больше не основной атрибут; Arrow Rain: бонус от скорости снаряда ограничен 200%", en: "Whirlwind / Berserking Blade: Dexterity no longer a main attribute; Arrow Rain: projectile speed bonus capped at 200%" } },
+    { type: "down", text: { ru: "Freeze-билды: нерф колец на заморозку (Gemma 2 по тестам не задета)", en: "Freeze builds: freeze rings nerfed (Gemma 2 unaffected in tests)" } },
+    { type: "new", text: { ru: "Тюрьма Tartarus: 16 камер, заключённые поглощают друг друга и растут, в конце бунт с лутом", en: "Tartarus prison: 16 cells, prisoners devour each other and grow, ending in a loot riot" } },
+    { type: "new", text: { ru: "Followers: наёмники из заключённых. Связка «шесть проклятий» через Поэта (цепная молния → паралич → проклятия)", en: "Followers: mercenaries recruited from prisoners. \"Six curses\" combo via the Poet (chain lightning → paralysis → curses)" } },
+    { type: "new", text: { ru: "Divine Ascent: 150 этажей, прыжки до 5 этажей, награда Pactspirit перенесена с 35 на 50 этаж", en: "Divine Ascent: 150 floors, skip up to 5 floors, Pactspirit reward moved from floor 35 to 50" } }
   ],
 
   sources: [
-    ["musabots — SS14 Tier List (11.10.2026)", "https://musabots.com/blog/torchlight-infinite-tier-list"],
-    ["IGGM — SS13 Starter Tier List", "https://www.iggm.com/news/torchlight-infinite-ss13-afterlight-starter-build-tier-list-for-fast-leveling"],
-    ["Официальный патчноут SS14", "https://torchlight.xd.com/ss14pn/"],
-    ["PCGamesN — Tartarus season", "https://www.pcgamesn.com/torchlight-infinite/update-tartarus-season"],
-    ["17173 — превью SS14, наёмники и шесть проклятий", "https://news.17173.com/content/10112026/143712170.shtml"],
-    ["Bilibili — превью S14, Youga 3", "https://www.bilibili.com/video/BV1eWph6qEfM/"],
-    ["233leyuan — билды SS13", "https://www.233leyuan.com/post-detail/2077457185859616768"],
-    ["minmaxed — гайды S14", "https://minmaxedarpg.com/games/tli/seasons/s14"],
-    ["tlidb — база героев (портреты)", "https://tlidb.com/en/Hero"]
+    [{ ru: "musabots — тир-лист SS14 (11.10.2026)", en: "musabots — SS14 Tier List (Oct 11, 2026)" }, "https://musabots.com/blog/torchlight-infinite-tier-list"],
+    [{ ru: "IGGM — тир-лист стартеров SS13", en: "IGGM — SS13 Starter Tier List" }, "https://www.iggm.com/news/torchlight-infinite-ss13-afterlight-starter-build-tier-list-for-fast-leveling"],
+    [{ ru: "Официальный патчноут SS14", en: "Official SS14 patch notes" }, "https://torchlight.xd.com/ss14pn/"],
+    [{ ru: "PCGamesN — сезон Tartarus", en: "PCGamesN — Tartarus season" }, "https://www.pcgamesn.com/torchlight-infinite/update-tartarus-season"],
+    [{ ru: "17173 — превью SS14, наёмники и шесть проклятий", en: "17173 — SS14 preview, followers and six curses" }, "https://news.17173.com/content/10112026/143712170.shtml"],
+    [{ ru: "Bilibili — превью S14, Youga 3", en: "Bilibili — S14 preview, Youga 3" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"],
+    [{ ru: "233leyuan — билды SS13", en: "233leyuan — SS13 builds" }, "https://www.233leyuan.com/post-detail/2077457185859616768"],
+    [{ ru: "minmaxed — гайды S14", en: "minmaxed — S14 guides" }, "https://minmaxedarpg.com/games/tli/seasons/s14"],
+    [{ ru: "tlidb — база героев (портреты)", en: "tlidb — hero database (portraits)" }, "https://tlidb.com/en/Hero"]
   ]
 };
