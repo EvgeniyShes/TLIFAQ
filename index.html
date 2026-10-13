@@ -133,11 +133,21 @@ tr.more .pc .c b{color:var(--down)}
 footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:40px}
 .views{margin-top:8px;font-size:11px;opacity:.6}
 .like{position:relative;margin-top:20px;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid #ff8a2b55;background:#ff8a2b14;color:var(--text);font:600 14px Inter;cursor:pointer;transition:.15s}
-.like:hover{background:#ff8a2b2a}
-.like .heart{color:var(--muted);font-size:16px;transition:.15s}
+.like:hover{background:#ff8a2b2a;transform:translateY(-1px)}
+.like .heart{position:relative;display:inline-block;color:var(--muted);font-size:16px;transition:.15s}
 .like.on{border-color:var(--S);background:#ff4d4d1f}
 .like.on .heart{color:var(--S);transform:scale(1.2)}
 .like b{color:var(--fire2)}
+/* Пока не лайкнуто — пульсирующее свечение и «сердцебиение», чтобы кнопку заметили */
+.like:not(.on){animation:likeGlow 2.4s ease-in-out infinite}
+.like:not(.on) .heart{color:#ff8080;animation:beat 2.4s ease-in-out infinite}
+@keyframes likeGlow{0%,100%{box-shadow:0 0 0 0 #ff4d4d00}50%{box-shadow:0 0 0 6px #ff4d4d1f,0 0 26px #ff8a2b66}}
+@keyframes beat{0%,55%,100%{transform:scale(1)}10%{transform:scale(1.4)}20%{transform:scale(1)}30%{transform:scale(1.3)}}
+/* Клик — сердце «выстреливает», разлетаются искры */
+.like.pop .heart{animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:scale(.5)}60%{transform:scale(1.8)}100%{transform:scale(1.2)}}
+.spark{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:var(--c);pointer-events:none;animation:fly .7s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--x),var(--y)) scale(0);opacity:0}}
 
 @media (max-width:760px){
   .tier-label{width:48px;font-size:26px}
@@ -157,7 +167,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
   tr.more .pc{grid-template-columns:1fr}
   .detail{flex-direction:column}
 }
-@media (prefers-reduced-motion:reduce){.embers{display:none}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){.embers{display:none}*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -412,8 +422,18 @@ async function sendStats(extra) {
     if (r.ok) { stats = await r.json(); renderStats(); }
   } catch {}
 }
+function burst() {
+  const btn = $("#likeBtn"), heart = btn.querySelector(".heart");
+  btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop");
+  for (let i = 0; i < 14; i++) {
+    const s = document.createElement("i"), a = i / 14 * 2 * Math.PI, r = 28 + Math.random() * 22;
+    s.className = "spark";
+    s.style.cssText = `--x:${Math.cos(a) * r}px;--y:${Math.sin(a) * r}px;--c:${["#ff4d4d","#ff8a2b","#ffcf6b"][i % 3]}`;
+    heart.append(s); setTimeout(() => s.remove(), 750);
+  }
+}
 $("#likeBtn").onclick = () => {
-  stats.liked = !stats.liked; stats.likes += stats.liked ? 1 : -1; renderStats(); // сразу, не дожидаясь сервера
+  stats.liked = !stats.liked; if (stats.liked) burst(); stats.likes += stats.liked ? 1 : -1; renderStats(); // сразу, не дожидаясь сервера
   sendStats({ like: stats.liked });
 };
 sendStats();
