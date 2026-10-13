@@ -297,7 +297,15 @@ window.DATA = {
   authors: {
     Travic: { youtube: "https://www.youtube.com/@Travic_", twitch: "https://www.twitch.tv/travic" },
     instinct: { twitch: "https://www.twitch.tv/instinct_t" },
-    DonTheCrown: { youtube: "https://www.youtube.com/@DonTheCrown" }
+    DonTheCrown: { youtube: "https://www.youtube.com/@DonTheCrown" },
+    Pat404: { youtube: "https://www.youtube.com/@Pat404Games" },
+    Little_practice: { youtube: "https://www.youtube.com/@Little_practice232" },
+    "Marcus Nordstrom": { youtube: "https://www.youtube.com/@marcusnordstrom9251" },
+    // без найденного канала — ссылка на сам материал
+    "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
+    // площадки, а не авторы — в список авторов не выводятся
+    Reddit: { site: true }, "233leyuan": { site: true },
+    R3plic: { url: "https://tlicompendium.com/en/news/5-1-battle-tested-starters-for-season-14-tartarus" }
   },
 
   // Изменения SS14

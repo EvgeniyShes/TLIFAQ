@@ -70,7 +70,8 @@ function indexPage(lang) {
     chList: TLI.changesHTML(lang),
     srcList: TLI.sourcesHTML(lang),
     heroIdx: TLI.heroIndexHTML(lang),
-    guidesBody: TLI.guidesHTML(lang)
+    guidesBody: TLI.guidesHTML(lang),
+    authorsList: TLI.authorsListHTML()
   };
   for (const [id, html] of Object.entries(fills)) h = fillId(h, id, html);
   return h;

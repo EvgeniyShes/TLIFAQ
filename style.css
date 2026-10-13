@@ -272,3 +272,10 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
   .gtbl tr{padding:10px 0;border-bottom:1px solid var(--line)}
   .gtbl td{border:0;padding:4px 0}
 }
+
+/* Используемые материалы авторов */
+.sub-h{font:700 15px Inter;margin:18px 0 4px}
+.authors-list{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+.au{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14px}
+.au a{color:var(--text);text-decoration:none;font-weight:600}.au a:hover{color:var(--fire2)}
+.au .ch{font-size:11px;color:var(--muted);font-weight:500}
