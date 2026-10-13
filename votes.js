@@ -17,7 +17,7 @@ const SOURCES = [
   { id: "r3plic", name: "R3plic, «5 (+1) Battle-Tested Starters for SS14» (tlicompendium)", w: 2, lists: ["start"],
     // подборка лучших стартеров без порядка → S
     votes: { S: "erika_01 selena_01 youga_02 rehan_02 youga_03" } },
-  { id: "yt_season_unknown", name: "YouTube, тир-лист на весь сезон (скриншот от владельца, автор не указан)", w: 1, lists: ["end"],
+  { id: "yt_season_unknown", old: true, name: "YouTube, тир-лист на весь сезон (скриншот от владельца, автор не указан)", w: 1, lists: ["end"],
     // героев опознал по артам (сверка с подписанным тир-листом DonTheCrown); SSS и S → S, A → A, B → B, F → C
     votes: { S: "youga_03 erika_01 carino_03 erika_03 bing_01 gemma_02 selena_01 iris_02 youga_02 rosa_02 thea_01 carino_02 rehan_02",
              A: "rehan_01 bing_02 iris_01 sage_01 thea_03 gemma_03",
@@ -50,29 +50,30 @@ const SOURCES = [
              A: "rosa_02 rehan_02 gemma_02 erika_02 carino_03 gemma_03 iris_01 iris_02 erika_03 thea_01 sage_01",
              B: "rehan_01 youga_02 rosa_01 bing_01 carino_01 carino_02 moto_02",
              C: "moto_01 gemma_01 thea_02 thea_03 youga_01" } },
-  { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
+  { id: "musabots_start", old: true, name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
-  { id: "iggm", name: "IGGM, стартеры SS13", w: 1, lists: ["start"],
+  { id: "iggm", old: true, name: "IGGM, стартеры SS13", w: 1, lists: ["start"],
     votes: { S: "selena_02 youga_02 rehan_02 iris_01 erika_01", A: "bing_01 thea_03 gemma_02 sage_01",
              B: "rosa_01 gemma_01", C: "rosa_02" } },
-  { id: "mmoexp", name: "mmoexp / musabots, эндгейм (SS13, 3-й день)", w: 1, lists: ["end"],
+  { id: "mmoexp", old: true, name: "mmoexp / musabots, эндгейм (SS13, 3-й день)", w: 1, lists: ["end"],
     votes: { S: "rosa_02 carino_03 gemma_02 bing_01 iris_02 sage_01", A: "selena_02 rehan_02 erika_01 erika_03 bing_02 moto_02",
              C: "thea_02" } },
-  { id: "kr4000", name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
+  { id: "kr4000", old: true, name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
     // 100+ → S, 30–73 → A, 10–22 → B, меньше 10 → C
     votes: { S: "sage_01 iris_02 erika_02", A: "rosa_02 bing_02 moto_02 gemma_02 rehan_02",
              B: "rehan_01 selena_02 erika_03 thea_03 youga_01",
              C: "iris_01 moto_01 gemma_01 thea_01 carino_02 gemma_03 carino_01 rosa_01 carino_03 youga_02 bing_01 erika_01 thea_02 selena_01" } },
-  { id: "instinct", name: "instinct, гайд Iris 2 (SS13)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02" } },
-  { id: "travic", name: "Travic, гайд Rehan 1 от кампании до 250M (Twitch, ред. 1)", w: 1.5, lists: ["start"], votes: { A: "rehan_01" } },
+  { id: "instinct", old: true, name: "instinct, гайд Iris 2 (SS13)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02" } },
+  { id: "travic", old: true, name: "Travic, гайд Rehan 1 от кампании до 250M (Twitch, ред. 1)", w: 1.5, lists: ["start"], votes: { A: "rehan_01" } },
   { id: "seph", name: "SephGoesGaming, гайды Iris 2 Erosion Magus и Youga 1 Ice Lances до Profound (SS14)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02 youga_01" } },
   { id: "reddit", name: "Reddit, тесты стартеров до старта", w: 1, lists: ["start"], votes: { B: "carino_01", S: "erika_01" } },
   { id: "bili_titles", name: "Bilibili, заголовки про Youga 3", w: 0.5, lists: ["start", "end"], votes: { S: "youga_03" } },
-  { id: "selena1_old", name: "Selena 1: тир SS7 и гайд maxroll до T7", w: 0.5, lists: ["start"], votes: { B: "selena_01" } },
+  { id: "selena1_old", old: true, name: "Selena 1: тир SS7 и гайд maxroll до T7", w: 0.5, lists: ["start"], votes: { B: "selena_01" } },
   { id: "owner", name: "Владелец сайта: Selena 1 хороша на актах", w: 0.5, lists: ["start"], votes: { A: "selena_01" } }
 ];
 // Поправка за патч SS14 (явные нерфы/баффы из патчноута и блюпоста)
+// Поправка патча — только на долю источников прошлого сезона (old: true); прогнозы SS14 патч уже учли
 const PATCH = { rehan_01: -0.5, rehan_02: -0.5, selena_02: -0.5, rosa_02: -0.5, sage_01: -0.5, moto_02: -0.5 };
 const tierOf = x => x >= 3.5 ? "S" : x >= 2.5 ? "A" : x >= 1.5 ? "B" : "C";
 
@@ -80,11 +81,11 @@ function calc(list) {
   const acc = {};
   for (const s of SOURCES) if (s.lists.includes(list))
     for (const [t, ids] of Object.entries(s.votes)) for (const id of ids.split(" ")) {
-      (acc[id] ||= { sum: 0, w: 0, from: [] });
-      acc[id].sum += SCORE[t] * s.w; acc[id].w += s.w; acc[id].from.push(`${s.id}:${t}`);
+      (acc[id] ||= { sum: 0, w: 0, ow: 0, from: [] });
+      acc[id].sum += SCORE[t] * s.w; acc[id].w += s.w; if (s.old) acc[id].ow += s.w; acc[id].from.push(`${s.id}:${t}`);
     }
   return Object.fromEntries(Object.entries(acc).map(([id, a]) => {
-    const raw = a.sum / a.w, val = raw + (PATCH[id] || 0);
+    const raw = a.sum / a.w, val = raw + (PATCH[id] || 0) * a.ow / a.w;
     return [id, { val: +val.toFixed(2), tier: tierOf(val), weight: a.w, from: a.from.join(" ") }];
   }));
 }
