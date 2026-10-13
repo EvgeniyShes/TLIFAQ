@@ -1,7 +1,7 @@
 // Голоса источников за тиры. Методика — в SOURCES.md (веса, пороги S/A/B/C).
 // node votes.js — печатает расчёт по каждому трейту и расхождения с тирами в data.js.
 // Новый источник: добавить в SOURCES ниже (вес + голоса), запустить, перенести изменения в data.js.
-const SCORE = { S: 4, A: 3, B: 2, C: 1 };
+const SCORE = { S: 4, "A+": 3.5, A: 3, B: 2, C: 1 };
 const SOURCES = [
   { id: "laoke", name: "Lao Ke, тир-лист SS14 (Bilibili, скриншоты с DCInside)", w: 2, lists: ["start", "end"],
     // уровни автора: «бог»+«бессмертный» → S, «демон» → A, «призрак» → B; «наблюдаем» — без голоса; Gemma 2 на скриншотах нет
@@ -23,6 +23,13 @@ const SOURCES = [
              A: "rehan_01 bing_02 iris_01 sage_01 thea_03 gemma_03",
              B: "erika_02 gemma_01 selena_02 youga_01 rosa_01 carino_01",
              C: "moto_01 moto_02 thea_02" } },
+  { id: "pat404", name: "Pat404, «СТАРТЕРЫ SS14: кого брать, а кого нет?» (YouTube)", w: 2, lists: ["start"],
+    // героев опознал по портретам; «S, но дорого» и S → S, A+ → 3,5
+    votes: { S: "youga_03 erika_01 iris_02",
+             "A+": "rehan_02 selena_01 thea_01 gemma_02 bing_02 rosa_02",
+             A: "iris_01 moto_02 youga_02 bing_01 erika_02 carino_02 carino_01 selena_02 erika_03 sage_01 thea_03",
+             B: "moto_01 youga_01 carino_03 rehan_01",
+             C: "rosa_01 thea_02 gemma_01 gemma_03" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
