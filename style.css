@@ -378,3 +378,4 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .tip [data-i]{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(6px,-50%);white-space:nowrap;padding:7px 12px;border-radius:8px;background:var(--bg2);border:1px solid var(--line);color:var(--text);font:500 13px Inter;box-shadow:0 4px 14px #0009;opacity:0;pointer-events:none;transition:.15s}
 .tip:hover [data-i],.tip:focus-visible [data-i]{opacity:1;transform:translate(0,-50%)}
 @media (max-width:760px){.tips{right:12px;bottom:12px}.tip{width:42px;height:42px;font-size:19px}.boosty .bi{font-size:19px}}
+.tip.tg{background:#2aabee;border-color:#2aabee}
