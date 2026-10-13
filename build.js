@@ -53,8 +53,7 @@ function indexPage(lang) {
   let h = template.replace("{{lang}}", lang).replace("{{head}}", head(lang, null, t("title"), t("desc")));
   h = h.replace(/(data-i="(\w+)"[^>]*>)(<\/)/g, (_, a, k, b) => a + esc(t(k)) + b);
   h = h.replace(`<input id="q" type="search">`, `<input id="q" type="search" placeholder="${esc(t("search"))}">`);
-  h = h.replace(`id="tip" `, `id="tip" title="${esc(t("tipTitle"))}" `).replace(`id="boosty" `, `id="boosty" title="${esc(t("boostyTitle"))}" `);
-  const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
+    const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
     sBadge: `${t("season")} ${D.season.code} · ${D.season.name}`,
     sUpd: updText(lang),

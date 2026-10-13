@@ -368,10 +368,13 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .ph-h{display:block;margin-top:10px;padding-top:8px;border-top:1px solid #ffffff14;font-size:13px;line-height:1.45;color:var(--muted)}
 .ph-h b{color:var(--text);font-weight:600}
 
-/* Донаты: CloudTips и Boosty — заметные кнопки */
-.tip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:14px;font-weight:600}
-.tip:hover{border-color:var(--fire);color:var(--fire2)}
-.boosty .bi{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:5px;background:#f15f2c;color:#fff;font:800 12px Inter}
-.boosty:hover{border-color:#f15f2c}
+/* Донаты: круглые закреплённые иконки справа снизу, подпись при наведении */
 .actions{flex-direction:column;gap:12px}
-.tips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.tips{position:fixed;right:18px;bottom:18px;z-index:20;display:flex;flex-direction:column;gap:10px}
+.tip{position:relative;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--card);box-shadow:0 4px 16px #0008;text-decoration:none;font-size:22px;transition:transform .15s,border-color .15s}
+.tip:hover,.tip:focus-visible{transform:scale(1.08);border-color:var(--fire)}
+.tip.boosty{background:#f15f2c;border-color:#f15f2c}
+.boosty .bi{color:#fff;font:800 22px Inter}
+.tip [data-i]{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(6px,-50%);white-space:nowrap;padding:7px 12px;border-radius:8px;background:var(--bg2);border:1px solid var(--line);color:var(--text);font:500 13px Inter;box-shadow:0 4px 14px #0009;opacity:0;pointer-events:none;transition:.15s}
+.tip:hover [data-i],.tip:focus-visible [data-i]{opacity:1;transform:translate(0,-50%)}
+@media (max-width:760px){.tips{right:12px;bottom:12px}.tip{width:42px;height:42px;font-size:19px}.boosty .bi{font-size:19px}}
