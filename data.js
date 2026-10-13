@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T16:13:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T16:22:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -81,7 +81,8 @@ window.DATA = {
           ["carino_03", "", { ru: "Топ эндгейма в SS13, но на старте нужны вложения", en: "SS13 endgame top pick, but needs investment early" }],
           ["erika_02", "", { ru: "Набирала игроков в SS13, уступает Erika 1 в скорости", en: "Gained players in SS13, slower than Erika 1" }],
           ["erika_03", "", { ru: "Надёжная, но раскрывается позже", en: "Reliable, but comes online later" }],
-          ["bing_02",  "", { ru: "Спеллбёрсты требуют шмота", en: "Spell Bursts need gear" }]
+          ["bing_02",  "", { ru: "Спеллбёрсты требуют шмота", en: "Spell Bursts need gear" }],
+          ["selena_01", "", { ru: "Хороша на актах и первых картах: Tide под врагами усиливает урон, без вложений доходит до T7. Дальше слабый урон по боссам", en: "Good for acts and early maps: Tide under enemies amplifies damage, reaches T7 with no investment. Weak boss damage later" }]
         ],
         C: [
           ["rosa_02",   "down", { ru: "Не для старта: нужны редкие перчатки из Deep Space", en: "Not a starter: needs rare gloves from Deep Space" }],
@@ -90,7 +91,6 @@ window.DATA = {
           ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
           ["carino_01", "", { ru: "Слабее Carino 2. Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances — нужна проверка", en: "Weaker than Carino 2. A Reddit player killed the Traveler on ~T2 gear with Ice Lances pre-season — needs confirmation" }],
           ["rehan_01",  "down", { ru: "Нерф Berserk в SS14: 50–78% → 40–68%", en: "Berserk nerfed in SS14: 50–78% → 40–68%" }],
-          ["selena_01", "down", { ru: "Терял игроков в SS13, в SS14 ещё и −30% скорости бега", en: "Lost players in SS13, plus −30% movement speed in SS14" }],
           ["thea_02",   "", { ru: "Слабый трейт, хуже всех в Divine Ascent", en: "Weak trait, worst in Divine Ascent" }]
         ]
       }
@@ -137,7 +137,7 @@ window.DATA = {
           ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }],
           ["iris_01",   "", { ru: "Фармит до T8, дальше уступает Iris 2", en: "Farms up to T8, then behind Iris 2" }],
           ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
-          ["selena_01", "down", { ru: "Терял игроков, нерф в SS14", en: "Lost players, nerfed in SS14" }]
+          ["selena_01", "", { ru: "Терял игроков в SS13: слабый урон по боссам и сильная зависимость от шмота", en: "Lost players in SS13: weak boss damage and heavy gear dependence" }]
         ]
       }
     }
@@ -244,7 +244,7 @@ window.DATA = {
     { type: "up", text: { ru: "Meteor: базовый урон 332–616 → 465–863", en: "Meteor: base damage 332–616 → 465–863" } },
     { type: "up", text: { ru: "Electric Overload: бонус молнии 15% → 16%", en: "Electric Overload: lightning bonus 15% → 16%" } },
     { type: "down", text: { ru: "Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%", en: "Rehan: rage bonus 20–44% → 10–34%, Berserk 50–78% → 40–68%" } },
-    { type: "down", text: { ru: "Selena: ground-урон трейта +0–20% → −20–0%; второй трейт даёт −30% скорости бега", en: "Selena: trait ground damage +0–20% → −20–0%; second trait adds −30% movement speed" } },
+    { type: "down", text: { ru: "Selena: ground-урон трейта +0–20% → −20–0%; ещё один её талант даёт −30% скорости бега (к какому трейту он относится, пока не подтверждено)", en: "Selena: trait ground damage +0–20% → −20–0%; another of her talents adds −30% movement speed (which trait it belongs to is unconfirmed)" } },
     { type: "down", text: { ru: "Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%", en: "Rosa: elemental bonus 5–9% → 4–8% (cap 50–90% → 40–80%), Silver stance 20–48% → 10–34%" } },
     { type: "down", text: { ru: "Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%", en: "Sage: leaves and spores weakened, elixir effect 100–180% → 30–70%" } },
     { type: "down", text: { ru: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен", en: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: damage reduced" } },

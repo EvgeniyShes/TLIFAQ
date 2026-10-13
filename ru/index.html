@@ -39,7 +39,7 @@
     <span class="badge" id="sBadge">Сезон SS14 · Tartarus</span>
     <h1>Torchlight: Infinite</h1>
     <p class="sub" data-i="subtitle">Тир-листы героев и билдов</p>
-    <p class="upd"><span class="dot"></span><span data-i="updEvery">Информация обновляется раз в 12 часов</span> · <span data-i="lastUpd">последнее обновление:</span> <b id="sUpd">13 окт. 2026 г., 19:13 МСК</b> <span id="sAgo"></span></p>
+    <p class="upd"><span class="dot"></span><span data-i="updEvery">Информация обновляется раз в 12 часов</span> · <span data-i="lastUpd">последнее обновление:</span> <b id="sUpd">13 окт. 2026 г., 19:22 МСК</b> <span id="sAgo"></span></p>
     <p class="sub" style="margin-top:18px"><span data-i="seasonStart">Старт сезона</span>: <b style="color:var(--fire2)" id="sStart">16 октября, 05:00 МСК</b></p>
     <div class="countdown" id="cd"></div>
     <div class="actions">
@@ -172,6 +172,11 @@
           <div class="portrait"><img src="/img/bing_02.webp" alt="Bing 2 Creative Genius" loading="lazy" width="72" height="72"></div>
           
           <div class="hname">Bing 2</div><div class="htrait">Creative Genius</div>
+        </button>
+        <button class="hcard " data-id="selena_01" title="Sing with the Tide">
+          <div class="portrait"><img src="/img/selena_01.webp" alt="Selena 1 Sing with the Tide" loading="lazy" width="72" height="72"></div>
+          
+          <div class="hname">Selena 1</div><div class="htrait">Sing with the Tide</div>
         </button></div>
     </div>
     <div class="tier" style="--tc:var(--C)">
@@ -206,11 +211,6 @@
           <div class="portrait"><img src="/img/rehan_01.webp" alt="Rehan 1 Anger" loading="lazy" width="72" height="72"></div>
           <span class="trend down">▼</span>
           <div class="hname">Rehan 1</div><div class="htrait">Anger</div>
-        </button>
-        <button class="hcard " data-id="selena_01" title="Sing with the Tide">
-          <div class="portrait"><img src="/img/selena_01.webp" alt="Selena 1 Sing with the Tide" loading="lazy" width="72" height="72"></div>
-          <span class="trend down">▼</span>
-          <div class="hname">Selena 1</div><div class="htrait">Sing with the Tide</div>
         </button>
         <button class="hcard " data-id="thea_02" title="Incarnation of The Gods">
           <div class="portrait"><img src="/img/thea_02.webp" alt="Thea 2 Incarnation of The Gods" loading="lazy" width="72" height="72"></div>
@@ -461,7 +461,7 @@
   <section id="changes">
     <h2><svg><use href="#i-bolt"/></svg><span data-i="changesTitle">Что изменилось в SS14</span></h2>
     <p class="lead" data-i="changesLead">Ключевые правки по официальному патчноуту и превью сезона</p>
-    <div class="changes" id="chList"><div class="ch up"><span class="ic">▲</span><span>Youga 3 «The Ultimate One»: новый трейт. Заклинания на Clockwork Core кастуются сами, крит сокращает кулдауны, ветки Dictator / Conqueror / Overlord</span></div><div class="ch up"><span class="ic">▲</span><span>Meteor: базовый урон 332–616 → 465–863</span></div><div class="ch up"><span class="ic">▲</span><span>Electric Overload: бонус молнии 15% → 16%</span></div><div class="ch down"><span class="ic">▼</span><span>Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%</span></div><div class="ch down"><span class="ic">▼</span><span>Selena: ground-урон трейта +0–20% → −20–0%; второй трейт даёт −30% скорости бега</span></div><div class="ch down"><span class="ic">▼</span><span>Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%</span></div><div class="ch down"><span class="ic">▼</span><span>Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%</span></div><div class="ch down"><span class="ic">▼</span><span>Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен</span></div><div class="ch down"><span class="ic">▼</span><span>Whirlwind / Berserking Blade: ловкость больше не основной атрибут; Arrow Rain: бонус от скорости снаряда ограничен 200%</span></div><div class="ch down"><span class="ic">▼</span><span>Freeze-билды: нерф колец на заморозку (Gemma 2 по тестам не задета)</span></div><div class="ch new"><span class="ic">✦</span><span>Тюрьма Tartarus: 16 камер, заключённые поглощают друг друга и растут, в конце бунт с лутом</span></div><div class="ch new"><span class="ic">✦</span><span>Followers: наёмники из заключённых. Связка «шесть проклятий» через Поэта (цепная молния → паралич → проклятия)</span></div><div class="ch new"><span class="ic">✦</span><span>Divine Ascent: 150 этажей, прыжки до 5 этажей, награда Pactspirit перенесена с 35 на 50 этаж</span></div></div>
+    <div class="changes" id="chList"><div class="ch up"><span class="ic">▲</span><span>Youga 3 «The Ultimate One»: новый трейт. Заклинания на Clockwork Core кастуются сами, крит сокращает кулдауны, ветки Dictator / Conqueror / Overlord</span></div><div class="ch up"><span class="ic">▲</span><span>Meteor: базовый урон 332–616 → 465–863</span></div><div class="ch up"><span class="ic">▲</span><span>Electric Overload: бонус молнии 15% → 16%</span></div><div class="ch down"><span class="ic">▼</span><span>Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%</span></div><div class="ch down"><span class="ic">▼</span><span>Selena: ground-урон трейта +0–20% → −20–0%; ещё один её талант даёт −30% скорости бега (к какому трейту он относится, пока не подтверждено)</span></div><div class="ch down"><span class="ic">▼</span><span>Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%</span></div><div class="ch down"><span class="ic">▼</span><span>Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%</span></div><div class="ch down"><span class="ic">▼</span><span>Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен</span></div><div class="ch down"><span class="ic">▼</span><span>Whirlwind / Berserking Blade: ловкость больше не основной атрибут; Arrow Rain: бонус от скорости снаряда ограничен 200%</span></div><div class="ch down"><span class="ic">▼</span><span>Freeze-билды: нерф колец на заморозку (Gemma 2 по тестам не задета)</span></div><div class="ch new"><span class="ic">✦</span><span>Тюрьма Tartarus: 16 камер, заключённые поглощают друг друга и растут, в конце бунт с лутом</span></div><div class="ch new"><span class="ic">✦</span><span>Followers: наёмники из заключённых. Связка «шесть проклятий» через Поэта (цепная молния → паралич → проклятия)</span></div><div class="ch new"><span class="ic">✦</span><span>Divine Ascent: 150 этажей, прыжки до 5 этажей, награда Pactspirit перенесена с 35 на 50 этаж</span></div></div>
   </section>
 
   <section id="sources">
