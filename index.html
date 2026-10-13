@@ -115,6 +115,10 @@ tr.more .pc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 tr.more .pc b{display:block;margin-bottom:2px}
 tr.more .pc .p b{color:var(--up)}
 tr.more .pc .c b{color:var(--down)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.lnk{padding:7px 12px;border-radius:9px;background:#ff8a2b1a;border:1px solid #ff8a2b55;color:var(--fire2);text-decoration:none;font-size:13px;font-weight:600}
+.lnk:hover{background:#ff8a2b33}
+.lnk.yt{background:#ff00001a;border-color:#ff4d4d66;color:#ff8080}
 .empty{text-align:center;color:var(--muted);padding:30px}
 
 /* Изменения */
@@ -234,7 +238,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", empty: "Ничего не найдено",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
@@ -246,7 +250,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", empty: "Nothing found",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
@@ -329,6 +333,8 @@ const sortVal = {
   hero: b => label(b.hero), tier: b => TIER_ORDER[b.tier], name: b => L(b.name), stage: b => b.stage,
   budget: b => b.budget, diff: b => b.diff, trend: b => ({up:0,"":1,down:2})[b.trend]
 };
+const ytSearch = b => "https://www.youtube.com/results?search_query=" +
+  encodeURIComponent(`Torchlight Infinite ${D.season.code} ${label(b.hero)} ${H[b.hero].trait} ${typeof b.name === "object" ? b.name.en : b.name}`);
 function renderBuilds() {
   const hero = $("#heroSel").value, q = $("#q").value.trim().toLowerCase();
   const rows = D.builds.map((b, i) => ({...b, i}))
@@ -351,6 +357,8 @@ function renderBuilds() {
       <td class="c-trend">${b.trend==="up"?`<span class="tr-up">▲ ${t("buff")}</span>`:b.trend==="down"?`<span class="tr-down">▼ ${t("nerf")}</span>`:"—"}</td>
     </tr>
     ${open.has(b.i) ? `<tr class="more"><td colspan="8"><div class="pc"><div class="p"><b>${t("pros")}</b>${esc(L(b.pros))}</div><div class="c"><b>${t("cons")}</b>${esc(L(b.cons))}</div></div>
+      <div class="links">${(b.links || []).map(([s,u]) => `<a class="lnk" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(s))}</a>`).join("")}
+        <a class="lnk yt" href="${ytSearch(b)}" target="_blank" rel="noopener">▶ ${t("ytVideos")}</a></div>
       <div style="margin-top:8px;color:var(--muted);font-size:12px">${t("source")}: ${esc(L(b.src))}</div></td></tr>` : ""}`).join("")
     : `<tr><td colspan="8" class="empty">${t("empty")}</td></tr>`;
 }

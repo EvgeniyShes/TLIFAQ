@@ -1,5 +1,6 @@
 // Данные сайта. Правь здесь — страница перерисуется сама.
 // Текст на двух языках: { ru: "...", en: "..." }. Если en нет — покажется ru.
+// links: [[{ ru, en }, "url"], ...] — прямые ссылки на гайды; ссылка на поиск YouTube добавляется сама.
 // trend: "up" — бафф/новинка в SS14, "down" — нерф в SS14, "" — без изменений.
 window.DATA = {
   season: {
@@ -119,10 +120,19 @@ window.DATA = {
   builds: [
     { hero: "youga_03", name: { ru: "Охотничьи клыки", en: "Hound Fangs" }, skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
       pros: { ru: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", en: "Auto-cast spells, crits reduce cooldowns; author claims zero to U8" },
-      cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" }, src: "Bilibili" },
+      cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" }, src: "Bilibili",
+      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"]] },
     { hero: "youga_03", name: { ru: "Династия", en: "Dynasty" }, skill: { ru: "Spacetime Dictator, снаряды", en: "Spacetime Dictator, projectiles" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "«K8 за день», снаряды пробивают и возвращаются от стен, 70% урона по тебе откладывается", en: "\"K8 in a day\", projectiles pierce and bounce off walls, 70% of damage taken is delayed" },
-      cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" }, src: "Bilibili" },
+      cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" }, src: "Bilibili",
+      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"]] },
+    { hero: "youga_01", name: "Chain Lightning", skill: "Chain Lightning", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
+      pros: { ru: "Популярный гайд на minmaxed, три стартовых варианта", en: "Popular minmaxed guide, three starter versions" },
+      cons: { ru: "Youga 2/3 сильнее на старте", en: "Youga 2/3 are stronger starters" }, src: "minmaxed",
+      links: [
+        [{ ru: "Гайд: Chain Lightning", en: "Guide: Chain Lightning" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusion-chain-lightning-vpun6p"],
+        [{ ru: "Гайд: 3 стартовых варианта", en: "Guide: 3 starter versions" }, "https://minmaxedarpg.com/guides/youga-1-starters-4w5cuw"]
+      ] },
     { hero: "youga_02", name: "Spacetime Elapse DoT", skill: "Mind Control + Channeled Depths", tier: "S", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дешёвый, сильный по боссам, +2 стака канала", en: "Cheap, strong vs bosses, +2 channel stacks" },
       cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" }, src: "IGGM, musabots" },
@@ -134,7 +144,11 @@ window.DATA = {
       cons: { ru: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", en: "Erosion and Ruinous Star nerfed in SS13, lower ceiling" }, src: "IGGM, musabots" },
     { hero: "gemma_02", name: { ru: "Frost Core / ледяные осколки", en: "Frost Core / Ice Shards" }, skill: "Frost Core, Chromatic Shot (Cold Tangle)", tier: "S", stage: "both", budget: 1, diff: 1, trend: "up",
       pros: { ru: "Контроль заморозкой, «всё T2 — стабильные 200E», нерф freeze в SS14 не задел", en: "Freeze control, \"full T2 gear — stable 200E\", untouched by the SS14 freeze nerf" },
-      cons: { ru: "Энтанглмент-версия ослаблена (убран лимит стаков)", en: "Entanglement version weakened (stack cap removed)" }, src: "minmaxed, Bilibili, 233leyuan" },
+      cons: { ru: "Энтанглмент-версия ослаблена (убран лимит стаков)", en: "Entanglement version weakened (stack cap removed)" }, src: "minmaxed, Bilibili, 233leyuan",
+      links: [
+        [{ ru: "Гайд: кампания на Frost Core", en: "Guide: Frost Core campaign" }, "https://minmaxedarpg.com/guides/campaign-gemma-2-frostbitten-heart-frost-core-guide-5ujbsm"],
+        [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl"]
+      ] },
     { hero: "bing_01", name: "Blast Nova", skill: { ru: "Бомбы-проджектайлы", en: "Projectile bombs" }, tier: "S", stage: "end", budget: 3, diff: 2, trend: "",
       pros: { ru: "Несколько бомб за каст, топ фарма", en: "Multiple bombs per cast, top farming" },
       cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" }, src: "musabots, IGGM" },
@@ -160,7 +174,8 @@ window.DATA = {
       cons: { ru: "Медленнее S-стартеров", en: "Slower than S-tier starters" }, src: "musabots" },
     { hero: "moto_02", name: { ru: "Самоподрыв двух генералов", en: "Twin Generals Self-Destruct" }, skill: { ru: "Synthetic Troop, самоподрыв", en: "Synthetic Troop, self-destruct" }, tier: "B", stage: "start", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Импорт кода билда, сбалансирован во всём", en: "Importable build code, well-rounded" },
-      cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" }, src: "233leyuan, Bilibili" },
+      cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" }, src: "233leyuan, Bilibili",
+      links: [[{ ru: "Гайд с кодом билда (233leyuan)", en: "Guide with build code (233leyuan)" }, "https://www.233leyuan.com/post-detail/2077457185859616768"]] },
     { hero: "moto_01", name: { ru: "Паучий танк без затрат", en: "Zero-Cost Spider Tank" }, skill: "Synthetic Troop", tier: "C", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Почти бесплатный", en: "Almost free" },
       cons: { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }, src: "233leyuan" },
