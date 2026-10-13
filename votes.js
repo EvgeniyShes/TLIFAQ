@@ -75,18 +75,20 @@ const SOURCES = [
 // Поправка за патч SS14 (явные нерфы/баффы из патчноута и блюпоста)
 // Поправка патча — только на долю источников прошлого сезона (old: true); прогнозы SS14 патч уже учли
 const PATCH = { rehan_01: -0.5, rehan_02: -0.5, selena_02: -0.5, rosa_02: -0.5, sage_01: -0.5, moto_02: -0.5 };
-const tierOf = x => x >= 3.5 ? "S" : x >= 2.5 ? "A" : x >= 1.5 ? "B" : "C";
+// S также по частоте: S поставили ≥ 50% веса источников, а A и выше — ≥ 75% (среднее сжимает лидеров к центру)
+const tierOf = (x, sShare = 0, aShare = 0) => x >= 3.5 || (sShare >= 0.5 && aShare >= 0.75 && x >= 3) ? "S" : x >= 2.5 ? "A" : x >= 1.5 ? "B" : "C";
 
 function calc(list) {
   const acc = {};
   for (const s of SOURCES) if (s.lists.includes(list))
     for (const [t, ids] of Object.entries(s.votes)) for (const id of ids.split(" ")) {
-      (acc[id] ||= { sum: 0, w: 0, ow: 0, from: [] });
+      (acc[id] ||= { sum: 0, w: 0, ow: 0, sw: 0, aw: 0, from: [] });
+      if (t === "S") acc[id].sw += s.w; if (SCORE[t] >= 3) acc[id].aw += s.w;
       acc[id].sum += SCORE[t] * s.w; acc[id].w += s.w; if (s.old) acc[id].ow += s.w; acc[id].from.push(`${s.id}:${t}`);
     }
   return Object.fromEntries(Object.entries(acc).map(([id, a]) => {
     const raw = a.sum / a.w, val = raw + (PATCH[id] || 0) * a.ow / a.w;
-    return [id, { val: +val.toFixed(2), tier: tierOf(val), weight: a.w, from: a.from.join(" ") }];
+    return [id, { val: +val.toFixed(2), tier: tierOf(val, a.sw / a.w, a.aw / a.w), sShare: +(a.sw / a.w).toFixed(2), weight: a.w, from: a.from.join(" ") }];
   }));
 }
 

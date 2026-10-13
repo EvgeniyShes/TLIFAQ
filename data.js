@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T18:15:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T18:18:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
@@ -58,14 +58,14 @@ window.DATA = {
         S: [
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
-          ["selena_01", "", { ru: "Lao Ke, R3plic и satu1kaa: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke, R3plic and satu1kaa: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }]
+          ["selena_01", "", { ru: "Lao Ke, R3plic и satu1kaa: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke, R3plic and satu1kaa: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }],
+          ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
+          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
+          ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }]
         ],
         A: [
-          ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
-          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
           ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
-          ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }],
           ["gemma_02", "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
           ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
@@ -102,15 +102,15 @@ window.DATA = {
         S: [
           ["youga_03", "up", { ru: "Lao Ke: единственный «бог» SS14; результатов на живом сезоне ещё нет", en: "Lao Ke: the only \"god\" of SS14; no live-season results yet" }],
           ["rosa_02", "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
-          ["sage_01", "down", { ru: "Сильнейший класс SS13 (100+ на 4000-м этаже), но с нерфами SS14 часть авторов ставит его ниже", en: "Strongest class of SS13 (100+ on floor 4000), but with SS14 nerfs some creators rate it lower" }]
+          ["sage_01", "down", { ru: "Сильнейший класс SS13 (100+ на 4000-м этаже), но с нерфами SS14 часть авторов ставит его ниже", en: "Strongest class of SS13 (100+ on floor 4000), but with SS14 nerfs some creators rate it lower" }],
+          ["rehan_02", "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
+          ["erika_01", "", { ru: "На 4000-м этаже в конце SS13 — единицы игроков; уступает Rosa 2", en: "Only a handful on floor 4000 at the end of SS13; behind Rosa 2" }]
         ],
         A: [
           ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }],
           ["bing_02", "", { ru: "Creative Genius: спеллбёрсты", en: "Creative Genius: Spell Bursts" }],
           ["iris_02", "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }],
           ["selena_01", "", { ru: "Прогноз: Lao Ke высоко оценивает на SS14, но в SS13 почти никто не играл", en: "Forecast: Lao Ke rates her highly for SS14, but almost nobody played her in SS13" }],
-          ["rehan_02", "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
-          ["erika_01", "", { ru: "На 4000-м этаже в конце SS13 — единицы игроков; уступает Rosa 2", en: "Only a handful on floor 4000 at the end of SS13; behind Rosa 2" }],
           ["thea_01", "new", { ru: "Трейт переработан в SS14, набирал игроков ещё в SS13", en: "Trait reworked in SS14, was gaining players in SS13" }],
           ["erika_02", "", { ru: "100+ игроков на 4000-м этаже в SS13; дорогая", en: "100+ players on floor 4000 in SS13; expensive" }],
           ["youga_02", "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }],
@@ -348,7 +348,7 @@ window.DATA = {
       codes: [
         [{ ru: "билд Адемки", en: "Ademka's build" }, "nnCFv5bgEfG9+AAAAAAAKQ=="]
       ] },
-    { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "A", stage: "both", budget: 2, diff: 2, trend: "down",
+    { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "S", stage: "both", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Без штрафа к скорости атаки, быстрый темп", en: "No attack speed penalty, fast pace" },
       cons: { ru: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", en: "Rage nerfed, Dexterity removed from Whirlwind and Berserking Blade" },
       src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
