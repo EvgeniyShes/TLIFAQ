@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /template.html
+
+Sitemap: https://tlifaq.pages.dev/sitemap.xml
