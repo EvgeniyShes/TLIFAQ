@@ -125,32 +125,55 @@ function seg(el, opts, cur, onPick) {
 
 // Тир-листы
 let mode = "starter", selected = null;
+const DETAIL = $("#detail");
 function renderTiers() {
   $("#tierHint").textContent = L(D.tiers[mode].hint);
+  $("#tierList").after(DETAIL); // вынуть плашку, пока перерисовываем список
   $("#tierList").innerHTML = TLI.tiersHTML(lang, mode, selected);
-  if (selected) showDetail(selected);
+  if (!selected) return;
+  showDetail(selected);
+  $("#tierList").querySelector(`.hcard[data-id="${selected}"]`).closest(".tier").after(DETAIL); // плашка — сразу под рядом героя
 }
 $("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b) return;
   mode = b.dataset.k; $("#tierSeg").innerHTML = TLI.phaseTabsHTML(lang, mode); renderTiers(); };
 $("#tierList").onclick = e => { const c = e.target.closest(".hcard"); if (!c) return;
   selected = selected === c.dataset.id ? null : c.dataset.id; renderTiers();
-  if (selected) $("#detail").scrollIntoView({block:"nearest", behavior:"smooth"}); else $("#detail").classList.remove("show"); };
+  if (selected) DETAIL.scrollIntoView({block:"nearest", behavior:"smooth"}); else DETAIL.classList.remove("show"); };
 
 function showDetail(id) {
-  const st = tierOf("starter", id), en = tierOf("endgame", id), cur = tierOf(mode, id);
-  const pill = (name, x) => x ? `<span class="pill" style="color:var(--${x.t})">${name}: ${x.t}</span>` : "";
-  $("#detail").innerHTML = `
-    <img src="${img(id)}" alt="">
-    <div>
-      <h3 class="serif">${label(id)} · ${esc(H[id].trait)}</h3>
-      <div class="pills">${pill(t("start"), st)}${pill(t("end"), en)}</div>
-      <div>${cur ? esc(L(cur.r[2])) : ""}</div>
-      <div class="pills">${D.builds.filter(b => b.hero === id).map(b => `<a class="pill" href="#builds" data-hero="${id}">⚔ ${esc(L(b.name))}</a>`).join("")}
-        <a class="pill hero-link" href="${pageUrl(lang, id)}">${t("heroPage")} →</a></div>
-    </div>`;
-  $("#detail").classList.add("show");
+  const st = tierOf("starter", id), en = tierOf("endgame", id);
+  const builds = D.builds.map((b, i) => ({...b, i})).filter(b => b.hero === id);
+  const tierBox = (x, list) => `<div class="d-tier" style="--tc:var(--${x.t})"><span class="tb" style="background:var(--${x.t})">${x.t}</span>
+      <div><b>${D.tiers[list].icon} ${esc(L(D.tiers[list].title))}</b><p>${esc(L(x.r[2]))}</p></div></div>`;
+  const card = b => `<button class="d-build" data-i="${b.i}" style="--tc:var(--${b.tier})">
+      <span class="d-btop"><span class="tb" style="background:var(--${b.tier})">${b.tier}</span><span class="d-bname">${esc(L(b.name))}</span></span>
+      <span class="d-bskill">${esc(L(b.skill))}</span>
+      <span class="d-bfoot"><span class="tag">${t(b.stage)}</span><span class="dots" title="${t("thBudget")}">${TLI.dots(b.budget)}</span>
+        ${(b.links || []).length ? `<span class="d-guides">📖 ${b.links.length}</span>` : ""}<span class="d-go">${t("openInTable")} ↓</span></span>
+    </button>`;
+  DETAIL.innerHTML = `
+    <button class="d-close" type="button" title="${t("close")}">✕</button>
+    <div class="d-head">
+      <img src="${img(id)}" alt="${label(id)}">
+      <div>
+        <h3 class="serif">${label(id)}</h3>
+        <div class="d-trait">${esc(H[id].trait)}</div>
+        <a class="d-page" href="${pageUrl(lang, id)}">${t("heroPage")} <span>— ${t("heroPageHint")}</span> →</a>
+      </div>
+    </div>
+    <div class="d-tiers">${tierBox(st, "starter")}${tierBox(en, "endgame")}</div>
+    <div class="d-btitle">${t("heroBuilds")} · ${builds.length}</div>
+    ${builds.length ? `<div class="d-builds">${builds.map(card).join("")}</div>` : `<p class="lead">${t("noBuildsShort")}</p>`}`;
+  DETAIL.classList.add("show");
 }
-$("#detail").onclick = e => { const a = e.target.closest("[data-hero]"); if (a) { $("#heroSel").value = a.dataset.hero; renderBuilds(); } };
+DETAIL.onclick = e => {
+  if (e.target.closest(".d-close")) { selected = null; renderTiers(); DETAIL.classList.remove("show"); return; }
+  const c = e.target.closest(".d-build"); if (!c) return;
+  const i = +c.dataset.i;
+  $("#heroSel").value = D.builds[i].hero; open.add(i);
+  if (stage !== "all") $('#stageSeg [data-k="all"]').click(); else renderBuilds();
+  document.querySelector(`tr.row[data-i="${i}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+};
 
 // Таблица билдов
 let stage = "all", sortK = "tier", sortDir = 1, open = new Set();

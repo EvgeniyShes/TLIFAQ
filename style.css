@@ -222,3 +222,33 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
 #changes .ch{background:var(--bg)}
 #sources{margin-top:24px}
 @media (max-width:760px){#changes{padding:20px 14px;margin-top:40px}}
+
+/* Плашка героя в тир-листе */
+.detail.show{display:block;position:relative}
+.d-close{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--muted);font-size:14px;cursor:pointer}
+.d-close:hover{color:var(--text);border-color:var(--fire)}
+.d-head{display:flex;gap:16px;align-items:center;padding-right:40px}
+.d-head h3{margin:0;font-size:22px}
+.d-trait{color:var(--muted);font-size:14px;margin:2px 0 10px}
+.d-page{display:inline-flex;flex-wrap:wrap;gap:4px;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;
+  color:#1a0d05;background:linear-gradient(180deg,#ff8a2b,#d9531e)}
+.d-page span{font-weight:500;opacity:.85}
+.d-page:hover{filter:brightness(1.1)}
+.d-tiers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.d-tier{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--tc)}
+.d-tier b{font-size:14px}.d-tier p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.d-btitle{font:700 13px Inter;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.d-builds{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.d-build{display:flex;flex-direction:column;gap:6px;text-align:left;padding:12px;border-radius:12px;cursor:pointer;font:inherit;color:var(--text);
+  background:var(--bg2);border:1px solid var(--line);border-top:3px solid var(--tc);transition:.15s}
+.d-build:hover{border-color:var(--fire);transform:translateY(-2px)}
+.d-btop{display:flex;gap:10px;align-items:center}
+.d-build .tb{width:28px;height:28px;font-size:14px;flex:none}
+.d-bname{font-weight:700;font-size:15px}
+.d-bskill{font-size:12px;color:var(--muted)}
+.d-bfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:auto;font-size:12px}
+.d-guides{color:var(--fire2);font-weight:600}
+.d-go{margin-left:auto;color:var(--fire2);font-weight:600}
+@media (max-width:760px){.d-tiers{grid-template-columns:1fr}.d-head img{width:72px;height:72px}}
+
+.tier + .detail{margin:-2px 0 12px}
