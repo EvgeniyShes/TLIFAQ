@@ -367,3 +367,9 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .method p{margin:4px 0 0}
 .ph-h{display:block;margin-top:10px;padding-top:8px;border-top:1px solid #ffffff14;font-size:13px;line-height:1.45;color:var(--muted)}
 .ph-h b{color:var(--text);font-weight:600}
+
+/* Донаты: CloudTips и Boosty — заметные кнопки */
+.tip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:14px;font-weight:600}
+.tip:hover{border-color:var(--fire);color:var(--fire2)}
+.boosty .bi{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:5px;background:#f15f2c;color:#fff;font:800 12px Inter}
+.boosty:hover{border-color:#f15f2c}
