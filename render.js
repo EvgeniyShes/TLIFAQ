@@ -19,7 +19,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", showAll: "показать все билды", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", authorsTitle: "Используемые материалы авторов", authorsNote: "Гайды, тир-листы и видео этих авторов использованы на сайте. Все права на материалы принадлежат авторам.", sourcesSub: "Откуда взяты данные", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", showAll: "показать все билды", buildCode: "Код билда для игры", hasCode: "код", copy: "Копировать", codeHint: "Скопируйте код и вставьте его в игре в окно импорта билда", thCode: "Код в игру", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", authorsTitle: "Используемые материалы авторов", authorsNote: "Гайды, тир-листы и видео этих авторов использованы на сайте. Все права на материалы принадлежат авторам.", sourcesSub: "Откуда взяты данные", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
     like: "Нравится", tip: "поддержать автора", tipTitle: "Поддержите проект — оставьте чаевые", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
@@ -38,7 +38,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", showAll: "show all builds", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", authorsTitle: "Creators whose materials are used", authorsNote: "Guides, tier lists and videos by these creators are used on this site. All rights to the materials belong to their authors.", sourcesSub: "Where the data comes from", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", showAll: "show all builds", buildCode: "In-game build code", hasCode: "code", copy: "Copy", codeHint: "Copy the code and paste it into the in-game build import window", thCode: "In-game code", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", authorsTitle: "Creators whose materials are used", authorsNote: "Guides, tier lists and videos by these creators are used on this site. All rights to the materials belong to their authors.", sourcesSub: "Where the data comes from", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
     like: "Like", tip: "buy me a coffee", tipTitle: "Support the project — leave a tip", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
@@ -96,11 +96,15 @@ function authorHTML(name) {
     .map(([k, t]) => `<a href="${a[k]}" target="_blank" rel="noopener nofollow">${t}</a>`);
   return `<span class="author">${esc(name)}${ch.length ? ` <span class="ch">(${ch.join(" · ")})</span>` : ""}</span>`;
 }
+// Коды билдов для импорта в игре: codes: [[подпись, "КОД"], ...]
+const codeChip = (lang, [label, code]) => `<span class="bcode">${label ? `<span class="cl">${esc(L(lang, label))}</span>` : ""}<code>${esc(code)}</code><button class="copy" type="button" data-code="${esc(code)}" title="${T(lang,"codeHint")}" onclick="navigator.clipboard.writeText(this.dataset.code).then(()=>{this.textContent='✓'})">${T(lang,"copy")}</button></span>`;
+const codesHTML = (lang, b) => (b.codes || []).length ? `<div class="codes"><b>🎮 ${T(lang,"buildCode")}</b><small>${T(lang,"codeHint")}</small>${b.codes.map(c => codeChip(lang, c)).join("")}</div>` : "";
 const guideBtn = (lang, [s, u, a]) => `<a class="lnk" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(lang, s))}${a ? `<span class="by"> · ${esc(a)}</span>` : ""}</a>`;
 
 function moreHTML(lang, b) {
   const authors = [...new Set((b.links || []).map(l => l[2]).filter(Boolean))];
   return `<div class="pc"><div class="p"><b>${T(lang,"pros")}</b>${esc(L(lang, b.pros))}</div><div class="c"><b>${T(lang,"cons")}</b>${esc(L(lang, b.cons))}</div></div>
+      ${codesHTML(lang, b)}
       <div class="links">${(b.links || []).map(l => guideBtn(lang, l)).join("")}
         <a class="lnk yt" href="${ytSearch(b)}" target="_blank" rel="noopener">▶ ${T(lang,"ytVideos")}</a></div>
       <div class="srcline">${authors.length ? `${T(lang,"credits")}: ${authors.map(authorHTML).join(", ")} · ` : ""}${T(lang,"source")}: ${esc(L(lang, b.src))}</div>`;
@@ -122,13 +126,14 @@ function authorsListHTML() {
 
 // Таблица «Гайды по билдам»: герой · билд · гайд · автор
 function guidesHTML(lang) {
-  return D.builds.flatMap(b => (b.links || []).map(l => [b, l]))
+  return D.builds.flatMap(b => b.links ? b.links.map((l, i) => [b, l, i]) : b.codes ? [[b, null, 0]] : [])
     .sort((x, y) => label(x[0].hero).localeCompare(label(y[0].hero)))
-    .map(([b, l]) => `<tr>
+    .map(([b, l, i]) => `<tr>
       <td><a class="who" href="${pageUrl(lang, b.hero)}"><img src="${img(b.hero)}" alt="" loading="lazy" width="32" height="32"><span><b>${label(b.hero)}</b><small>${esc(H[b.hero].trait)}</small></span></a></td>
       <td>${esc(L(lang, b.name))}</td>
-      <td>${guideBtn(lang, [l[0], l[1]])}</td>
-      <td>${l[2] ? authorHTML(l[2]) : "—"}</td>
+      <td>${l ? guideBtn(lang, [l[0], l[1]]) : "—"}</td>
+      <td>${l && l[2] ? authorHTML(l[2]) : "—"}</td>
+      <td>${i === 0 && (b.codes || []).length ? b.codes.map(c => codeChip(lang, c)).join("") : ""}</td>
     </tr>`).join("");
 }
 
@@ -138,7 +143,7 @@ function buildsHTML(lang, rows, open = new Set()) {
     <tr class="row" data-i="${b.i}" style="--tc:var(--${b.tier})">
       <td class="c-who"><div class="who"><img src="${img(b.hero)}" alt="" loading="lazy" width="40" height="40"><div><a href="${pageUrl(lang, b.hero)}"><b>${label(b.hero)}</b></a><small>${esc(H[b.hero].trait)}</small></div></div></td>
       <td class="c-tier"><span class="tb" style="background:var(--${b.tier})">${b.tier}</span></td>
-      <td class="c-name">${esc(L(lang, b.name))}</td>
+      <td class="c-name">${esc(L(lang, b.name))}${(b.codes || []).length ? ` <span class="has-code" title="${T(lang,"buildCode")}">🎮 ${T(lang,"hasCode")}</span>` : ""}</td>
       <td class="c-skill">${esc(L(lang, b.skill))}</td>
       <td class="c-stage"><span class="tag">${t(b.stage)}</span></td>
       <td class="c-budget" title="${t("thBudget")}"><span class="dots">${dots(b.budget)}</span></td>

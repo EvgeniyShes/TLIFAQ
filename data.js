@@ -141,6 +141,7 @@ window.DATA = {
 
   // Билды. stage: start | end | both; budget: 1–3; diff: 1–3
   // links: [[{ ru, en }, "url", "Автор"], ...] — ссылки на гайды; каналы автора — в authors
+  // codes: [[{ ru, en } или "", "КОД"], ...] — коды билда для импорта в игре (с указанием автора в links/src)
   builds: [
     { hero: "youga_03", name: { ru: "Охотничьи клыки", en: "Hound Fangs" }, skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
       pros: { ru: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", en: "Auto-cast spells, crits reduce cooldowns; author claims zero to U8" },
