@@ -93,7 +93,8 @@
 <script>
 const {D, H, esc, label, img, pageUrl, tierOf} = TLI, $ = s => document.querySelector(s);
 const lang = document.documentElement.lang;
-if (new URLSearchParams(location.search).get("lang") === "en" && lang !== "en") location.replace("/en/"); // старые ссылки ?lang=en
+const qLang = new URLSearchParams(location.search).get("lang"); // старые ссылки ?lang=..
+if (qLang && qLang !== lang) location.replace(qLang === "ru" ? "/ru/" : "/");
 const t = k => TLI.T(lang, k), L = x => TLI.L(lang, x), loc = lang === "ru" ? "ru-RU" : "en-US";
 const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } },
                 set(k, v) { try { localStorage.setItem(k, v); } catch {} } };

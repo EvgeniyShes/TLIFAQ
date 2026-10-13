@@ -10,7 +10,7 @@ globalThis.window = globalThis;
 require(path.join(root, "data.js"));
 require(path.join(root, "render.js"));
 const { D, H, SITE, T, L, esc, label, img, pageUrl, tierOf, dots } = TLI;
-const LANGS = ["ru", "en"];
+const LANGS = ["en", "ru"]; // английская версия — основная (корень сайта), русская — /ru/
 // Коды подтверждения владельца для Google Search Console / Яндекс Вебмастера (ставятся на главные страницы)
 const VERIFY = {
   "google-site-verification": "EC71OXZ5T7s2XkNTHbbgbjq7a0rILMfgmgyjy2NUmNI"
@@ -33,7 +33,7 @@ function head(lang, id, title, desc) {
     `<meta name="description" content="${esc(desc)}">`,
     `<link rel="canonical" href="${url}">`,
     ...LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${SITE + pageUrl(l, id)}">`),
-    `<link rel="alternate" hreflang="x-default" href="${SITE + pageUrl("ru", id)}">`,
+    `<link rel="alternate" hreflang="x-default" href="${SITE + pageUrl("en", id)}">`,
     `<meta property="og:type" content="website">`,
     `<meta property="og:site_name" content="TLI FAQ">`,
     `<meta property="og:title" content="${esc(title)}">`,
@@ -124,10 +124,10 @@ function heroPage(lang, id) {
 }
 
 // Сборка
-for (const dir of ["hero", "en"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
+for (const dir of ["hero", "en", "ru"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
 const urls = [];
 for (const lang of LANGS) {
-  write(lang === "en" ? "en/index.html" : "index.html", indexPage(lang));
+  write(lang === "ru" ? "ru/index.html" : "index.html", indexPage(lang));
   for (const id of Object.keys(H)) write(pageUrl(lang, id).slice(1) + "index.html", heroPage(lang, id));
 }
 for (const id of [null, ...Object.keys(H)]) urls.push(id);

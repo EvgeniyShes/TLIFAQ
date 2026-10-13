@@ -53,7 +53,7 @@ const img = id => `/img/${id}.webp`;
 const dots = n => "●".repeat(n) + `<i>${"●".repeat(3-n)}</i>`;
 const T = (lang, k) => I18N[lang][k];
 const L = (lang, x) => x && typeof x === "object" ? (x[lang] ?? x.ru) : x; // текст из data.js
-const pageUrl = (lang, id) => (lang === "en" ? "/en" : "") + (id ? `/hero/${id}/` : "/");
+const pageUrl = (lang, id) => (lang === "ru" ? "/ru" : "") + (id ? `/hero/${id}/` : "/");
 const ytSearch = b => "https://www.youtube.com/results?search_query=" +
   encodeURIComponent(`Torchlight Infinite ${D.season.code} ${label(b.hero)} ${H[b.hero].trait} ${typeof b.name === "object" ? b.name.en : b.name}`);
 
