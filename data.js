@@ -52,8 +52,8 @@ window.DATA = {
     starter: {
       title: { ru: "Старт лиги", en: "League start" },
       icon: "🚀",
-      desc: { ru: "Билд «с нуля»: пройти кампанию и ранний Netherrealm без шмота и заработать первую валюту. Потом на неё собирают эндгейм-билд.", en: "A from-scratch build: clear the campaign and early Netherrealm with no gear and farm your first currency. Then use it to gear an endgame build." },
-      hint: { ru: "Кампания и ранний Netherrealm без шмота, бюджет, скорость прогресса", en: "Campaign and early Netherrealm with no gear, budget, progression speed" },
+      desc: { ru: "Билд «с нуля»: пройти кампанию и ранний Netherrealm без шмота, без больших вложений убить первого тревелера — босса Сириуса — и заработать первую валюту. Потом на неё собирают эндгейм-билд.", en: "A from-scratch build: clear the campaign and early Netherrealm with no gear, kill the first Traveler boss (Sirius) without big investment, and farm your first currency. Then use it to gear an endgame build." },
+      hint: { ru: "Кампания, ранний Netherrealm и первый тревелер (Сириус) без больших вложений, бюджет, скорость прогресса", en: "Campaign, early Netherrealm and the first Traveler (Sirius) without big investment, budget, progression speed" },
       rows: {
         S: [
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
