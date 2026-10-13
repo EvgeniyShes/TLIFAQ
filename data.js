@@ -140,127 +140,165 @@ window.DATA = {
   },
 
   // Билды. stage: start | end | both; budget: 1–3; diff: 1–3
+  // links: [[{ ru, en }, "url", "Автор"], ...] — ссылки на гайды; каналы автора — в authors
   builds: [
     { hero: "youga_03", name: { ru: "Охотничьи клыки", en: "Hound Fangs" }, skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
       pros: { ru: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", en: "Auto-cast spells, crits reduce cooldowns; author claims zero to U8" },
-      cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" }, src: "Bilibili",
-      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"],
-        [{ ru: "Первый геймплей Youga 3 от Qingzi Tan (Bilibili)", en: "Youga 3 first gameplay by Qingzi Tan (Bilibili)" }, "https://www.bilibili.com/video/BV1BHHS6oEyh/"],
-        [{ ru: "Стартуют на Youga 3: DonTheCrown (tlicompendium)", en: "Starting on Youga 3: DonTheCrown (tlicompendium)" }, "https://tlicompendium.com/en/@DonTheCrown"],
-        [{ ru: "Стартуют на Youga 3: ManMauzer (tlicompendium)", en: "Starting on Youga 3: ManMauzer (tlicompendium)" }, "https://tlicompendium.com/en/@ManMauzer"]] },
+      cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" },
+      src: "Bilibili",
+      links: [
+        [{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/", "Ruguo Bu Shi Qi"],
+        [{ ru: "Первый геймплей Youga 3 от Qingzi Tan (Bilibili)", en: "Youga 3 first gameplay by Qingzi Tan (Bilibili)" }, "https://www.bilibili.com/video/BV1BHHS6oEyh/", "Qingzi Tan"]
+      ] },
     { hero: "youga_03", name: { ru: "Династия", en: "Dynasty" }, skill: { ru: "Spacetime Dictator, снаряды", en: "Spacetime Dictator, projectiles" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "«K8 за день», снаряды пробивают и возвращаются от стен, 70% урона по тебе откладывается", en: "\"K8 in a day\", projectiles pierce and bounce off walls, 70% of damage taken is delayed" },
-      cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" }, src: "Bilibili",
-      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"]] },
+      cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" },
+      src: "Bilibili",
+      links: [
+        [{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/", "Ruguo Bu Shi Qi"]
+      ] },
     { hero: "youga_01", name: "Chain Lightning", skill: "Chain Lightning", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Популярный гайд на minmaxed, три стартовых варианта", en: "Popular minmaxed guide, three starter versions" },
-      cons: { ru: "Youga 2/3 сильнее на старте", en: "Youga 2/3 are stronger starters" }, src: "minmaxed",
+      cons: { ru: "Youga 2/3 сильнее на старте", en: "Youga 2/3 are stronger starters" },
+      src: "minmaxed",
       links: [
-        [{ ru: "Гайд: Chain Lightning", en: "Guide: Chain Lightning" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusion-chain-lightning-vpun6p"],
-        [{ ru: "Гайд: 3 стартовых варианта", en: "Guide: 3 starter versions" }, "https://minmaxedarpg.com/guides/youga-1-starters-4w5cuw"]
+        [{ ru: "Гайд: Chain Lightning", en: "Guide: Chain Lightning" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusion-chain-lightning-vpun6p", "fragmentations"],
+        [{ ru: "Гайд: 3 стартовых варианта", en: "Guide: 3 starter versions" }, "https://minmaxedarpg.com/guides/youga-1-starters-4w5cuw", "fragmentations"]
       ] },
     { hero: "selena_01", name: "Howling Gale", skill: { ru: "Howling Gale, заморозка", en: "Howling Gale, freeze" }, tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Безопасный и комфортный старт: с 20 уровня автоматизация прямо в наборе умений, замораживающий клир на весь экран", en: "Safe, comfy start: built-in automation from level 20, screen-wide freezing clear" },
       cons: { ru: "Тяжело заходит в Profound, TM 8 придётся фармить дольше, чем другими героями", en: "Struggles to break into Profound; you'll farm TM 8 longer than with other heroes" },
       src: { ru: "R3plic (tlicompendium), гайд ItsAdiar (SS12)", en: "R3plic (tlicompendium), ItsAdiar's guide (SS12)" },
-      links: [[{ ru: "Гайд ItsAdiar: Howling Gale, стартер (SS12, tlicompendium)", en: "ItsAdiar's guide: Howling Gale starter (SS12, tlicompendium)" }, "https://tlicompendium.com/en/build-guides/itsadiar-selena-howling-gale-league-starter-s12"]] },
+      links: [
+        [{ ru: "Гайд ItsAdiar: Howling Gale, стартер (SS12, tlicompendium)", en: "ItsAdiar's guide: Howling Gale starter (SS12, tlicompendium)" }, "https://tlicompendium.com/en/build-guides/itsadiar-selena-howling-gale-league-starter-s12", "ItsAdiar"]
+      ] },
     { hero: "erika_01", name: "Corrosive Throw", skill: "Corrosive Throw", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Как Thunder Spike от BmLegolas, но с дистанции; билд не понерфили в SS14", en: "Like BmLegolas' Thunder Spike but ranged; the build was not nerfed in SS14" },
       cons: { ru: "Гайд пока помечен автором как незаконченный (WIP)", en: "The guide is still marked work-in-progress by its author" },
       src: { ru: "Shad0ws, R3plic (tlicompendium)", en: "Shad0ws, R3plic (tlicompendium)" },
-      links: [[{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13"]] },
+      links: [
+        [{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13", "Shad0ws"]
+      ] },
     { hero: "youga_02", name: "Spacetime Elapse DoT", skill: "Mind Control + Channeled Depths", tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дешёвый, сильный по боссам, +2 стака канала", en: "Cheap, strong vs bosses, +2 channel stacks" },
-      cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" }, src: "IGGM, musabots",
-      links: [[{ ru: "Гайд ShadyBroker: Mind Control, стартер (tlicompendium)", en: "ShadyBroker's guide: Mind Control starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/mind-control-youga-2-league-starter"]] },
+      cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" },
+      src: "IGGM, musabots",
+      links: [
+        [{ ru: "Гайд ShadyBroker: Mind Control, стартер (tlicompendium)", en: "ShadyBroker's guide: Mind Control starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/mind-control-youga-2-league-starter", "ShadyBroker"]
+      ] },
     { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot / Thunder Spike", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
-      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. По тесту игрока до старта: с Thunder Jawbone Thunder Spike — быстрый стартер, а Farewell Desire примерно удваивает урон",
-              en: "Very fast, no respec needed for endgame. A pre-season player test: Thunder Spike with Thunder Jawbone is a fast starter, and Farewell Desire roughly doubles damage" },
-      cons: { ru: "Хрупкая, частые смерти у новичков. Farewell Desire до старта стоила 90+ FE — цена на живом рынке будет другой",
-              en: "Fragile, frequent deaths for new players. Farewell Desire cost 90+ FE pre-season — live market price will differ" },
+      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. По тесту игрока до старта: с Thunder Jawbone Thunder Spike — быстрый стартер, а Farewell Desire примерно удваивает урон", en: "Very fast, no respec needed for endgame. A pre-season player test: Thunder Spike with Thunder Jawbone is a fast starter, and Farewell Desire roughly doubles damage" },
+      cons: { ru: "Хрупкая, частые смерти у новичков. Farewell Desire до старта стоила 90+ FE — цена на живом рынке будет другой", en: "Fragile, frequent deaths for new players. Farewell Desire cost 90+ FE pre-season — live market price will differ" },
       src: { ru: "IGGM, musabots, TreyexGaming, тест игрока на Reddit", en: "IGGM, musabots, TreyexGaming, player test on Reddit" },
-      links: [[{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"],
-        [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide"]] },
+      links: [
+        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
+        [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"]
+      ] },
     { hero: "carino_01", name: "Ice Lances / Chromatic Shot", skill: "Ice Lances, Chromatic Shot", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
-      pros: { ru: "По тесту игрока до старта: Ice Lances с Marksman bracers, Grudge и Control Spell убивает Traveler примерно на T2-шмоте; Chromatic Shot может быть ещё лучше",
-              en: "A pre-season player test: Ice Lances with Marksman bracers, Grudge and Control Spell kills the Traveler on roughly T2 gear; Chromatic Shot may be even better" },
+      pros: { ru: "По тесту игрока до старта: Ice Lances с Marksman bracers, Grudge и Control Spell убивает Traveler примерно на T2-шмоте; Chromatic Shot может быть ещё лучше", en: "A pre-season player test: Ice Lances with Marksman bracers, Grudge and Control Spell kills the Traveler on roughly T2 gear; Chromatic Shot may be even better" },
       cons: { ru: "Один непроверенный отзыв до старта; Carino 2 остаётся надёжнее", en: "A single unverified pre-season report; Carino 2 is still more reliable" },
       src: { ru: "тест игрока на Reddit", en: "player test on Reddit" },
-      links: [[{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"]] },
+      links: [
+        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"]
+      ] },
     { hero: "thea_03", name: "Blasphemer Erosion", skill: "Haunting Abomination / Mind Control", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Топ в начале и середине сезона", en: "Top tier early and mid season" },
-      cons: { ru: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", en: "Erosion and Ruinous Star nerfed in SS13, lower ceiling" }, src: "IGGM, musabots" },
+      cons: { ru: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", en: "Erosion and Ruinous Star nerfed in SS13, lower ceiling" },
+      src: "IGGM, musabots" },
     { hero: "gemma_02", name: { ru: "Frost Core / ледяные осколки", en: "Frost Core / Ice Shards" }, skill: "Frost Core, Chromatic Shot (Cold Tangle)", tier: "A", stage: "both", budget: 1, diff: 1, trend: "up",
       pros: { ru: "Контроль заморозкой, «всё T2 — стабильные 200E», нерф freeze в SS14 не задел", en: "Freeze control, \"full T2 gear — stable 200E\", untouched by the SS14 freeze nerf" },
-      cons: { ru: "Энтанглмент-версия ослаблена (убран лимит стаков)", en: "Entanglement version weakened (stack cap removed)" }, src: "minmaxed, Bilibili, 233leyuan",
+      cons: { ru: "Энтанглмент-версия ослаблена (убран лимит стаков)", en: "Entanglement version weakened (stack cap removed)" },
+      src: "minmaxed, Bilibili, 233leyuan",
       links: [
-        [{ ru: "Гайд: кампания на Frost Core", en: "Guide: Frost Core campaign" }, "https://minmaxedarpg.com/guides/campaign-gemma-2-frostbitten-heart-frost-core-guide-5ujbsm"],
-        [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl"]
+        [{ ru: "Гайд: кампания на Frost Core", en: "Guide: Frost Core campaign" }, "https://minmaxedarpg.com/guides/campaign-gemma-2-frostbitten-heart-frost-core-guide-5ujbsm", "minmaxed"],
+        [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl", "minmaxed"]
       ] },
     { hero: "bing_01", name: "Blast Nova", skill: { ru: "Бомбы-проджектайлы", en: "Projectile bombs" }, tier: "A", stage: "end", budget: 3, diff: 2, trend: "",
       pros: { ru: "Несколько бомб за каст, топ фарма", en: "Multiple bombs per cast, top farming" },
-      cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" }, src: "musabots, IGGM" },
-    { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" },
-      skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" },
-      tier: "S", stage: "both", budget: 3, diff: 3, trend: "",
-      pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее",
-              en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
-      cons: { ru: "Дорогие питомцы (Anubis на максимуме примерно удваивает урон), сложная механика Магусов, урон растёт хуже, чем у Rosa и Rehan; ловкость и сила должны быть равны",
-              en: "Expensive pets (maxed Anubis roughly doubles damage), complex Magus mechanics, damage scales worse than Rosa and Rehan; Dexterity and Strength must stay equal" },
+      cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" },
+      src: "musabots, IGGM" },
+    { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" }, skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" }, tier: "S", stage: "both", budget: 3, diff: 3, trend: "",
+      pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее", en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
+      cons: { ru: "Дорогие питомцы (Anubis на максимуме примерно удваивает урон), сложная механика Магусов, урон растёт хуже, чем у Rosa и Rehan; ловкость и сила должны быть равны", en: "Expensive pets (maxed Anubis roughly doubles damage), complex Magus mechanics, damage scales worse than Rosa and Rehan; Dexterity and Strength must stay equal" },
       src: { ru: "musabots, гайд instinct (SS13)", en: "musabots, instinct's guide (SS13)" },
       links: [
-        [{ ru: "Гайд instinct: прогрессия Iris 2 (Google Docs)", en: "instinct's guide: Iris 2 progression (Google Docs)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
-        [{ ru: "Стримы instinct (Twitch)", en: "instinct's streams (Twitch)" }, "https://www.twitch.tv/instinct_t"]
+        [{ ru: "Гайд instinct: прогрессия Iris 2 (Google Docs)", en: "instinct's guide: Iris 2 progression (Google Docs)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit", "instinct"]
       ] },
     { hero: "iris_01", name: "Growing Breeze Summoner", skill: "Spirit Magi", tier: "B", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
-      cons: { ru: "Не самый быстрый", en: "Not the fastest" }, src: "IGGM" },
+      cons: { ru: "Не самый быстрый", en: "Not the fastest" },
+      src: "IGGM" },
     { hero: "selena_02", name: "Ground Autowalk", skill: "Thorns Domain / Tidal Spring / Meteor", tier: "B", stage: "both", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Дешёвый «автобег» по картам; Meteor в SS14 бафнут", en: "Cheap auto-walk map clearing; Meteor buffed in SS14" },
-      cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
-      links: [[{ ru: "Гайд DonTheCrown: Frost Terra, стартер (tlicompendium)", en: "DonTheCrown's guide: Frost Terra starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/frost-terra-selena-2-season-starter"],
-        [{ ru: "Гайд Allie: стартер Selena 2 (tlicompendium)", en: "Allie's guide: Selena 2 starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/allies-selena-2-s13-starter-guide"]] },
+      cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" },
+      src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
+      links: [
+        [{ ru: "Гайд DonTheCrown: Frost Terra, стартер (tlicompendium)", en: "DonTheCrown's guide: Frost Terra starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/frost-terra-selena-2-season-starter", "DonTheCrown"],
+        [{ ru: "Гайд Allie: стартер Selena 2 (tlicompendium)", en: "Allie's guide: Selena 2 starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/allies-selena-2-s13-starter-guide", "Allie"]
+      ] },
     { hero: "sage_01", name: "Licorice Note Elixirs", skill: { ru: "Эликсиры + саммоны", en: "Elixirs + summons" }, tier: "A", stage: "end", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Хорошая защита, саммоны забирают урон", en: "Good defense, summons absorb damage" },
-      cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" }, src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" },
-      links: [[{ ru: "Разбор Sage на SS14 от Neng Miao (Bilibili; документ обещан после блюпоста)", en: "Sage SS14 breakdown by Neng Miao (Bilibili; document promised after the blue post)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/"],
-        [{ ru: "Гайд DonTheCrown: Chromatic Shot Sage, стартер (tlicompendium)", en: "DonTheCrown's guide: Chromatic Shot Sage starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/chromatic-shot-sage-season-starter"]] },
+      cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" },
+      src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" },
+      links: [
+        [{ ru: "Разбор Sage на SS14 от Neng Miao (Bilibili; документ обещан после блюпоста)", en: "Sage SS14 breakdown by Neng Miao (Bilibili; document promised after the blue post)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/", "Neng Miao"],
+        [{ ru: "Гайд DonTheCrown: Chromatic Shot Sage, стартер (tlicompendium)", en: "DonTheCrown's guide: Chromatic Shot Sage starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/chromatic-shot-sage-season-starter", "DonTheCrown"]
+      ] },
     { hero: "rosa_02", name: "Unsullied Blade", skill: "Mana stacking", tier: "A", stage: "end", budget: 3, diff: 3, trend: "down",
       pros: { ru: "Один из самых высоких потолков в игре", en: "One of the highest ceilings in the game" },
-      cons: { ru: "Дорогие перчатки из Deep Space, нерф Silver stance", en: "Expensive Deep Space gloves, Silver stance nerfed" }, src: "musabots, IGGM",
-      links: [[{ ru: "Гайд AgroMorph: прокачка Rosa 2 в кампании (tlicompendium)", en: "AgroMorph's guide: Rosa 2 campaign leveling (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-campaign-leveling"],
-        [{ ru: "Гайд AgroMorph: Spectral Slash, Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t7-traveler-setup"],
-        [{ ru: "Гайд AgroMorph: Spectral Slash, T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t8-1-outlaw-setup"]] },
+      cons: { ru: "Дорогие перчатки из Deep Space, нерф Silver stance", en: "Expensive Deep Space gloves, Silver stance nerfed" },
+      src: "musabots, IGGM",
+      links: [
+        [{ ru: "Гайд AgroMorph: прокачка Rosa 2 в кампании (tlicompendium)", en: "AgroMorph's guide: Rosa 2 campaign leveling (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-campaign-leveling", "AgroMorph"],
+        [{ ru: "Гайд AgroMorph: Spectral Slash, Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t7-traveler-setup", "AgroMorph"],
+        [{ ru: "Гайд AgroMorph: Spectral Slash, T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t8-1-outlaw-setup", "AgroMorph"]
+      ] },
     { hero: "bing_02", name: "Creative Genius Spellburst", skill: "Spell Burst", tier: "A", stage: "end", budget: 3, diff: 2, trend: "",
       pros: { ru: "Синергия спеллбёрста и питомцев", en: "Spell Burst and pet synergy" },
-      cons: { ru: "Шмот дорожает из-за популярности", en: "Gear prices rise with popularity" }, src: "ProGameGuides, musabots" },
+      cons: { ru: "Шмот дорожает из-за популярности", en: "Gear prices rise with popularity" },
+      src: "ProGameGuides, musabots" },
     { hero: "carino_02", name: "Lethal Flash", skill: { ru: "Проджектайлы, Deflection", en: "Projectiles, Deflection" }, tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Надёжный и удобный", en: "Reliable and comfortable" },
-      cons: { ru: "Медленнее S-стартеров", en: "Slower than S-tier starters" }, src: "musabots" },
+      cons: { ru: "Медленнее S-стартеров", en: "Slower than S-tier starters" },
+      src: "musabots" },
     { hero: "moto_02", name: { ru: "Самоподрыв двух генералов", en: "Twin Generals Self-Destruct" }, skill: { ru: "Synthetic Troop, самоподрыв", en: "Synthetic Troop, self-destruct" }, tier: "B", stage: "start", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Импорт кода билда, сбалансирован во всём", en: "Importable build code, well-rounded" },
-      cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" }, src: "233leyuan, Bilibili",
-      links: [[{ ru: "Гайд с кодом билда (233leyuan)", en: "Guide with build code (233leyuan)" }, "https://www.233leyuan.com/post-detail/2077457185859616768"]] },
+      cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" },
+      src: "233leyuan, Bilibili",
+      links: [
+        [{ ru: "Гайд с кодом билда (233leyuan)", en: "Guide with build code (233leyuan)" }, "https://www.233leyuan.com/post-detail/2077457185859616768", "233leyuan"]
+      ] },
     { hero: "moto_01", name: { ru: "Паучий танк без затрат", en: "Zero-Cost Spider Tank" }, skill: "Synthetic Troop", tier: "C", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Почти бесплатный", en: "Almost free" },
-      cons: { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }, src: "233leyuan" },
+      cons: { ru: "Слабее Moto 2", en: "Weaker than Moto 2" },
+      src: "233leyuan" },
     { hero: "rehan_01", name: { ru: "Whirlwind: от кампании до 250M", en: "Whirlwind: campaign to 250M" }, skill: "Groundshaker → Savage Charge → Whirlwind", tier: "B", stage: "start", budget: 2, diff: 2, trend: "",
-      pros: { ru: "Пошаговый гайд из 4 этапов: Groundshaker и Savage Charge в кампании, переход на Whirlwind с 60 уровня (~50k DPS), 250M DPS к 89 уровню с двуручным мечом. На каждом этапе снаряжение, скиллы, трейты, питомцы и таланты",
-              en: "Step-by-step guide in 4 setups: Groundshaker and Savage Charge in the campaign, Whirlwind from level 60 (~50k DPS), 250M DPS by level 89 with a two-handed sword. Each setup lists gear, skills, traits, pact spirits and talents" },
-      cons: { ru: "Это первая часть — эндгейм выйдет позже. В SS14 Whirlwind больше не использует ловкость: строки с Dexterity в снаряжении автор советует заменить на урон. Талант Indifference требует 200+ свободной энергии",
-              en: "This is Part 1 — endgame comes later. In SS14 Whirlwind no longer uses Dexterity: the author advises replacing Dexterity gear lines with damage. The Indifference talent needs 200+ unspent Energy" },
+      pros: { ru: "Пошаговый гайд из 4 этапов: Groundshaker и Savage Charge в кампании, переход на Whirlwind с 60 уровня (~50k DPS), 250M DPS к 89 уровню с двуручным мечом. На каждом этапе снаряжение, скиллы, трейты, питомцы и таланты", en: "Step-by-step guide in 4 setups: Groundshaker and Savage Charge in the campaign, Whirlwind from level 60 (~50k DPS), 250M DPS by level 89 with a two-handed sword. Each setup lists gear, skills, traits, pact spirits and talents" },
+      cons: { ru: "Это первая часть — эндгейм выйдет позже. В SS14 Whirlwind больше не использует ловкость: строки с Dexterity в снаряжении автор советует заменить на урон. Талант Indifference требует 200+ свободной энергии", en: "This is Part 1 — endgame comes later. In SS14 Whirlwind no longer uses Dexterity: the author advises replacing Dexterity gear lines with damage. The Indifference talent needs 200+ unspent Energy" },
       src: { ru: "гайд Travic (ред. 1, 12.10.2026); благодарности автора: Medicated, Brokugin, Marcus Nordstrom", en: "Travic's guide (rev. 1, Oct 12, 2026); author's credits: Medicated, Brokugin, Marcus Nordstrom" },
-      links: [[{ ru: "Travic на Twitch (автор гайда)", en: "Travic on Twitch (guide author)" }, "https://www.twitch.tv/travic"],
-        [{ ru: "Marcus Nordstrom на YouTube (видео по Rehan 1)", en: "Marcus Nordstrom on YouTube (Rehan 1 videos)" }, "https://www.youtube.com/@marcusnordstrom9251"]] },
+      links: [
+        [{ ru: "Видео-гайд: Whirlwind от кампании до 250M", en: "Video guide: Whirlwind, campaign to 250M" }, "https://www.youtube.com/watch?v=vUBZlHRlEZo", "Travic"]
+      ] },
     { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "A", stage: "both", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Без штрафа к скорости атаки, быстрый темп", en: "No attack speed penalty, fast pace" },
-      cons: { ru: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", en: "Rage nerfed, Dexterity removed from Whirlwind and Berserking Blade" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
-      links: [[{ ru: "Гайд AgroMorph: Spectral Slash, фарм T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-spectral-slash-8-1-any-farm"],
-        [{ ru: "Гайд AgroMorph: Thunder Spike, прокачка и Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Thunder Spike, leveling and T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-thunder-spike-leveling-and-t7-traveler-setup"]] },
+      cons: { ru: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", en: "Rage nerfed, Dexterity removed from Whirlwind and Berserking Blade" },
+      src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
+      links: [
+        [{ ru: "Гайд AgroMorph: Spectral Slash, фарм T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-spectral-slash-8-1-any-farm", "AgroMorph"],
+        [{ ru: "Гайд AgroMorph: Thunder Spike, прокачка и Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Thunder Spike, leveling and T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-thunder-spike-leveling-and-t7-traveler-setup", "AgroMorph"]
+      ] },
     { hero: "gemma_01", name: "Ice-Fire Fusion", skill: { ru: "Скиллы + шмот + таланты", en: "Skills + gear + talents" }, tier: "B", stage: "end", budget: 3, diff: 3, trend: "",
       pros: { ru: "Силён в полной сборке", en: "Strong when fully assembled" },
-      cons: { ru: "Долго и сложно собирается", en: "Slow and hard to assemble" }, src: "IGGM" }
+      cons: { ru: "Долго и сложно собирается", en: "Slow and hard to assemble" },
+      src: "IGGM" }
   ],
+
+  // Каналы авторов гайдов — только для указания авторства (мелкой строкой под гайдом)
+  authors: {
+    Travic: { youtube: "https://www.youtube.com/@Travic_", twitch: "https://www.twitch.tv/travic" },
+    instinct: { twitch: "https://www.twitch.tv/instinct_t" },
+    DonTheCrown: { youtube: "https://www.youtube.com/@DonTheCrown" }
+  },
 
   // Изменения SS14
   changes: [
@@ -293,8 +331,7 @@ window.DATA = {
     [{ ru: "minmaxed — гайды S14", en: "minmaxed — S14 guides" }, "https://minmaxedarpg.com/games/tli/seasons/s14"],
     [{ ru: "instinct — гайд по прогрессии Iris 2 (SS13)", en: "instinct — Iris 2 progression guide (SS13)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
     [{ ru: "R3plic — 5 (+1) проверенных стартеров SS14 (tlicompendium)", en: "R3plic — 5 (+1) battle-tested SS14 starters (tlicompendium)" }, "https://tlicompendium.com/en/news/5-1-battle-tested-starters-for-season-14-tartarus"],
-    [{ ru: "Travic — гайд Rehan 1 (Twitch)", en: "Travic — Rehan 1 guide (Twitch)" }, "https://www.twitch.tv/travic"],
-    [{ ru: "Marcus Nordstrom — видео по Torchlight: Infinite (YouTube)", en: "Marcus Nordstrom — Torchlight: Infinite videos (YouTube)" }, "https://www.youtube.com/@marcusnordstrom9251"],
+    [{ ru: "Travic — видео-гайд Rehan 1 (YouTube)", en: "Travic — Rehan 1 video guide (YouTube)" }, "https://www.youtube.com/watch?v=vUBZlHRlEZo"],
     [{ ru: "Pat404 — стартеры SS14: кого брать, а кого нет (YouTube)", en: "Pat404 — SS14 starters: who to pick (YouTube, Russian)" }, "https://www.youtube.com/watch?v=7y6-yvglxeQ"],
     [{ ru: "Little_practice — кем играть в лиге Tartarus (YouTube)", en: "Little_practice — who to play in Tartarus (YouTube, Russian)" }, "https://www.youtube.com/watch?v=s61o8_2aYN4"],
     [{ ru: "DonTheCrown — прогноз тир-листа SS14 (YouTube)", en: "DonTheCrown — SS14 tier list prediction (YouTube)" }, "https://www.youtube.com/watch?v=WOTBgd06l2U"],

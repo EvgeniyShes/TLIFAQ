@@ -252,3 +252,23 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
 @media (max-width:760px){.d-tiers{grid-template-columns:1fr}.d-head img{width:72px;height:72px}}
 
 .tier + .detail{margin:-2px 0 12px}
+
+/* Гайды и авторы */
+.lnk .by{font-weight:500;color:var(--muted)}
+.author{color:var(--text)}
+.author .ch{font-size:11px;color:var(--muted)}
+.author .ch a{color:var(--muted)}.author .ch a:hover{color:var(--fire2)}
+.gtbl{width:100%;border-collapse:collapse;font-size:14px}
+.gtbl th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
+.gtbl td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+.gtbl tr:hover td{background:#ffffff05}
+.gtbl .who{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit}
+.gtbl .who img{width:32px;height:32px;border-radius:50%}
+.gtbl .who b{display:block;font-size:13px}.gtbl .who small{color:var(--muted);font-size:11px}
+.gtbl .lnk{display:inline-block}
+@media (max-width:760px){
+  .gtbl thead{display:none}
+  .gtbl,.gtbl tbody,.gtbl tr,.gtbl td{display:block;width:100%}
+  .gtbl tr{padding:10px 0;border-bottom:1px solid var(--line)}
+  .gtbl td{border:0;padding:4px 0}
+}

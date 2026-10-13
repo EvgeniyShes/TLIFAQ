@@ -19,7 +19,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", showAll: "показать все билды", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", showAll: "показать все билды", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
     like: "Нравится", tip: "поддержать автора", tipTitle: "Поддержите проект — оставьте чаевые", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
@@ -38,7 +38,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", showAll: "show all builds", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", showAll: "show all builds", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
     like: "Like", tip: "buy me a coffee", tipTitle: "Support the project — leave a tip", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
@@ -89,11 +89,33 @@ function buildRows(lang, {stage = "all", hero = "", q = "", sortK = "tier", sort
 }
 
 // Плюсы/минусы, ссылки и источник билда — в раскрытой строке таблицы и на странице героя
+// Автор гайда: имя + его каналы мелкими ссылками (только для указания авторства)
+function authorHTML(name) {
+  const a = (D.authors || {})[name] || {};
+  const ch = [["youtube", "YouTube"], ["twitch", "Twitch"]].filter(([k]) => a[k])
+    .map(([k, t]) => `<a href="${a[k]}" target="_blank" rel="noopener nofollow">${t}</a>`);
+  return `<span class="author">${esc(name)}${ch.length ? ` <span class="ch">(${ch.join(" · ")})</span>` : ""}</span>`;
+}
+const guideBtn = (lang, [s, u, a]) => `<a class="lnk" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(lang, s))}${a ? `<span class="by"> · ${esc(a)}</span>` : ""}</a>`;
+
 function moreHTML(lang, b) {
+  const authors = [...new Set((b.links || []).map(l => l[2]).filter(Boolean))];
   return `<div class="pc"><div class="p"><b>${T(lang,"pros")}</b>${esc(L(lang, b.pros))}</div><div class="c"><b>${T(lang,"cons")}</b>${esc(L(lang, b.cons))}</div></div>
-      <div class="links">${(b.links || []).map(([s,u]) => `<a class="lnk" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(lang, s))}</a>`).join("")}
+      <div class="links">${(b.links || []).map(l => guideBtn(lang, l)).join("")}
         <a class="lnk yt" href="${ytSearch(b)}" target="_blank" rel="noopener">▶ ${T(lang,"ytVideos")}</a></div>
-      <div class="srcline">${T(lang,"source")}: ${esc(L(lang, b.src))}</div>`;
+      <div class="srcline">${authors.length ? `${T(lang,"credits")}: ${authors.map(authorHTML).join(", ")} · ` : ""}${T(lang,"source")}: ${esc(L(lang, b.src))}</div>`;
+}
+
+// Таблица «Гайды по билдам»: герой · билд · гайд · автор
+function guidesHTML(lang) {
+  return D.builds.flatMap(b => (b.links || []).map(l => [b, l]))
+    .sort((x, y) => label(x[0].hero).localeCompare(label(y[0].hero)))
+    .map(([b, l]) => `<tr>
+      <td><a class="who" href="${pageUrl(lang, b.hero)}"><img src="${img(b.hero)}" alt="" loading="lazy" width="32" height="32"><span><b>${label(b.hero)}</b><small>${esc(H[b.hero].trait)}</small></span></a></td>
+      <td>${esc(L(lang, b.name))}</td>
+      <td>${guideBtn(lang, [l[0], l[1]])}</td>
+      <td>${l[2] ? authorHTML(l[2]) : "—"}</td>
+    </tr>`).join("");
 }
 
 function buildsHTML(lang, rows, open = new Set()) {
@@ -126,5 +148,5 @@ const phaseTabsHTML = (lang, mode) => {
 const heroIndexHTML = lang => Object.keys(H).map(id => `<a href="${pageUrl(lang, id)}">${label(id)} · ${esc(H[id].trait)}</a>`).join("");
 
 g.TLI = { D, H, SITE, I18N, TREND, esc, label, img, dots, T, L, pageUrl, ytSearch, tierOf, tiersHTML, buildRows, moreHTML, buildsHTML,
-  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML };
+  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML, guidesHTML };
 })(typeof window !== "undefined" ? window : globalThis);
