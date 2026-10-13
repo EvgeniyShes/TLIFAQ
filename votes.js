@@ -39,6 +39,11 @@ const SOURCES = [
   { id: "satu1kaa", name: "satu1kaa, «Вилкой в глаз или стартер раз? Лигстартеры SS14» (YouTube)", w: 2, lists: ["start"],
     // рекомендованные стартеры; «Рехан» = Rehan 1, «три Карины» = Carino 1/2/3 (уточнил владелец)
     votes: { S: "carino_03 iris_02 selena_01 erika_01 rosa_02 rehan_01 carino_01 carino_02" } },
+  { id: "minmaxed_yt", name: "MinMaxedARPG, «META: Tierlist Torchlight Infinite Tartarus Season 14» (YouTube)", w: 2, lists: ["start", "end"],
+    // героев опознал по артам (тот же набор артов, что в тир-листе «на весь сезон»); «unsure» (Moto 1/2, Rosa 1, Iris 1) — без голоса
+    votes: { S: "thea_01 carino_01 rosa_02 gemma_02 rehan_02 sage_01",
+             A: "erika_01 youga_03 youga_02 iris_02 bing_02 selena_01 thea_03 bing_01 youga_01 rehan_01 gemma_01 carino_02 carino_03",
+             B: "selena_02 gemma_03 thea_02 erika_02 erika_03" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
