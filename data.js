@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updated: "13.10.2026",
+    updatedAt: "2026-10-13T14:20:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."

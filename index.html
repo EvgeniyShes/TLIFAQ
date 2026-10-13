@@ -371,7 +371,7 @@ function applyLang() {
   document.title = t("title");
   document.querySelectorAll("[data-i]:not([data-k])").forEach(el => el.textContent = t(el.dataset.i));
   $("#sBadge").textContent = `${t("season")} ${D.season.code} · ${D.season.name}`;
-  $("#sUpd").textContent = D.season.updated;
+  $("#sUpd").textContent = new Date(D.season.updatedAt).toLocaleString(lang === "ru" ? "ru-RU" : "en-US", {dateStyle: "medium", timeStyle: "short"});
   $("#sStart").textContent = L(D.season.startLabel);
   $("#sNote").textContent = L(D.season.note);
   $("#q").placeholder = t("search");
