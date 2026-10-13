@@ -42,6 +42,9 @@ h1{position:relative;margin:16px 0 6px;font-size:clamp(30px,6vw,56px);font-weigh
 .countdown div{min-width:68px;padding:10px 8px;background:#ffffff08;border:1px solid var(--line);border-radius:12px}
 .countdown b{display:block;font:800 26px Cinzel,serif;color:var(--fire2)}
 .countdown span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.upd{position:relative;display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 6px;margin:12px 0 0;padding:6px 14px;border-radius:999px;background:#ffffff08;border:1px solid var(--line);font-size:13px;color:var(--muted)}
+.upd b{color:var(--text);font-weight:600}
+.upd .dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 8px var(--up)}
 .note{position:relative;max-width:720px;margin:20px auto 0;font-size:13px;color:var(--muted)}
 
 /* Навигация */
@@ -184,7 +187,8 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
   <div class="wrap">
     <span class="badge" id="sBadge"></span>
     <h1>Torchlight: Infinite</h1>
-    <p class="sub"><span data-i="subtitle"></span> · <span data-i="dataFrom"></span> <span id="sUpd"></span></p>
+    <p class="sub" data-i="subtitle"></p>
+    <p class="upd"><span class="dot"></span><span data-i="updEvery"></span> · <span data-i="lastUpd"></span> <b id="sUpd"></b> <span id="sAgo"></span></p>
     <p class="sub" style="margin-top:18px"><span data-i="seasonStart"></span>: <b style="color:var(--fire2)" id="sStart"></b></p>
     <div class="countdown" id="cd"></div>
     <button class="like" id="likeBtn" hidden><span class="heart">♥</span> <span data-i="like"></span> <b id="likeN"></b></button>
@@ -250,7 +254,7 @@ const dots = n => "●".repeat(n) + `<i>${"●".repeat(3-n)}</i>`;
 // Переводы интерфейса
 const I18N = {
   ru: {
-    title: "TLI FAQ — тир-листы Torchlight: Infinite", season: "Сезон", subtitle: "Тир-листы героев и билдов", dataFrom: "данные от",
+    title: "TLI FAQ — тир-листы Torchlight: Infinite", season: "Сезон", subtitle: "Тир-листы героев и билдов", updEvery: "Информация обновляется раз в 12 часов", lastUpd: "последнее обновление:",
     seasonStart: "Старт сезона", running: "Сезон идёт", units: ["дней","часов","минут","секунд"],
     navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
     tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendNew: "трейт переработан", legendClick: "Нажми на героя, чтобы открыть подробности",
@@ -262,7 +266,7 @@ const I18N = {
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
   en: {
-    title: "TLI FAQ — Torchlight: Infinite tier lists", season: "Season", subtitle: "Hero and build tier lists", dataFrom: "data as of",
+    title: "TLI FAQ — Torchlight: Infinite tier lists", season: "Season", subtitle: "Hero and build tier lists", updEvery: "Updated every 12 hours", lastUpd: "last update:",
     seasonStart: "Season start", running: "Season is live", units: ["days","hours","min","sec"],
     navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
     tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendNew: "trait reworked", legendClick: "Click a hero for details",
@@ -390,7 +394,9 @@ function applyLang() {
   document.title = t("title");
   document.querySelectorAll("[data-i]:not([data-k])").forEach(el => el.textContent = t(el.dataset.i));
   $("#sBadge").textContent = `${t("season")} ${D.season.code} · ${D.season.name}`;
-  $("#sUpd").textContent = new Date(D.season.updatedAt).toLocaleString(lang === "ru" ? "ru-RU" : "en-US", {dateStyle: "medium", timeStyle: "short"});
+  const upd = new Date(D.season.updatedAt), loc = lang === "ru" ? "ru-RU" : "en-US", hrs = Math.round((upd - Date.now()) / 36e5);
+  $("#sUpd").textContent = upd.toLocaleString(loc, {dateStyle: "medium", timeStyle: "short"});
+  $("#sAgo").textContent = "(" + new Intl.RelativeTimeFormat(loc, {numeric: "auto"}).format(Math.abs(hrs) < 24 ? hrs : Math.round(hrs / 24), Math.abs(hrs) < 24 ? "hour" : "day") + ")";
   $("#sStart").textContent = L(D.season.startLabel);
   $("#sNote").textContent = L(D.season.note);
   $("#q").placeholder = t("search");
