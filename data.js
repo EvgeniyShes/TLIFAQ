@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T16:08:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T16:13:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -60,7 +60,7 @@ window.DATA = {
         S: [
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
-          ["youga_03", "up", { ru: "Новый трейт SS14: на Bilibili — «с нуля до U8», «K8 за день»", en: "New SS14 trait: Bilibili creators claim \"zero to U8\" and \"K8 in a day\"" }],
+          ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["thea_03",  "", { ru: "Erosion-урон, сильна в начале и середине", en: "Erosion damage, strong early and mid game" }]
         ],
         A: [
@@ -88,7 +88,7 @@ window.DATA = {
           ["gemma_01",  "", { ru: "Много деталей, собирается долго", en: "Many moving parts, slow to assemble" }],
           ["youga_01",  "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
-          ["carino_01", "", { ru: "Слабее Carino 2", en: "Weaker than Carino 2" }],
+          ["carino_01", "", { ru: "Слабее Carino 2. Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances — нужна проверка", en: "Weaker than Carino 2. A Reddit player killed the Traveler on ~T2 gear with Ice Lances pre-season — needs confirmation" }],
           ["rehan_01",  "down", { ru: "Нерф Berserk в SS14: 50–78% → 40–68%", en: "Berserk nerfed in SS14: 50–78% → 40–68%" }],
           ["selena_01", "down", { ru: "Терял игроков в SS13, в SS14 ещё и −30% скорости бега", en: "Lost players in SS13, plus −30% movement speed in SS14" }],
           ["thea_02",   "", { ru: "Слабый трейт, хуже всех в Divine Ascent", en: "Weak trait, worst in Divine Ascent" }]
@@ -148,7 +148,8 @@ window.DATA = {
     { hero: "youga_03", name: { ru: "Охотничьи клыки", en: "Hound Fangs" }, skill: "Spell Tangle + Clockwork Core", tier: "S", stage: "both", budget: 2, diff: 2, trend: "up",
       pros: { ru: "Автокаст заклинаний, крит сокращает кулдауны; по словам автора — с нуля до U8", en: "Auto-cast spells, crits reduce cooldowns; author claims zero to U8" },
       cons: { ru: "Новый трейт, цифры не проверены на живом сезоне", en: "New trait, numbers not yet tested on live" }, src: "Bilibili",
-      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"]] },
+      links: [[{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/"],
+        [{ ru: "Первый геймплей Youga 3 от Qingzi Tan (Bilibili)", en: "Youga 3 first gameplay by Qingzi Tan (Bilibili)" }, "https://www.bilibili.com/video/BV1BHHS6oEyh/"]] },
     { hero: "youga_03", name: { ru: "Династия", en: "Dynasty" }, skill: { ru: "Spacetime Dictator, снаряды", en: "Spacetime Dictator, projectiles" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "«K8 за день», снаряды пробивают и возвращаются от стен, 70% урона по тебе откладывается", en: "\"K8 in a day\", projectiles pierce and bounce off walls, 70% of damage taken is delayed" },
       cons: { ru: "Облачный билд до старта сезона", en: "Theorycraft before the season starts" }, src: "Bilibili",
@@ -163,9 +164,19 @@ window.DATA = {
     { hero: "youga_02", name: "Spacetime Elapse DoT", skill: "Mind Control + Channeled Depths", tier: "S", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дешёвый, сильный по боссам, +2 стака канала", en: "Cheap, strong vs bosses, +2 channel stacks" },
       cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" }, src: "IGGM, musabots" },
-    { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
-      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму", en: "Very fast, no respec needed for endgame" },
-      cons: { ru: "Хрупкая, частые смерти у новичков", en: "Fragile, frequent deaths for new players" }, src: "IGGM, musabots, TreyexGaming" },
+    { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot / Thunder Spike", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
+      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. По тесту игрока до старта: с Thunder Jawbone Thunder Spike — быстрый стартер, а Farewell Desire примерно удваивает урон",
+              en: "Very fast, no respec needed for endgame. A pre-season player test: Thunder Spike with Thunder Jawbone is a fast starter, and Farewell Desire roughly doubles damage" },
+      cons: { ru: "Хрупкая, частые смерти у новичков. Farewell Desire до старта стоила 90+ FE — цена на живом рынке будет другой",
+              en: "Fragile, frequent deaths for new players. Farewell Desire cost 90+ FE pre-season — live market price will differ" },
+      src: { ru: "IGGM, musabots, TreyexGaming, тест игрока на Reddit", en: "IGGM, musabots, TreyexGaming, player test on Reddit" },
+      links: [[{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"]] },
+    { hero: "carino_01", name: "Ice Lances / Chromatic Shot", skill: "Ice Lances, Chromatic Shot", tier: "C", stage: "start", budget: 1, diff: 2, trend: "",
+      pros: { ru: "По тесту игрока до старта: Ice Lances с Marksman bracers, Grudge и Control Spell убивает Traveler примерно на T2-шмоте; Chromatic Shot может быть ещё лучше",
+              en: "A pre-season player test: Ice Lances with Marksman bracers, Grudge and Control Spell kills the Traveler on roughly T2 gear; Chromatic Shot may be even better" },
+      cons: { ru: "Один непроверенный отзыв до старта; Carino 2 остаётся надёжнее", en: "A single unverified pre-season report; Carino 2 is still more reliable" },
+      src: { ru: "тест игрока на Reddit", en: "player test on Reddit" },
+      links: [[{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"]] },
     { hero: "thea_03", name: "Blasphemer Erosion", skill: "Haunting Abomination / Mind Control", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Топ в начале и середине сезона", en: "Top tier early and mid season" },
       cons: { ru: "Erosion и Ruinous Star понерфлены ещё в SS13, потолок ниже", en: "Erosion and Ruinous Star nerfed in SS13, lower ceiling" }, src: "IGGM, musabots" },
@@ -199,7 +210,8 @@ window.DATA = {
       cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" } },
     { hero: "sage_01", name: "Licorice Note Elixirs", skill: { ru: "Эликсиры + саммоны", en: "Elixirs + summons" }, tier: "A", stage: "end", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Хорошая защита, саммоны забирают урон", en: "Good defense, summons absorb damage" },
-      cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" }, src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" } },
+      cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" }, src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" },
+      links: [[{ ru: "Разбор Sage на SS14 от Neng Miao (Bilibili; документ обещан после блюпоста)", en: "Sage SS14 breakdown by Neng Miao (Bilibili; document promised after the blue post)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/"]] },
     { hero: "rosa_02", name: "Unsullied Blade", skill: "Mana stacking", tier: "A", stage: "end", budget: 3, diff: 3, trend: "down",
       pros: { ru: "Один из самых высоких потолков в игре", en: "One of the highest ceilings in the game" },
       cons: { ru: "Дорогие перчатки из Deep Space, нерф Silver stance", en: "Expensive Deep Space gloves, Silver stance nerfed" }, src: "musabots, IGGM" },
@@ -254,6 +266,10 @@ window.DATA = {
     [{ ru: "233leyuan — билды SS13", en: "233leyuan — SS13 builds" }, "https://www.233leyuan.com/post-detail/2077457185859616768"],
     [{ ru: "minmaxed — гайды S14", en: "minmaxed — S14 guides" }, "https://minmaxedarpg.com/games/tli/seasons/s14"],
     [{ ru: "instinct — гайд по прогрессии Iris 2 (SS13)", en: "instinct — Iris 2 progression guide (SS13)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
+    [{ ru: "Reddit — тесты стартеров SS14 игроками", en: "Reddit — players' SS14 starter tests" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"],
+    [{ ru: "Qingzi Tan — первый геймплей Youga 3 (Bilibili)", en: "Qingzi Tan — Youga 3 first gameplay (Bilibili)" }, "https://www.bilibili.com/video/BV1BHHS6oEyh/"],
+    [{ ru: "Neng Miao — разбор Sage на SS14 (Bilibili)", en: "Neng Miao — Sage SS14 breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/"],
+    [{ ru: "Enzee5 — TLI Resource Links, каталог гайдов сообщества", en: "Enzee5 — TLI Resource Links, community guide index" }, "https://docs.google.com/spreadsheets/d/1Vg6PbMnkWC2K7FXL9ojFwK7RQ-28gkeDzPDnwcKhiwo/edit"],
     [{ ru: "tlidb — база героев (портреты)", en: "tlidb — hero database (portraits)" }, "https://tlidb.com/en/Hero"]
   ]
 };

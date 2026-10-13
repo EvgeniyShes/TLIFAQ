@@ -29,6 +29,12 @@
 - **13.10.2026, гайд instinct по Iris 2** (вес 1,5, SS13). Старт: musabots A×2 + instinct A×1,5 → 3,0 → **A** (без изменений).
   Эндгейм: musabots S×2 + mmoexp S×2 + instinct A×1,5 → 3,73 → **S** (без изменений, но теперь 3 источника).
   Добавлено в билд Iris 2: путь от кампании до Deep Space, варианты Thunder/Fire Magus, плюсы/минусы, ссылки на гайд и Twitch.
+- **13.10.2026, архив исследования от ChatGPT** (прислал владелец). Агрегатор: веса даются по исходным источникам внутри него, а не самому архиву.
+  Важно: ChatGPT сам указывает, что видео **не смотрел** (Bilibili 412, YouTube ограничен) — только заголовки, описания и текстовые посты.
+  - Carino 1, старт: musabots C×2 + тест игрока на Reddit B×1 (не проверен мной: Reddit закрыт для меня) → 1,33 → **C** (без изменений). Добавлен билд Ice Lances / Chromatic Shot.
+  - Erika 1, старт: musabots S×2 + IGGM S×1 + Reddit S×1 → 4,0 → **S** (без изменений). В билд добавлены Thunder Spike, Thunder Jawbone, Farewell Desire (90+ FE — цена до старта).
+  - Youga 3: ≥4 автора на Bilibili — это интерес, а не сила (вес 0,5 каждый). Тир S остаётся **прогнозом**, источников с результатами пока нет.
+  - Тир-лист Lao Ke (Bilibili, 11.10), Q&A Marcus_Nordstrom (YouTube), SS13-тир KaidGames2: содержимое (сами тиры/цены) недоступно → на тиры не влияют, пометил 🔁.
 
 ## Проверенные страницы
 
@@ -45,6 +51,15 @@
 | [233leyuan — что играть в SS13](https://www.233leyuan.com/post-detail/2076310819657379840) | 13.10.2026 | ⛔ | Только вступление, без тиров |
 | [minmaxed — S14](https://minmaxedarpg.com/games/tli/seasons/s14) | 13.10.2026 | 🔁 | 4 гайда (Gemma 2 ×2, Youga 1 ×2). Новые гайды появляются |
 | [instinct — гайд по Iris 2 (Google Docs)](https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit) · [Twitch](https://www.twitch.tv/instinct_t) | 13.10.2026 | 🔁 | Прислал владелец. Прогрессия Iris 2 до Profound/Deep (SS13): Thunder/Fire Magus на актах, питомцы, трейты, грейды. Автор обещал дополнять |
+| [Reddit — Early SS14 League Start Ideas](https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/) | 13.10.2026 | 🔁 | Из архива ChatGPT. Тесты игроков: Carino 1 Ice Lances, Erika 1 Thunder Spike. Мне Reddit недоступен (403) — не проверено |
+| [Lao Ke — тир-лист SS14 (Bilibili)](https://www.bilibili.com/video/BV1yqpL6kEYK/) | 13.10.2026 | 🔁 | Из архива. Видео есть (11.10), сами тиры в описании не указаны — нужен просмотр/субтитры |
+| [Qingzi Tan — первый геймплей Youga 3](https://www.bilibili.com/video/BV1BHHS6oEyh/) | 13.10.2026 | ✅ | Из архива. Ссылка в билде Youga 3 |
+| Bilibili: Yin Ya, Ares, Zuiwu Canxue — Youga 3 (поиск, без прямых ссылок) | 13.10.2026 | ⛔ | Из архива. Только заголовки: три направления билда, теорикрафт |
+| [Neng Miao — Sage SS14 (Bilibili)](https://www.bilibili.com/video/BV1wnpj6VEvG/) | 13.10.2026 | 🔁 | Проверил сам: видео 11.10, документ гайда обещан после блюпоста — ждать |
+| [Marcus_Nordstrom — Q&A (YouTube)](https://youtu.be/Eahxy8XL42Q) | 13.10.2026 | 🔁 | Из архива. Цены билдов Youga 3/Bing 2/Iris 2, Rosa 2 vs Rehan 2 — ответы только в видео |
+| [KaidGames2 — тир-лист SS13 (YouTube)](https://www.youtube.com/watch?v=-w8exoAJOTU) | 13.10.2026 | ⛔ | Из архива. Прошлый сезон, сами тиры недоступны |
+| [Enzee5 — TLI Resource Links](https://docs.google.com/spreadsheets/d/1Vg6PbMnkWC2K7FXL9ojFwK7RQ-28gkeDzPDnwcKhiwo/edit) | 13.10.2026 | 🔁 | Из архива. Каталог гайдов сообщества (Bmlegolas, Shad0ws, Shadybroker, Fataouille, miakitten_, Corealis) — проверять каждый на актуальность |
+| [tlicompendium — Erika 1 Corrosive Throw (Shad0ws, WIP)](https://tlicompendium.com/) | 13.10.2026 | 🔁 | Из архива. Гайд в работе |
 | [tlidb — герои](https://tlidb.com/en/Hero) | 13.10.2026 | ✅ | Названия трейтов, портреты (`cdn.tlidb.com/.../Portrait/<Hero>/UI_Portrait_<Hero>_0N_128.webp`) |
 | [ProGameGuides tier list](https://progameguides.com/torchlight/torchlight-infinite-tier-list-best-characters-builds-ranked/) | 13.10.2026 | ⛔ | Без даты, сезон неясен |
 | [FandomWire classes tier list](https://fandomwire.com/torchlight-infinite-classes-tier-list/) | 13.10.2026 | ⛔ | Сезон Lunaria (SS12), устарел |
