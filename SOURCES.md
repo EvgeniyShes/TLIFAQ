@@ -51,6 +51,8 @@
   Изменения в эндгейме: Carino 2 B → A, Youga 2 B → A, Gemma 3 C → B, Rosa 1 C → B, Iris 1 C → B, Sage S → A (3,36 с учётом нерфа SS14). Когда будет ссылка на видео — указать автора и поднять вес до 2.
 - **13.10.2026, гайд Travic по Rehan 1 (Anger)** — PDF «TLI Tartarus Leaguestarter, Part 1», ред. 1 от 12.10.2026 (прислал владелец). Вес 1,5, только старт. Голос A (рабочий стартер с полным путём до 250M DPS).
   Rehan 1, старт: Lao Ke B×2 + DonTheCrown B×2 + Travic A×1,5 → 2,27, нерф SS14 −0,5 → 1,77 → **B** (без изменений). Добавлен билд Whirlwind с пересказом этапов; сам PDF на сайт не выкладываем — ссылки на Twitch автора и YouTube Marcus Nordstrom (автор благодарит его в гайде).
+- **13.10.2026, Pat404, «СТАРТЕРЫ SS14: кого брать, а кого нет?»** (YouTube, прислал владелец скриншотом). Вес 2, только старт. Героев опознал по портретам (сошлись все 28). «S, но дорого» и S → S, A+ → 3,5 (добавлено в шкалу votes.js). Автор оговаривает: тир-лист — ориентир, главное — ваши питомцы и комфорт.
+  Изменения на старте: Thea 1 B → A, Carino 1 C → B, Gemma 3 и Rosa 1 B → C.
 
 ## Проверенные страницы
 
@@ -70,6 +72,7 @@
 | [Reddit — Early SS14 League Start Ideas](https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/) | 13.10.2026 | 🔁 | Из архива ChatGPT. Тесты игроков: Carino 1 Ice Lances, Erika 1 Thunder Spike. Мне Reddit недоступен (403) — не проверено |
 | [Lao Ke — тир-лист SS14 (Bilibili)](https://www.bilibili.com/video/BV1yqpL6kEYK/) | 13.10.2026 | ✅ | Тиры расшифрованы по скриншотам из поста на DCInside (см. ниже). Вес 2, оба списка |
 | [DonTheCrown — NO BAIT TIER LIST SS14 (YouTube)](https://www.youtube.com/watch?v=WOTBgd06l2U) | 13.10.2026 | 🔁 | Прислал владелец (скриншот тир-листа). Прогноз силы/популярности на SS14, все 28 трейтов. Вес 2 |
+| [Pat404 — стартеры SS14 (YouTube)](https://www.youtube.com/watch?v=7y6-yvglxeQ) | 13.10.2026 | ✅ | Тир-лист стартеров с ценами сборок, все 28 трейтов. Вес 2 |
 | Travic — PDF «TLI Tartarus Leaguestarter, Part 1» ([Twitch](https://www.twitch.tv/travic)) | 13.10.2026 | 🔁 | Rehan 1, 4 этапа до 250M. Автор обещает Part 2+ и новые редакции — проверять номер редакции. YouTube-канал автора не найден |
 | [Marcus Nordstrom (YouTube)](https://www.youtube.com/@marcusnordstrom9251) | 13.10.2026 | 🔁 | Видео по Rehan 1 и ответы на вопросы с Reddit (цены билдов) |
 | [DCInside — пост со скриншотами Lao Ke и статистикой SS13](https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605) | 13.10.2026 | ✅ | Через ChatGPT. 3 скриншота тир-листа Lao Ke (SS14) + таблица «игроков на 4000-м этаже» по итогам SS13 |
