@@ -10,8 +10,8 @@ window.DATA = {
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
     updatedAt: "2026-10-13T17:46:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
-      ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
-      en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
+      ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
+      en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
     }
   },
 
