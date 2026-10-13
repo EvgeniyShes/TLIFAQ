@@ -373,3 +373,5 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .tip:hover{border-color:var(--fire);color:var(--fire2)}
 .boosty .bi{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:5px;background:#f15f2c;color:#fff;font:800 12px Inter}
 .boosty:hover{border-color:#f15f2c}
+.actions{flex-direction:column;gap:12px}
+.tips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
