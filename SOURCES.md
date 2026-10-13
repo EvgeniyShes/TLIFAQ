@@ -58,6 +58,7 @@
 - **13.10.2026, satu1kaa, «Вилкой в глаз или стартер раз? Лигстартеры SS14»** (YouTube, 11.10.2026; описание прочитано через Chrome владельца). Вес 2, только старт: Carino 3, Iris 2, Selena 1, Erika 1, Rosa 2 → S. Итог: Iris 2 и Selena 1 на старте A → S.
   Добавлены коды билдов: Iris 2 (instinct), Erika 1 15T (Мия / BmLegolas), Rosa 2 ~500B, Carino 3 ~45B и ~900B (новый билд), Selena 1 Scorching Beam — новый билд с гайдом Smith (tlicompendium, обновлён 05.09.2026).
   Владелец уточнил: «Рехан» = Rehan 1 (код Адемки, t.me/torchdwg — отдельный билд), «Карины Танглы» = общий код для Carino 1/2/3, «Роза» = Rosa 2. Голоса satu1kaa за Rehan 1, Carino 1, Carino 2 добавлены — тиры не изменились.
+- **13.10.2026, SephGoesGaming** — видео «S14 Builds Are Ready!» (10.10.2026) и два гайда на tlicompendium: Iris 2 Erosion Magus и Youga 1 Ice Lances, оба «кампания → Profound». Вес 1,5, оба списка, голос A за каждый. Добавлены два билда. Итог: Iris 2 S → A на старте (3,46) и в эндгейме (3,45) — на волосок ниже порога S.
 
 ## Проверенные страницы
 
@@ -80,6 +81,7 @@
 | [Pat404 — стартеры SS14 (YouTube)](https://www.youtube.com/watch?v=7y6-yvglxeQ) | 13.10.2026 | ✅ | Тир-лист стартеров с ценами сборок, все 28 трейтов. Вес 2 |
 | [Little_practice — кем играть в Tartarus (YouTube)](https://www.youtube.com/watch?v=s61o8_2aYN4) | 13.10.2026 | ✅ | Тир-лист по шаблону DonTheCrown, все 28 трейтов. Вес 1 (похож на адаптацию Don) |
 | [satu1kaa — лигстартеры SS14 (YouTube)](https://www.youtube.com/watch?v=CeWW7KZI9Co) | 13.10.2026 | ✅ | Рекомендации стартеров + коды билдов в описании. Описание YouTube видно только через браузер владельца (без входа — проверка «не бот») |
+| [SephGoesGaming — S14 Builds Are Ready (YouTube)](https://www.youtube.com/watch?v=0hBikw3DX68) | 13.10.2026 | ✅ | Гайды Iris 2 Erosion Magus и Youga 1 Ice Lances (tlicompendium) |
 | [Smith — Selena 1 Scorching Beam (tlicompendium)](https://tlicompendium.com/en/build-guides/scorching-ignite-deep-space-mapping) | 13.10.2026 | 🔁 | Гайд SS13 (05.09.2026), фарм Deep Space |
 | Travic — PDF «TLI Tartarus Leaguestarter, Part 1» ([Twitch](https://www.twitch.tv/travic)) | 13.10.2026 | 🔁 | Rehan 1, 4 этапа до 250M. Автор обещает Part 2+ и новые редакции — проверять номер редакции. YouTube-канал автора не найден |
 | [Marcus Nordstrom (YouTube)](https://www.youtube.com/@marcusnordstrom9251) | 13.10.2026 | 🔁 | Видео по Rehan 1 и ответы на вопросы с Reddit (цены билдов) |

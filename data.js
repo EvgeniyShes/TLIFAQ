@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T17:40:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T17:43:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -58,29 +58,29 @@ window.DATA = {
         S: [
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
-          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }],
-          ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }]
+          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }]
         ],
         A: [
+          ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
           ["gemma_02", "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
           ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
+          ["carino_02", "", { ru: "Надёжный, но Lao Ke ставит ниже: «хороший, просто нет места»", en: "Reliable, but Lao Ke rates it lower: \"good, just no room\"" }],
           ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
           ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }],
           ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
           ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
-          ["carino_02", "", { ru: "Надёжный, но Lao Ke ставит ниже: «хороший, просто нет места»", en: "Reliable, but Lao Ke rates it lower: \"good, just no room\"" }],
           ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
           ["bing_01", "", { ru: "Недорогой билд против боссов, по картам можно автобегом", en: "Cheap bossing build, maps can be auto-run" }]
         ],
         B: [
           ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
           ["thea_03", "", { ru: "Erosion-урон, сильна в начале и середине", en: "Erosion damage, strong early and mid game" }],
+          ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
           ["iris_01", "", { ru: "Саммонер, доводит до T8, хорош для фарма Flame Elementium", en: "Summoner, carries to T8, good for Flame Elementium farming" }],
           ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }],
           ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }],
-          ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
           ["youga_01", "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["rehan_01", "down", { ru: "Нерф Berserk в SS14, но есть подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Berserk nerfed in SS14, but Travic has a detailed guide — campaign to 250M damage with Whirlwind" }],
           ["thea_02", "", { ru: "Lao Ke: «демон» — Tenacity-билд, но упирается в ожерелье и бюджет", en: "Lao Ke: \"demon\" — Tenacity build, but limited by the necklace and budget" }],
@@ -100,10 +100,10 @@ window.DATA = {
       hint: { ru: "Частота в топах Divine Ascent и Supreme Showdown, фарм и урон по боссам", en: "Presence in top Divine Ascent and Supreme Showdown ranks, farming and boss damage" },
       rows: {
         S: [
-          ["youga_03", "up", { ru: "Lao Ke: единственный «бог» SS14; результатов на живом сезоне ещё нет", en: "Lao Ke: the only \"god\" of SS14; no live-season results yet" }],
-          ["iris_02", "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }]
+          ["youga_03", "up", { ru: "Lao Ke: единственный «бог» SS14; результатов на живом сезоне ещё нет", en: "Lao Ke: the only \"god\" of SS14; no live-season results yet" }]
         ],
         A: [
+          ["iris_02", "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }],
           ["rosa_02", "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
           ["sage_01", "down", { ru: "Сильнейший класс SS13 (100+ на 4000-м этаже), но с нерфами SS14 часть авторов ставит его ниже", en: "Strongest class of SS13 (100+ on floor 4000), but with SS14 nerfs some creators rate it lower" }],
           ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }],
@@ -120,8 +120,8 @@ window.DATA = {
         B: [
           ["thea_01", "new", { ru: "Трейт переработан в SS14, набирал игроков ещё в SS13", en: "Trait reworked in SS14, was gaining players in SS13" }],
           ["carino_03", "", { ru: "В топе на 3-й день SS13, но до 4000-го этажа дошли единицы; Lao Ke — «демон»", en: "Top tier on SS13 day 3, but few reached floor 4000; Lao Ke: \"demon\"" }],
-          ["thea_03", "", { ru: "Больше урона, чем у Youga 2, но дорогой предмет памяти", en: "More damage than Youga 2, but an expensive memory item" }],
           ["youga_01", "", { ru: "Набирал игроков в SS13, популярный гайд Chain Lightning", en: "Gained players in SS13, popular Chain Lightning guide" }],
+          ["thea_03", "", { ru: "Больше урона, чем у Youga 2, но дорогой предмет памяти", en: "More damage than Youga 2, but an expensive memory item" }],
           ["moto_02", "down", { ru: "Понерфлен до сезона, но в SS13 результаты лучше ожиданий (51 игрок на 4000-м этаже)", en: "Nerfed pre-season, but SS13 results beat expectations (51 players on floor 4000)" }],
           ["gemma_01", "", { ru: "Силён в полной сборке, но терял игроков", en: "Strong when complete, but lost players" }],
           ["rehan_01", "down", { ru: "Набирал игроков, но Berserk понерфлен", en: "Gained players, but Berserk nerfed" }],
@@ -180,6 +180,14 @@ window.DATA = {
       links: [
         [{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13", "Shad0ws"]
       ] },
+    { hero: "youga_01", name: { ru: "Ice Lances: от кампании до Profound", en: "Ice Lances: campaign to Profound" }, skill: "Ice Lances", tier: "B", stage: "both", budget: 1, diff: 1, trend: "",
+      pros: { ru: "Автокаст уже с 75 уровня за счёт трейта (I'm an Illusion) — удобно на телефоне, дорогие активаторы не нужны. Этапы до Profound, до ~5T урона", en: "Auto-cast from level 75 via the trait (I'm an Illusion) — great on mobile, no pricey activation mediums needed. Stages up to Profound, up to ~5T damage" },
+      cons: { ru: "В SS14 понерфили кольца на Frostbite — в T8 станет тяжелее", en: "SS14 nerfed Frostbite rings — T8 gets harder" },
+      src: { ru: "гайд SephGoesGaming (tlicompendium, 10.10.2026)", en: "SephGoesGaming's guide (tlicompendium, Oct 10, 2026)" },
+      links: [
+        [{ ru: "Гайд: Youga 1 Ice Lances, кампания → Profound (tlicompendium)", en: "Guide: Youga 1 Ice Lances, campaign → Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga1-ice-lances-campaign-to-profound-s14", "SephGoesGaming"],
+        [{ ru: "Видео: сборки на S14 (YouTube)", en: "Video: S14 builds (YouTube)" }, "https://www.youtube.com/watch?v=0hBikw3DX68", "SephGoesGaming"]
+      ] },
     { hero: "youga_02", name: "Spacetime Elapse DoT", skill: "Mind Control + Channeled Depths", tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дешёвый, сильный по боссам, +2 стака канала", en: "Cheap, strong vs bosses, +2 channel stacks" },
       cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" },
@@ -226,7 +234,7 @@ window.DATA = {
       pros: { ru: "Несколько бомб за каст, топ фарма", en: "Multiple bombs per cast, top farming" },
       cons: { ru: "Нужны вложения, на старте средне", en: "Needs investment, average at start" },
       src: "musabots, IGGM" },
-    { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" }, skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" }, tier: "S", stage: "both", budget: 3, diff: 3, trend: "",
+    { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" }, skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" }, tier: "A", stage: "both", budget: 3, diff: 3, trend: "",
       pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее", en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
       cons: { ru: "Дорогие питомцы (Anubis на максимуме примерно удваивает урон), сложная механика Магусов, урон растёт хуже, чем у Rosa и Rehan; ловкость и сила должны быть равны", en: "Expensive pets (maxed Anubis roughly doubles damage), complex Magus mechanics, damage scales worse than Rosa and Rehan; Dexterity and Strength must stay equal" },
       src: { ru: "musabots, гайд instinct (SS13)", en: "musabots, instinct's guide (SS13)" },
@@ -236,6 +244,14 @@ window.DATA = {
       ],
       codes: [
         [{ ru: "билд instinct (в игре: Instinct#5138)", en: "instinct's build (in game: Instinct#5138)" }, "eW8BDIGgEfG5tQAAAAAAPg=="]
+      ] },
+    { hero: "iris_02", name: { ru: "Erosion Magus: от кампании до Profound", en: "Erosion Magus: campaign to Profound" }, skill: "Summon Erosion / Fire / Frost Magus", tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Более автоматическая игра — удобно на телефоне (легче, чем Rock Magus). Этапы: кампания, T7, T8, Profound; до ~1T урона. Автор прошёл с ним SS13 до убийства на SS20", en: "More automated playstyle — great on mobile (easier than Rock Magus). Stages: campaign, T7, T8, Profound; up to ~1T damage. The author took it through SS13 to an SS20 kill" },
+      cons: { ru: "Питомец Scale of Original Sin обязателен — сила и ловкость должны быть равны. Магусы теряют здоровье, нужен сильный реген", en: "The Scale of Original Sin pact spirit is a must — Strength and Dexterity must be equal. Magi lose life, so you need strong regen" },
+      src: { ru: "гайд SephGoesGaming (tlicompendium, 10.10.2026)", en: "SephGoesGaming's guide (tlicompendium, Oct 10, 2026)" },
+      links: [
+        [{ ru: "Гайд: Iris 2 Erosion Magus, кампания → Profound (tlicompendium)", en: "Guide: Iris 2 Erosion Magus, campaign → Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/iris2-erosion-magus-campaign-to-profound-s14", "SephGoesGaming"],
+        [{ ru: "Видео: сборки на S14 (YouTube)", en: "Video: S14 builds (YouTube)" }, "https://www.youtube.com/watch?v=0hBikw3DX68", "SephGoesGaming"]
       ] },
     { hero: "iris_01", name: "Growing Breeze Summoner", skill: "Spirit Magi", tier: "B", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
@@ -351,6 +367,7 @@ window.DATA = {
     Travic: { youtube: "https://www.youtube.com/@Travic_", twitch: "https://www.twitch.tv/travic" },
     instinct: { twitch: "https://www.twitch.tv/instinct_t" },
     "Адемка": { url: "https://t.me/torchdwg" },
+    SephGoesGaming: { youtube: "https://www.youtube.com/@SephGoesGaming", twitch: "https://www.twitch.tv/sephgoesgaming" },
     satu1kaa: { youtube: "https://www.youtube.com/@satu1kaa", twitch: "https://www.twitch.tv/satu1kaa" },
     DonTheCrown: { youtube: "https://www.youtube.com/@DonTheCrown" },
     Pat404: { youtube: "https://www.youtube.com/@Pat404Games" },
@@ -398,6 +415,7 @@ window.DATA = {
     [{ ru: "Pat404 — стартеры SS14: кого брать, а кого нет (YouTube)", en: "Pat404 — SS14 starters: who to pick (YouTube, Russian)" }, "https://www.youtube.com/watch?v=7y6-yvglxeQ"],
     [{ ru: "Little_practice — кем играть в лиге Tartarus (YouTube)", en: "Little_practice — who to play in Tartarus (YouTube, Russian)" }, "https://www.youtube.com/watch?v=s61o8_2aYN4"],
     [{ ru: "satu1kaa — лигстартеры SS14 и коды билдов (YouTube)", en: "satu1kaa — SS14 league starters and build codes (YouTube, Russian)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co"],
+    [{ ru: "SephGoesGaming — гайды Iris 2 и Youga 1 на SS14 (tlicompendium)", en: "SephGoesGaming — Iris 2 and Youga 1 SS14 guides (tlicompendium)" }, "https://www.youtube.com/watch?v=0hBikw3DX68"],
     [{ ru: "DonTheCrown — прогноз тир-листа SS14 (YouTube)", en: "DonTheCrown — SS14 tier list prediction (YouTube)" }, "https://www.youtube.com/watch?v=WOTBgd06l2U"],
     [{ ru: "Lao Ke — тир-лист SS14 (Bilibili)", en: "Lao Ke — SS14 tier list (Bilibili)" }, "https://www.bilibili.com/video/BV1yqpL6kEYK/"],
     [{ ru: "DCInside — скриншоты тир-листа Lao Ke и статистика 4000-го этажа SS13", en: "DCInside — Lao Ke tier list screenshots and SS13 floor-4000 stats" }, "https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605"],

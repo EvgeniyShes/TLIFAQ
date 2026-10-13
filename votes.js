@@ -55,6 +55,7 @@ const SOURCES = [
              C: "iris_01 moto_01 gemma_01 thea_01 carino_02 gemma_03 carino_01 rosa_01 carino_03 youga_02 bing_01 erika_01 thea_02 selena_01" } },
   { id: "instinct", name: "instinct, гайд Iris 2 (SS13)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02" } },
   { id: "travic", name: "Travic, гайд Rehan 1 от кампании до 250M (Twitch, ред. 1)", w: 1.5, lists: ["start"], votes: { A: "rehan_01" } },
+  { id: "seph", name: "SephGoesGaming, гайды Iris 2 Erosion Magus и Youga 1 Ice Lances до Profound (SS14)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02 youga_01" } },
   { id: "reddit", name: "Reddit, тесты стартеров до старта", w: 1, lists: ["start"], votes: { B: "carino_01", S: "erika_01" } },
   { id: "bili_titles", name: "Bilibili, заголовки про Youga 3", w: 0.5, lists: ["start", "end"], votes: { S: "youga_03" } },
   { id: "selena1_old", name: "Selena 1: тир SS7 и гайд maxroll до T7", w: 0.5, lists: ["start"], votes: { B: "selena_01" } },
