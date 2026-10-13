@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T17:15:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T17:18:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -85,7 +85,7 @@ window.DATA = {
           ["youga_01", "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["gemma_03", "", { ru: "Нужны вложения", en: "Needs investment" }],
           ["rosa_01", "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }],
-          ["rehan_01", "down", { ru: "Нерф Berserk в SS14: 50–78% → 40–68%", en: "Berserk nerfed in SS14: 50–78% → 40–68%" }]
+          ["rehan_01", "down", { ru: "Нерф Berserk в SS14, но есть подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Berserk nerfed in SS14, but Travic has a detailed guide — campaign to 250M damage with Whirlwind" }]
         ],
         C: [
           ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
@@ -244,6 +244,14 @@ window.DATA = {
     { hero: "moto_01", name: { ru: "Паучий танк без затрат", en: "Zero-Cost Spider Tank" }, skill: "Synthetic Troop", tier: "C", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Почти бесплатный", en: "Almost free" },
       cons: { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }, src: "233leyuan" },
+    { hero: "rehan_01", name: { ru: "Whirlwind: от кампании до 250M", en: "Whirlwind: campaign to 250M" }, skill: "Groundshaker → Savage Charge → Whirlwind", tier: "B", stage: "start", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Пошаговый гайд из 4 этапов: Groundshaker и Savage Charge в кампании, переход на Whirlwind с 60 уровня (~50k DPS), 250M DPS к 89 уровню с двуручным мечом. На каждом этапе снаряжение, скиллы, трейты, питомцы и таланты",
+              en: "Step-by-step guide in 4 setups: Groundshaker and Savage Charge in the campaign, Whirlwind from level 60 (~50k DPS), 250M DPS by level 89 with a two-handed sword. Each setup lists gear, skills, traits, pact spirits and talents" },
+      cons: { ru: "Это первая часть — эндгейм выйдет позже. В SS14 Whirlwind больше не использует ловкость: строки с Dexterity в снаряжении автор советует заменить на урон. Талант Indifference требует 200+ свободной энергии",
+              en: "This is Part 1 — endgame comes later. In SS14 Whirlwind no longer uses Dexterity: the author advises replacing Dexterity gear lines with damage. The Indifference talent needs 200+ unspent Energy" },
+      src: { ru: "гайд Travic (ред. 1, 12.10.2026); благодарности автора: Medicated, Brokugin, Marcus Nordstrom", en: "Travic's guide (rev. 1, Oct 12, 2026); author's credits: Medicated, Brokugin, Marcus Nordstrom" },
+      links: [[{ ru: "Travic на Twitch (автор гайда)", en: "Travic on Twitch (guide author)" }, "https://www.twitch.tv/travic"],
+        [{ ru: "Marcus Nordstrom на YouTube (видео по Rehan 1)", en: "Marcus Nordstrom on YouTube (Rehan 1 videos)" }, "https://www.youtube.com/@marcusnordstrom9251"]] },
     { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "A", stage: "both", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Без штрафа к скорости атаки, быстрый темп", en: "No attack speed penalty, fast pace" },
       cons: { ru: "Нерф ярости, у Whirlwind и Berserking Blade убрана ловкость", en: "Rage nerfed, Dexterity removed from Whirlwind and Berserking Blade" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
@@ -285,6 +293,8 @@ window.DATA = {
     [{ ru: "minmaxed — гайды S14", en: "minmaxed — S14 guides" }, "https://minmaxedarpg.com/games/tli/seasons/s14"],
     [{ ru: "instinct — гайд по прогрессии Iris 2 (SS13)", en: "instinct — Iris 2 progression guide (SS13)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit"],
     [{ ru: "R3plic — 5 (+1) проверенных стартеров SS14 (tlicompendium)", en: "R3plic — 5 (+1) battle-tested SS14 starters (tlicompendium)" }, "https://tlicompendium.com/en/news/5-1-battle-tested-starters-for-season-14-tartarus"],
+    [{ ru: "Travic — гайд Rehan 1 (Twitch)", en: "Travic — Rehan 1 guide (Twitch)" }, "https://www.twitch.tv/travic"],
+    [{ ru: "Marcus Nordstrom — видео по Torchlight: Infinite (YouTube)", en: "Marcus Nordstrom — Torchlight: Infinite videos (YouTube)" }, "https://www.youtube.com/@marcusnordstrom9251"],
     [{ ru: "DonTheCrown — прогноз тир-листа SS14 (YouTube)", en: "DonTheCrown — SS14 tier list prediction (YouTube)" }, "https://www.youtube.com/watch?v=WOTBgd06l2U"],
     [{ ru: "Lao Ke — тир-лист SS14 (Bilibili)", en: "Lao Ke — SS14 tier list (Bilibili)" }, "https://www.bilibili.com/video/BV1yqpL6kEYK/"],
     [{ ru: "DCInside — скриншоты тир-листа Lao Ke и статистика 4000-го этажа SS13", en: "DCInside — Lao Ke tier list screenshots and SS13 floor-4000 stats" }, "https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605"],

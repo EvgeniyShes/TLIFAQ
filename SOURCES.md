@@ -49,6 +49,8 @@
   - **R3plic, «5 (+1) Battle-Tested Starters for SS14»** (tlicompendium, 12.10, вес 2, только старт): Erika 1, Selena 1, Youga 2, Rehan 2, Youga 3 → S. После него Erika 1 и Selena 1 на старте → **S**. Добавлены билды Selena 1 Howling Gale и Erika 1 Corrosive Throw, ссылки на гайды BmLegolas, ShadyBroker, AgroMorph, DonTheCrown, Allie, ItsAdiar, Shad0ws.
 - **13.10.2026, скриншот тир-листа с YouTube «на весь сезон»** (прислал владелец, автор и ссылка не указаны). Подписей нет — героев опознал по артам, сверяясь с подписанным тир-листом DonTheCrown (сошлись все 28). Вес 1 (автор неизвестен), только эндгейм. SSS и S → S, A → A, B → B, F → C.
   Изменения в эндгейме: Carino 2 B → A, Youga 2 B → A, Gemma 3 C → B, Rosa 1 C → B, Iris 1 C → B, Sage S → A (3,36 с учётом нерфа SS14). Когда будет ссылка на видео — указать автора и поднять вес до 2.
+- **13.10.2026, гайд Travic по Rehan 1 (Anger)** — PDF «TLI Tartarus Leaguestarter, Part 1», ред. 1 от 12.10.2026 (прислал владелец). Вес 1,5, только старт. Голос A (рабочий стартер с полным путём до 250M DPS).
+  Rehan 1, старт: Lao Ke B×2 + DonTheCrown B×2 + Travic A×1,5 → 2,27, нерф SS14 −0,5 → 1,77 → **B** (без изменений). Добавлен билд Whirlwind с пересказом этапов; сам PDF на сайт не выкладываем — ссылки на Twitch автора и YouTube Marcus Nordstrom (автор благодарит его в гайде).
 
 ## Проверенные страницы
 
@@ -68,6 +70,8 @@
 | [Reddit — Early SS14 League Start Ideas](https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/) | 13.10.2026 | 🔁 | Из архива ChatGPT. Тесты игроков: Carino 1 Ice Lances, Erika 1 Thunder Spike. Мне Reddit недоступен (403) — не проверено |
 | [Lao Ke — тир-лист SS14 (Bilibili)](https://www.bilibili.com/video/BV1yqpL6kEYK/) | 13.10.2026 | ✅ | Тиры расшифрованы по скриншотам из поста на DCInside (см. ниже). Вес 2, оба списка |
 | [DonTheCrown — NO BAIT TIER LIST SS14 (YouTube)](https://www.youtube.com/watch?v=WOTBgd06l2U) | 13.10.2026 | 🔁 | Прислал владелец (скриншот тир-листа). Прогноз силы/популярности на SS14, все 28 трейтов. Вес 2 |
+| Travic — PDF «TLI Tartarus Leaguestarter, Part 1» ([Twitch](https://www.twitch.tv/travic)) | 13.10.2026 | 🔁 | Rehan 1, 4 этапа до 250M. Автор обещает Part 2+ и новые редакции — проверять номер редакции. YouTube-канал автора не найден |
+| [Marcus Nordstrom (YouTube)](https://www.youtube.com/@marcusnordstrom9251) | 13.10.2026 | 🔁 | Видео по Rehan 1 и ответы на вопросы с Reddit (цены билдов) |
 | [DCInside — пост со скриншотами Lao Ke и статистикой SS13](https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605) | 13.10.2026 | ✅ | Через ChatGPT. 3 скриншота тир-листа Lao Ke (SS14) + таблица «игроков на 4000-м этаже» по итогам SS13 |
 | [Qingzi Tan — первый геймплей Youga 3](https://www.bilibili.com/video/BV1BHHS6oEyh/) | 13.10.2026 | ✅ | Из архива. Ссылка в билде Youga 3 |
 | Bilibili: Yin Ya, Ares, Zuiwu Canxue — Youga 3 (поиск, без прямых ссылок) | 13.10.2026 | ⛔ | Из архива. Только заголовки: три направления билда, теорикрафт |
