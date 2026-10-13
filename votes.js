@@ -1,0 +1,71 @@
+// Голоса источников за тиры. Методика — в SOURCES.md (веса, пороги S/A/B/C).
+// node votes.js — печатает расчёт по каждому трейту и расхождения с тирами в data.js.
+// Новый источник: добавить в SOURCES ниже (вес + голоса), запустить, перенести изменения в data.js.
+const SCORE = { S: 4, A: 3, B: 2, C: 1 };
+const SOURCES = [
+  { id: "laoke", name: "Lao Ke, тир-лист SS14 (Bilibili, скриншоты с DCInside)", w: 2, lists: ["start", "end"],
+    // уровни автора: «бог»+«бессмертный» → S, «демон» → A, «призрак» → B; «наблюдаем» — без голоса; Gemma 2 на скриншотах нет
+    votes: { S: "youga_03 rosa_02 iris_02 sage_01 selena_01",
+             A: "erika_03 moto_02 carino_03 bing_01 thea_03 thea_02 erika_02 gemma_01 bing_02",
+             B: "gemma_03 rosa_01 rehan_01 rehan_02 carino_02 erika_01 selena_02" } },
+  { id: "don", name: "DonTheCrown, прогноз тир-листа SS14 (YouTube)", w: 2, lists: ["start", "end"],
+    // Powerful and Popular → S, Strong Options → A, Less Played → B, Off Meta / Not Played → C
+    votes: { S: "sage_01 youga_03 rehan_02 rosa_02 bing_02 erika_01",
+             A: "gemma_02 iris_02 selena_01 erika_02 carino_02 youga_02",
+             B: "bing_01 selena_02 thea_01 moto_02 erika_03 rehan_01 youga_01",
+             C: "carino_01 rosa_01 gemma_03 thea_03 carino_03 iris_01 thea_02 moto_01 gemma_01" } },
+  { id: "r3plic", name: "R3plic, «5 (+1) Battle-Tested Starters for SS14» (tlicompendium)", w: 2, lists: ["start"],
+    // подборка лучших стартеров без порядка → S
+    votes: { S: "erika_01 selena_01 youga_02 rehan_02 youga_03" } },
+  { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
+    votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
+             B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
+  { id: "iggm", name: "IGGM, стартеры SS13", w: 1, lists: ["start"],
+    votes: { S: "selena_02 youga_02 rehan_02 iris_01 erika_01", A: "bing_01 thea_03 gemma_02 sage_01",
+             B: "rosa_01 gemma_01", C: "rosa_02" } },
+  { id: "mmoexp", name: "mmoexp / musabots, эндгейм (SS13, 3-й день)", w: 1, lists: ["end"],
+    votes: { S: "rosa_02 carino_03 gemma_02 bing_01 iris_02 sage_01", A: "selena_02 rehan_02 erika_01 erika_03 bing_02 moto_02",
+             C: "thea_02" } },
+  { id: "kr4000", name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
+    // 100+ → S, 30–73 → A, 10–22 → B, меньше 10 → C
+    votes: { S: "sage_01 iris_02 erika_02", A: "rosa_02 bing_02 moto_02 gemma_02 rehan_02",
+             B: "rehan_01 selena_02 erika_03 thea_03 youga_01",
+             C: "iris_01 moto_01 gemma_01 thea_01 carino_02 gemma_03 carino_01 rosa_01 carino_03 youga_02 bing_01 erika_01 thea_02 selena_01" } },
+  { id: "instinct", name: "instinct, гайд Iris 2 (SS13)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02" } },
+  { id: "reddit", name: "Reddit, тесты стартеров до старта", w: 1, lists: ["start"], votes: { B: "carino_01", S: "erika_01" } },
+  { id: "bili_titles", name: "Bilibili, заголовки про Youga 3", w: 0.5, lists: ["start", "end"], votes: { S: "youga_03" } },
+  { id: "selena1_old", name: "Selena 1: тир SS7 и гайд maxroll до T7", w: 0.5, lists: ["start"], votes: { B: "selena_01" } },
+  { id: "owner", name: "Владелец сайта: Selena 1 хороша на актах", w: 0.5, lists: ["start"], votes: { A: "selena_01" } }
+];
+// Поправка за патч SS14 (явные нерфы/баффы из патчноута и блюпоста)
+const PATCH = { rehan_01: -0.5, rehan_02: -0.5, selena_02: -0.5, rosa_02: -0.5, sage_01: -0.5, moto_02: -0.5 };
+const tierOf = x => x >= 3.5 ? "S" : x >= 2.5 ? "A" : x >= 1.5 ? "B" : "C";
+
+function calc(list) {
+  const acc = {};
+  for (const s of SOURCES) if (s.lists.includes(list))
+    for (const [t, ids] of Object.entries(s.votes)) for (const id of ids.split(" ")) {
+      (acc[id] ||= { sum: 0, w: 0, from: [] });
+      acc[id].sum += SCORE[t] * s.w; acc[id].w += s.w; acc[id].from.push(`${s.id}:${t}`);
+    }
+  return Object.fromEntries(Object.entries(acc).map(([id, a]) => {
+    const raw = a.sum / a.w, val = raw + (PATCH[id] || 0);
+    return [id, { val: +val.toFixed(2), tier: tierOf(val), weight: a.w, from: a.from.join(" ") }];
+  }));
+}
+
+if (require.main === module) {
+  globalThis.window = globalThis; require("./data.js");
+  const D = window.DATA;
+  for (const [list, key] of [["start", "starter"], ["end", "endgame"]]) {
+    const res = calc(list), cur = {};
+    for (const [t, rows] of Object.entries(D.tiers[key].rows)) for (const [id] of rows) cur[id] = t;
+    console.log(`\n=== ${list} ===`);
+    for (const id of Object.keys(D.heroes)) {
+      const r = res[id];
+      const line = r ? `${r.val.toFixed(2)} → ${r.tier}  (вес ${r.weight}${r.weight < 2 ? ", мало данных" : ""})` : "нет голосов";
+      console.log(`${(r && r.tier !== cur[id]) ? "≠" : " "} ${id.padEnd(10)} сейчас ${cur[id]}  ${line}   ${r ? r.from : ""}`);
+    }
+  }
+}
+module.exports = { calc, SOURCES, PATCH };
