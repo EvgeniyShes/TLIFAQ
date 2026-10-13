@@ -227,6 +227,7 @@
     <div class="filters">
       <div class="seg" id="stageSeg"><button data-k="all" class="on">Все</button><button data-k="start" class="">Старт</button><button data-k="end" class="">Эндгейм</button></div>
       <select id="heroSel"><option value="">Все герои</option><option value="bing_01">Bing 1 — Blast Nova</option><option value="bing_02">Bing 2 — Creative Genius</option><option value="carino_01">Carino 1 — Ranger of Glory</option><option value="carino_02">Carino 2 — Lethal Flash</option><option value="erika_01">Erika 1 — Wind Stalker</option><option value="gemma_01">Gemma 1 — Ice-Fire Fusion</option><option value="gemma_02">Gemma 2 — Frostbitten Heart</option><option value="iris_01">Iris 1 — Growing Breeze</option><option value="iris_02">Iris 2 — Vigilant Breeze</option><option value="moto_01">Moto 1 — Order Calling</option><option value="moto_02">Moto 2 — Charge Calling</option><option value="rehan_02">Rehan 2 — Seething Silhouette</option><option value="rosa_02">Rosa 2 — Unsullied Blade</option><option value="sage_01">Sage 1 — Licorice Note</option><option value="selena_01">Selena 1 — Sing with the Tide</option><option value="selena_02">Selena 2 — Dance of the Deep</option><option value="thea_03">Thea 3 — Blasphemer</option><option value="youga_01">Youga 1 — Spacetime Illusion</option><option value="youga_02">Youga 2 — Spacetime Elapse</option><option value="youga_03">Youga 3 — The Ultimate One</option></select>
+      <button class="chip-reset" id="resetHero" type="button" hidden></button>
       <input id="q" type="search" placeholder="Поиск: скилл, билд…">
     </div>
     <table class="tbl">
@@ -573,9 +574,13 @@ function renderBuilds() {
   document.querySelectorAll(".tbl th[data-k]").forEach(th =>
     th.innerHTML = (th.dataset.i ? t(th.dataset.i) : "SS14") + (th.dataset.k === sortK ? ` <span class="arr">${sortDir>0?"▲":"▼"}</span>` : ""));
   $("#tbody").innerHTML = TLI.buildsHTML(lang, rows, open);
+  const h = $("#heroSel").value;
+  $("#resetHero").hidden = !h;
+  if (h) $("#resetHero").innerHTML = `${label(h)} <b>✕</b> <span>${t("showAll")}</span>`;
 }
 $("#tbody").onclick = e => { if (e.target.closest("a")) return; const r = e.target.closest("tr.row"); if (!r) return;
   const i = +r.dataset.i; open.has(i) ? open.delete(i) : open.add(i); renderBuilds(); };
+$("#resetHero").onclick = () => { $("#heroSel").value = ""; renderBuilds(); };
 renderBuilds();
 
 // Лайки и уникальные просмотры (Cloudflare Pages Function + D1). Нет бэкенда — блоки скрыты.

@@ -208,3 +208,17 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
 .ph-arrow span{font-size:11px;color:var(--muted);line-height:1.3}
 .ph-arrow b{font-size:28px;line-height:1}
 @media (max-width:760px){.phases{grid-template-columns:1fr}.ph-arrow{flex-direction:row;max-width:none;gap:8px}.ph-arrow b{transform:rotate(90deg);font-size:22px}}
+
+/* Сброс фильтра по герою в таблице билдов */
+.chip-reset{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;cursor:pointer;
+  background:#ff8a2b1f;border:1px solid var(--fire);color:var(--text);font:600 13px Inter}
+.chip-reset b{color:var(--fire2)}.chip-reset span{color:var(--muted);font-weight:500}
+.chip-reset:hover{background:#ff8a2b33}.chip-reset:hover span{color:var(--text)}
+
+/* «Что изменилось» — отдельный блок-справка, отделённый от тиров и билдов */
+#changes{margin-top:56px;padding:28px 24px 24px;border-radius:18px;border:1px solid #60a5fa33;
+  background:linear-gradient(180deg,#60a5fa12,transparent 70%),var(--bg2)}
+#changes h2 svg{color:var(--new)}
+#changes .ch{background:var(--bg)}
+#sources{margin-top:24px}
+@media (max-width:760px){#changes{padding:20px 14px;margin-top:40px}}

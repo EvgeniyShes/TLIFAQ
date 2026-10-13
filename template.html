@@ -58,6 +58,7 @@
     <div class="filters">
       <div class="seg" id="stageSeg"></div>
       <select id="heroSel"></select>
+      <button class="chip-reset" id="resetHero" type="button" hidden></button>
       <input id="q" type="search">
     </div>
     <table class="tbl">
@@ -162,9 +163,13 @@ function renderBuilds() {
   document.querySelectorAll(".tbl th[data-k]").forEach(th =>
     th.innerHTML = (th.dataset.i ? t(th.dataset.i) : "SS14") + (th.dataset.k === sortK ? ` <span class="arr">${sortDir>0?"▲":"▼"}</span>` : ""));
   $("#tbody").innerHTML = TLI.buildsHTML(lang, rows, open);
+  const h = $("#heroSel").value;
+  $("#resetHero").hidden = !h;
+  if (h) $("#resetHero").innerHTML = `${label(h)} <b>✕</b> <span>${t("showAll")}</span>`;
 }
 $("#tbody").onclick = e => { if (e.target.closest("a")) return; const r = e.target.closest("tr.row"); if (!r) return;
   const i = +r.dataset.i; open.has(i) ? open.delete(i) : open.add(i); renderBuilds(); };
+$("#resetHero").onclick = () => { $("#heroSel").value = ""; renderBuilds(); };
 renderBuilds();
 
 // Лайки и уникальные просмотры (Cloudflare Pages Function + D1). Нет бэкенда — блоки скрыты.
