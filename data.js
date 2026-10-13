@@ -58,7 +58,7 @@ window.DATA = {
         S: [
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
-          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }]
+          ["selena_01", "", { ru: "Lao Ke, R3plic и satu1kaa: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke, R3plic and satu1kaa: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }]
         ],
         A: [
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],

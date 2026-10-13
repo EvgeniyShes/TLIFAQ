@@ -300,3 +300,9 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
 #sources .authors-list{display:block;line-height:1.7;margin:0}
 #sources .src{columns:auto;display:flex;flex-wrap:wrap;gap:2px 16px;list-style:none;padding:0;margin:0;font-size:12px}
 #sources .src li{margin:0}
+
+/* Главная ссылка на гайд — крупная и заметная */
+.lnk.main{padding:10px 18px;font-size:14px;font-weight:700;color:#1a0d05;background:linear-gradient(180deg,#ff9a3d,#e0631f);border-color:transparent;box-shadow:0 2px 12px #ff8a2b40}
+.lnk.main .by{color:#3b1a06;font-weight:600}
+.lnk.main:hover{filter:brightness(1.08);background:linear-gradient(180deg,#ffa64f,#e86d28)}
+.links{align-items:center}
