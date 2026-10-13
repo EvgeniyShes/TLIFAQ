@@ -59,7 +59,7 @@
   <section id="tiers">
     <h2><svg><use href="#i-crown"/></svg><span data-i="tiersTitle">Тир-лист героев</span></h2>
     <p class="lead" id="tierHint">Кампания и ранний Netherrealm без шмота, бюджет, скорость прогресса</p>
-    <div class="seg" id="tierSeg"><button data-k="starter" class="on">Старт сезона</button><button data-k="endgame" class="">Эндгейм</button></div>
+    <div class="phases" id="tierSeg"><button class="phase on" data-k="starter"><span class="ph-ic">🚀</span><span class="ph-t">Старт лиги</span><span class="ph-d">Билд «с нуля»: пройти кампанию и ранний Netherrealm без шмота и заработать первую валюту. Потом на неё собирают эндгейм-билд.</span></button><div class="ph-arrow"><span>накопил валюту — пересел</span><b>→</b></div><button class="phase " data-k="endgame"><span class="ph-ic">💎</span><span class="ph-t">Эндгейм</span><span class="ph-d">Куда пересаживаются на заработанную валюту: Profound, Deep Space, Divine Ascent, Supreme Showdown. Нужны вложения, зато самый высокий потолок.</span></button></div>
     <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">бафф или новинка SS14</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">нерф в SS14</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">трейт переработан</span></span><span data-i="legendClick">Нажми на героя, чтобы открыть подробности</span></div>
     <div id="tierList">
     <div class="tier" style="--tc:var(--S)">
@@ -507,7 +507,8 @@ function renderTiers() {
   $("#tierList").innerHTML = TLI.tiersHTML(lang, mode, selected);
   if (selected) showDetail(selected);
 }
-seg($("#tierSeg"), Object.entries(D.tiers).map(([k,v]) => [k, L(v.title)]), mode, k => { mode = k; renderTiers(); });
+$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b) return;
+  mode = b.dataset.k; $("#tierSeg").innerHTML = TLI.phaseTabsHTML(lang, mode); renderTiers(); };
 $("#tierList").onclick = e => { const c = e.target.closest(".hcard"); if (!c) return;
   selected = selected === c.dataset.id ? null : c.dataset.id; renderTiers();
   if (selected) $("#detail").scrollIntoView({block:"nearest", behavior:"smooth"}); else $("#detail").classList.remove("show"); };

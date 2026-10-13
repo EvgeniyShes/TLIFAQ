@@ -50,7 +50,10 @@ window.DATA = {
   // Тир-листы героев: [id, trend, комментарий]
   tiers: {
     starter: {
-      title: { ru: "Старт сезона", en: "League start" },
+      title: { ru: "Старт лиги", en: "League start" },
+      icon: "🚀",
+      desc: { ru: "Билд «с нуля»: пройти кампанию и ранний Netherrealm без шмота и заработать первую валюту. Потом на неё собирают эндгейм-билд.",
+              en: "A from-scratch build: clear the campaign and early Netherrealm with no gear and farm your first currency. Then use it to gear an endgame build." },
       hint: { ru: "Кампания и ранний Netherrealm без шмота, бюджет, скорость прогресса",
               en: "Campaign and early Netherrealm with no gear, budget, progression speed" },
       rows: {
@@ -94,6 +97,9 @@ window.DATA = {
     },
     endgame: {
       title: { ru: "Эндгейм", en: "Endgame" },
+      icon: "💎",
+      desc: { ru: "Куда пересаживаются на заработанную валюту: Profound, Deep Space, Divine Ascent, Supreme Showdown. Нужны вложения, зато самый высокий потолок.",
+              en: "What you switch to with the farmed currency: Profound, Deep Space, Divine Ascent, Supreme Showdown. Needs investment, but has the highest ceiling." },
       hint: { ru: "Частота в топах Divine Ascent и Supreme Showdown, фарм и урон по боссам",
               en: "Presence in top Divine Ascent and Supreme Showdown ranks, farming and boss damage" },
       rows: {

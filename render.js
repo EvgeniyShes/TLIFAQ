@@ -23,7 +23,7 @@ const I18N = {
     like: "Нравится", tip: "поддержать автора", tipTitle: "Поддержите проект — оставьте чаевые", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
-    noBuilds: "Отдельных разборов билда пока нет — смотрите видео:", tierStart: "Тир на старте сезона", tierEnd: "Тир в эндгейме",
+    noBuilds: "Отдельных разборов билда пока нет — смотрите видео:", tierStart: "Старт лиги — первая валюта", tierEnd: "Эндгейм — Profound, Deep Space", phaseArrow: "накопил валюту — пересел",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
   en: {
@@ -42,7 +42,7 @@ const I18N = {
     like: "Like", tip: "buy me a coffee", tipTitle: "Support the project — leave a tip", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
-    noBuilds: "No dedicated build breakdown yet — check the videos:", tierStart: "League start tier", tierEnd: "Endgame tier",
+    noBuilds: "No dedicated build breakdown yet — check the videos:", tierStart: "League start — first currency", tierEnd: "Endgame — Profound, Deep Space", phaseArrow: "farm currency, then switch",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
 };
@@ -117,8 +117,14 @@ const changesHTML = lang => D.changes.map(c => `<div class="ch ${c.type}"><span 
 const sourcesHTML = lang => D.sources.map(([s,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(L(lang, s))}</a></li>`).join("");
 const heroOptionsHTML = lang => `<option value="">${T(lang,"allHeroes")}</option>` + [...new Set(D.builds.map(b => b.hero))].sort()
   .map(id => `<option value="${id}">${label(id)} — ${esc(H[id].trait)}</option>`).join("");
+// Две карточки-этапа вместо переключателя: старт лиги → эндгейм
+const phaseTabsHTML = (lang, mode) => {
+  const card = ([k, v]) => `<button class="phase ${k === mode ? "on" : ""}" data-k="${k}"><span class="ph-ic">${v.icon}</span><span class="ph-t">${esc(L(lang, v.title))}</span><span class="ph-d">${esc(L(lang, v.desc))}</span></button>`;
+  const [a, b] = Object.entries(D.tiers);
+  return card(a) + `<div class="ph-arrow"><span>${T(lang, "phaseArrow")}</span><b>→</b></div>` + card(b);
+};
 const heroIndexHTML = lang => Object.keys(H).map(id => `<a href="${pageUrl(lang, id)}">${label(id)} · ${esc(H[id].trait)}</a>`).join("");
 
 g.TLI = { D, H, SITE, I18N, TREND, esc, label, img, dots, T, L, pageUrl, ytSearch, tierOf, tiersHTML, buildRows, moreHTML, buildsHTML,
-  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML };
+  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML };
 })(typeof window !== "undefined" ? window : globalThis);

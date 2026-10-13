@@ -46,7 +46,7 @@
   <section id="tiers">
     <h2><svg><use href="#i-crown"/></svg><span data-i="tiersTitle"></span></h2>
     <p class="lead" id="tierHint"></p>
-    <div class="seg" id="tierSeg"></div>
+    <div class="phases" id="tierSeg"></div>
     <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp"></span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown"></span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew"></span></span><span data-i="legendClick"></span></div>
     <div id="tierList"></div>
     <div class="detail" id="detail"></div>
@@ -129,7 +129,8 @@ function renderTiers() {
   $("#tierList").innerHTML = TLI.tiersHTML(lang, mode, selected);
   if (selected) showDetail(selected);
 }
-seg($("#tierSeg"), Object.entries(D.tiers).map(([k,v]) => [k, L(v.title)]), mode, k => { mode = k; renderTiers(); });
+$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b) return;
+  mode = b.dataset.k; $("#tierSeg").innerHTML = TLI.phaseTabsHTML(lang, mode); renderTiers(); };
 $("#tierList").onclick = e => { const c = e.target.closest(".hcard"); if (!c) return;
   selected = selected === c.dataset.id ? null : c.dataset.id; renderTiers();
   if (selected) $("#detail").scrollIntoView({block:"nearest", behavior:"smooth"}); else $("#detail").classList.remove("show"); };

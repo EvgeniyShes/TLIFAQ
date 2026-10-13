@@ -62,7 +62,7 @@ function indexPage(lang) {
     sNote: esc(L(lang, D.season.note)),
     langSeg: langLinks(lang, null),
     tierHint: esc(L(lang, D.tiers.starter.hint)),
-    tierSeg: seg(Object.entries(D.tiers).map(([k, v]) => [k, L(lang, v.title)]), "starter"),
+    tierSeg: TLI.phaseTabsHTML(lang, "starter"),
     tierList: TLI.tiersHTML(lang, "starter", null),
     stageSeg: seg([["all", t("all")], ["start", t("start")], ["end", t("end")]], "all"),
     heroSel: TLI.heroOptionsHTML(lang),
