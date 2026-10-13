@@ -14,7 +14,7 @@ const I18N = {
     heroDesc: (name, trait, st, en, builds) => `${name} ${trait} в Torchlight: Infinite SS14 Tartarus: тир на старте сезона — ${st}, в эндгейме — ${en}.${builds ? " Билды: " + builds + "." : ""} Плюсы, минусы, гайды и видео.`,
     season: "Сезон", subtitle: "Тир-листы героев и билдов", updEvery: "Информация обновляется раз в 12 часов", lastUpd: "последнее обновление:",
     seasonStart: "Старт сезона", running: "Сезон идёт", units: ["дней","часов","минут","секунд"],
-    methodTitle: "Как составлен тир-лист", methodText: "Это не окончательные факты, а сводная оценка. Мы собираем тир-листы, гайды, видео, таблицы и обсуждения на Reddit из разных источников и сводим их в средневзвешенную оценку: свежие данные и опытные авторы весят больше, изменения патча SS14 учитываются отдельно, а в S попадают и те, кого большинство авторов ставит в топ.", methodPets: "Питомцы (пакт-спириты), снаряжение и бюджет могут заметно сдвинуть героя или билд по тирам.", navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
+    methodTitle: "Как составлен тир-лист", methodText: "Это не окончательные факты, а сводная оценка. Мы собираем тир-листы, гайды, видео, таблицы и обсуждения на Reddit из разных источников и сводим их в средневзвешенную оценку: свежие данные и опытные авторы весят больше, изменения патча SS14 учитываются отдельно, а в S попадают и те, кого большинство авторов ставит в топ.", methodPets: "Питомцы (пакт-спириты), снаряжение и бюджет могут заметно сдвинуть героя или билд по тирам.", criteria: "Оцениваем", navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
     tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendNew: "трейт переработан", legendClick: "Нажми на героя, чтобы открыть подробности",
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
@@ -33,7 +33,7 @@ const I18N = {
     heroDesc: (name, trait, st, en, builds) => `${name} ${trait} in Torchlight: Infinite SS14 Tartarus: league start tier ${st}, endgame tier ${en}.${builds ? " Builds: " + builds + "." : ""} Pros, cons, guides and videos.`,
     season: "Season", subtitle: "Hero and build tier lists", updEvery: "Updated every 12 hours", lastUpd: "last update:",
     seasonStart: "Season start", running: "Season is live", units: ["days","hours","min","sec"],
-    methodTitle: "How this tier list is made", methodText: "These are not final facts but an aggregate estimate. We collect tier lists, guides, videos, spreadsheets and Reddit discussions from many sources and combine them into a weighted average: fresh data and experienced creators count for more, SS14 patch changes are factored in separately, and heroes most creators put at the top also make S.", methodPets: "Pets (pact spirits), gear and budget can noticeably shift a hero or build between tiers.", navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
+    methodTitle: "How this tier list is made", methodText: "These are not final facts but an aggregate estimate. We collect tier lists, guides, videos, spreadsheets and Reddit discussions from many sources and combine them into a weighted average: fresh data and experienced creators count for more, SS14 patch changes are factored in separately, and heroes most creators put at the top also make S.", methodPets: "Pets (pact spirits), gear and budget can noticeably shift a hero or build between tiers.", criteria: "Rated by", navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
     tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendNew: "trait reworked", legendClick: "Click a hero for details",
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
@@ -154,7 +154,7 @@ const heroOptionsHTML = lang => `<option value="">${T(lang,"allHeroes")}</option
   .map(id => `<option value="${id}">${label(id)} — ${esc(H[id].trait)}</option>`).join("");
 // Две карточки-этапа вместо переключателя: старт лиги → эндгейм
 const phaseTabsHTML = (lang, mode) => {
-  const card = ([k, v]) => `<button class="phase ${k === mode ? "on" : ""}" data-k="${k}"><span class="ph-ic">${v.icon}</span><span class="ph-t">${esc(L(lang, v.title))}</span><span class="ph-d">${esc(L(lang, v.desc))}</span></button>`;
+  const card = ([k, v]) => `<button class="phase ${k === mode ? "on" : ""}" data-k="${k}"><span class="ph-ic">${v.icon}</span><span class="ph-t">${esc(L(lang, v.title))}</span><span class="ph-d">${esc(L(lang, v.desc))}</span><span class="ph-h"><b>${T(lang,"criteria")}:</b> ${esc(L(lang, v.hint))}</span></button>`;
   const [a, b] = Object.entries(D.tiers);
   return card(a) + `<div class="ph-arrow"><span>${T(lang, "phaseArrow")}</span><b>→</b></div>` + card(b);
 };
