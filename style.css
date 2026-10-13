@@ -360,3 +360,8 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
   nav .wrap > a{padding:8px 12px;font-size:14px}
   main section{margin:18px -8px;padding:16px 12px 14px;border-radius:12px}
 }
+
+/* Плашка «Как составлен тир-лист» */
+.method{margin:4px 0 18px;padding:12px 16px;border-radius:12px;border:1px solid #60a5fa44;border-left:4px solid var(--new);background:#60a5fa0d;font-size:14px;line-height:1.55;color:#cfc6d6}
+.method b{display:block;color:var(--text);font-size:15px;margin-bottom:4px}
+.method p{margin:4px 0 0}
