@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T17:25:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T17:40:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -57,29 +57,29 @@ window.DATA = {
       rows: {
         S: [
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
-          ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }]
+          ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
+          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }],
+          ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }]
         ],
         A: [
-          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }],
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
-          ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
           ["gemma_02", "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
           ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
+          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
           ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }],
           ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
-          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
           ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
           ["carino_02", "", { ru: "Надёжный, но Lao Ke ставит ниже: «хороший, просто нет места»", en: "Reliable, but Lao Ke rates it lower: \"good, just no room\"" }],
           ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
           ["bing_01", "", { ru: "Недорогой билд против боссов, по картам можно автобегом", en: "Cheap bossing build, maps can be auto-run" }]
         ],
         B: [
+          ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
           ["thea_03", "", { ru: "Erosion-урон, сильна в начале и середине", en: "Erosion damage, strong early and mid game" }],
           ["iris_01", "", { ru: "Саммонер, доводит до T8, хорош для фарма Flame Elementium", en: "Summoner, carries to T8, good for Flame Elementium farming" }],
           ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }],
           ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }],
-          ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
           ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
           ["youga_01", "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["rehan_01", "down", { ru: "Нерф Berserk в SS14, но есть подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Berserk nerfed in SS14, but Travic has a detailed guide — campaign to 250M damage with Whirlwind" }],
@@ -166,7 +166,7 @@ window.DATA = {
         [{ ru: "Гайд: Chain Lightning", en: "Guide: Chain Lightning" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusion-chain-lightning-vpun6p", "fragmentations"],
         [{ ru: "Гайд: 3 стартовых варианта", en: "Guide: 3 starter versions" }, "https://minmaxedarpg.com/guides/youga-1-starters-4w5cuw", "fragmentations"]
       ] },
-    { hero: "selena_01", name: "Howling Gale", skill: { ru: "Howling Gale, заморозка", en: "Howling Gale, freeze" }, tier: "A", stage: "start", budget: 1, diff: 1, trend: "",
+    { hero: "selena_01", name: "Howling Gale", skill: { ru: "Howling Gale, заморозка", en: "Howling Gale, freeze" }, tier: "S", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Безопасный и комфортный старт: с 20 уровня автоматизация прямо в наборе умений, замораживающий клир на весь экран", en: "Safe, comfy start: built-in automation from level 20, screen-wide freezing clear" },
       cons: { ru: "Тяжело заходит в Profound, TM 8 придётся фармить дольше, чем другими героями", en: "Struggles to break into Profound; you'll farm TM 8 longer than with other heroes" },
       src: { ru: "R3plic (tlicompendium), гайд ItsAdiar (SS12)", en: "R3plic (tlicompendium), ItsAdiar's guide (SS12)" },
@@ -193,14 +193,22 @@ window.DATA = {
       src: { ru: "IGGM, musabots, TreyexGaming, тест игрока на Reddit", en: "IGGM, musabots, TreyexGaming, player test on Reddit" },
       links: [
         [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
-        [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"]
+        [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"],
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "~15T урона (Мия / BmLegolas)", en: "~15T damage (Mia / BmLegolas)" }, "fDE/Q5s2EfG78gAAAAAAMw=="]
       ] },
     { hero: "carino_01", name: "Ice Lances / Chromatic Shot", skill: "Ice Lances, Chromatic Shot", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "По тесту игрока до старта: Ice Lances с Marksman bracers, Grudge и Control Spell убивает Traveler примерно на T2-шмоте; Chromatic Shot может быть ещё лучше", en: "A pre-season player test: Ice Lances with Marksman bracers, Grudge and Control Spell kills the Traveler on roughly T2 gear; Chromatic Shot may be even better" },
       cons: { ru: "Один непроверенный отзыв до старта; Carino 2 остаётся надёжнее", en: "A single unverified pre-season report; Carino 2 is still more reliable" },
       src: { ru: "тест игрока на Reddit", en: "player test on Reddit" },
       links: [
-        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"]
+        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "Tangles — общий код для Carino 1/2/3", en: "Tangles — shared code for Carino 1/2/3" }, "VKaEwoGiEfG27wAAAAAA6A=="]
       ] },
     { hero: "thea_03", name: "Blasphemer Erosion", skill: "Haunting Abomination / Mind Control", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Топ в начале и середине сезона", en: "Top tier early and mid season" },
@@ -223,7 +231,11 @@ window.DATA = {
       cons: { ru: "Дорогие питомцы (Anubis на максимуме примерно удваивает урон), сложная механика Магусов, урон растёт хуже, чем у Rosa и Rehan; ловкость и сила должны быть равны", en: "Expensive pets (maxed Anubis roughly doubles damage), complex Magus mechanics, damage scales worse than Rosa and Rehan; Dexterity and Strength must stay equal" },
       src: { ru: "musabots, гайд instinct (SS13)", en: "musabots, instinct's guide (SS13)" },
       links: [
-        [{ ru: "Гайд instinct: прогрессия Iris 2 (Google Docs)", en: "instinct's guide: Iris 2 progression (Google Docs)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit", "instinct"]
+        [{ ru: "Гайд instinct: прогрессия Iris 2 (Google Docs)", en: "instinct's guide: Iris 2 progression (Google Docs)" }, "https://docs.google.com/document/d/1ZvE5EIwXpxn1Ta5Zi8qDGuKBDS1TEDlNggbTgI1X6o8/edit", "instinct"],
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "билд instinct (в игре: Instinct#5138)", en: "instinct's build (in game: Instinct#5138)" }, "eW8BDIGgEfG5tQAAAAAAPg=="]
       ] },
     { hero: "iris_01", name: "Growing Breeze Summoner", skill: "Spirit Magi", tier: "B", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
@@ -252,16 +264,46 @@ window.DATA = {
       links: [
         [{ ru: "Гайд AgroMorph: прокачка Rosa 2 в кампании (tlicompendium)", en: "AgroMorph's guide: Rosa 2 campaign leveling (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-campaign-leveling", "AgroMorph"],
         [{ ru: "Гайд AgroMorph: Spectral Slash, Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t7-traveler-setup", "AgroMorph"],
-        [{ ru: "Гайд AgroMorph: Spectral Slash, T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t8-1-outlaw-setup", "AgroMorph"]
+        [{ ru: "Гайд AgroMorph: Spectral Slash, T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rosa-2-spectral-slash-t8-1-outlaw-setup", "AgroMorph"],
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "~500B после нерфа, без дорогих призм", en: "~500B after the nerf, without pricey prisms" }, "JDx2V4maEfGTbQAAAAADNg=="]
       ] },
     { hero: "bing_02", name: "Creative Genius Spellburst", skill: "Spell Burst", tier: "A", stage: "end", budget: 3, diff: 2, trend: "",
       pros: { ru: "Синергия спеллбёрста и питомцев", en: "Spell Burst and pet synergy" },
       cons: { ru: "Шмот дорожает из-за популярности", en: "Gear prices rise with popularity" },
       src: "ProGameGuides, musabots" },
+    { hero: "carino_03", name: { ru: "Zealot of War: коды билда", en: "Zealot of War: build codes" }, skill: { ru: "смотрите код билда", en: "see the build code" }, tier: "B", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "satu1kaa рекомендует как стартер; два кода — для ~45B и ~900B урона", en: "satu1kaa recommends it as a starter; two codes — for ~45B and ~900B damage" },
+      cons: { ru: "Подробного текстового гайда пока нет — только коды и видео", en: "No written guide yet — only codes and the video" },
+      src: { ru: "satu1kaa, описание видео (11.10.2026)", en: "satu1kaa, video description (Oct 11, 2026)" },
+      links: [
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "Tangles — общий код для Carino 1/2/3", en: "Tangles — shared code for Carino 1/2/3" }, "VKaEwoGiEfG27wAAAAAA6A=="],
+        [{ ru: "~45B урона", en: "~45B damage" }, "2VYAicQCEfGcWQAAAAAAFQ=="],
+        [{ ru: "~900B урона", en: "~900B damage" }, "KUGqvrj3EfGcUAAAAAAAFQ=="]
+      ] },
+    { hero: "selena_01", name: "Scorching Beam (Ignite)", skill: "Scorching Beam", tier: "S", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Гайд с фармом Deep Space; satu1kaa рекомендует Selena как стартер", en: "Guide that goes up to Deep Space farming; satu1kaa recommends Selena as a starter" },
+      cons: { ru: "Гайд обновлён 05.09.2026 (прошлый сезон) — сверяйте с патчем SS14", en: "Guide last updated Sep 5, 2026 (previous season) — check against the SS14 patch" },
+      src: { ru: "гайд Smith (tlicompendium), рекомендация satu1kaa", en: "Smith's guide (tlicompendium), satu1kaa's recommendation" },
+      links: [
+        [{ ru: "Гайд Smith: Scorching Beam, фарм Deep Space (tlicompendium)", en: "Smith's guide: Scorching Beam, Deep Space farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/scorching-ignite-deep-space-mapping", "Smith"],
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ] },
     { hero: "carino_02", name: "Lethal Flash", skill: { ru: "Проджектайлы, Deflection", en: "Projectiles, Deflection" }, tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Надёжный и удобный", en: "Reliable and comfortable" },
       cons: { ru: "Медленнее S-стартеров", en: "Slower than S-tier starters" },
-      src: "musabots" },
+      src: "musabots",
+      links: [
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "Tangles — общий код для Carino 1/2/3", en: "Tangles — shared code for Carino 1/2/3" }, "VKaEwoGiEfG27wAAAAAA6A=="]
+      ] },
     { hero: "moto_02", name: { ru: "Самоподрыв двух генералов", en: "Twin Generals Self-Destruct" }, skill: { ru: "Synthetic Troop, самоподрыв", en: "Synthetic Troop, self-destruct" }, tier: "B", stage: "start", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Импорт кода билда, сбалансирован во всём", en: "Importable build code, well-rounded" },
       cons: { ru: "Задет нерфами SS14", en: "Hit by SS14 nerfs" },
@@ -279,6 +321,16 @@ window.DATA = {
       src: { ru: "гайд Travic (ред. 1, 12.10.2026); благодарности автора: Medicated, Brokugin, Marcus Nordstrom", en: "Travic's guide (rev. 1, Oct 12, 2026); author's credits: Medicated, Brokugin, Marcus Nordstrom" },
       links: [
         [{ ru: "Видео-гайд: Whirlwind от кампании до 250M", en: "Video guide: Whirlwind, campaign to 250M" }, "https://www.youtube.com/watch?v=vUBZlHRlEZo", "Travic"]
+      ] },
+    { hero: "rehan_01", name: { ru: "Anger: код билда от Адемки", en: "Anger: build code by Ademka" }, skill: { ru: "смотрите код билда", en: "see the build code" }, tier: "B", stage: "start", budget: 2, diff: 2, trend: "",
+      pros: { ru: "satu1kaa рекомендует Rehan 1 как стартер; готовый код билда для импорта", en: "satu1kaa recommends Rehan 1 as a starter; a ready-made build code to import" },
+      cons: { ru: "Только код — пошаговый разбор смотрите в гайде Travic выше", en: "Code only — for a step-by-step walkthrough see Travic's guide above" },
+      src: { ru: "Адемка (t.me/torchdwg), из подборки satu1kaa (11.10.2026)", en: "Ademka (t.me/torchdwg), via satu1kaa's list (Oct 11, 2026)" },
+      links: [
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ],
+      codes: [
+        [{ ru: "билд Адемки", en: "Ademka's build" }, "nnCFv5bgEfG9+AAAAAAAKQ=="]
       ] },
     { hero: "rehan_02", name: "Seething Silhouette", skill: "Whirlwind / Berserking Blade", tier: "A", stage: "both", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Без штрафа к скорости атаки, быстрый темп", en: "No attack speed penalty, fast pace" },
@@ -298,6 +350,8 @@ window.DATA = {
   authors: {
     Travic: { youtube: "https://www.youtube.com/@Travic_", twitch: "https://www.twitch.tv/travic" },
     instinct: { twitch: "https://www.twitch.tv/instinct_t" },
+    "Адемка": { url: "https://t.me/torchdwg" },
+    satu1kaa: { youtube: "https://www.youtube.com/@satu1kaa", twitch: "https://www.twitch.tv/satu1kaa" },
     DonTheCrown: { youtube: "https://www.youtube.com/@DonTheCrown" },
     Pat404: { youtube: "https://www.youtube.com/@Pat404Games" },
     Little_practice: { youtube: "https://www.youtube.com/@Little_practice232" },
@@ -343,6 +397,7 @@ window.DATA = {
     [{ ru: "Travic — видео-гайд Rehan 1 (YouTube)", en: "Travic — Rehan 1 video guide (YouTube)" }, "https://www.youtube.com/watch?v=vUBZlHRlEZo"],
     [{ ru: "Pat404 — стартеры SS14: кого брать, а кого нет (YouTube)", en: "Pat404 — SS14 starters: who to pick (YouTube, Russian)" }, "https://www.youtube.com/watch?v=7y6-yvglxeQ"],
     [{ ru: "Little_practice — кем играть в лиге Tartarus (YouTube)", en: "Little_practice — who to play in Tartarus (YouTube, Russian)" }, "https://www.youtube.com/watch?v=s61o8_2aYN4"],
+    [{ ru: "satu1kaa — лигстартеры SS14 и коды билдов (YouTube)", en: "satu1kaa — SS14 league starters and build codes (YouTube, Russian)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co"],
     [{ ru: "DonTheCrown — прогноз тир-листа SS14 (YouTube)", en: "DonTheCrown — SS14 tier list prediction (YouTube)" }, "https://www.youtube.com/watch?v=WOTBgd06l2U"],
     [{ ru: "Lao Ke — тир-лист SS14 (Bilibili)", en: "Lao Ke — SS14 tier list (Bilibili)" }, "https://www.bilibili.com/video/BV1yqpL6kEYK/"],
     [{ ru: "DCInside — скриншоты тир-листа Lao Ke и статистика 4000-го этажа SS13", en: "DCInside — Lao Ke tier list screenshots and SS13 floor-4000 stats" }, "https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605"],

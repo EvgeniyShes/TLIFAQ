@@ -36,6 +36,9 @@ const SOURCES = [
              A: "bing_02 carino_02 gemma_02 iris_02 selena_01 thea_01 youga_02",
              B: "bing_01 carino_01 carino_03 erika_02 erika_03 moto_02 rehan_01 selena_02 youga_01",
              C: "gemma_01 gemma_03 rosa_01 thea_02 thea_03 iris_01 moto_01" } },
+  { id: "satu1kaa", name: "satu1kaa, «Вилкой в глаз или стартер раз? Лигстартеры SS14» (YouTube)", w: 2, lists: ["start"],
+    // рекомендованные стартеры; «Рехан» = Rehan 1, «три Карины» = Carino 1/2/3 (уточнил владелец)
+    votes: { S: "carino_03 iris_02 selena_01 erika_01 rosa_02 rehan_01 carino_01 carino_02" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
