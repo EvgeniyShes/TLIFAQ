@@ -16,6 +16,7 @@
   --S:#ff4d4d; --A:#ff9f3d; --B:#f5d547; --C:#7cc7a0;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,system-ui,sans-serif;
   background-image:radial-gradient(1200px 500px at 50% -150px,#ff8a2b22,transparent 70%)}
@@ -130,6 +131,13 @@ tr.more .pc .c b{color:var(--down)}
 .src{columns:2 300px;padding-left:18px;font-size:14px}
 .src li{margin-bottom:6px}
 footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:40px}
+.views{margin-top:8px;font-size:11px;opacity:.6}
+.like{position:relative;margin-top:20px;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid #ff8a2b55;background:#ff8a2b14;color:var(--text);font:600 14px Inter;cursor:pointer;transition:.15s}
+.like:hover{background:#ff8a2b2a}
+.like .heart{color:var(--muted);font-size:16px;transition:.15s}
+.like.on{border-color:var(--S);background:#ff4d4d1f}
+.like.on .heart{color:var(--S);transform:scale(1.2)}
+.like b{color:var(--fire2)}
 
 @media (max-width:760px){
   .tier-label{width:48px;font-size:26px}
@@ -169,6 +177,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
     <p class="sub"><span data-i="subtitle"></span> · <span data-i="dataFrom"></span> <span id="sUpd"></span></p>
     <p class="sub" style="margin-top:18px"><span data-i="seasonStart"></span>: <b style="color:var(--fire2)" id="sStart"></b></p>
     <div class="countdown" id="cd"></div>
+    <button class="like" id="likeBtn" hidden><span class="heart">♥</span> <span data-i="like"></span> <b id="likeN"></b></button>
     <p class="note" id="sNote"></p>
   </div>
 </header>
@@ -217,7 +226,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
   </section>
 </main>
 
-<footer class="wrap" data-i="footer"></footer>
+<footer class="wrap"><span data-i="footer"></span><div class="views" id="views" hidden></div></footer>
 
 <script src="data.js"></script>
 <script>
@@ -238,7 +247,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", empty: "Ничего не найдено",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", like: "Нравится", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
@@ -250,7 +259,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", empty: "Nothing found",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", like: "Like", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
@@ -383,8 +392,31 @@ function applyLang() {
   seg($("#stageSeg"), [["all",t("all")],["start",t("start")],["end",t("end")]], stage, k => { stage = k; renderBuilds(); });
   $("#chList").innerHTML = D.changes.map(c => `<div class="ch ${c.type}"><span class="ic">${{up:"▲",down:"▼",new:"✦"}[c.type]}</span><span>${esc(L(c.text))}</span></div>`).join("");
   $("#srcList").innerHTML = D.sources.map(([s,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(L(s))}</a></li>`).join("");
-  tick(); renderTiers(); renderBuilds();
+  tick(); renderTiers(); renderBuilds(); renderStats();
 }
+
+// Лайки и уникальные просмотры (Cloudflare Pages Function + D1). Нет бэкенда — блоки скрыты.
+let stats = null;
+const visitor = store.get("visitor") || crypto.randomUUID();
+store.set("visitor", visitor);
+function renderStats() {
+  if (!stats) return;
+  $("#likeBtn").hidden = $("#views").hidden = false;
+  $("#likeBtn").classList.toggle("on", stats.liked);
+  $("#likeN").textContent = stats.likes;
+  $("#views").textContent = `👁 ${stats.views} ${t("views")}`;
+}
+async function sendStats(extra) {
+  try {
+    const r = await fetch("api/stats", { method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({ id: visitor, ...extra }) });
+    if (r.ok) { stats = await r.json(); renderStats(); }
+  } catch {}
+}
+$("#likeBtn").onclick = () => {
+  stats.liked = !stats.liked; stats.likes += stats.liked ? 1 : -1; renderStats(); // сразу, не дожидаясь сервера
+  sendStats({ like: stats.liked });
+};
+sendStats();
 seg($("#langSeg"), [["ru","RU"],["en","EN"]], lang, k => { lang = k; store.set("lang", k); applyLang(); });
 applyLang();
 
