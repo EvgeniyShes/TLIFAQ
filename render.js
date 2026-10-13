@@ -95,13 +95,13 @@ const authorHTML = name => `<span class="author">${esc(name)}</span>`;
 // Коды билдов для импорта в игре: codes: [[подпись, "КОД"], ...]
 const codeChip = (lang, [label, code]) => `<span class="bcode">${label ? `<span class="cl">${esc(L(lang, label))}</span>` : ""}<code>${esc(code)}</code><button class="copy" type="button" data-code="${esc(code)}" title="${T(lang,"codeHint")}" onclick="navigator.clipboard.writeText(this.dataset.code).then(()=>{this.textContent='✓'})">${T(lang,"copy")}</button></span>`;
 const codesHTML = (lang, b) => (b.codes || []).length ? `<div class="codes"><b>🎮 ${T(lang,"buildCode")}</b><small>${T(lang,"codeHint")}</small>${b.codes.map(c => codeChip(lang, c)).join("")}</div>` : "";
-const guideBtn = (lang, [s, u, a], main) => `<a class="lnk${main ? " main" : ""}" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(lang, s))}${a ? `<span class="by"> · ${esc(a)}</span>` : ""}</a>`;
+const guideBtn = (lang, [s, u, a]) => `<a class="lnk" href="${u}" target="_blank" rel="noopener">📖 ${esc(L(lang, s))}${a ? `<span class="by"> · ${esc(a)}</span>` : ""}</a>`;
 
 function moreHTML(lang, b) {
   const authors = [...new Set((b.links || []).map(l => l[2]).filter(Boolean))];
   return `<div class="pc"><div class="p"><b>${T(lang,"pros")}</b>${esc(L(lang, b.pros))}</div><div class="c"><b>${T(lang,"cons")}</b>${esc(L(lang, b.cons))}</div></div>
       ${codesHTML(lang, b)}
-      <div class="links">${(b.links || []).map((l, i) => guideBtn(lang, l, i === 0)).join("")}
+      <div class="links">${(b.links || []).map(l => guideBtn(lang, l)).join("")}
         <a class="lnk yt" href="${ytSearch(b)}" target="_blank" rel="noopener">▶ ${T(lang,"ytVideos")}</a></div>
       <div class="srcline">${authors.length ? `${T(lang,"credits")}: ${authors.map(authorHTML).join(", ")} · ` : ""}${T(lang,"source")}: ${esc(L(lang, b.src))}</div>`;
 }
