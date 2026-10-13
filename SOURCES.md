@@ -53,6 +53,8 @@
   Rehan 1, старт: Lao Ke B×2 + DonTheCrown B×2 + Travic A×1,5 → 2,27, нерф SS14 −0,5 → 1,77 → **B** (без изменений). Добавлен билд Whirlwind с пересказом этапов; сам PDF на сайт не выкладываем — ссылки на Twitch автора и YouTube Marcus Nordstrom (автор благодарит его в гайде).
 - **13.10.2026, Pat404, «СТАРТЕРЫ SS14: кого брать, а кого нет?»** (YouTube, прислал владелец скриншотом). Вес 2, только старт. Героев опознал по портретам (сошлись все 28). «S, но дорого» и S → S, A+ → 3,5 (добавлено в шкалу votes.js). Автор оговаривает: тир-лист — ориентир, главное — ваши питомцы и комфорт.
   Изменения на старте: Thea 1 B → A, Carino 1 C → B, Gemma 3 и Rosa 1 B → C.
+- **13.10.2026, Little_practice, «Кем играть в лиге Tartarus? Тирлист героев и билды»** (YouTube, прислал владелец скриншотом, герои подписаны). Шаблон и расстановка почти как у DonTheCrown (отличия: Bing 2 ниже, Thea 1 выше, Erika 2 ниже, Carino 1/3 выше) — похоже на адаптацию, поэтому вес 1, оба списка. Powerful and Popular → S, Strong Options → A, Less Played → B, Not Played → C.
+  Изменения: старт — Youga 2, Bing 2 и Selena 1 S → A (Selena 1 — 3,45, на волосок ниже S), Thea 3 A → B; эндгейм — Rosa 1 и Iris 1 B → C.
 
 ## Проверенные страницы
 
@@ -73,6 +75,7 @@
 | [Lao Ke — тир-лист SS14 (Bilibili)](https://www.bilibili.com/video/BV1yqpL6kEYK/) | 13.10.2026 | ✅ | Тиры расшифрованы по скриншотам из поста на DCInside (см. ниже). Вес 2, оба списка |
 | [DonTheCrown — NO BAIT TIER LIST SS14 (YouTube)](https://www.youtube.com/watch?v=WOTBgd06l2U) | 13.10.2026 | 🔁 | Прислал владелец (скриншот тир-листа). Прогноз силы/популярности на SS14, все 28 трейтов. Вес 2 |
 | [Pat404 — стартеры SS14 (YouTube)](https://www.youtube.com/watch?v=7y6-yvglxeQ) | 13.10.2026 | ✅ | Тир-лист стартеров с ценами сборок, все 28 трейтов. Вес 2 |
+| [Little_practice — кем играть в Tartarus (YouTube)](https://www.youtube.com/watch?v=s61o8_2aYN4) | 13.10.2026 | ✅ | Тир-лист по шаблону DonTheCrown, все 28 трейтов. Вес 1 (похож на адаптацию Don) |
 | Travic — PDF «TLI Tartarus Leaguestarter, Part 1» ([Twitch](https://www.twitch.tv/travic)) | 13.10.2026 | 🔁 | Rehan 1, 4 этапа до 250M. Автор обещает Part 2+ и новые редакции — проверять номер редакции. YouTube-канал автора не найден |
 | [Marcus Nordstrom (YouTube)](https://www.youtube.com/@marcusnordstrom9251) | 13.10.2026 | 🔁 | Видео по Rehan 1 и ответы на вопросы с Reddit (цены билдов) |
 | [DCInside — пост со скриншотами Lao Ke и статистикой SS13](https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605) | 13.10.2026 | ✅ | Через ChatGPT. 3 скриншота тир-листа Lao Ke (SS14) + таблица «игроков на 4000-м этаже» по итогам SS13 |

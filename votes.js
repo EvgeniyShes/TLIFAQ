@@ -30,6 +30,12 @@ const SOURCES = [
              A: "iris_01 moto_02 youga_02 bing_01 erika_02 carino_02 carino_01 selena_02 erika_03 sage_01 thea_03",
              B: "moto_01 youga_01 carino_03 rehan_01",
              C: "rosa_01 thea_02 gemma_01 gemma_03" } },
+  { id: "little_practice", name: "Little_practice, «Кем играть в лиге Tartarus?» (YouTube)", w: 1, lists: ["start", "end"],
+    // шаблон и расстановка почти как у DonTheCrown (4 отличия) — вес 1, чтобы не считать одно мнение дважды
+    votes: { S: "erika_01 rehan_02 rosa_02 sage_01 youga_03",
+             A: "bing_02 carino_02 gemma_02 iris_02 selena_01 thea_01 youga_02",
+             B: "bing_01 carino_01 carino_03 erika_02 erika_03 moto_02 rehan_01 selena_02 youga_01",
+             C: "gemma_01 gemma_03 rosa_01 thea_02 thea_03 iris_01 moto_01" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
