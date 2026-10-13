@@ -1,7 +1,7 @@
 // Данные сайта. Правь здесь — страница перерисуется сама.
 // Текст на двух языках: { ru: "...", en: "..." }. Если en нет — покажется ru.
 // links: [[{ ru, en }, "url"], ...] — прямые ссылки на гайды; ссылка на поиск YouTube добавляется сама.
-// trend: "up" — бафф/новинка в SS14, "down" — нерф в SS14, "" — без изменений.
+// trend: "up" — бафф/новинка в SS14, "down" — нерф в SS14, "new" — переработан (только в тир-листах), "" — без изменений.
 window.DATA = {
   season: {
     code: "SS14",
@@ -73,14 +73,22 @@ window.DATA = {
           ["rehan_02", "down", { ru: "Бонус ярости урезан: 20–44% → 10–34%", en: "Rage bonus cut: 20–44% → 10–34%" }],
           ["bing_01",  "", { ru: "Раскрывается после вложений в шмот", en: "Comes online after gear investment" }],
           ["gemma_03", "", { ru: "Нужны вложения", en: "Needs investment" }],
-          ["rosa_01",  "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }]
+          ["rosa_01",  "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }],
+          ["thea_01",  "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
+          ["carino_03", "", { ru: "Топ эндгейма в SS13, но на старте нужны вложения", en: "SS13 endgame top pick, but needs investment early" }],
+          ["erika_02", "", { ru: "Набирала игроков в SS13, уступает Erika 1 в скорости", en: "Gained players in SS13, slower than Erika 1" }],
+          ["erika_03", "", { ru: "Надёжная, но раскрывается позже", en: "Reliable, but comes online later" }],
+          ["bing_02",  "", { ru: "Спеллбёрсты требуют шмота", en: "Spell Bursts need gear" }]
         ],
         C: [
           ["rosa_02",   "down", { ru: "Не для старта: нужны редкие перчатки из Deep Space", en: "Not a starter: needs rare gloves from Deep Space" }],
           ["gemma_01",  "", { ru: "Много деталей, собирается долго", en: "Many moving parts, slow to assemble" }],
           ["youga_01",  "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
-          ["carino_01", "", { ru: "Слабее Carino 2", en: "Weaker than Carino 2" }]
+          ["carino_01", "", { ru: "Слабее Carino 2", en: "Weaker than Carino 2" }],
+          ["rehan_01",  "down", { ru: "Нерф Berserk в SS14: 50–78% → 40–68%", en: "Berserk nerfed in SS14: 50–78% → 40–68%" }],
+          ["selena_01", "down", { ru: "Терял игроков в SS13, в SS14 ещё и −30% скорости бега", en: "Lost players in SS13, plus −30% movement speed in SS14" }],
+          ["thea_02",   "", { ru: "Слабый трейт, хуже всех в Divine Ascent", en: "Weak trait, worst in Divine Ascent" }]
         ]
       }
     },
@@ -92,7 +100,8 @@ window.DATA = {
         S: [
           ["bing_01",  "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }],
           ["iris_02",  "", { ru: "Vigilant Breeze: стабильный урон по боссам", en: "Vigilant Breeze: steady boss damage" }],
-          ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }]
+          ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }],
+          ["carino_03", "", { ru: "Zealot of War: в топе по данным 3-го дня SS13", en: "Zealot of War: top tier in SS13 day-3 data" }]
         ],
         A: [
           ["rosa_02",  "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
@@ -107,10 +116,22 @@ window.DATA = {
           ["rehan_02",  "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
           ["moto_02",   "down", { ru: "Нерф в блюпосте SS14", en: "Nerfed in the SS14 blue post" }],
           ["thea_03",   "", { ru: "Сильна до мид-гейма, потолок ниже", en: "Strong until mid game, lower ceiling" }],
-          ["youga_02",  "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }]
+          ["youga_02",  "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }],
+          ["thea_01",   "new", { ru: "Трейт переработан в SS14, набирал игроков ещё в SS13", en: "Trait reworked in SS14, was gaining players in SS13" }],
+          ["erika_02",  "", { ru: "Набирала игроков в SS13", en: "Gained players in SS13" }],
+          ["youga_01",  "", { ru: "Набирал игроков в SS13, популярный гайд Chain Lightning", en: "Gained players in SS13, popular Chain Lightning guide" }],
+          ["gemma_01",  "", { ru: "Силён в полной сборке, но терял игроков", en: "Strong when complete, but lost players" }],
+          ["gemma_03",  "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
+          ["rehan_01",  "down", { ru: "Набирал игроков, но Berserk понерфлен", en: "Gained players, but Berserk nerfed" }]
         ],
         C: [
-          ["thea_02", "", { ru: "Хуже всех в Divine Ascent по данным SS13", en: "Worst Divine Ascent performer in SS13 data" }]
+          ["thea_02",   "", { ru: "Хуже всех в Divine Ascent по данным SS13", en: "Worst Divine Ascent performer in SS13 data" }],
+          ["rosa_01",   "", { ru: "Терял игроков, Rosa 2 сильнее", en: "Lost players, Rosa 2 is stronger" }],
+          ["carino_01", "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
+          ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }],
+          ["iris_01",   "", { ru: "Фармит до T8, дальше уступает Iris 2", en: "Farms up to T8, then behind Iris 2" }],
+          ["moto_01",   "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
+          ["selena_01", "down", { ru: "Терял игроков, нерф в SS14", en: "Lost players, nerfed in SS14" }]
         ]
       }
     }
@@ -208,6 +229,7 @@ window.DATA = {
 
   sources: [
     [{ ru: "musabots — тир-лист SS14 (11.10.2026)", en: "musabots — SS14 Tier List (Oct 11, 2026)" }, "https://musabots.com/blog/torchlight-infinite-tier-list"],
+    [{ ru: "mmoexp — тир-лист SS13 по данным 3-го дня", en: "mmoexp — SS13 tier list, day-3 data" }, "https://www.mmoexp.com/News/torchlight-infinite-ss13-afterlight-tier-list-10-best-builds-to-farm-faster-based-on-day-3-performance.html"],
     [{ ru: "IGGM — тир-лист стартеров SS13", en: "IGGM — SS13 Starter Tier List" }, "https://www.iggm.com/news/torchlight-infinite-ss13-afterlight-starter-build-tier-list-for-fast-leveling"],
     [{ ru: "Официальный патчноут SS14", en: "Official SS14 patch notes" }, "https://torchlight.xd.com/ss14pn/"],
     [{ ru: "PCGamesN — сезон Tartarus", en: "PCGamesN — Tartarus season" }, "https://www.pcgamesn.com/torchlight-infinite/update-tartarus-season"],

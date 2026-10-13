@@ -76,7 +76,7 @@ h2 svg{width:22px;height:22px;color:var(--fire)}
 .htrait{font-size:11px;color:var(--muted);line-height:1.25}
 .trend{position:absolute;top:2px;right:8px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
   font-size:12px;font-weight:800;border:2px solid var(--bg2)}
-.trend.up{background:var(--up);color:#052e14}.trend.down{background:var(--down);color:#3b0909}
+.trend.up{background:var(--up);color:#052e14}.trend.down{background:var(--down);color:#3b0909}.trend.new{background:var(--new);color:#06213f}
 
 .detail{display:none;gap:16px;align-items:flex-start;margin-top:14px;padding:16px;border-radius:14px;
   background:linear-gradient(135deg,#ff8a2b14,transparent 60%),var(--card);border:1px solid #ff8a2b44}
@@ -183,7 +183,7 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
     <h2><svg><use href="#i-crown"/></svg><span data-i="tiersTitle"></span></h2>
     <p class="lead" id="tierHint"></p>
     <div class="seg" id="tierSeg"></div>
-    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp"></span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown"></span></span><span data-i="legendClick"></span></div>
+    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp"></span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown"></span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew"></span></span><span data-i="legendClick"></span></div>
     <div id="tierList"></div>
     <div class="detail" id="detail"></div>
   </section>
@@ -234,7 +234,7 @@ const I18N = {
     title: "TLI FAQ — тир-листы Torchlight: Infinite", season: "Сезон", subtitle: "Тир-листы героев и билдов", dataFrom: "данные от",
     seasonStart: "Старт сезона", running: "Сезон идёт", units: ["дней","часов","минут","секунд"],
     navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
-    tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendClick: "Нажми на героя, чтобы открыть подробности",
+    tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendNew: "трейт переработан", legendClick: "Нажми на героя, чтобы открыть подробности",
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
@@ -246,7 +246,7 @@ const I18N = {
     title: "TLI FAQ — Torchlight: Infinite tier lists", season: "Season", subtitle: "Hero and build tier lists", dataFrom: "data as of",
     seasonStart: "Season start", running: "Season is live", units: ["days","hours","min","sec"],
     navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
-    tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendClick: "Click a hero for details",
+    tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendNew: "trait reworked", legendClick: "Click a hero for details",
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
@@ -297,7 +297,7 @@ function renderTiers() {
       <div class="tier-items">${arr.map(([id, tr]) => `
         <button class="hcard ${id===selected?"sel":""}" data-id="${id}" title="${esc(H[id].trait)}">
           <div class="portrait"><img src="${img(id)}" alt="${label(id)}" loading="lazy"></div>
-          ${tr ? `<span class="trend ${tr}">${tr==="up"?"▲":"▼"}</span>` : ""}
+          ${tr ? `<span class="trend ${tr}">${{up:"▲",down:"▼",new:"✦"}[tr]}</span>` : ""}
           <div class="hname">${label(id)}</div><div class="htrait">${esc(H[id].trait)}</div>
         </button>`).join("")}</div>
     </div>`).join("");
