@@ -47,6 +47,8 @@
   - Веса старых источников приведены к методике: musabots, IGGM, mmoexp — данные SS13 → вес 1 (раньше musabots/mmoexp считались с весом 2); mmoexp и эндгейм musabots — один и тот же источник, считается один раз.
   - Итог: 27 изменений тиров (полный список — в истории коммитов). Главное: старт — S у Youga 2, Youga 3, Bing 2; Rosa 2 C → A, Selena 1 → A, Erika 1 S → A. Эндгейм — S у Iris 2, Youga 3, Sage; Carino 3 S → B, Bing 1 и Gemma 2 S → A, Selena 1 C → A (прогноз).
   - **R3plic, «5 (+1) Battle-Tested Starters for SS14»** (tlicompendium, 12.10, вес 2, только старт): Erika 1, Selena 1, Youga 2, Rehan 2, Youga 3 → S. После него Erika 1 и Selena 1 на старте → **S**. Добавлены билды Selena 1 Howling Gale и Erika 1 Corrosive Throw, ссылки на гайды BmLegolas, ShadyBroker, AgroMorph, DonTheCrown, Allie, ItsAdiar, Shad0ws.
+- **13.10.2026, скриншот тир-листа с YouTube «на весь сезон»** (прислал владелец, автор и ссылка не указаны). Подписей нет — героев опознал по артам, сверяясь с подписанным тир-листом DonTheCrown (сошлись все 28). Вес 1 (автор неизвестен), только эндгейм. SSS и S → S, A → A, B → B, F → C.
+  Изменения в эндгейме: Carino 2 B → A, Youga 2 B → A, Gemma 3 C → B, Rosa 1 C → B, Iris 1 C → B, Sage S → A (3,36 с учётом нерфа SS14). Когда будет ссылка на видео — указать автора и поднять вес до 2.
 
 ## Проверенные страницы
 

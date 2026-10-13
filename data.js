@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T16:30:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-13T17:15:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13 и патчноутам SS14. Обновим после первой недели сезона.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results and SS14 patch notes. We'll update after the first week."
@@ -60,7 +60,7 @@ window.DATA = {
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
-          ["selena_01", "", { ru: "Lao Ke и R3plic: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke and R3plic: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }]
+          ["selena_01", "", { ru: "Прогноз: Lao Ke ставит во второй по силе уровень; хороша на актах и первых картах — Tide под врагами усиливает урон", en: "Forecast: Lao Ke puts her in the second-highest tier; good for acts and early maps — Tide under enemies amplifies damage" }]
         ],
         A: [
           ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
@@ -101,39 +101,39 @@ window.DATA = {
       rows: {
         S: [
           ["youga_03", "up", { ru: "Lao Ke: единственный «бог» SS14; результатов на живом сезоне ещё нет", en: "Lao Ke: the only \"god\" of SS14; no live-season results yet" }],
-          ["iris_02", "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }],
-          ["sage_01", "down", { ru: "Сильнейший класс SS13 (100+ на 4000-м этаже); нерфы SS14 вряд ли его уронят", en: "Strongest class of SS13 (100+ on floor 4000); SS14 nerfs are unlikely to sink it" }]
+          ["iris_02", "", { ru: "Стабильный урон по боссам, доходит до Profound и Deep Space. Потолок урона ниже, чем у Rosa и Rehan", en: "Steady boss damage, reaches Profound and Deep Space. Lower damage ceiling than Rosa and Rehan" }]
         ],
         A: [
-          ["bing_02", "", { ru: "Creative Genius: спеллбёрсты", en: "Creative Genius: Spell Bursts" }],
-          ["rosa_02", "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
           ["gemma_02", "up", { ru: "Frostbitten Heart: единственный freeze, не задетый нерфом", en: "Frostbitten Heart: the only freeze build untouched by the nerf" }],
-          ["erika_02", "", { ru: "100+ игроков на 4000-м этаже в SS13; дорогая", en: "100+ players on floor 4000 in SS13; expensive" }],
+          ["rosa_02", "down", { ru: "Был S; бонус Silver stance урезан 20–48% → 10–34%", en: "Was S; Silver stance bonus cut 20–48% → 10–34%" }],
+          ["sage_01", "down", { ru: "Сильнейший класс SS13 (100+ на 4000-м этаже), но с нерфами SS14 часть авторов ставит его ниже", en: "Strongest class of SS13 (100+ on floor 4000), but with SS14 nerfs some creators rate it lower" }],
+          ["bing_02", "", { ru: "Creative Genius: спеллбёрсты", en: "Creative Genius: Spell Bursts" }],
           ["selena_01", "", { ru: "Прогноз: Lao Ke высоко оценивает на SS14, но в SS13 почти никто не играл", en: "Forecast: Lao Ke rates her highly for SS14, but almost nobody played her in SS13" }],
+          ["erika_02", "", { ru: "100+ игроков на 4000-м этаже в SS13; дорогая", en: "100+ players on floor 4000 in SS13; expensive" }],
           ["erika_01", "", { ru: "На 4000-м этаже в конце SS13 — единицы игроков; уступает Rosa 2", en: "Only a handful on floor 4000 at the end of SS13; behind Rosa 2" }],
-          ["rehan_02", "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
+          ["youga_02", "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }],
           ["erika_03", "", { ru: "Vendetta's Sting", en: "Vendetta's Sting" }],
-          ["bing_01", "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }]
+          ["bing_01", "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }],
+          ["rehan_02", "down", { ru: "Нерф ярости", en: "Rage nerfed" }],
+          ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }]
         ],
         B: [
-          ["youga_02", "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }],
-          ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }],
           ["carino_03", "", { ru: "В топе на 3-й день SS13, но до 4000-го этажа дошли единицы; Lao Ke — «демон»", en: "Top tier on SS13 day 3, but few reached floor 4000; Lao Ke: \"demon\"" }],
-          ["moto_02", "down", { ru: "Понерфлен до сезона, но в SS13 результаты лучше ожиданий (51 игрок на 4000-м этаже)", en: "Nerfed pre-season, but SS13 results beat expectations (51 players on floor 4000)" }],
+          ["thea_01", "new", { ru: "Трейт переработан в SS14, набирал игроков ещё в SS13", en: "Trait reworked in SS14, was gaining players in SS13" }],
           ["thea_03", "", { ru: "Больше урона, чем у Youga 2, но дорогой предмет памяти", en: "More damage than Youga 2, but an expensive memory item" }],
           ["youga_01", "", { ru: "Набирал игроков в SS13, популярный гайд Chain Lightning", en: "Gained players in SS13, popular Chain Lightning guide" }],
+          ["moto_02", "down", { ru: "Понерфлен до сезона, но в SS13 результаты лучше ожиданий (51 игрок на 4000-м этаже)", en: "Nerfed pre-season, but SS13 results beat expectations (51 players on floor 4000)" }],
           ["gemma_01", "", { ru: "Силён в полной сборке, но терял игроков", en: "Strong when complete, but lost players" }],
-          ["thea_01", "new", { ru: "Трейт переработан в SS14, набирал игроков ещё в SS13", en: "Trait reworked in SS14, was gaining players in SS13" }],
-          ["thea_02", "", { ru: "В SS13 слабая, Lao Ke ждёт роста в SS14 (Tenacity-билд)", en: "Weak in SS13, Lao Ke expects growth in SS14 (Tenacity build)" }],
+          ["rehan_01", "down", { ru: "Набирал игроков, но Berserk понерфлен", en: "Gained players, but Berserk nerfed" }],
+          ["gemma_03", "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
           ["selena_02", "down", { ru: "Отлично чистила карты, но нерф ground-скиллов", en: "Great map clear, but ground skills nerfed" }],
-          ["rehan_01", "down", { ru: "Набирал игроков, но Berserk понерфлен", en: "Gained players, but Berserk nerfed" }]
+          ["thea_02", "", { ru: "В SS13 слабая, Lao Ke ждёт роста в SS14 (Tenacity-билд)", en: "Weak in SS13, Lao Ke expects growth in SS14 (Tenacity build)" }],
+          ["rosa_01", "", { ru: "Терял игроков, Rosa 2 сильнее", en: "Lost players, Rosa 2 is stronger" }],
+          ["iris_01", "", { ru: "Фармит до T8, дальше уступает Iris 2", en: "Farms up to T8, then behind Iris 2" }]
         ],
         C: [
-          ["gemma_03", "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
-          ["rosa_01", "", { ru: "Терял игроков, Rosa 2 сильнее", en: "Lost players, Rosa 2 is stronger" }],
           ["carino_01", "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
-          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
-          ["iris_01", "", { ru: "Фармит до T8, дальше уступает Iris 2", en: "Farms up to T8, then behind Iris 2" }]
+          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }]
         ]
       }
     }
@@ -220,7 +220,7 @@ window.DATA = {
       cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" }, src: { ru: "IGGM, патчноут SS14", en: "IGGM, SS14 patch notes" },
       links: [[{ ru: "Гайд DonTheCrown: Frost Terra, стартер (tlicompendium)", en: "DonTheCrown's guide: Frost Terra starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/frost-terra-selena-2-season-starter"],
         [{ ru: "Гайд Allie: стартер Selena 2 (tlicompendium)", en: "Allie's guide: Selena 2 starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/allies-selena-2-s13-starter-guide"]] },
-    { hero: "sage_01", name: "Licorice Note Elixirs", skill: { ru: "Эликсиры + саммоны", en: "Elixirs + summons" }, tier: "S", stage: "end", budget: 2, diff: 2, trend: "down",
+    { hero: "sage_01", name: "Licorice Note Elixirs", skill: { ru: "Эликсиры + саммоны", en: "Elixirs + summons" }, tier: "A", stage: "end", budget: 2, diff: 2, trend: "down",
       pros: { ru: "Хорошая защита, саммоны забирают урон", en: "Good defense, summons absorb damage" },
       cons: { ru: "Главная жертва нерфов SS14", en: "Biggest loser of SS14 nerfs" }, src: { ru: "musabots, Bilibili, патчноут SS14", en: "musabots, Bilibili, SS14 patch notes" },
       links: [[{ ru: "Разбор Sage на SS14 от Neng Miao (Bilibili; документ обещан после блюпоста)", en: "Sage SS14 breakdown by Neng Miao (Bilibili; document promised after the blue post)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/"],

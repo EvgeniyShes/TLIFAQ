@@ -17,6 +17,12 @@ const SOURCES = [
   { id: "r3plic", name: "R3plic, «5 (+1) Battle-Tested Starters for SS14» (tlicompendium)", w: 2, lists: ["start"],
     // подборка лучших стартеров без порядка → S
     votes: { S: "erika_01 selena_01 youga_02 rehan_02 youga_03" } },
+  { id: "yt_season_unknown", name: "YouTube, тир-лист на весь сезон (скриншот от владельца, автор не указан)", w: 1, lists: ["end"],
+    // героев опознал по артам (сверка с подписанным тир-листом DonTheCrown); SSS и S → S, A → A, B → B, F → C
+    votes: { S: "youga_03 erika_01 carino_03 erika_03 bing_01 gemma_02 selena_01 iris_02 youga_02 rosa_02 thea_01 carino_02 rehan_02",
+             A: "rehan_01 bing_02 iris_01 sage_01 thea_03 gemma_03",
+             B: "erika_02 gemma_01 selena_02 youga_01 rosa_01 carino_01",
+             C: "moto_01 moto_02 thea_02" } },
   { id: "musabots_start", name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
     votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
              B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
