@@ -117,11 +117,9 @@ function authorsListHTML() {
   const names = [...new Set([...Object.keys(first), ...Object.keys(D.authors || {})])]
     .filter(n => !((D.authors || {})[n] || {}).site).sort((x, y) => x.localeCompare(y));
   return names.map(n => {
-    const a = (D.authors || {})[n] || {}, main = a.youtube || a.twitch || a.url || first[n];
-    const extra = a.youtube && a.twitch ? ` <a class="ch" href="${a.twitch}" target="_blank" rel="noopener nofollow">Twitch</a>` : "";
-    const kind = a.youtube ? "YouTube" : a.twitch ? "Twitch" : "";
-    return `<span class="au"><a href="${main}" target="_blank" rel="noopener nofollow">${esc(n)}</a>${kind ? `<span class="ch">${kind}</span>` : ""}${extra}</span>`;
-  }).join("");
+    const a = (D.authors || {})[n] || {}, url = a.youtube || a.twitch || a.url || first[n];
+    return `<a href="${url}" target="_blank" rel="noopener nofollow">${esc(n)}</a>`;
+  }).join(", ");
 }
 
 // Таблица «Гайды по билдам»: герой · билд · гайд · автор

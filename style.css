@@ -290,3 +290,13 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center;border
 .copy:hover{background:#60a5fa22}
 .has-code{font-size:11px;font-weight:600;color:#93c5fd;white-space:nowrap}
 .gtbl .bcode{margin:2px 0}
+
+/* Источники — скромно, просто для отчётности */
+#sources{font-size:13px;color:var(--muted)}
+#sources h2{font-size:16px}#sources h2 svg{width:16px;height:16px}
+#sources .sub-h{font:600 12px Inter;color:var(--muted);margin:14px 0 4px;text-transform:uppercase;letter-spacing:.05em}
+#sources .lead{font-size:12px;margin:0 0 4px}
+#sources a{color:var(--muted);text-decoration:none}#sources a:hover{color:var(--text);text-decoration:underline}
+#sources .authors-list{display:block;line-height:1.7;margin:0}
+#sources .src{columns:auto;display:flex;flex-wrap:wrap;gap:2px 16px;list-style:none;padding:0;margin:0;font-size:12px}
+#sources .src li{margin:0}
