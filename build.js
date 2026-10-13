@@ -11,6 +11,10 @@ require(path.join(root, "data.js"));
 require(path.join(root, "render.js"));
 const { D, H, SITE, T, L, esc, label, img, pageUrl, tierOf, dots } = TLI;
 const LANGS = ["ru", "en"];
+// Коды подтверждения владельца для Google Search Console / Яндекс Вебмастера (ставятся на главные страницы)
+const VERIFY = {
+  "google-site-verification": "EC71OXZ5T7s2XkNTHbbgbjq7a0rILMfgmgyjy2NUmNI"
+};
 
 const write = (rel, html) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); };
 const fillId = (h, id, html) => {
@@ -37,7 +41,8 @@ function head(lang, id, title, desc) {
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:locale" content="${lang === "ru" ? "ru_RU" : "en_US"}">`,
     ...(id ? [`<meta property="og:image" content="${SITE + img(id)}">`] : []),
-    `<meta name="twitter:card" content="summary">`
+    `<meta name="twitter:card" content="summary">`,
+    ...(id ? [] : Object.entries(VERIFY).map(([n, c]) => `<meta name="${n}" content="${c}">`))
   ].join("\n");
 }
 
