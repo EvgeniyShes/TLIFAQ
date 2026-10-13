@@ -342,3 +342,21 @@ tr.more td{font-size:15px;line-height:1.55}
 .links{border-top:1px solid var(--line);padding-top:12px;margin-top:14px}
 .lnk,.lnk.yt{background:var(--bg2);border:1px solid var(--line);color:var(--text);font-weight:500}
 .lnk:hover,.lnk.yt:hover{background:var(--card);border-color:var(--fire);color:var(--fire2)}
+
+/* Меню: пункты-кнопки с иконками, подсветка текущего раздела */
+nav .wrap{gap:8px;padding-top:10px;padding-bottom:10px;align-items:center}
+nav .wrap > a{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:15px}
+nav .wrap > a svg{width:17px;height:17px;color:var(--fire)}
+nav .wrap > a:hover{border-color:var(--fire);color:var(--fire2)}
+nav .wrap > a.on{background:#ff8a2b1f;border-color:var(--fire);color:var(--fire2)}
+nav .lang{margin:0 0 0 auto}
+
+/* Разделы — отдельные панели, чтобы не сливались */
+main section{margin:28px 0;padding:24px 24px 20px;border:1px solid var(--line);border-radius:16px;background:var(--bg2);scroll-margin-top:80px}
+main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+#guides{border-color:#60a5fa55;background:linear-gradient(180deg,#60a5fa0f,var(--bg2) 220px)}
+#guides > h2 svg{color:var(--new)}
+@media (max-width:760px){
+  nav .wrap > a{padding:8px 12px;font-size:14px}
+  main section{margin:18px -8px;padding:16px 12px 14px;border-radius:12px}
+}
