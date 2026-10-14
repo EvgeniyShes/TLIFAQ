@@ -1078,7 +1078,7 @@ function renderStats() {
   $("#likeBtn").hidden = $("#views").hidden = false;
   $("#likeBtn").classList.toggle("on", stats.liked);
   $("#likeN").textContent = stats.likes;
-  $("#views").textContent = `👁 ${stats.views} ${t("views")}`;
+  $("#views").textContent = `👁 ${stats.views}`; $("#views").title = t("views");
 }
 async function sendStats(extra) {
   try {
