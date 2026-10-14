@@ -20,7 +20,8 @@ window.DATA = {
   changelog: [
     ["2026-10-14", [
       "New builds: Youga 3 Splitting Lightning Bolt (VacaAlpha, BmLegolas) and Stasis Vault campaign (DonTheCrown), Youga 2 Fallen Star Ignite (Corealis), Rehan 2 Frost Spike campaign → Profound with build codes (ExileMind) and Spectral Slash SS14 endgame.",
-      "Erika 1 Corrosive Throw: added Shad0ws' SS14 video guide."
+      "Erika 1 Corrosive Throw: added Shad0ws' SS14 video guide.",
+      "New builds: Youga 3 physical Hound's Fangs (ManMauzer), Selena 2 Frost Terra start → early Profound (Crazycaps), Rosa 2 Frost Spike level 1 → Profound (Lucas)."
     ]],
     ["2026-10-13", [
       "Launch: SS14 Tartarus tier lists for league start and endgame (all 28 traits), builds, SS14 changes and sources.",
@@ -173,6 +174,13 @@ window.DATA = {
       links: [
         [{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/", "Ruguo Bu Shi Qi"]
       ] },
+    { hero: "youga_03", name: { ru: "Hound's Fangs: физический урон через Trauma", en: "Hound's Fangs: physical Trauma" }, skill: { ru: "Hound's Fangs, ветка I Meet the Selves", en: "Hound's Fangs, I Meet the Selves branch" }, tier: "S", stage: "both", budget: 2, diff: 3, trend: "up",
+      pros: { ru: "Подробный разбор механики: I Meet the Selves с +40% скорости кулдаунов даёт Hound's Fangs +80% урона за каждый стак Trauma (до 3 стаков через Open Wounds). Вместо дорогого Malign Embrace — шлем Ralph's Dreadcrest с Laceration: ещё до ~+477% физического урона. Версии билда на старт (огонь, физика, Shackles) и середину игры", en: "A detailed mechanics breakdown: I Meet the Selves with +40% cooldown recovery gives Hound's Fangs +80% damage per Trauma stack (up to 3 via Open Wounds). Instead of the pricey Malign Embrace — the Ralph's Dreadcrest helmet with Laceration: up to ~+477% more physical damage. Build versions for league start (fire, physical, Shackles) and mid game" },
+      cons: { ru: "Теорикрафт: Laceration — новый эффект, до сезона его не проверить. На 30 стаках билд получает ~3000 чистого урона в секунду — нужен большой запас здоровья, реген и Life Tonic для сброса стаков. Коды билдов — только в игре (Pro Builds → Creator → ManMauzer)", en: "Theorycraft: Laceration is a new effect that can't be tested before the season. At 30 stacks the build takes ~3000 true damage per second — needs a big life pool, regen and Life Tonic to clear stacks. Build codes are in-game only (Pro Builds → Creator → ManMauzer)" },
+      src: { ru: "гайд ManMauzer (tlicompendium, 12.10.2026)", en: "ManMauzer's guide (tlicompendium, Oct 12, 2026)" },
+      links: [
+        [{ ru: "Гайд ManMauzer: Hound's Fangs, стартеры Youga 3 (tlicompendium)", en: "ManMauzer's guide: Hound's Fangs, Youga 3 starters (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-manmauzer", "ManMauzer"]
+      ] },
     { hero: "youga_03", name: "Splitting Lightning Bolt", skill: "Splitting Lightning Bolt + Gale", tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "Стартовое заклинание Youga 3, бюджет 0 FE. Ветка I Meet the Selves: чем больше снарядов, тем больше урона (до +120%), I Need Not Lift a Finger автоматизирует каст. Разобраны саппорты, таланты, таблички, питомцы и FAQ. Клир быстрее, чем у Hound's Fangs. У BmLegolas: кампания на Chromatic Shot, переход на Splitting Lightning Bolt с TM8", en: "Youga 3's starting spell, 0 FE budget. I Meet the Selves branch: more projectiles means more damage (up to +120%), I Need Not Lift a Finger automates casting. Supports, talents, slates, pact spirits and an FAQ are covered. Faster clear than Hound's Fangs. BmLegolas: Chromatic Shot in the campaign, switch to Splitting Lightning Bolt at TM8" },
       cons: { ru: "Теорикрафт до старта; по словам VacaAlpha, у Hound's Fangs урон выше. Код билда автор обещал позже, Malign Embrace для капа танглов будет очень дорогим", en: "Pre-season theorycraft; VacaAlpha says Hound's Fangs has higher damage. The build code is promised later, and Malign Embrace for the tangle cap will be very expensive" },
@@ -299,6 +307,13 @@ window.DATA = {
       pros: { ru: "Дотягивает до T8, хорош для фарма Flame Elementium", en: "Reaches T8, good for Flame Elementium farming" },
       cons: { ru: "Не самый быстрый", en: "Not the fastest" },
       src: "IGGM" },
+    { hero: "selena_02", name: { ru: "Frost Terra: старт до раннего Profound", en: "Frost Terra: league start to early Profound" }, skill: { ru: "Frost Terra, Reap (DoT)", en: "Frost Terra, Reap (DoT)" }, tier: "A", stage: "both", budget: 2, diff: 3, trend: "down",
+      pros: { ru: "Этапы: кампания, TM5, T7, T8, T8-1, Profound. Приоритеты крафта оружия и брони, порядок легендарок (Restless Glacier → Crimson Gash → …), формула кулдауна Reap и таблица брейкпоинтов, лут-фильтр до T7. Вариант быстрой кампании через паучьи танки Moto (если в сезоне можно перекинуть скиллы)", en: "Stages: campaign, TM5, T7, T8, T8-1, Profound. Weapon and armor crafting priorities, legendary order (Restless Glacier → Crimson Gash → …), a Reap cooldown formula with a breakpoint sheet, loot filter up to T7. A faster campaign option with Moto's Spider Tanks (if skill muling still works this season)" },
+      cons: { ru: "Расчёт Reap сделан под питомцев: фиолетовый/синий холодный и Abyssal King Soul 1 уровня. Selena 2 понерфлена в SS14; автор сам пишет, что ещё осваивает героя. Видео прохождения обещано позже", en: "Reap math assumes specific pact spirits: a purple/blue cold one and level-1 Abyssal King Soul. Selena 2 was nerfed in SS14; the author says they're still learning the hero. A run video is promised later" },
+      src: { ru: "гайд Crazycaps (tlicompendium, 13.10.2026)", en: "Crazycaps' guide (tlicompendium, Oct 13, 2026)" },
+      links: [
+        [{ ru: "Гайд Crazycaps: Frost Terra до раннего Profound (tlicompendium)", en: "Crazycaps' guide: Frost Terra to early Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/selena-2-frost-terra-guide-season-starter-till-early-profound", "Crazycaps"]
+      ] },
     { hero: "selena_02", name: "Ground Autowalk", skill: "Thorns Domain / Tidal Spring / Meteor", tier: "A", stage: "both", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Дешёвый «автобег» по картам; Meteor в SS14 бафнут", en: "Cheap auto-walk map clearing; Meteor buffed in SS14" },
       cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" },
@@ -314,6 +329,13 @@ window.DATA = {
       links: [
         [{ ru: "Разбор Sage на SS14 от Neng Miao (Bilibili; документ обещан после блюпоста)", en: "Sage SS14 breakdown by Neng Miao (Bilibili; document promised after the blue post)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/", "Neng Miao"],
         [{ ru: "Гайд DonTheCrown: Chromatic Shot Sage, стартер (tlicompendium)", en: "DonTheCrown's guide: Chromatic Shot Sage starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/chromatic-shot-sage-season-starter", "DonTheCrown"]
+      ] },
+    { hero: "rosa_02", name: { ru: "Frost Spike: от 1 уровня до Profound", en: "Frost Spike: level 1 to Profound" }, skill: "Frost Spike", tier: "S", stage: "both", budget: 2, diff: 2, trend: "down",
+      pros: { ru: "Пошаговая прокачка (уровни 1–55, 56 → Traveler T7), сетапы T8, T8-2 с 75% количества и Profound. Советы: не отставать по уровню, на что тратить Embers (Precious и Matchless — только на вещи T7), какие карты брать с T4, порядок крафта: оружие → кольца с Max Frostbite. Питомцы: Red Umbrella + Azure Gunslinger, третий — под маппинг или боссов", en: "Step-by-step leveling (levels 1–55, 56 → T7 Traveler), setups for T8, T8-2 with 75% quantity and Profound. Tips: don't fall behind in level, where to spend Embers (Precious and Matchless only on T7 items), which map cards to run from T4, crafting order: weapons → Max Frostbite rings. Pact spirits: Red Umbrella + Azure Gunslinger, the third for mapping or bossing" },
+      cons: { ru: "Гайд на португальском (последняя заметка продублирована на английском). Profound-комбо не закончено; из-за бага планера оружие в нём показано кинжалами и когтями — на деле нужны мечи", en: "The guide is in Portuguese (the final note is duplicated in English). The Profound combo setup is unfinished; due to a planner bug the weapons show as daggers and claws — you actually need swords" },
+      src: { ru: "гайд Lucas (tlicompendium, 13.10.2026)", en: "Lucas' guide (tlicompendium, Oct 13, 2026)" },
+      links: [
+        [{ ru: "Гайд Lucas: Rosa 2 Frost Spike (tlicompendium, на португальском)", en: "Lucas' guide: Rosa 2 Frost Spike (tlicompendium, in Portuguese)" }, "https://tlicompendium.com/en/build-guides/minha-build-ss14", "Lucas"]
       ] },
     { hero: "rosa_02", name: "Unsullied Blade", skill: "Mana stacking", tier: "S", stage: "end", budget: 3, diff: 3, trend: "down",
       pros: { ru: "Один из самых высоких потолков в игре", en: "One of the highest ceilings in the game" },
@@ -444,6 +466,9 @@ window.DATA = {
     ExileMind: { youtube: "https://www.youtube.com/@Ex1leMind" },
     Corealis: { youtube: "https://www.youtube.com/@Corealis73" },
     Shad0ws: { youtube: "https://www.youtube.com/@oftheShad0w" },
+    ManMauzer: { youtube: "https://www.youtube.com/@ManMauzer", twitch: "https://twitch.tv/manmauzer" },
+    Crazycaps: { youtube: "https://www.youtube.com/@crazycaps3934", twitch: "https://twitch.tv/crazycaps" },
+    Lucas: { twitch: "https://www.twitch.tv/lucasgattii" },
     // без найденного канала — ссылка на сам материал
     "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
     // площадки, а не авторы — в список авторов не выводятся

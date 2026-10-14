@@ -37,7 +37,7 @@
 
 Формат записи — комментарий над `builds` в `data.js` (поля `hero, name, skill, tier, stage, budget, diff, trend, pros, cons, src, links, codes`). Новый автор — в `authors` (каналы берутся из `creatorInfo` гайда). Перед добавлением — `grep` slug'а по `data.js`, чтобы не задвоить.
 
-Берём только **доделанные и информативные** гайды: текст в нескольких разделах (трейты, скиллы, гир, питомцы) или видео/код билда. Гайд «только планер» (текстовые поля пустые) и гайды из одного абзаца не берём — пишем в `SOURCES.md`, почему.
+Берём только **доделанные и информативные** гайды: текст в нескольких разделах (трейты, скиллы, гир, питомцы) или видео/код билда. Гайд «только планер» (на странице «Start writing…», есть только сборка) и гайды из одного абзаца не берём — пишем в `SOURCES.md`, почему.
 
 ### tlicompendium — через API, без браузера
 
@@ -47,7 +47,7 @@
 - `https://api.tlicompendium.com/api/buildguides/creator?sortBy=newest&page=1&pageSize=20` — гайды авторов
 - `https://api.tlicompendium.com/api/buildguides/by-slug/<slug>` — полный гайд (в списке текст бывает пустым)
 
-Поля: `title, slug, publishDate, lastEditedDate, patchVersion` (SS14), `userDisplayName`, `creatorInfo` (YouTube/Twitch), `youtubeLink`, `inGameBuildCode`, `cost, damage`, тексты в HTML: `introduction, heroTraitsText, skillsText, talentTreeText, gearText, divinityText, pactspiritsText, statsPriorityText, faqItems`. `heroId` — UUID; героя и трейт видно по `<title>` страницы гайда в браузере («Erika (Wind Stalker) …») или по названию.
+Поля: `title, slug, publishDate, lastEditedDate, patchVersion` (SS14), `userDisplayName`, `creatorInfo` (YouTube/Twitch), `youtubeLink`, `inGameBuildCode`, `cost, damage`, тексты в HTML: `introduction, heroTraitsText, skillsText, talentTreeText, gearText, divinityText, pactspiritsText, statsPriorityText, faqItems`. **Пустые текстовые поля в API ещё не значат пустой гайд**: в новом формате (вкладки «Build Version», этапы) весь текст лежит в сжатом `compressedBuildData`. Такие гайды открывать в браузере и читать `main.innerText` до блока «Helmet / Chest Armor»; «Start writing…» — значит, текста правда нет. `heroId` — UUID; героя и трейт видно по `<title>` страницы гайда в браузере («Erika (Wind Stalker) …») или по названию.
 Новости — только в браузере: `https://tlicompendium.com/en/news`.
 
 ### Другие площадки
