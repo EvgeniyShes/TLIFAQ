@@ -384,7 +384,11 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .log-link{display:inline-flex;align-items:center;margin-left:4px;padding:3px;border-radius:50%;color:var(--muted)}
 .log-link:hover,.log-link:focus-visible{color:var(--fire2);background:#ff8a2b1a}
 .log-link svg{width:16px;height:16px}
-.clog section{padding:24px 0 0}
 .clog h2{font-size:18px;color:var(--fire2)}
 .clog ul{margin:8px 0 0;padding-left:20px}
 .clog li{margin:6px 0}
+
+/* Футер всегда внизу экрана, даже на коротких страницах */
+body{min-height:100vh;display:flex;flex-direction:column}
+body > .wrap{width:100%}
+main{flex:1 0 auto}
