@@ -52,6 +52,7 @@ function indexPage(lang) {
   const t = k => T(lang, k);
   let h = template.replace("{{lang}}", lang).replace("{{head}}", head(lang, null, t("title"), t("desc")));
   h = h.replace(/(data-i="(\w+)"[^>]*>)(<\/)/g, (_, a, k, b) => a + esc(t(k)) + b);
+  h = h.replace(`id="logLink"`, `id="logLink" title="${esc(t("changelog"))}" aria-label="${esc(t("changelog"))}"`);
   h = h.replace(`<input id="q" type="search">`, `<input id="q" type="search" placeholder="${esc(t("search"))}">`);
     const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
@@ -123,13 +124,35 @@ function heroPage(lang, id) {
     "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
 }
 
+// Журнал изменений: одна страница, только EN
+function changelogPage() {
+  const title = "Changelog — Torchlight: Infinite tier list", desc = "Major content updates of the TLI FAQ tier lists and builds.";
+  const url = SITE + "/changelog/";
+  const meta = [`<title>${title}</title>`, `<meta name="description" content="${desc}">`, `<link rel="canonical" href="${url}">`,
+    `<meta property="og:title" content="${title}">`, `<meta property="og:description" content="${desc}">`, `<meta property="og:url" content="${url}">`].join("\n");
+  const day = d => new Date(d + "T00:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", dateStyle: "long" });
+  const body = `
+<header class="hp-head"><div class="wrap">
+  <div class="hp-nav"><a href="/">${T("en", "backToList")}</a><a href="/ru/">RU</a></div>
+  <h1>Changelog</h1>
+  <p class="sub">Major content updates: tiers, builds, guides and sources.</p>
+</div></header>
+<main class="wrap clog">
+${D.changelog.map(([d, items]) => `  <section><h2>${day(d)}</h2><ul>${items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></section>`).join("\n")}
+</main>
+<footer class="wrap"><span>${T("en", "footer")}</span></footer>`;
+  return template.slice(0, template.indexOf("<body>") + 6).replace("{{lang}}", "en").replace("{{head}}", meta) +
+    "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
+}
+
 // Сборка
-for (const dir of ["hero", "en", "ru"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
+for (const dir of ["hero", "en", "ru", "changelog"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
 const urls = [];
 for (const lang of LANGS) {
   write(lang === "ru" ? "ru/index.html" : "index.html", indexPage(lang));
   for (const id of Object.keys(H)) write(pageUrl(lang, id).slice(1) + "index.html", heroPage(lang, id));
 }
+write("changelog/index.html", changelogPage());
 for (const id of [null, ...Object.keys(H)]) urls.push(id);
 const lastmod = D.season.updatedAt.slice(0, 10);
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
@@ -137,6 +160,7 @@ write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.flatMap(id => LANGS.map(lang => `<url><loc>${SITE + pageUrl(lang, id)}</loc><lastmod>${lastmod}</lastmod><changefreq>daily</changefreq><priority>${id ? "0.7" : "1.0"}</priority>
 ${LANGS.map(l => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE + pageUrl(l, id)}"/>`).join("\n")}
 </url>`)).join("\n")}
+<url><loc>${SITE}/changelog/</loc><lastmod>${D.changelog[0][0]}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
 </urlset>
 `);
 console.log(`Готово: ${LANGS.length} главных, ${LANGS.length * Object.keys(H).length} страниц героев, sitemap на ${urls.length * LANGS.length} адресов`);

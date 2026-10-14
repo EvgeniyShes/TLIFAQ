@@ -15,6 +15,21 @@ window.DATA = {
     }
   },
 
+  // Журнал крупных обновлений содержимого (страница /changelog/): только EN, кратко, новые сверху.
+  // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
+  changelog: [
+    ["2026-10-14", [
+      "New builds: Youga 3 Splitting Lightning Bolt (VacaAlpha, BmLegolas) and Stasis Vault campaign (DonTheCrown), Youga 2 Fallen Star Ignite (Corealis), Rehan 2 Frost Spike campaign → Profound with build codes (ExileMind) and Spectral Slash SS14 endgame.",
+      "Erika 1 Corrosive Throw: added Shad0ws' SS14 video guide."
+    ]],
+    ["2026-10-13", [
+      "Launch: SS14 Tartarus tier lists for league start and endgame (all 28 traits), builds, SS14 changes and sources.",
+      "Tiers recalculated from weighted sources: Lao Ke, DonTheCrown, R3plic, MinMaxedARPG, CoffeeBns, Pat404, Little_practice, SS13 floor-4000 stats.",
+      "New guides: Travic (Rehan 1 Whirlwind), SephGoesGaming (Iris 2, Youga 1), instinct (Iris 2), Smith (Selena 1 Scorching Beam).",
+      "In-game build codes from satu1kaa, instinct and Ademka."
+    ]]
+  ],
+
   // Герои и трейты. id = имя файла портрета в img/
   heroes: {
     rehan_01:  { hero: "Rehan",  n: 1, trait: "Anger" },

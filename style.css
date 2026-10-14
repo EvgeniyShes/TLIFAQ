@@ -379,3 +379,12 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 .tip:hover [data-i],.tip:focus-visible [data-i]{opacity:1;transform:translate(0,-50%)}
 @media (max-width:760px){.tips{right:12px;bottom:12px}.tip{width:42px;height:42px;font-size:19px}.boosty .bi{font-size:19px}}
 .tip.tg{background:#2aabee;border-color:#2aabee}
+
+/* Журнал изменений */
+.log-link{display:inline-flex;align-items:center;margin-left:4px;padding:3px;border-radius:50%;color:var(--muted)}
+.log-link:hover,.log-link:focus-visible{color:var(--fire2);background:#ff8a2b1a}
+.log-link svg{width:16px;height:16px}
+.clog section{padding:24px 0 0}
+.clog h2{font-size:18px;color:var(--fire2)}
+.clog ul{margin:8px 0 0;padding-left:20px}
+.clog li{margin:6px 0}
