@@ -61,6 +61,8 @@ h2 svg{width:22px;height:22px;color:var(--fire)}
   border:1px solid transparent;transition:.15s;background:none;color:inherit;font:inherit}
 .hcard:hover,.hcard.sel{background:var(--card);border-color:var(--line);transform:translateY(-2px)}
 .hcard.sel{border-color:var(--fire)}
+/* <button> центрирует содержимое по вертикали — при длинном трейте портрет съезжал вниз; прижимаем к верху */
+.hcard{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
 .portrait{width:72px;height:72px;margin:0 auto;border-radius:50%;padding:3px;
   background:conic-gradient(from 210deg,var(--tc),#ffffff22,var(--tc))}
 .portrait img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#000;display:block}
