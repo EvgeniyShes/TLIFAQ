@@ -22,6 +22,7 @@
 
 - Патчноут — не голос, а поправка: явный нерф −0,5, бафф/новинка +0,5 (и ▲/▼ на сайте). Поправка действует только на долю голосов источников прошлого сезона (`old: true` в votes.js): прогнозы SS14 патч уже учли, иначе нерф считается дважды.
 - Гайд по одному герою влияет только на этого героя: он не сравнивает героев между собой.
+- **Не используем** сайты, которые продают игровую валюту, предметы, аккаунты, бустинг (RMT: IGGM, mmoexp и т.п.) или ботов (musabots): ни как голос, ни как ссылку. Расчёты ниже до 14.10.2026 ещё учитывали их. Их голоса убраны из `votes.js`, но тиры по решению владельца **не сдвигали**: `node votes.js` показывает ≠ у rosa_01 (старт B), carino_03, erika_01, bing_01 (эндгейм) — это намеренно, пересматривать по новым данным SS14, а не «чинить» под формулу.
 - Если у героя меньше 2 источников — тир помечаем как прогноз и пересматриваем первым.
 - Если суммарный вес голосов у трейта меньше 2 — тир по формуле не меняем (оставляем прежнюю оценку, «мало данных»).
 - **Голоса всех источников хранятся в `votes.js`.** `node votes.js` печатает расчёт по каждому трейту и расхождения с `data.js`. Новый источник: добавить в `votes.js` (вес + голоса), запустить, перенести изменения в `data.js`.
@@ -71,9 +72,9 @@
 
 | Источник | Проверен | Статус | Что взято / почему нет |
 |---|---|---|---|
-| [musabots — SS14 tier list](https://musabots.com/blog/torchlight-infinite-tier-list) | 13.10.2026 | 🔁 | Стартер и эндгейм тиры (данные SS13). Обещают обновить после 1-й недели SS14 |
-| [IGGM — SS13 starter tier list](https://www.iggm.com/news/torchlight-infinite-ss13-afterlight-starter-build-tier-list-for-fast-leveling) | 13.10.2026 | ✅ | Стартовые тиры SS13, плюсы/минусы, ключевые скиллы |
-| [mmoexp — SS13 tier list, day 3](https://www.mmoexp.com/News/torchlight-infinite-ss13-afterlight-tier-list-10-best-builds-to-farm-faster-based-on-day-3-performance.html) | 13.10.2026 | ✅ | Эндгейм SS13, кто набирал/терял игроков. Carino 3 = S |
+| [musabots — SS14 tier list](https://musabots.com/blog/torchlight-infinite-tier-list) | 14.10.2026 | ⛔ | **Исключён**: магазин игровой валюты (RMT) / продавец ботов — не источник. Голоса убраны из votes.js, билды без других источников удалены |
+| [IGGM — SS13 starter tier list](https://www.iggm.com/news/torchlight-infinite-ss13-afterlight-starter-build-tier-list-for-fast-leveling) | 14.10.2026 | ⛔ | **Исключён**: магазин игровой валюты (RMT) / продавец ботов — не источник. Голоса убраны из votes.js, билды без других источников удалены |
+| [mmoexp — SS13 tier list, day 3](https://www.mmoexp.com/News/torchlight-infinite-ss13-afterlight-tier-list-10-best-builds-to-farm-faster-based-on-day-3-performance.html) | 14.10.2026 | ⛔ | **Исключён**: магазин игровой валюты (RMT) / продавец ботов — не источник. Голоса убраны из votes.js, билды без других источников удалены |
 | [Официальный патчноут SS14](https://torchlight.xd.com/ss14pn/) | 13.10.2026 | 🔁 | Нерфы Rehan/Selena/Rosa/Sage, скиллы. Могут выйти хотфиксы |
 | [PCGamesN — Tartarus](https://www.pcgamesn.com/torchlight-infinite/update-tartarus-season) | 13.10.2026 | ✅ | Даты, механики, Youga 3, Thea 1 rework (без деталей) |
 | [17173 — превью SS14](https://news.17173.com/content/10112026/143712170.shtml) | 13.10.2026 | ✅ | Наёмники, «шесть проклятий», Youga 3 Dictator |
@@ -119,7 +120,7 @@
 
 ## Где искать в первую очередь после старта SS14
 
-1. musabots (обещали обновить через неделю)
+1. Тир-листы авторов и стримеров (DonTheCrown, MinMaxedARPG, CoffeeBns, Lao Ke) — обновлённые после старта
 2. minmaxed S14 — новые гайды
 3. 17173 / 233leyuan — китайские разборы и коды билдов
-4. Новые тир-листы IGGM / mmoexp по SS14
+4. Ладдеры и статистика популярности трейтов SS14

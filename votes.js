@@ -50,15 +50,8 @@ const SOURCES = [
              A: "rosa_02 rehan_02 gemma_02 erika_02 carino_03 gemma_03 iris_01 iris_02 erika_03 thea_01 sage_01",
              B: "rehan_01 youga_02 rosa_01 bing_01 carino_01 carino_02 moto_02",
              C: "moto_01 gemma_01 thea_02 thea_03 youga_01" } },
-  { id: "musabots_start", old: true, name: "musabots / PixelNitro, стартеры (данные SS13)", w: 1, lists: ["start"],
-    votes: { S: "selena_02 erika_01 youga_02 thea_03", A: "sage_01 moto_02 carino_02 gemma_02 iris_02",
-             B: "rehan_02 rosa_02 bing_01 gemma_03", C: "moto_01 youga_01 gemma_01 carino_01" } },
-  { id: "iggm", old: true, name: "IGGM, стартеры SS13", w: 1, lists: ["start"],
-    votes: { S: "selena_02 youga_02 rehan_02 iris_01 erika_01", A: "bing_01 thea_03 gemma_02 sage_01",
-             B: "rosa_01 gemma_01", C: "rosa_02" } },
-  { id: "mmoexp", old: true, name: "mmoexp / musabots, эндгейм (SS13, 3-й день)", w: 1, lists: ["end"],
-    votes: { S: "rosa_02 carino_03 gemma_02 bing_01 iris_02 sage_01", A: "selena_02 rehan_02 erika_01 erika_03 bing_02 moto_02",
-             C: "thea_02" } },
+  // IGGM, mmoexp и musabots убраны 14.10.2026: RMT-магазины и продавец ботов — не источник.
+  // Тиры после этого не сдвигали (решение владельца): ≠ у rosa_01, carino_03, erika_01, bing_01 — намеренно, см. SOURCES.md
   { id: "kr4000", old: true, name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
     // 100+ → S, 30–73 → A, 10–22 → B, меньше 10 → C
     votes: { S: "sage_01 iris_02 erika_02", A: "rosa_02 bing_02 moto_02 gemma_02 rehan_02",
