@@ -32,6 +32,29 @@
 4. Дописать в `SOURCES.md`, что проверено.
 5. Запустить `node build.js` и закоммитить сгенерированные файлы вместе с `data.js`.
 
+## Как добавлять билды
+
+Формат записи — комментарий над `builds` в `data.js` (поля `hero, name, skill, tier, stage, budget, diff, trend, pros, cons, src, links, codes`). Новый автор — в `authors` (каналы берутся из `creatorInfo` гайда). Перед добавлением — `grep` slug'а по `data.js`, чтобы не задвоить.
+
+Берём только **доделанные и информативные** гайды: текст в нескольких разделах (трейты, скиллы, гир, питомцы) или видео/код билда. Гайд «только планер» (текстовые поля пустые) и гайды из одного абзаца не берём — пишем в `SOURCES.md`, почему.
+
+### tlicompendium — через API, без браузера
+
+Сайт — SPA (curl отдаёт пустую страницу), но API открыт:
+
+- `https://api.tlicompendium.com/api/buildguides?sortBy=newest&page=1&pageSize=80` — гайды игроков
+- `https://api.tlicompendium.com/api/buildguides/creator?sortBy=newest&page=1&pageSize=20` — гайды авторов
+- `https://api.tlicompendium.com/api/buildguides/by-slug/<slug>` — полный гайд (в списке текст бывает пустым)
+
+Поля: `title, slug, publishDate, lastEditedDate, patchVersion` (SS14), `userDisplayName`, `creatorInfo` (YouTube/Twitch), `youtubeLink`, `inGameBuildCode`, `cost, damage`, тексты в HTML: `introduction, heroTraitsText, skillsText, talentTreeText, gearText, divinityText, pactspiritsText, statsPriorityText, faqItems`. `heroId` — UUID; героя и трейт видно по `<title>` страницы гайда в браузере («Erika (Wind Stalker) …») или по названию.
+Новости — только в браузере: `https://tlicompendium.com/en/news`.
+
+### Другие площадки
+
+- minmaxed: `https://minmaxedarpg.com/games/tli/seasons/s14` — в браузере, ссылки `/guides/…`.
+- Reddit: встроенный браузер его не открывает → Claude in Chrome или RSS `https://www.reddit.com/r/TorchlightInfinite/new/.rss` через `curl` с браузерным User-Agent (при частых запросах 429).
+- Автор и название YouTube-видео: `https://www.youtube.com/oembed?url=<ссылка>&format=json`.
+
 ## Открытые задачи
 
 - [x] Google Search Console подключён (тег в `VERIFY` в build.js), sitemap отправлен.

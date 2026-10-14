@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-13T18:18:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-14T06:41:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
@@ -158,6 +158,23 @@ window.DATA = {
       links: [
         [{ ru: "Разбор трейта (Bilibili)", en: "Trait breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1eWph6qEfM/", "Ruguo Bu Shi Qi"]
       ] },
+    { hero: "youga_03", name: "Splitting Lightning Bolt", skill: "Splitting Lightning Bolt + Gale", tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
+      pros: { ru: "Стартовое заклинание Youga 3, бюджет 0 FE. Ветка I Meet the Selves: чем больше снарядов, тем больше урона (до +120%), I Need Not Lift a Finger автоматизирует каст. Разобраны саппорты, таланты, таблички, питомцы и FAQ. Клир быстрее, чем у Hound's Fangs. У BmLegolas: кампания на Chromatic Shot, переход на Splitting Lightning Bolt с TM8", en: "Youga 3's starting spell, 0 FE budget. I Meet the Selves branch: more projectiles means more damage (up to +120%), I Need Not Lift a Finger automates casting. Supports, talents, slates, pact spirits and an FAQ are covered. Faster clear than Hound's Fangs. BmLegolas: Chromatic Shot in the campaign, switch to Splitting Lightning Bolt at TM8" },
+      cons: { ru: "Теорикрафт до старта; по словам VacaAlpha, у Hound's Fangs урон выше. Код билда автор обещал позже, Malign Embrace для капа танглов будет очень дорогим", en: "Pre-season theorycraft; VacaAlpha says Hound's Fangs has higher damage. The build code is promised later, and Malign Embrace for the tangle cap will be very expensive" },
+      src: { ru: "гайды VacaAlpha и BmLegolas (tlicompendium, 13.10.2026)", en: "VacaAlpha's and BmLegolas' guides (tlicompendium, Oct 13, 2026)" },
+      links: [
+        [{ ru: "Гайд VacaAlpha: Splitting Lightning Bolt, стартер (tlicompendium)", en: "VacaAlpha's guide: Splitting Lightning Bolt starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/vaca-splitting-lightning-bolt-youga3-starter-ss14", "VacaAlpha"],
+        [{ ru: "Видео VacaAlpha (YouTube)", en: "VacaAlpha's video (YouTube)" }, "https://www.youtube.com/watch?v=SgVXD6_ivPc", "VacaAlpha"],
+        [{ ru: "Гайд BmLegolas: Splitting Lightning Bolt (tlicompendium)", en: "BmLegolas' guide: Splitting Lightning Bolt (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga3-splitting-lightning-bolt-league-starter", "BmLegolas"],
+        [{ ru: "Видео BmLegolas (YouTube)", en: "BmLegolas' video (YouTube)" }, "https://youtu.be/Yy6TWm9MWIo", "BmLegolas"]
+      ] },
+    { hero: "youga_03", name: { ru: "Кампания до T7: Stasis Vault", en: "Campaign to T7: Stasis Vault" }, skill: { ru: "Homing Frost Bolt, Stasis Vault (ветка I Hold All in My Grasp)", en: "Homing Frost Bolt, Stasis Vault (I Hold All in My Grasp branch)" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
+      pros: { ru: "Кампания до Traveler T7, три варианта главного скилла. Купол Stasis Vault вокруг столба возвращает снаряды во врагов. Разобраны все трейты, вещи из сокровищниц кампании, питомцы (Witch of the Night ускоряет кулдауны) и статы: интеллект, крит, Frostbite", en: "Campaign to the T7 Traveler, three main-skill variants. The Stasis Vault dome around the pillar bounces projectiles back into enemies. Covers every trait, campaign trove items, pact spirits (Witch of the Night speeds up cooldowns) and stats: Intelligence, crit, Frostbite" },
+      cons: { ru: "Содержимое сокровищниц автор угадывает — до старта оно неизвестно. I Will Hunt You Down вдвое режет скорость каста, без прыжков и пробивания урона нет", en: "The author is guessing trove contents — unknown before launch. I Will Hunt You Down halves cast speed, so without jumps and penetration there's no damage" },
+      src: { ru: "гайд DonTheCrown (tlicompendium, 14.10.2026)", en: "DonTheCrown's guide (tlicompendium, Oct 14, 2026)" },
+      links: [
+        [{ ru: "Гайд DonTheCrown: кампания Youga 3, 3 варианта (tlicompendium)", en: "DonTheCrown's guide: Youga 3 campaign, 3 variants (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-campaign-guide-3-variations", "DonTheCrown"]
+      ] },
     { hero: "youga_01", name: "Chain Lightning", skill: "Chain Lightning", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Популярный гайд на minmaxed, три стартовых варианта", en: "Popular minmaxed guide, three starter versions" },
       cons: { ru: "Youga 2/3 сильнее на старте", en: "Youga 2/3 are stronger starters" },
@@ -175,10 +192,11 @@ window.DATA = {
       ] },
     { hero: "erika_01", name: "Corrosive Throw", skill: "Corrosive Throw", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Как Thunder Spike от BmLegolas, но с дистанции; билд не понерфили в SS14", en: "Like BmLegolas' Thunder Spike but ranged; the build was not nerfed in SS14" },
-      cons: { ru: "Гайд пока помечен автором как незаконченный (WIP)", en: "The guide is still marked work-in-progress by its author" },
+      cons: { ru: "Текстовый гайд автор пометил как незаконченный (WIP); полный разбор под SS14 — в его видео", en: "The written guide is marked work-in-progress by its author; the full SS14 breakdown is in the author's video" },
       src: { ru: "Shad0ws, R3plic (tlicompendium)", en: "Shad0ws, R3plic (tlicompendium)" },
       links: [
-        [{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13", "Shad0ws"]
+        [{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13", "Shad0ws"],
+        [{ ru: "Видео-гайд Shad0ws: Corrosive Throw под SS14 (YouTube)", en: "Shad0ws' video guide: Corrosive Throw for SS14 (YouTube)" }, "https://www.youtube.com/watch?v=TZAC-HcZuNk", "Shad0ws"]
       ] },
     { hero: "youga_01", name: { ru: "Ice Lances: от кампании до Profound", en: "Ice Lances: campaign to Profound" }, skill: "Ice Lances", tier: "B", stage: "both", budget: 1, diff: 1, trend: "",
       pros: { ru: "Автокаст уже с 75 уровня за счёт трейта (I'm an Illusion) — удобно на телефоне, дорогие активаторы не нужны. Этапы до Profound, до ~5T урона", en: "Auto-cast from level 75 via the trait (I'm an Illusion) — great on mobile, no pricey activation mediums needed. Stages up to Profound, up to ~5T damage" },
@@ -194,6 +212,15 @@ window.DATA = {
       src: "IGGM, musabots",
       links: [
         [{ ru: "Гайд ShadyBroker: Mind Control, стартер (tlicompendium)", en: "ShadyBroker's guide: Mind Control starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/mind-control-youga-2-league-starter", "ShadyBroker"]
+      ] },
+    { hero: "youga_02", name: "Fallen Star Ignite", skill: { ru: "Fallen Star, поджог (автобомбер)", en: "Fallen Star, Ignite (auto-bomber)" }, tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Сводка по 5 видео Corealis (в SS13 убил босса на SS20): старт, ранние карты и середина игры. Подробно: легендарки с лучшими модами, рарки по слотам, кисметы, pedigree, таблички и питомцы", en: "A summary of Corealis' 5 videos (SS20 boss kill in SS13): league start, early mapping and mid game. Detailed legendaries with best mods, rares per slot, kismets, pedigree, slates and pact spirits" },
+      cons: { ru: "Не полный гайд — автор сам отсылает к видео Corealis. На старте Corealis советует Mind Control от ShadyBroker, пока не соберёте скиллы Fallen Star, Activation Medium: Rhythm, Sun's Embrace и Kismet: Volcano (переход примерно после 58 уровня). Таланты и таблица — из SS13", en: "Not a full guide — the author points to Corealis' videos. Corealis recommends ShadyBroker's Mind Control at league start until you collect the Fallen Star skills, Activation Medium: Rhythm, Sun's Embrace and Kismet: Volcano (switch after roughly level 58). Talents and the sheet are from SS13" },
+      src: { ru: "HundeKoerper по видео Corealis (tlicompendium, 12.10.2026)", en: "HundeKoerper, based on Corealis' videos (tlicompendium, Oct 12, 2026)" },
+      links: [
+        [{ ru: "Гайд HundeKoerper: Fallen Star Ignite (tlicompendium)", en: "HundeKoerper's guide: Fallen Star Ignite (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga2-fallen-star-ignite", "HundeKoerper"],
+        [{ ru: "Видео Corealis: разбор после убийства на SS20 (YouTube)", en: "Corealis' video: post-SS20 deep dive (YouTube)" }, "https://www.youtube.com/watch?v=rX6ST8Zan4U", "Corealis"],
+        [{ ru: "Таблица Corealis: таланты Youga 2 (Google Sheets)", en: "Corealis' sheet: Youga 2 talents (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1U4kyxoi4XxH8xay8IjsjoKXy_YNbz_GF2Xmb6D0gy1Y/edit", "Corealis"]
       ] },
     { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot / Thunder Spike", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
       pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. По тесту игрока до старта: с Thunder Jawbone Thunder Spike — быстрый стартер, а Farewell Desire примерно удваивает урон", en: "Very fast, no respec needed for endgame. A pre-season player test: Thunder Spike with Thunder Jawbone is a fast starter, and Farewell Desire roughly doubles damage" },
@@ -356,6 +383,28 @@ window.DATA = {
         [{ ru: "Гайд AgroMorph: Spectral Slash, фарм T8 (tlicompendium)", en: "AgroMorph's guide: Spectral Slash, T8 farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-spectral-slash-8-1-any-farm", "AgroMorph"],
         [{ ru: "Гайд AgroMorph: Thunder Spike, прокачка и Traveler T7 (tlicompendium)", en: "AgroMorph's guide: Thunder Spike, leveling and T7 Traveler (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-thunder-spike-leveling-and-t7-traveler-setup", "AgroMorph"]
       ] },
+    { hero: "rehan_02", name: { ru: "Frost Spike: от кампании до Profound", en: "Frost Spike: campaign to Profound" }, skill: "Groundshaker → Frost Spike + Spiral Strike", tier: "S", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Серия ExileMind: кампания на двух Groundshaker по очереди (из-за Demolition Charge), затем T1–T7 на бюджетном гире с упором на быстрые боссы, затем эндгейм на 200–300B урона для раннего Profound (~5000 FE). Есть видео и коды билдов для обоих этапов", en: "ExileMind's series: campaign alternating two Groundshakers (thanks to Demolition Charge), then T1–T7 on budget gear focused on fast boss kills, then an endgame setup at 200–300B damage for early Profound (~5000 FE). Videos and build codes for both stages" },
+      cons: { ru: "Для эндгейма нужно оружие 100 уровня с нужными аффиксами и обязательное кольцо Broken Sun; выживать придётся позиционированием", en: "Endgame needs level-100 weapons with the right affixes and a mandatory Broken Sun ring; survival relies on positioning" },
+      src: { ru: "гайды ExileMind (tlicompendium, 12.10.2026)", en: "ExileMind's guides (tlicompendium, Oct 12, 2026)" },
+      links: [
+        [{ ru: "Гайд ExileMind: Groundshaker, быстрая кампания (tlicompendium)", en: "ExileMind's guide: Groundshaker, fast campaign (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan-2-groundshake-leveling-guide-fast-campaign", "ExileMind"],
+        [{ ru: "Гайд ExileMind: Frost Spike, T1–T7 (tlicompendium)", en: "ExileMind's guide: Frost Spike, T1–T7 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/rehan2-frost-spike-t1-t7-progressing-build", "ExileMind"],
+        [{ ru: "Гайд ExileMind: Frost Spike, эндгейм и Profound (tlicompendium)", en: "ExileMind's guide: Frost Spike, endgame and Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/frostspike-rehan-endgame-profound-guide-250b-dps", "ExileMind"],
+        [{ ru: "Видео: Frost Spike от T1 до Profound (YouTube)", en: "Video: Frost Spike, T1 to Profound (YouTube)" }, "https://www.youtube.com/watch?v=SXsJggPwNKY", "ExileMind"],
+        [{ ru: "Видео: прокачка на Groundshaker (YouTube)", en: "Video: Groundshaker leveling (YouTube)" }, "https://www.youtube.com/watch?v=jB3xpfFnY3g", "ExileMind"]
+      ],
+      codes: [
+        [{ ru: "T1–T7 (ExileMind)", en: "T1–T7 (ExileMind)" }, "zHQTTsZlEfGg0AAAAAAACw=="],
+        [{ ru: "эндгейм ~250B (ExileMind)", en: "endgame ~250B (ExileMind)" }, "+QpLvcZlEfGg0AAAAAAACw=="]
+      ] },
+    { hero: "rehan_02", name: { ru: "Spectral Slash: эндгейм под SS14", en: "Spectral Slash: SS14 endgame" }, skill: "Spectral Slash + Seething Spirit", tier: "S", stage: "end", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Гайд на русском: билд AgroMorph, пересобранный под SS14. Разобрано, что поменял патч, трейты по уровням (на 45 — Fury's Onslaught, а не Ritual of Offering), ауры отдельно для карт и боссов, гир, таблички, pedigree и FAQ. Вход в эндгейм ~5000 FE", en: "A Russian-language guide: AgroMorph's build reworked for SS14. Covers the patch changes, traits per level (Fury's Onslaught at 45, not Ritual of Offering), separate auras for mapping and bossing, gear, slates, pedigree and an FAQ. Endgame entry ~5000 FE" },
+      cons: { ru: "Мили — надо стоять у босса. Чувствителен к резерву аур и мане: для карт нужен 3% Seal Mana Compensation. Призма из SS13 пропала, пока ставится любая с крит-уроном", en: "Melee — you have to stand next to the boss. Sensitive to aura reservation and mana: mapping needs 3% Seal Mana Compensation. The SS13 prism is gone, any crit-damage prism for now" },
+      src: { ru: "гайд Vladislav Shalimov на основе билда AgroMorph (tlicompendium, 12.10.2026)", en: "Vladislav Shalimov's guide based on AgroMorph's build (tlicompendium, Oct 12, 2026)" },
+      links: [
+        [{ ru: "Гайд: Rehan 2 Spectral Slash, эндгейм SS14 (tlicompendium, на русском)", en: "Guide: Rehan 2 Spectral Slash, SS14 endgame (tlicompendium, in Russian)" }, "https://tlicompendium.com/en/build-guides/rehan-2-spectral-slash-endgame-melee-ss14-tartarus-mapping-bossing", "Vladislav Shalimov"]
+      ] },
     { hero: "gemma_01", name: "Ice-Fire Fusion", skill: { ru: "Скиллы + шмот + таланты", en: "Skills + gear + talents" }, tier: "B", stage: "end", budget: 3, diff: 3, trend: "",
       pros: { ru: "Силён в полной сборке", en: "Strong when fully assembled" },
       cons: { ru: "Долго и сложно собирается", en: "Slow and hard to assemble" },
@@ -375,6 +424,11 @@ window.DATA = {
     Pat404: { youtube: "https://www.youtube.com/@Pat404Games" },
     Little_practice: { youtube: "https://www.youtube.com/@Little_practice232" },
     "Marcus Nordstrom": { youtube: "https://www.youtube.com/@marcusnordstrom9251" },
+    VacaAlpha: { youtube: "https://www.youtube.com/@VacaAlpha", twitch: "https://twitch.tv/VacaAlpha" },
+    BmLegolas: { youtube: "https://www.youtube.com/@Bmlegolas", twitch: "https://twitch.tv/Bmlegolas" },
+    ExileMind: { youtube: "https://www.youtube.com/@Ex1leMind" },
+    Corealis: { youtube: "https://www.youtube.com/@Corealis73" },
+    Shad0ws: { youtube: "https://www.youtube.com/@oftheShad0w" },
     // без найденного канала — ссылка на сам материал
     "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
     // площадки, а не авторы — в список авторов не выводятся
