@@ -21,7 +21,6 @@ window.DATA = {
     ["2026-10-14", [
       "New builds: Youga 3 Splitting Lightning Bolt (VacaAlpha, BmLegolas) and Stasis Vault campaign (DonTheCrown), Youga 2 Fallen Star Ignite (Corealis), Rehan 2 Frost Spike campaign → Profound with build codes (ExileMind) and Spectral Slash SS14 endgame.",
       "Erika 1 Corrosive Throw: added Shad0ws' SS14 video guide.",
-      "Removed sources that sell game currency or bots (IGGM, mmoexp, musabots) and builds based only on them.",
       "New builds: Youga 3 physical Hound's Fangs (ManMauzer), Selena 2 Frost Terra start → early Profound (Crazycaps), Rosa 2 Frost Spike level 1 → Profound (Lucas)."
     ]],
     ["2026-10-13", [

@@ -50,7 +50,7 @@ const SOURCES = [
              A: "rosa_02 rehan_02 gemma_02 erika_02 carino_03 gemma_03 iris_01 iris_02 erika_03 thea_01 sage_01",
              B: "rehan_01 youga_02 rosa_01 bing_01 carino_01 carino_02 moto_02",
              C: "moto_01 gemma_01 thea_02 thea_03 youga_01" } },
-  // IGGM, mmoexp и musabots убраны 14.10.2026: RMT-магазины и продавец ботов — не источник.
+  // 14.10.2026 убраны RMT-магазины и продавец ботов — не источники (см. SOURCES.md).
   // Тиры после этого не сдвигали (решение владельца): ≠ у rosa_01, carino_03, erika_01, bing_01 — намеренно, см. SOURCES.md
   { id: "kr4000", old: true, name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
     // 100+ → S, 30–73 → A, 10–22 → B, меньше 10 → C
