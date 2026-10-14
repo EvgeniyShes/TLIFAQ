@@ -52,7 +52,7 @@ function indexPage(lang) {
   const t = k => T(lang, k);
   let h = template.replace("{{lang}}", lang).replace("{{head}}", head(lang, null, t("title"), t("desc")));
   h = h.replace(/(data-i="(\w+)"[^>]*>)(<\/)/g, (_, a, k, b) => a + esc(t(k)) + b);
-  h = h.replace(`id="logLink"`, `id="logLink" title="${esc(t("changelog"))}" aria-label="${esc(t("changelog"))}"`);
+  h = h.replace(`id="logLink"`, `id="logLink" title="${esc(t("changelogTip"))}"`);
   h = h.replace(`<input id="q" type="search">`, `<input id="q" type="search" placeholder="${esc(t("search"))}">`);
     const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
