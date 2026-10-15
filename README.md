@@ -56,7 +56,7 @@
 - minmaxed: `https://minmaxedarpg.com/games/tli/seasons/s14` — в браузере, ссылки `/guides/…`.
 - Reddit: встроенный браузер его не открывает → Claude in Chrome или RSS `https://www.reddit.com/r/TorchlightInfinite/new/.rss` через `curl` с браузерным User-Agent (при частых запросах 429).
 - Автор и название YouTube-видео: `https://www.youtube.com/oembed?url=<ссылка>&format=json`.
-- Свежие видео и их описания (ссылки, коды) — `curl` с браузерным User-Agent: поиск `https://www.youtube.com/results?search_query=torchlight+infinite+ss14+build&sp=CAISBAgCEAE%253D` (за сегодня; `ytInitialData` → `videoRenderer`), описание — `ytInitialPlayerResponse.videoDetails.shortDescription` на странице `watch?v=…`.
+- Свежие видео и их описания (ссылки, коды) — `curl` с браузерным User-Agent: поиск `https://www.youtube.com/results?search_query=torchlight+infinite+ss14+build&sp=CAISBAgCEAE%253D` (за сегодня; `ytInitialData` → `videoRenderer`), описание — `ytInitialPlayerResponse.videoDetails.shortDescription` на странице `watch?v=…`. Если YouTube отвечает проверкой «не бот» (так было вечером 15.10), описание берётся из встроенного браузера на youtube.com: `fetch('/youtubei/v1/next', {method:'POST', body: JSON.stringify({context: ytcfg.get('INNERTUBE_CONTEXT'), videoId})})` → `videoSecondaryInfoRenderer.attributedDescription.content`, полные ссылки — в `urlEndpoint.url` (параметр `q`). Тир-лист из видео: в браузере перемотать к концу, нарисовать кадр `<video>` на canvas поверх страницы и увеличить нужный кусок.
 - Google Docs/Sheets: `…/export?format=txt`, `…/export?format=csv&gid=<лист>`; список листов — в `…/htmlview`.
 
 ## Открытые задачи

@@ -19,6 +19,7 @@ window.DATA = {
   // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
   changelog: [
     ["2026-10-15", [
+      "New builds: Iris 2 Rock Magus swap from TM5 with build code (Wuxia), Carino 3 leveling → T7 → 8-1 → Profound (AgroMorph), Youga 3 Ice Lances Tangle (Beast_hearth, KakiGaming). New videos and guides: ManMauzer and Nirtas (Youga 3), satu1kaa (Erika 1 Thunder Spike day one), Bmlegolas (Bing 2 Lightning Beam 0 → SS20).",
       "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
       "SS14 changes now name the exact trait: the Rage nerf hits Rehan 2 only (Rehan 1 unchanged), the elemental nerf hits Rosa 2, the Terra nerf hits Selena 2.",
       "New builds: Selena 1 Wilting Beam starter (CrimsonDead), Youga 3 cold Hound's Fangs (Nirtas), Selena 2 Frost Terra → Tidewell (Nirtas), Youga 1 Chain Lightning 8B → SS20 (Fragmentations), Bing 2 Splitting Lightning Bolt (CoffeeBns).",
@@ -185,7 +186,8 @@ window.DATA = {
       cons: { ru: "Теорикрафт: Laceration — новый эффект, до сезона его не проверить. На 30 стаках билд получает ~3000 чистого урона в секунду — нужен большой запас здоровья, реген и Life Tonic для сброса стаков. Коды билдов — только в игре (Pro Builds → Creator → ManMauzer)", en: "Theorycraft: Laceration is a new effect that can't be tested before the season. At 30 stacks the build takes ~3000 true damage per second — needs a big life pool, regen and Life Tonic to clear stacks. Build codes are in-game only (Pro Builds → Creator → ManMauzer)" },
       src: { ru: "гайд ManMauzer (tlicompendium, 12.10.2026)", en: "ManMauzer's guide (tlicompendium, Oct 12, 2026)" },
       links: [
-        [{ ru: "Гайд ManMauzer: Hound's Fangs, стартеры Youga 3 (tlicompendium)", en: "ManMauzer's guide: Hound's Fangs, Youga 3 starters (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-manmauzer", "ManMauzer"]
+        [{ ru: "Гайд ManMauzer: Hound's Fangs, стартеры Youga 3 (tlicompendium)", en: "ManMauzer's guide: Hound's Fangs, Youga 3 starters (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-manmauzer", "ManMauzer"],
+        [{ ru: "Видео ManMauzer: чистая физика через Ralph's Dreadcrest — механики (YouTube)", en: "ManMauzer's video: pure physical via Ralph's Dreadcrest — mechanics (YouTube)" }, "https://www.youtube.com/watch?v=kPlzTOYL0ro", "ManMauzer"]
       ] },
     { hero: "youga_03", name: "Splitting Lightning Bolt", skill: "Splitting Lightning Bolt + Gale", tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "Стартовое заклинание Youga 3, бюджет 0 FE. Ветка I Meet the Selves: чем больше снарядов, тем больше урона (до +120%), I Need Not Lift a Finger автоматизирует каст. Разобраны саппорты, таланты, таблички, питомцы и FAQ. Клир быстрее, чем у Hound's Fangs. У BmLegolas: кампания на Chromatic Shot, переход на Splitting Lightning Bolt с TM8", en: "Youga 3's starting spell, 0 FE budget. I Meet the Selves branch: more projectiles means more damage (up to +120%), I Need Not Lift a Finger automates casting. Supports, talents, slates, pact spirits and an FAQ are covered. Faster clear than Hound's Fangs. BmLegolas: Chromatic Shot in the campaign, switch to Splitting Lightning Bolt at TM8" },
@@ -209,7 +211,19 @@ window.DATA = {
       cons: { ru: "Автор сам пишет «в работе, может оказаться байтом». По словам разработчиков, Hound's Fangs даёт только 1 стак за каст — автор допускает, что Blazing Meteor окажется лучше. Malign Embrace и Dawn Break дорогие", en: "The author says it's a work in progress and \"could be 100% bait\". Per the devs, Hound's Fangs only gives 1 stack per cast — the author thinks Blazing Meteor might be better. Malign Embrace and Dawn Break are expensive" },
       src: { ru: "гайд Nirtas (tlicompendium, 15.10.2026)", en: "Nirtas' guide (tlicompendium, Oct 15, 2026)" },
       links: [
-        [{ ru: "Гайд Nirtas: Youga 3 (tlicompendium)", en: "Nirtas' guide: Youga 3 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/nirtas-youga-3-guide", "Nirtas"]
+        [{ ru: "Гайд Nirtas: Youga 3 (tlicompendium)", en: "Nirtas' guide: Youga 3 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/nirtas-youga-3-guide", "Nirtas"],
+        [{ ru: "Видео Nirtas: план старта на Youga 3 (YouTube)", en: "Nirtas' video: Youga 3 league start plan (YouTube)" }, "https://www.youtube.com/watch?v=oY4iAwHoRM8", "Nirtas"],
+        [{ ru: "Письменные гайды Nirtas (Google Docs)", en: "Nirtas' written guides (Google Docs)" }, "https://docs.google.com/document/d/1FJsDClP6rImdOgeY_0mSwuREpJWnvvTL/edit", "Nirtas"]
+      ] },
+    { hero: "youga_03", name: { ru: "Ice Lances + Tangle: с актов до Profound", en: "Ice Lances + Tangle: acts to Profound" }, skill: "Ice Lances (Tangle)", tier: "S", stage: "both", budget: 1, diff: 3, trend: "up",
+      pros: { ru: "Ice Lances сразу с актов: у него больше базовый урон и эффективность добавленного урона (палка с +100 холода даёт ~229), встроенный +1 Jump. Нерф Chromatic Shot и нерф шотгана на Ice Lances этот билд не задевают. Автор ждёт 300–600M урона к Traveler T7 без вложений, выход в Profound — за несколько тысяч FE. Автор три сезона играл Gemma 2 Tangle Ice Lances (топ-1 Dragon на старте SS13, Traveler в топ-3) и считает, что у Youga 3 урона больше. В таблице — подробный разбор механик", en: "Ice Lances right from the acts: higher base damage and added-damage effectiveness (a staff with +100 cold gives ~229), built-in +1 Jump. The Chromatic Shot nerf and the Ice Lances shotgun nerf don't affect this build. The author expects 300–600M damage by the T7 Traveler with zero investment, Profound for a few thousand FE. The author played Gemma 2 Tangle Ice Lances for three seasons (top-1 Dragon at SS13 start, Traveler in the top 3) and says Youga 3 has more damage. The spreadsheet breaks down the mechanics in detail" },
+      cons: { ru: "Теорикрафт до старта — автор сам пишет, что не все механики могут подтвердиться. Rebound (Magnificent) на Ice Lances работает хуже. Таблица на русском. Последователей (followers) автор не расписывает", en: "Pre-season theorycraft — the author warns not every mechanic may hold up. Rebound (Magnificent) works worse on Ice Lances now. The spreadsheet is in Russian. Followers aren't covered" },
+      src: { ru: "видео и таблица Beast_hearth (15.10.2026), видео KakiGaming", en: "Beast_hearth's video and spreadsheet (Oct 15, 2026), KakiGaming's video" },
+      links: [
+        [{ ru: "Видео Beast_hearth: старт на Youga 3, Ice Lances Tangle (YouTube)", en: "Beast_hearth's video: Youga 3 start, Ice Lances Tangle (YouTube)" }, "https://www.youtube.com/watch?v=CxqnpLDVPT0", "Beast_hearth"],
+        [{ ru: "Таблица Beast_hearth: гайд и механики (Google Sheets, на русском)", en: "Beast_hearth's spreadsheet: guide and mechanics (Google Sheets, in Russian)" }, "https://docs.google.com/spreadsheets/d/1HATk_pdoY57KfXoDz4OTGKltMaMiYjcBbVmiRhFfrDQ/edit", "Beast_hearth"],
+        [{ ru: "Видео KakiGaming: стартер Youga 3 на ледяных снарядах, позже Psionic Missile (YouTube, на корейском)", en: "KakiGaming's video: Youga 3 ice projectile starter, later Psionic Missile (YouTube, in Korean)" }, "https://www.youtube.com/watch?v=X1gfZKfqafk", "KakiGaming"],
+        [{ ru: "Сборка KakiGaming (планер tlicompendium)", en: "KakiGaming's setup (tlicompendium planner)" }, "https://tlicompendium.com/ko/build-planner?code=pxHkN9AtQrGp0-gNAwkVn7S-5ANT3zeV", "KakiGaming"]
       ] },
     { hero: "youga_01", name: "Chain Lightning", skill: "Chain Lightning", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Популярный гайд на minmaxed, три стартовых варианта", en: "Popular minmaxed guide, three starter versions" },
@@ -283,7 +297,9 @@ window.DATA = {
       links: [
         [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
         [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"],
-        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"],
+        [{ ru: "Видео satu1kaa: Thunder Spike в первый день — прокачка через Spider Tank, дерево, скиллы, шмот, Pedigree (YouTube)", en: "satu1kaa's video: Thunder Spike on day one — Spider Tank leveling, tree, skills, gear, Pedigree (YouTube)" }, "https://www.youtube.com/watch?v=43hFTRuzWe4", "satu1kaa"],
+        [{ ru: "Таблица satu1kaa: план Erika 1 на старт (Google Sheets)", en: "satu1kaa's spreadsheet: Erika 1 league start plan (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1o9lEwtiGqxzp4Fuuw6-0qG6XkpjzhMBnulFvAbVBgIg/edit", "satu1kaa"]
       ],
       codes: [
         [{ ru: "~15T урона (Мия / BmLegolas)", en: "~15T damage (Mia / BmLegolas)" }, "fDE/Q5s2EfG78gAAAAAAMw=="]
@@ -318,6 +334,17 @@ window.DATA = {
       ],
       codes: [
         [{ ru: "билд instinct (в игре: Instinct#5138)", en: "instinct's build (in game: Instinct#5138)" }, "eW8BDIGgEfG5tQAAAAAAPg=="]
+      ] },
+    { hero: "iris_02", name: { ru: "Rock Magus: переход с TM5", en: "Rock Magus: swap from TM5" }, skill: { ru: "Summon Rock Magus, Dirty Tricks (5 видов ailment на миньонах)", en: "Summon Rock Magus, Dirty Tricks (5 ailment types on minions)" }, tier: "A", stage: "both", budget: 2, diff: 3, trend: "",
+      pros: { ru: "Качаетесь на огне или молнии, а около TM5, когда можно скрафтить трость с модами T4–T3, переходите на этот билд. Через Dirty Tricks миньоны вешают 5 видов ailment: Trauma, Wilt, Numbed, Scorched и холод. Isomorphic Arms (God of Machine) отдаёт миньонам оружие, поэтому на трости крафтят как можно больше плоского урона. Есть видео и код билда", en: "Level with fire or lightning, then around TM5, once you can craft a cane with T4–T3 mods, swap to this build. Via Dirty Tricks your minions apply 5 ailment types: Trauma, Wilt, Numbed, Scorched and cold. Isomorphic Arms (God of Machine) hands your weapon to the minions, so craft as much flat damage on the cane as possible. Video and build code included" },
+      cons: { ru: "Автор не советует играть без питомца. Нужна ветка Machinist (ради мода +10–10 базового урона ailment миньонам) — сама по себе она слабая. Текст гайда короткий, основное — в видео", en: "The author advises against playing it without the pet. Needs the Machinist tree (for +10–10 base ailment damage to minions), which is weak on its own. The written guide is short, the main content is in the video" },
+      src: { ru: "гайд и видео Wuxia (tlicompendium, 15.10.2026)", en: "Wuxia's guide and video (tlicompendium, Oct 15, 2026)" },
+      links: [
+        [{ ru: "Гайд Wuxia: переход на Rock Magus с TM5 (tlicompendium)", en: "Wuxia's guide: Rock Magus swap from TM5 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/timemark5-erosion-magus-swap", "Wuxia"],
+        [{ ru: "Видео Wuxia: прокачка и переход (YouTube)", en: "Wuxia's video: leveling and swap (YouTube)" }, "https://www.youtube.com/watch?v=CrIZSM8wOrs", "Wuxia"]
+      ],
+      codes: [
+        [{ ru: "TM5+, Rock Magus (Wuxia)", en: "TM5+, Rock Magus (Wuxia)" }, "VEeq+McCEfGcXAAAAAAAFQ=="]
       ] },
     { hero: "iris_02", name: { ru: "Erosion Magus: от кампании до Profound", en: "Erosion Magus: campaign to Profound" }, skill: "Summon Erosion / Fire / Frost Magus", tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
       pros: { ru: "Более автоматическая игра — удобно на телефоне (легче, чем Rock Magus). Этапы: кампания, T7, T8, Profound; до ~1T урона. Автор прошёл с ним SS13 до убийства на SS20", en: "More automated playstyle — great on mobile (easier than Rock Magus). Stages: campaign, T7, T8, Profound; up to ~1T damage. The author took it through SS13 to an SS20 kill" },
@@ -399,13 +426,25 @@ window.DATA = {
         [{ ru: "Гайд Smith: Scorching Beam, фарм Deep Space (tlicompendium)", en: "Smith's guide: Scorching Beam, Deep Space farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/scorching-ignite-deep-space-mapping", "Smith"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
       ] },
+    { hero: "carino_03", name: { ru: "Прокачка → T7 → 8-1 → Profound (AgroMorph)", en: "Leveling → T7 → 8-1 → Profound (AgroMorph)" }, skill: { ru: "Spiders / Lightning Shot на прокачке, Chromatic Shot, затем Blazing Bullet", en: "Spiders / Lightning Shot for leveling, Chromatic Shot, then Blazing Bullet" }, tier: "B", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Пять сборок от одного автора под SS14: прокачка на пауках (и запасной вариант на Lightning Shot, если пауков понерфят), версия только для убийства Traveler T7, Chromatic Shot для комфортного 8-1 и фарма на следующий билд, Blazing Bullet с запасом урона под Profound. Для каждой — гибкие слоты, бюджетные замены дорогих вещей и варианты талантов для Pedigree of Gods", en: "Five setups from one author for SS14: Spider leveling (with a Lightning Shot fallback if spiders get nerfed), a version just for killing the T7 Traveler, Chromatic Shot for a comfy 8-1 and farming toward the next build, and Blazing Bullet with overkill damage for Profound. Each lists flex slots, budget swaps for pricey items and Pedigree of Gods talent options" },
+      cons: { ru: "Тексты короткие и на русском — это заметки к сборкам в планере. Для Blazing Bullet обязательна призма Ethereal Prism: Sweeping Fury, а для Death's Touch нужен именно крит-урон", en: "The notes are short and in Russian — annotations to planner setups. Blazing Bullet requires Ethereal Prism: Sweeping Fury, and Death's Touch must roll crit damage" },
+      src: { ru: "гайды AgroMorph (tlicompendium, 15.10.2026)", en: "AgroMorph's guides (tlicompendium, Oct 15, 2026)" },
+      links: [
+        [{ ru: "Прокачка на пауках (tlicompendium)", en: "Spider leveling (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/carino-3-leveling-guide-spiders", "AgroMorph"],
+        [{ ru: "Прокачка на Lightning Shot, если пауков понерфят (tlicompendium)", en: "Lightning Shot leveling if spiders get nerfed (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/carino-3-leveling-guide-lightning-shot-if-spiders-nerf", "AgroMorph"],
+        [{ ru: "Chromatic Shot: убийство Traveler T7 (tlicompendium)", en: "Chromatic Shot: T7 Traveler kill (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/carino-3-traveler-kill", "AgroMorph"],
+        [{ ru: "Chromatic Shot: закрытие 8-1 (tlicompendium)", en: "Chromatic Shot: clearing 8-1 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/carino-3-chromatic-shot-8-1-clear", "AgroMorph"],
+        [{ ru: "Blazing Bullet: Profound (tlicompendium)", en: "Blazing Bullet: Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/carino-3-blazing-bullet-profound", "AgroMorph"]
+      ] },
     { hero: "bing_02", name: { ru: "Splitting Lightning Bolt: гир до Profound", en: "Splitting Lightning Bolt: gearing to Profound" }, skill: { ru: "Splitting Lightning Bolt (с 14 уровня), подходит любой снарядный скилл", en: "Splitting Lightning Bolt (from level 14), any projectile skill works" }, tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
       pros: { ru: "Стартер автора на SS14. Список нужных модов для любого снарядного Bing: благословения Focus и Agility, Frail, паралич, Blur, +1 к уровню скилла на плитах. Порядок покупок: 30–100 FE в первый день хватает до T8 (коррапт-версия вещи — до Deep Space), первая покупка за 1000+ FE — для урона и автоматизации. Есть ветки трейта, прокачка и варианты на Blazing Meteor, Fire Burst и Lightning Beam", en: "The author's SS14 starter. A list of mods every projectile Bing needs: Focus and Agility blessings, Frail, Paralysis, Blur, +1 skill level slates. A shopping order: 30–100 FE on day one gets you to T8 (a corrupted version carries you to Deep Space), the first 1000+ FE purchase is for damage and automation. Trait choices, leveling, and Blazing Meteor, Fire Burst and Lightning Beam variants" },
       cons: { ru: "Вещи из сокровищниц кампании все под огонь — для молнии придётся обходиться без них. Гайд — видео и таблица, без пошагового текста", en: "Campaign trove items are all fire-based — the lightning version has to do without them. The guide is a video plus a spreadsheet, no step-by-step text" },
       src: { ru: "видео и таблица CoffeeBns (15.10.2026)", en: "CoffeeBns' video and spreadsheet (Oct 15, 2026)" },
       links: [
         [{ ru: "Видео CoffeeBns: Bing 2, стартер SS14 (YouTube)", en: "CoffeeBns' video: Bing 2 SS14 starter (YouTube)" }, "https://www.youtube.com/watch?v=TNzOALQ-XUQ", "CoffeeBns"],
-        [{ ru: "Таблица CoffeeBns: гайды SS14, Bing 2 и коды билдов (Google Sheets)", en: "CoffeeBns' spreadsheet: SS14 guides, Bing 2 and build codes (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1u0wFwTbKT35XlwHf0D5VDur67d-Nl7SsnQ9C41lqgJk/edit?usp=sharing", "CoffeeBns"]
+        [{ ru: "Таблица CoffeeBns: гайды SS14, Bing 2 и коды билдов (Google Sheets)", en: "CoffeeBns' spreadsheet: SS14 guides, Bing 2 and build codes (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1u0wFwTbKT35XlwHf0D5VDur67d-Nl7SsnQ9C41lqgJk/edit?usp=sharing", "CoffeeBns"],
+        [{ ru: "Гайд BmLegolas: вариант на Lightning Beam от 0 до SS20 (tlicompendium, обновлён под SS14)", en: "BmLegolas' guide: Lightning Beam variant from 0 to SS20 (tlicompendium, updated for SS14)" }, "https://tlicompendium.com/en/build-guides/bing2-lightning-beam-0-to-ss20-guide", "BmLegolas"]
       ] },
     { hero: "carino_02", name: "Lethal Flash", skill: { ru: "Проджектайлы, Deflection", en: "Projectiles, Deflection" }, tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Надёжный и удобный", en: "Reliable and comfortable" },
@@ -498,6 +537,10 @@ window.DATA = {
     ManMauzer: { youtube: "https://www.youtube.com/@ManMauzer", twitch: "https://twitch.tv/manmauzer" },
     Crazycaps: { youtube: "https://www.youtube.com/@crazycaps3934", twitch: "https://twitch.tv/crazycaps" },
     Lucas: { twitch: "https://www.twitch.tv/lucasgattii" },
+    AgroMorph: { youtube: "https://www.youtube.com/@AgroMorphHighlights", twitch: "https://twitch.tv/agromorph" },
+    Wuxia: { youtube: "https://www.youtube.com/@WuxiaTLI" },
+    Beast_hearth: { url: "https://www.youtube.com/watch?v=CxqnpLDVPT0" },
+    KakiGaming: { url: "https://nextkaki.kr/" },
     CrimsonDead: { youtube: "https://www.youtube.com/@Cr1msonDead", twitch: "https://twitch.tv/cr1msondead" },
     Nirtas: { youtube: "https://www.youtube.com/@Nirtas", twitch: "https://twitch.tv/N1rtas" },
     ShadyBroker: { twitch: "https://www.twitch.tv/shadybroker" },
