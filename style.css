@@ -26,18 +26,22 @@ h1{position:relative;margin:16px 0 6px;font-size:clamp(30px,6vw,56px);font-weigh
   background:linear-gradient(180deg,#fff2d6,var(--fire) 70%,#c2410c);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 4px 24px #ff8a2b55)}
 .sub{position:relative;color:var(--muted);margin:0}
-h1.logo{margin:0 auto;max-width:500px;background:none;filter:drop-shadow(0 6px 30px #ff8a2b33)}
+.brand{position:relative;max-width:500px;margin:0 auto}
+h1.logo{margin:0;background:none;filter:drop-shadow(0 6px 30px #ff8a2b33)}
 h1.logo img{display:block;width:100%;height:auto}
-.game{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;margin:4px 0 6px;
-  font:600 13px Cinzel,serif;letter-spacing:.3em;text-transform:uppercase;color:#c99a4a}
-.game::before,.game::after{content:"";width:56px;height:1px;background:linear-gradient(90deg,transparent,#c99a4a)}
-.game::after{transform:scaleX(-1)}
-.league{position:relative;display:inline-flex;flex-direction:column;align-items:center;margin:30px auto 0;padding:20px 32px 18px;
+/* ромб на линии логотипа — 56.15% ширины: центр текста сдвинут туда, текст подтянут под линию */
+.brand .sub{margin-top:-5%;padding-left:12.3%}
+.league{position:relative;display:flex;width:fit-content;flex-direction:column;align-items:center;margin:30px auto 0;padding:20px 40px 18px;
   border:1px solid #ff8a2b44;border-radius:20px;background:radial-gradient(ellipse at 50% 0,#ff5a1a26,transparent 70%),#120d11d9;
   box-shadow:0 0 50px #ff5a1a1f,inset 0 1px 0 #ffcf6b26}
-.lg-name{margin:12px 0 2px;font:800 clamp(30px,6vw,52px)/1.1 Cinzel,serif;letter-spacing:.04em;color:#e9d6b4}
-.lg-name b{background:linear-gradient(180deg,#fff2d6,var(--fire) 65%,#c2410c);-webkit-background-clip:text;background-clip:text;color:transparent;
+.lg-name{margin:10px 0 8px}
+.lg-name b{display:block;font:800 clamp(40px,9vw,72px)/1 Cinzel,serif;letter-spacing:.05em;
+  background:linear-gradient(180deg,#fff2d6,var(--fire) 65%,#c2410c);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 3px 18px #ff5a1a66)}
+.lg-name span{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px;
+  font:600 14px Cinzel,serif;letter-spacing:.35em;text-transform:uppercase;color:#c99a4a}
+.lg-name span::before,.lg-name span::after{content:"";width:40px;height:1px;background:linear-gradient(90deg,transparent,#c99a4a)}
+.lg-name span::after{transform:scaleX(-1)}
 .lg-state{margin:0;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .lg-date{margin:14px 0 0;font-size:13px;color:var(--muted)}.lg-date b{color:var(--fire2);font-weight:600}
 .league.live .lg-state{display:inline-flex;align-items:center;gap:8px;color:var(--up)}
@@ -49,7 +53,7 @@ h1.logo img{display:block;width:100%;height:auto}
 .countdown b{display:block;font:800 34px/1.1 Cinzel,serif;color:var(--fire2);text-shadow:0 0 18px #ff8a2b66}
 .countdown span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
 .league + .upd{margin-top:22px}
-@media (max-width:520px){.game{gap:10px;font-size:12px;letter-spacing:.18em;white-space:nowrap}.game::before,.game::after{width:28px}.league{padding:18px 14px 16px;width:100%;box-sizing:border-box}.countdown{gap:6px}.countdown div{min-width:0;flex:1}.countdown b{font-size:26px}}
+@media (max-width:520px){.league{padding:18px 14px 16px;width:100%;box-sizing:border-box}.countdown{gap:6px}.countdown div{min-width:0;flex:1}.countdown b{font-size:26px}}
 .upd{position:relative;display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 6px;margin:12px 0 0;padding:6px 14px;border-radius:999px;background:#ffffff08;border:1px solid var(--line);font-size:13px;color:var(--muted)}
 .upd b{color:var(--text);font-weight:600}
 .upd .dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 8px var(--up)}

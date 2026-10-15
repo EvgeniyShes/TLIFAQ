@@ -57,7 +57,7 @@ function indexPage(lang) {
     const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
     sBadge: `${t("season")} ${D.season.code}`,
-    sLeague: t("leagueName")(esc(D.season.name)),
+    sLeague: `<b>${esc(D.season.name)}</b><span>${t("league")}</span>`,
     sUpd: updText(lang),
     sStart: esc(L(lang, D.season.startLabel)),
     sNote: esc(L(lang, D.season.note)),
