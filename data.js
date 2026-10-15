@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-14T06:41:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-15T07:43:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
@@ -19,6 +19,8 @@ window.DATA = {
   // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
   changelog: [
     ["2026-10-15", [
+      "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Thea 1 up to S, Moto 2 up to A; Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3, Selena 2 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
+      "SS14 changes now name the exact trait: the Rage nerf hits Rehan 2 only (Rehan 1 unchanged), the elemental nerf hits Rosa 2, the Terra nerf hits Selena 2.",
       "New builds: Selena 1 Wilting Beam starter (CrimsonDead), Youga 3 cold Hound's Fangs (Nirtas), Selena 2 Frost Terra → Tidewell (Nirtas), Youga 1 Chain Lightning 8B → SS20 (Fragmentations), Bing 2 Splitting Lightning Bolt (CoffeeBns).",
       "Selena 1 Scorching Beam: added CrimsonDead's SS14 guide. New videos: ShadyBroker (Youga 2 Mind Control), MinMaxedARPG (Gemma 2), DonTheCrown and Marcus Nordstrom (Selena 1), Francissss (Rosa 2)."
     ]],
@@ -79,37 +81,37 @@ window.DATA = {
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
           ["selena_01", "", { ru: "Lao Ke, R3plic и satu1kaa: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke, R3plic and satu1kaa: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }],
-          ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
           ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
-          ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }]
+          ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }]
         ],
         A: [
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
           ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
           ["gemma_02", "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],
           ["youga_02", "", { ru: "Бюджетный убийца боссов, DoT от Twisted Spacetime", en: "Budget boss killer, DoT from Twisted Spacetime" }],
-          ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
           ["carino_02", "", { ru: "Надёжный, но Lao Ke ставит ниже: «хороший, просто нет места»", en: "Reliable, but Lao Ke rates it lower: \"good, just no room\"" }],
-          ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
-          ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }],
-          ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
-          ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
-          ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
-          ["bing_01", "", { ru: "Недорогой билд против боссов, по картам можно автобегом", en: "Cheap bossing build, maps can be auto-run" }]
+          ["bing_01", "", { ru: "Недорогой билд против боссов, по картам можно автобегом", en: "Cheap bossing build, maps can be auto-run" }],
+          ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }],
+          ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
+          ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }]
         ],
         B: [
-          ["rehan_01", "down", { ru: "Нерф Berserk в SS14, но есть подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Berserk nerfed in SS14, but Travic has a detailed guide — campaign to 250M damage with Whirlwind" }],
-          ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }],
+          ["rehan_01", "", { ru: "Трейт в SS14 не менялся (нерф ярости — у Rehan 2); подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Trait unchanged in SS14 (the Rage nerf hit Rehan 2); Travic has a detailed guide — campaign to 250M damage with Whirlwind" }],
           ["iris_01", "", { ru: "Саммонер, доводит до T8, хорош для фарма Flame Elementium", en: "Summoner, carries to T8, good for Flame Elementium farming" }],
           ["thea_03", "", { ru: "Erosion-урон, сильна в начале и середине", en: "Erosion damage, strong early and mid game" }],
           ["youga_01", "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["gemma_03", "", { ru: "Нужны вложения", en: "Needs investment" }],
-          ["gemma_01", "", { ru: "Много деталей, собирается долго", en: "Many moving parts, slow to assemble" }],
-          ["thea_02", "", { ru: "Lao Ke: «демон» — Tenacity-билд, но упирается в ожерелье и бюджет", en: "Lao Ke: \"demon\" — Tenacity build, but limited by the necklace and budget" }],
-          ["rosa_01", "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }]
+          ["rosa_01", "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }],
+          ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
+          ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
+          ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
+          ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
+          ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }]
         ],
         C: [
-          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }]
+          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
+          ["gemma_01", "", { ru: "Много деталей, собирается долго", en: "Many moving parts, slow to assemble" }],
+          ["thea_02", "", { ru: "Lao Ke: «демон» — Tenacity-билд, но упирается в ожерелье и бюджет", en: "Lao Ke: \"demon\" — Tenacity build, but limited by the necklace and budget" }]
         ]
       }
     },
@@ -135,13 +137,12 @@ window.DATA = {
           ["erika_02", "", { ru: "100+ игроков на 4000-м этаже в SS13; дорогая", en: "100+ players on floor 4000 in SS13; expensive" }],
           ["youga_02", "", { ru: "Стартер, в эндгейме уступает", en: "Starter, falls behind in endgame" }],
           ["carino_03", "", { ru: "В топе на 3-й день SS13, но до 4000-го этажа дошли единицы; Lao Ke — «демон»", en: "Top tier on SS13 day 3, but few reached floor 4000; Lao Ke: \"demon\"" }],
-          ["erika_03", "", { ru: "Vendetta's Sting", en: "Vendetta's Sting" }],
           ["bing_01", "", { ru: "Blast Nova: связки бомб, топ фарм", en: "Blast Nova: bomb bundles, top farming" }],
-          ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }]
+          ["carino_02", "", { ru: "Стартер, в эндгейме уступает Carino 3", en: "Starter, behind Carino 3 in endgame" }],
+          ["rehan_01", "", { ru: "Набирал игроков в SS13, трейт в SS14 не тронут; в эндгейме — билд через Spell Burst", en: "Gained players in SS13, trait untouched in SS14; endgame via a Spell Burst build" }]
         ],
         B: [
           ["selena_02", "down", { ru: "Отлично чистила карты, но нерф ground-скиллов", en: "Great map clear, but ground skills nerfed" }],
-          ["rehan_01", "down", { ru: "Набирал игроков, но Berserk понерфлен", en: "Gained players, but Berserk nerfed" }],
           ["moto_02", "down", { ru: "Понерфлен до сезона, но в SS13 результаты лучше ожиданий (51 игрок на 4000-м этаже)", en: "Nerfed pre-season, but SS13 results beat expectations (51 players on floor 4000)" }],
           ["youga_01", "", { ru: "Набирал игроков в SS13, популярный гайд Chain Lightning", en: "Gained players in SS13, popular Chain Lightning guide" }],
           ["carino_01", "", { ru: "Терял игроков в SS13", en: "Lost players in SS13" }],
@@ -150,10 +151,11 @@ window.DATA = {
           ["iris_01", "", { ru: "Фармит до T8, дальше уступает Iris 2", en: "Farms up to T8, then behind Iris 2" }],
           ["gemma_01", "", { ru: "Силён в полной сборке, но терял игроков", en: "Strong when complete, but lost players" }],
           ["rosa_01", "", { ru: "Терял игроков, Rosa 2 сильнее", en: "Lost players, Rosa 2 is stronger" }],
-          ["thea_02", "", { ru: "В SS13 слабая, Lao Ke ждёт роста в SS14 (Tenacity-билд)", en: "Weak in SS13, Lao Ke expects growth in SS14 (Tenacity build)" }]
+          ["erika_03", "", { ru: "Vendetta's Sting", en: "Vendetta's Sting" }]
         ],
         C: [
-          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }]
+          ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
+          ["thea_02", "", { ru: "В SS13 слабая, Lao Ke ждёт роста в SS14 (Tenacity-билд)", en: "Weak in SS13, Lao Ke expects growth in SS14 (Tenacity build)" }]
         ]
       }
     }
@@ -515,10 +517,10 @@ window.DATA = {
       en: "Youga 3 \"The Ultimate One\": new trait. Spells on the Clockwork Core auto-cast, crits reduce cooldowns, Dictator / Conqueror / Overlord branches" } },
     { type: "up", text: { ru: "Meteor: базовый урон 332–616 → 465–863", en: "Meteor: base damage 332–616 → 465–863" } },
     { type: "up", text: { ru: "Electric Overload: бонус молнии 15% → 16%", en: "Electric Overload: lightning bonus 15% → 16%" } },
-    { type: "down", text: { ru: "Rehan: бонус ярости 20–44% → 10–34%, Berserk 50–78% → 40–68%", en: "Rehan: rage bonus 20–44% → 10–34%, Berserk 50–78% → 40–68%" } },
-    { type: "down", text: { ru: "Selena: ground-урон трейта +0–20% → −20–0%; ещё один её талант даёт −30% скорости бега (к какому трейту он относится, пока не подтверждено)", en: "Selena: trait ground damage +0–20% → −20–0%; another of her talents adds −30% movement speed (which trait it belongs to is unconfirmed)" } },
-    { type: "down", text: { ru: "Rosa: бонусы стихий 5–9% → 4–8% (кап 50–90% → 40–80%), Silver stance 20–48% → 10–34%", en: "Rosa: elemental bonus 5–9% → 4–8% (cap 50–90% → 40–80%), Silver stance 20–48% → 10–34%" } },
-    { type: "down", text: { ru: "Sage: ослаблены листья и споры, эффект эликсиров 100–180% → 30–70%", en: "Sage: leaves and spores weakened, elixir effect 100–180% → 30–70%" } },
+    { type: "down", text: { ru: "Rehan 2 (Seething Silhouette): урон в Berserk +20–44% → +10–34%, Fury's Onslaught 50–78% → 40–68%. Rehan 1 не тронут", en: "Rehan 2 (Seething Silhouette): Berserk damage +20–44% → +10–34%, Fury's Onslaught 50–78% → 40–68%. Rehan 1 unchanged" } },
+    { type: "down", text: { ru: "Selena 2 (Dance of the Deep): урон Terra-скиллов +0–20% → −20–0%; Silencing Severance: −30% скорости бега теперь только на 2 с после срабатывания", en: "Selena 2 (Dance of the Deep): Terra skill damage +0–20% → −20–0%; Silencing Severance: −30% movement speed now only for 2 s after it triggers" } },
+    { type: "down", text: { ru: "Rosa 2 (Unsullied Blade): бонус стихийного урона 5–9% → 4–8% за врага (кап 50–90% → 40–80%), Born to Cleanse 20–48% → 10–34%", en: "Rosa 2 (Unsullied Blade): elemental damage 5–9% → 4–8% per enemy (cap 50–90% → 40–80%), Born to Cleanse 20–48% → 10–34%" } },
+    { type: "down", text: { ru: "Sage (Licorice Note): ослаблены Razor Leaf и Scattered Spore, кап Everlasting Nectar 60–100% → 30–70%", en: "Sage (Licorice Note): Razor Leaf and Scattered Spore weakened, Everlasting Nectar cap 60–100% → 30–70%" } },
     { type: "down", text: { ru: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: урон снижен", en: "Thorns Domain, Tidal Spring, Hand of the Abyss, Thunderstorm Zone: damage reduced" } },
     { type: "down", text: { ru: "Whirlwind / Berserking Blade: ловкость больше не основной атрибут; Arrow Rain: бонус от скорости снаряда ограничен 200%", en: "Whirlwind / Berserking Blade: Dexterity no longer a main attribute; Arrow Rain: projectile speed bonus capped at 200%" } },
     { type: "down", text: { ru: "Freeze-билды: нерф колец на заморозку (Gemma 2 по тестам не задета)", en: "Freeze builds: freeze rings nerfed (Gemma 2 unaffected in tests)" } },
