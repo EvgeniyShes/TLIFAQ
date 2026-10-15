@@ -16,9 +16,10 @@ window.DATA = {
   },
 
   // Журнал крупных обновлений содержимого (страница /changelog/): только EN, кратко, новые сверху.
-  // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
+  // Тиры, билды, гайды, источники; заметные посетителю улучшения удобства — тоже (решение владельца). SEO и мелкие правки вёрстки не писать.
   changelog: [
     ["2026-10-15", [
+      "Usability: a clear League start / Endgame switch for the tier lists; build cards with a tier-colored header, guides and videos as large tiles at the top, bigger build codes; an opened row in the builds table now reads as one block; removed the auto YouTube search links that showed random videos.",
       "New builds: Iris 2 Rock Magus swap from TM5 with build code (Wuxia), Carino 3 leveling → T7 → 8-1 → Profound (AgroMorph), Youga 3 Ice Lances Tangle (Beast_hearth, KakiGaming). New videos and guides: ManMauzer and Nirtas (Youga 3), satu1kaa (Erika 1 Thunder Spike day one), Bmlegolas (Bing 2 Lightning Beam 0 → SS20).",
       "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
       "SS14 changes now name the exact trait: the Rage nerf hits Rehan 2 only (Rehan 1 unchanged), the elemental nerf hits Rosa 2, the Terra nerf hits Selena 2.",
