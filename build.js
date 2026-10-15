@@ -112,7 +112,7 @@ function heroPage(lang, id) {
   <section>
     <h2>${t("heroBuilds")}</h2>
     ${builds.length ? builds.map(buildCard).join("") :
-      `<p class="lead">${t("noBuilds")}</p><div class="links"><a class="lnk yt" href="${TLI.ytSearch({ hero: id, name: "" })}" target="_blank" rel="noopener">▶ ${t("ytVideos")}</a></div>`}
+      `<p class="lead">${t("noBuilds")}</p><div class="links"><a class="lnk yt" href="${TLI.ytSearch(id)}" target="_blank" rel="noopener">▶ ${t("ytVideos")}</a></div>`}
   </section>
   ${others.length ? `<section><h2>${t("otherTraits")}</h2><div class="heroes-idx">${others.map(x => `<a href="${pageUrl(lang, x)}">${label(x)} · ${esc(H[x].trait)}</a>`).join("")}</div></section>` : ""}
 </main>

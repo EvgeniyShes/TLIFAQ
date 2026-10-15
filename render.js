@@ -19,7 +19,7 @@ const I18N = {
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
-    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Видео на YouTube", showAll: "показать все билды", buildCode: "Код билда для игры", hasCode: "код", copy: "Копировать", codeHint: "Скопируйте код и вставьте его в игре в окно импорта билда", thCode: "Код в игру", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", authorsTitle: "Используемые материалы авторов", authorsNote: "Гайды, тир-листы и видео этих авторов использованы на сайте. Все права на материалы принадлежат авторам.", sourcesSub: "Откуда взяты данные", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
+    diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Искать видео на YouTube", showAll: "показать все билды", buildCode: "Код билда для игры", hasCode: "код", copy: "Копировать", codeHint: "Скопируйте код и вставьте его в игре в окно импорта билда", thCode: "Код в игру", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", authorsTitle: "Используемые материалы авторов", authorsNote: "Гайды, тир-листы и видео этих авторов использованы на сайте. Все права на материалы принадлежат авторам.", sourcesSub: "Откуда взяты данные", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
     like: "Нравится", tip: "Поддержать проект: чаевые через CloudTips (карты РФ)", boosty: "Поддержать проект на Boosty", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
@@ -38,7 +38,7 @@ const I18N = {
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
-    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Videos on YouTube", showAll: "show all builds", buildCode: "In-game build code", hasCode: "code", copy: "Copy", codeHint: "Copy the code and paste it into the in-game build import window", thCode: "In-game code", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", authorsTitle: "Creators whose materials are used", authorsNote: "Guides, tier lists and videos by these creators are used on this site. All rights to the materials belong to their authors.", sourcesSub: "Where the data comes from", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
+    diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Search YouTube for videos", showAll: "show all builds", buildCode: "In-game build code", hasCode: "code", copy: "Copy", codeHint: "Copy the code and paste it into the in-game build import window", thCode: "In-game code", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", authorsTitle: "Creators whose materials are used", authorsNote: "Guides, tier lists and videos by these creators are used on this site. All rights to the materials belong to their authors.", sourcesSub: "Where the data comes from", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
     like: "Like", tip: "Support the project: tip via CloudTips (Russian cards)", boosty: "Support the project on Boosty", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
@@ -54,8 +54,9 @@ const dots = n => "●".repeat(n) + `<i>${"●".repeat(3-n)}</i>`;
 const T = (lang, k) => I18N[lang][k];
 const L = (lang, x) => x && typeof x === "object" ? (x[lang] ?? x.ru) : x; // текст из data.js
 const pageUrl = (lang, id) => (lang === "ru" ? "/ru" : "") + (id ? `/hero/${id}/` : "/");
-const ytSearch = b => "https://www.youtube.com/results?search_query=" +
-  encodeURIComponent(`Torchlight Infinite ${D.season.code} ${label(b.hero)} ${H[b.hero].trait} ${typeof b.name === "object" ? b.name.en : b.name}`);
+// Поиск YouTube — только на странице героя без билдов; в карточках билдов — лишь настоящие ссылки авторов
+const ytSearch = id => "https://www.youtube.com/results?search_query=" +
+  encodeURIComponent(`Torchlight Infinite ${label(id)} ${H[id].trait} build`);
 
 function tierOf(list, id) {
   for (const [tier, arr] of Object.entries(D.tiers[list].rows)) { const r = arr.find(x => x[0] === id); if (r) return {t: tier, r}; }
@@ -101,8 +102,7 @@ function moreHTML(lang, b) {
   const authors = [...new Set((b.links || []).map(l => l[2]).filter(Boolean))];
   return `<div class="pc"><div class="p"><b>${T(lang,"pros")}</b>${esc(L(lang, b.pros))}</div><div class="c"><b>${T(lang,"cons")}</b>${esc(L(lang, b.cons))}</div></div>
       ${codesHTML(lang, b)}
-      <div class="links">${(b.links || []).map(l => guideBtn(lang, l)).join("")}
-        <a class="lnk yt" href="${ytSearch(b)}" target="_blank" rel="noopener">▶ ${T(lang,"ytVideos")}</a></div>
+      <div class="links">${(b.links || []).map(l => guideBtn(lang, l)).join("")}</div>
       <div class="srcline">${authors.length ? `${T(lang,"credits")}: ${authors.map(authorHTML).join(", ")} · ` : ""}${T(lang,"source")}: ${esc(L(lang, b.src))}</div>`;
 }
 
