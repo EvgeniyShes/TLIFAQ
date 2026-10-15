@@ -59,7 +59,9 @@
   <section id="tiers">
     <h2><svg><use href="#i-crown"/></svg><span data-i="tiersTitle">Hero tier list</span></h2>
     <div class="method"><b>ⓘ <span data-i="methodTitle">How this tier list is made</span></b><p data-i="methodText">These are not final facts but an aggregate estimate. We collect tier lists, guides, videos, spreadsheets and Reddit discussions from many sources and combine them into a weighted average: fresh data and experienced creators count for more, SS14 patch changes are factored in separately, and heroes most creators put at the top also make S.</p><p data-i="methodPets">Pets (pact spirits), gear and budget can noticeably shift a hero or build between tiers.</p></div>
-    <div class="phases" id="tierSeg"><button class="phase on" data-k="starter"><span class="ph-ic">🚀</span><span class="ph-t">League start</span><span class="ph-d">A from-scratch build: clear the campaign and early Netherrealm with no gear, kill the first Traveler boss (Sirius) without big investment, and farm your first currency. Then use it to gear an endgame build.</span><span class="ph-h"><b>Rated by:</b> Campaign, early Netherrealm and the first Traveler (Sirius) without big investment, budget, progression speed</span></button><div class="ph-arrow"><span>farm currency, then switch</span><b>→</b></div><button class="phase " data-k="endgame"><span class="ph-ic">💎</span><span class="ph-t">Endgame</span><span class="ph-d">What you switch to with the farmed currency: Profound, Deep Space, Divine Ascent, Supreme Showdown. Needs investment, but has the highest ceiling.</span><span class="ph-h"><b>Rated by:</b> Presence in top Divine Ascent and Supreme Showdown ranks, farming and boss damage</span></button></div>
+    <div class="phases" id="tierSeg"><div class="ph-pick">Choose the game stage</div>
+    <div class="ph-switch starter" role="tablist"><button class="phase on" data-k="starter" role="tab" aria-selected="true"><span class="ph-ic">🚀</span><span><span class="ph-t">League start</span><span class="ph-s">first currency</span></span></button><button class="phase " data-k="endgame" role="tab" aria-selected="false"><span class="ph-ic">💎</span><span><span class="ph-t">Endgame</span><span class="ph-s">Profound, Deep Space</span></span></button><span class="ph-arrow" title="farm currency, then switch">→</span></div>
+    <div class="ph-panel starter"><p class="ph-d">A from-scratch build: clear the campaign and early Netherrealm with no gear, kill the first Traveler boss (Sirius) without big investment, and farm your first currency. Then use it to gear an endgame build.</p><p class="ph-h"><b>Rated by:</b> Campaign, early Netherrealm and the first Traveler (Sirius) without big investment, budget, progression speed</p></div></div>
     <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">SS14 buff or new</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">SS14 nerf</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">trait reworked</span></span><span data-i="legendClick">Click a hero for details</span></div>
     <div id="tierList">
     <div class="tier" style="--tc:var(--S)">
@@ -1136,8 +1138,12 @@ function renderTiers() {
   showDetail(selected);
   $("#tierList").querySelector(`.hcard[data-id="${selected}"]`).closest(".tier").after(DETAIL); // плашка — сразу под рядом героя
 }
-$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b) return;
-  mode = b.dataset.k; $("#tierSeg").innerHTML = TLI.phaseTabsHTML(lang, mode); renderTiers(); };
+$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b || b.dataset.k === mode) return;
+  mode = b.dataset.k; // классы, а не перерисовка — чтобы плашка и уголок переезжали анимацией
+  $("#tierSeg").querySelectorAll(".phase").forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-selected", x === b); });
+  $("#tierSeg .ph-switch").className = "ph-switch " + mode;
+  const p = $("#tierSeg .ph-panel"); p.className = "ph-panel " + mode; p.innerHTML = TLI.phasePanelHTML(lang, mode);
+  renderTiers(); };
 $("#tierList").onclick = e => { const c = e.target.closest(".hcard"); if (!c) return;
   selected = selected === c.dataset.id ? null : c.dataset.id; renderTiers();
   if (selected) DETAIL.scrollIntoView({block:"nearest", behavior:"smooth"}); else DETAIL.classList.remove("show"); };

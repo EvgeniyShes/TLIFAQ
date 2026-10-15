@@ -157,8 +157,12 @@ function renderTiers() {
   showDetail(selected);
   $("#tierList").querySelector(`.hcard[data-id="${selected}"]`).closest(".tier").after(DETAIL); // плашка — сразу под рядом героя
 }
-$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b) return;
-  mode = b.dataset.k; $("#tierSeg").innerHTML = TLI.phaseTabsHTML(lang, mode); renderTiers(); };
+$("#tierSeg").onclick = e => { const b = e.target.closest(".phase"); if (!b || b.dataset.k === mode) return;
+  mode = b.dataset.k; // классы, а не перерисовка — чтобы плашка и уголок переезжали анимацией
+  $("#tierSeg").querySelectorAll(".phase").forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-selected", x === b); });
+  $("#tierSeg .ph-switch").className = "ph-switch " + mode;
+  const p = $("#tierSeg .ph-panel"); p.className = "ph-panel " + mode; p.innerHTML = TLI.phasePanelHTML(lang, mode);
+  renderTiers(); };
 $("#tierList").onclick = e => { const c = e.target.closest(".hcard"); if (!c) return;
   selected = selected === c.dataset.id ? null : c.dataset.id; renderTiers();
   if (selected) DETAIL.scrollIntoView({block:"nearest", behavior:"smooth"}); else DETAIL.classList.remove("show"); };

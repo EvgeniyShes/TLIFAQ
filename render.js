@@ -23,7 +23,7 @@ const I18N = {
     like: "Нравится", tip: "Поддержать проект: чаевые через CloudTips (карты РФ)", boosty: "Поддержать проект на Boosty", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
     heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
-    noBuilds: "Отдельных разборов билда пока нет — смотрите видео:", tierStart: "Старт лиги — первая валюта", tierEnd: "Эндгейм — Profound, Deep Space", phaseArrow: "накопил валюту — пересел",
+    noBuilds: "Отдельных разборов билда пока нет — смотрите видео:", tierStart: "Старт лиги — первая валюта", tierEnd: "Эндгейм — Profound, Deep Space", phaseArrow: "накопил валюту — пересел", phasePick: "Выберите этап игры",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
   en: {
@@ -42,7 +42,7 @@ const I18N = {
     like: "Like", tip: "Support the project: tip via CloudTips (Russian cards)", boosty: "Support the project on Boosty", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
     heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
-    noBuilds: "No dedicated build breakdown yet — check the videos:", tierStart: "League start — first currency", tierEnd: "Endgame — Profound, Deep Space", phaseArrow: "farm currency, then switch",
+    noBuilds: "No dedicated build breakdown yet — check the videos:", tierStart: "League start — first currency", tierEnd: "Endgame — Profound, Deep Space", phaseArrow: "farm currency, then switch", phasePick: "Choose the game stage",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
 };
@@ -152,14 +152,18 @@ const changesHTML = lang => D.changes.map(c => `<div class="ch ${c.type}"><span 
 const sourcesHTML = lang => D.sources.map(([s,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(L(lang, s))}</a></li>`).join("");
 const heroOptionsHTML = lang => `<option value="">${T(lang,"allHeroes")}</option>` + [...new Set(D.builds.map(b => b.hero))].sort()
   .map(id => `<option value="${id}">${label(id)} — ${esc(H[id].trait)}</option>`).join("");
-// Две карточки-этапа вместо переключателя: старт лиги → эндгейм
+// Переключатель этапов (старт лиги → эндгейм) и описание выбранного под ним
+const phasePanelHTML = (lang, mode) => { const v = D.tiers[mode];
+  return `<p class="ph-d">${esc(L(lang, v.desc))}</p><p class="ph-h"><b>${T(lang,"criteria")}:</b> ${esc(L(lang, v.hint))}</p>`; };
 const phaseTabsHTML = (lang, mode) => {
-  const card = ([k, v]) => `<button class="phase ${k === mode ? "on" : ""}" data-k="${k}"><span class="ph-ic">${v.icon}</span><span class="ph-t">${esc(L(lang, v.title))}</span><span class="ph-d">${esc(L(lang, v.desc))}</span><span class="ph-h"><b>${T(lang,"criteria")}:</b> ${esc(L(lang, v.hint))}</span></button>`;
-  const [a, b] = Object.entries(D.tiers);
-  return card(a) + `<div class="ph-arrow"><span>${T(lang, "phaseArrow")}</span><b>→</b></div>` + card(b);
+  const sub = k => T(lang, k === "starter" ? "tierStart" : "tierEnd").split(" — ")[1];
+  const tab = ([k, v]) => `<button class="phase ${k === mode ? "on" : ""}" data-k="${k}" role="tab" aria-selected="${k === mode}"><span class="ph-ic">${v.icon}</span><span><span class="ph-t">${esc(L(lang, v.title))}</span><span class="ph-s">${esc(sub(k))}</span></span></button>`;
+  return `<div class="ph-pick">${T(lang, "phasePick")}</div>
+    <div class="ph-switch ${mode}" role="tablist">${Object.entries(D.tiers).map(tab).join("")}<span class="ph-arrow" title="${esc(T(lang, "phaseArrow"))}">→</span></div>
+    <div class="ph-panel ${mode}">${phasePanelHTML(lang, mode)}</div>`;
 };
 const heroIndexHTML = lang => Object.keys(H).map(id => `<a href="${pageUrl(lang, id)}">${label(id)} · ${esc(H[id].trait)}</a>`).join("");
 
 g.TLI = { D, H, SITE, I18N, TREND, esc, label, img, dots, T, L, pageUrl, ytSearch, tierOf, tiersHTML, buildRows, moreHTML, buildsHTML,
-  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML, guidesHTML, authorsListHTML };
+  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML, phasePanelHTML, guidesHTML, authorsListHTML };
 })(typeof window !== "undefined" ? window : globalThis);
