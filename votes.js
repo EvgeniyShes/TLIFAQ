@@ -93,7 +93,7 @@ const SOURCES = [
              C: "erika_03 carino_01 selena_02 gemma_01" } },
   // 14.10.2026 убраны RMT-магазины и продавец ботов — не источники (см. SOURCES.md).
   // Тиры после этого не сдвигали (решение владельца): ≠ у rosa_01 (старт), carino_03 (эндгейм) — намеренно, см. SOURCES.md
-  // 15.10.2026 решение владельца поверх формулы: старт — rosa_02 и selena_01 в S, selena_02 в A, moto_02 в B; эндгейм — rehan_02 в S, rehan_01 в A (Spell Burst)
+  // 15.10.2026 решение владельца поверх формулы: старт — rosa_02 и selena_01 в S, selena_02 и thea_01 в A, moto_02 в B; эндгейм — rehan_02 в S, rehan_01 в A (Spell Burst)
   { id: "kr4000", old: true, name: "DCInside: игроков на 4000-м этаже, конец SS13", w: 1, lists: ["end"],
     // 100+ → S, 30–73 → A, 10–22 → B, меньше 10 → C
     votes: { S: "sage_01 iris_02 erika_02", A: "rosa_02 bing_02 moto_02 gemma_02 rehan_02",

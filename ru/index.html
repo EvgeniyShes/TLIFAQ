@@ -48,7 +48,7 @@
       <div class="countdown" id="cd"></div>
       <p class="lg-date"><span data-i="seasonStart">Старт сезона</span>: <b id="sStart">16 октября, 05:00 МСК</b></p>
     </div>
-    <p class="upd"><span class="dot"></span><span data-i="lastUpd">Последнее обновление:</span> <b id="sUpd">15 окт. 2026 г., 10:43 МСК</b> <span id="sAgo"></span> · <a class="log-link" id="logLink" title="Журнал изменений (на английском)" href="/changelog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><span data-i="changelog">Журнал изменений</span></a></p>
+    <p class="upd"><span class="dot"></span><span data-i="lastUpd">Последнее обновление:</span> <b id="sUpd">15 окт. 2026 г., 11:24 МСК</b> <span id="sAgo"></span> · <a class="log-link" id="logLink" title="Журнал изменений (на английском)" href="/changelog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><span data-i="changelog">Журнал изменений</span></a></p>
     <div class="actions">
       <button class="like" id="likeBtn" hidden><span class="heart">♥</span> <span data-i="like">Нравится</span> <b id="likeN"></b></button>
     </div>
@@ -68,14 +68,14 @@
     <div class="phases" id="tierSeg"><div class="ph-pick">Выберите этап игры</div>
     <div class="ph-switch starter" role="tablist"><button class="phase on" data-k="starter" role="tab" aria-selected="true"><span class="ph-ic">🚀</span><span><span class="ph-t">Старт лиги</span><span class="ph-s">первая валюта</span></span></button><button class="phase " data-k="endgame" role="tab" aria-selected="false"><span class="ph-ic">💎</span><span><span class="ph-t">Эндгейм</span><span class="ph-s">Profound, Deep Space</span></span></button><span class="ph-arrow" title="накопил валюту — пересел">→</span></div>
     <div class="ph-panel starter"><p class="ph-d">Билд «с нуля»: пройти кампанию и ранний Netherrealm без шмота, без больших вложений убить первого тревелера — босса Сириуса — и заработать первую валюту. Потом на неё собирают эндгейм-билд.</p><p class="ph-h"><b>Оцениваем:</b> Кампания, ранний Netherrealm и первый тревелер (Сириус) без больших вложений, бюджет, скорость прогресса</p></div></div>
-    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">бафф или новинка SS14</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">нерф в SS14</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">трейт переработан</span></span><span data-i="legendClick">Нажми на героя, чтобы открыть подробности</span></div>
+    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">бафф или новинка SS14</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">нерф в SS14</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">трейт переработан</span></span><span><b style="background:var(--fire2);color:#3a2600">$</b><span data-i="legendPricey">скорее всего будет дорогим</span></span><span data-i="legendClick">Нажми на героя, чтобы открыть подробности</span></div>
     <div id="tierList">
     <div class="tier" style="--tc:var(--S)">
       <div class="tier-label" style="background:var(--S)">S</div>
       <div class="tier-items">
         <button class="hcard " data-id="youga_03" title="The Ultimate One">
           <div class="portrait"><img src="/img/youga_03.webp" alt="Youga 3 The Ultimate One" loading="lazy" width="72" height="72"></div>
-          <span class="trend up">▲</span>
+          <span class="trend up">▲</span><span class="trend pricey" title="скорее всего будет дорогим">$</span>
           <div class="hname">Youga 3</div><div class="htrait">The Ultimate One</div>
         </button>
         <button class="hcard " data-id="erika_01" title="Wind Stalker">
@@ -92,16 +92,16 @@
           <div class="portrait"><img src="/img/rosa_02.webp" alt="Rosa 2 Unsullied Blade" loading="lazy" width="72" height="72"></div>
           <span class="trend down">▼</span>
           <div class="hname">Rosa 2</div><div class="htrait">Unsullied Blade</div>
-        </button>
-        <button class="hcard " data-id="thea_01" title="Wisdom of The Gods">
-          <div class="portrait"><img src="/img/thea_01.webp" alt="Thea 1 Wisdom of The Gods" loading="lazy" width="72" height="72"></div>
-          <span class="trend new">✦</span>
-          <div class="hname">Thea 1</div><div class="htrait">Wisdom of The Gods</div>
         </button></div>
     </div>
     <div class="tier" style="--tc:var(--A)">
       <div class="tier-label" style="background:var(--A)">A</div>
       <div class="tier-items">
+        <button class="hcard " data-id="thea_01" title="Wisdom of The Gods">
+          <div class="portrait"><img src="/img/thea_01.webp" alt="Thea 1 Wisdom of The Gods" loading="lazy" width="72" height="72"></div>
+          <span class="trend new">✦</span>
+          <div class="hname">Thea 1</div><div class="htrait">Wisdom of The Gods</div>
+        </button>
         <button class="hcard " data-id="bing_02" title="Creative Genius">
           <div class="portrait"><img src="/img/bing_02.webp" alt="Bing 2 Creative Genius" loading="lazy" width="72" height="72"></div>
           

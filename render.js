@@ -15,7 +15,7 @@ const I18N = {
     season: "Сезон", subtitle: "Тир-листы героев и билдов", changelog: "Журнал изменений", changelogTip: "Журнал изменений (на английском)", lastUpd: "Последнее обновление:",
     seasonStart: "Старт сезона", league: "Лига", leagueSoon: "стартует через", leagueLive: "уже идёт",units: ["дней","часов","минут","секунд"],
     methodTitle: "Как составлен тир-лист", methodText: "Это не окончательные факты, а сводная оценка. Мы собираем тир-листы, гайды, видео, таблицы и обсуждения на Reddit из разных источников и сводим их в средневзвешенную оценку: свежие данные и опытные авторы весят больше, изменения патча SS14 учитываются отдельно, а в S попадают и те, кого большинство авторов ставит в топ.", methodPets: "Питомцы (пакт-спириты), снаряжение и бюджет могут заметно сдвинуть героя или билд по тирам.", criteria: "Оцениваем", navTiers: "Тир-листы", navBuilds: "Билды", navChanges: "Изменения SS14", navSources: "Источники",
-    tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendNew: "трейт переработан", legendClick: "Нажми на героя, чтобы открыть подробности",
+    tiersTitle: "Тир-лист героев", legendUp: "бафф или новинка SS14", legendDown: "нерф в SS14", legendNew: "трейт переработан", legendPricey: "скорее всего будет дорогим", legendClick: "Нажми на героя, чтобы открыть подробности",
     start: "Старт", end: "Эндгейм", both: "Старт + эндгейм", all: "Все", allHeroes: "Все герои",
     buildsTitle: "Сводная таблица билдов", buildsLead: "Нажми на строку, чтобы увидеть плюсы, минусы и источник. Нажми на заголовок колонки, чтобы отсортировать.",
     search: "Поиск: скилл, билд…", thHero: "Герой", thTier: "Тир", thBuild: "Билд", thSkill: "Ключевой скилл", thStage: "Этап", thBudget: "Бюджет", thDiff: "Сложность",
@@ -34,7 +34,7 @@ const I18N = {
     season: "Season", subtitle: "Hero and build tier lists", changelog: "Changelog", changelogTip: "Changelog", lastUpd: "Last update:",
     seasonStart: "Season start", league: "League", leagueSoon: "starts in", leagueLive: "is live now",units: ["days","hours","min","sec"],
     methodTitle: "How this tier list is made", methodText: "These are not final facts but an aggregate estimate. We collect tier lists, guides, videos, spreadsheets and Reddit discussions from many sources and combine them into a weighted average: fresh data and experienced creators count for more, SS14 patch changes are factored in separately, and heroes most creators put at the top also make S.", methodPets: "Pets (pact spirits), gear and budget can noticeably shift a hero or build between tiers.", criteria: "Rated by", navTiers: "Tier lists", navBuilds: "Builds", navChanges: "SS14 changes", navSources: "Sources",
-    tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendNew: "trait reworked", legendClick: "Click a hero for details",
+    tiersTitle: "Hero tier list", legendUp: "SS14 buff or new", legendDown: "SS14 nerf", legendNew: "trait reworked", legendPricey: "likely to be expensive", legendClick: "Click a hero for details",
     start: "Start", end: "Endgame", both: "Start + endgame", all: "All", allHeroes: "All heroes",
     buildsTitle: "Build overview", buildsLead: "Click a row to see pros, cons and source. Click a column header to sort.",
     search: "Search: skill, build…", thHero: "Hero", thTier: "Tier", thBuild: "Build", thSkill: "Key skill", thStage: "Stage", thBudget: "Budget", thDiff: "Difficulty",
@@ -68,7 +68,7 @@ function tiersHTML(lang, mode, selected) {
       <div class="tier-items">${arr.map(([id, tr]) => `
         <button class="hcard ${id===selected?"sel":""}" data-id="${id}" title="${esc(H[id].trait)}">
           <div class="portrait"><img src="${img(id)}" alt="${label(id)} ${esc(H[id].trait)}" loading="lazy" width="72" height="72"></div>
-          ${tr ? `<span class="trend ${tr}">${TREND[tr]}</span>` : ""}
+          ${tr ? `<span class="trend ${tr}">${TREND[tr]}</span>` : ""}${H[id].pricey ? `<span class="trend pricey" title="${esc(T(lang, "legendPricey"))}">$</span>` : ""}
           <div class="hname">${label(id)}</div><div class="htrait">${esc(H[id].trait)}</div>
         </button>`).join("")}</div>
     </div>`).join("");

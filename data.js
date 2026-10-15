@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-15T07:43:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-15T08:24:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
@@ -19,7 +19,7 @@ window.DATA = {
   // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
   changelog: [
     ["2026-10-15", [
-      "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Thea 1 up to S; Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
+      "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
       "SS14 changes now name the exact trait: the Rage nerf hits Rehan 2 only (Rehan 1 unchanged), the elemental nerf hits Rosa 2, the Terra nerf hits Selena 2.",
       "New builds: Selena 1 Wilting Beam starter (CrimsonDead), Youga 3 cold Hound's Fangs (Nirtas), Selena 2 Frost Terra → Tidewell (Nirtas), Youga 1 Chain Lightning 8B → SS20 (Fragmentations), Bing 2 Splitting Lightning Bolt (CoffeeBns).",
       "Selena 1 Scorching Beam: added CrimsonDead's SS14 guide. New videos: ShadyBroker (Youga 2 Mind Control), MinMaxedARPG (Gemma 2), DonTheCrown and Marcus Nordstrom (Selena 1), Francissss (Rosa 2)."
@@ -57,7 +57,7 @@ window.DATA = {
     thea_03:   { hero: "Thea",   n: 3, trait: "Blasphemer" },
     youga_01:  { hero: "Youga",  n: 1, trait: "Spacetime Illusion" },
     youga_02:  { hero: "Youga",  n: 2, trait: "Spacetime Elapse" },
-    youga_03:  { hero: "Youga",  n: 3, trait: "The Ultimate One" },
+    youga_03:  { hero: "Youga",  n: 3, trait: "The Ultimate One", pricey: true }, // pricey — значок $ слева на карточке: скорее всего будет дорогим
     moto_01:   { hero: "Moto",   n: 1, trait: "Order Calling" },
     moto_02:   { hero: "Moto",   n: 2, trait: "Charge Calling" },
     rosa_01:   { hero: "Rosa",   n: 1, trait: "High Court Chariot" },
@@ -81,10 +81,10 @@ window.DATA = {
           ["youga_03", "up", { ru: "Новый трейт SS14, прогноз: минимум 4 автора на Bilibili разбирают его в трёх вариантах (автобег, мобильность, ручная игра), обещают «с нуля до U8»", en: "New SS14 trait, forecast: at least 4 Bilibili creators break it down in three variants (auto-run, mobility, manual), claiming \"zero to U8\"" }],
           ["erika_01", "", { ru: "Самый быстрый фарм валюты на старте; хрупкая", en: "Fastest early currency farming; fragile" }],
           ["selena_01", "", { ru: "Lao Ke, R3plic и satu1kaa: надёжный стартер — замораживающий клир на весь экран и автоматизация с 20 уровня; хуже заходит в Profound", en: "Lao Ke, R3plic and satu1kaa: a reliable starter — screen-wide freezing clear and automation from level 20; struggles to break into Profound" }],
-          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }],
-          ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }]
+          ["rosa_02", "down", { ru: "Lao Ke и DonTheCrown ставят в топ сезона; для полного раскрытия нужны дорогие перчатки", en: "Lao Ke and DonTheCrown put her at the top of the season; needs expensive gloves to fully come online" }]
         ],
         A: [
+          ["thea_01", "new", { ru: "Трейт переработан в SS14, реальная сила станет ясна после старта", en: "Trait reworked in SS14, real strength unknown until launch" }],
           ["bing_02", "", { ru: "Нужен питомец на спеллбёрсты, играется надёжно", en: "Needs a Spell Burst pet, plays reliably" }],
           ["iris_02", "", { ru: "Быстрая и живучая, проходит акты через Thunder или Fire Magus. Но дорогие питомцы и сложная механика", en: "Fast and tanky, clears acts with Thunder or Fire Magus. But pricey pets and complex mechanics" }],
           ["gemma_02", "up", { ru: "Заморозка упрощает старт; нерф freeze её не задел", en: "Freeze makes the start easy; the freeze nerf didn't hit her" }],

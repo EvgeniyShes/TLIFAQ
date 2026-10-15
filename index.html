@@ -48,7 +48,7 @@
       <div class="countdown" id="cd"></div>
       <p class="lg-date"><span data-i="seasonStart">Season start</span>: <b id="sStart">Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC</b></p>
     </div>
-    <p class="upd"><span class="dot"></span><span data-i="lastUpd">Last update:</span> <b id="sUpd">Oct 15, 2026, 7:43 AM UTC</b> <span id="sAgo"></span> · <a class="log-link" id="logLink" title="Changelog" href="/changelog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><span data-i="changelog">Changelog</span></a></p>
+    <p class="upd"><span class="dot"></span><span data-i="lastUpd">Last update:</span> <b id="sUpd">Oct 15, 2026, 8:24 AM UTC</b> <span id="sAgo"></span> · <a class="log-link" id="logLink" title="Changelog" href="/changelog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><span data-i="changelog">Changelog</span></a></p>
     <div class="actions">
       <button class="like" id="likeBtn" hidden><span class="heart">♥</span> <span data-i="like">Like</span> <b id="likeN"></b></button>
     </div>
@@ -68,14 +68,14 @@
     <div class="phases" id="tierSeg"><div class="ph-pick">Choose the game stage</div>
     <div class="ph-switch starter" role="tablist"><button class="phase on" data-k="starter" role="tab" aria-selected="true"><span class="ph-ic">🚀</span><span><span class="ph-t">League start</span><span class="ph-s">first currency</span></span></button><button class="phase " data-k="endgame" role="tab" aria-selected="false"><span class="ph-ic">💎</span><span><span class="ph-t">Endgame</span><span class="ph-s">Profound, Deep Space</span></span></button><span class="ph-arrow" title="farm currency, then switch">→</span></div>
     <div class="ph-panel starter"><p class="ph-d">A from-scratch build: clear the campaign and early Netherrealm with no gear, kill the first Traveler boss (Sirius) without big investment, and farm your first currency. Then use it to gear an endgame build.</p><p class="ph-h"><b>Rated by:</b> Campaign, early Netherrealm and the first Traveler (Sirius) without big investment, budget, progression speed</p></div></div>
-    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">SS14 buff or new</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">SS14 nerf</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">trait reworked</span></span><span data-i="legendClick">Click a hero for details</span></div>
+    <div class="legend"><span><b style="background:var(--up);color:#052e14">▲</b><span data-i="legendUp">SS14 buff or new</span></span><span><b style="background:var(--down);color:#3b0909">▼</b><span data-i="legendDown">SS14 nerf</span></span><span><b style="background:var(--new);color:#06213f">✦</b><span data-i="legendNew">trait reworked</span></span><span><b style="background:var(--fire2);color:#3a2600">$</b><span data-i="legendPricey">likely to be expensive</span></span><span data-i="legendClick">Click a hero for details</span></div>
     <div id="tierList">
     <div class="tier" style="--tc:var(--S)">
       <div class="tier-label" style="background:var(--S)">S</div>
       <div class="tier-items">
         <button class="hcard " data-id="youga_03" title="The Ultimate One">
           <div class="portrait"><img src="/img/youga_03.webp" alt="Youga 3 The Ultimate One" loading="lazy" width="72" height="72"></div>
-          <span class="trend up">▲</span>
+          <span class="trend up">▲</span><span class="trend pricey" title="likely to be expensive">$</span>
           <div class="hname">Youga 3</div><div class="htrait">The Ultimate One</div>
         </button>
         <button class="hcard " data-id="erika_01" title="Wind Stalker">
@@ -92,16 +92,16 @@
           <div class="portrait"><img src="/img/rosa_02.webp" alt="Rosa 2 Unsullied Blade" loading="lazy" width="72" height="72"></div>
           <span class="trend down">▼</span>
           <div class="hname">Rosa 2</div><div class="htrait">Unsullied Blade</div>
-        </button>
-        <button class="hcard " data-id="thea_01" title="Wisdom of The Gods">
-          <div class="portrait"><img src="/img/thea_01.webp" alt="Thea 1 Wisdom of The Gods" loading="lazy" width="72" height="72"></div>
-          <span class="trend new">✦</span>
-          <div class="hname">Thea 1</div><div class="htrait">Wisdom of The Gods</div>
         </button></div>
     </div>
     <div class="tier" style="--tc:var(--A)">
       <div class="tier-label" style="background:var(--A)">A</div>
       <div class="tier-items">
+        <button class="hcard " data-id="thea_01" title="Wisdom of The Gods">
+          <div class="portrait"><img src="/img/thea_01.webp" alt="Thea 1 Wisdom of The Gods" loading="lazy" width="72" height="72"></div>
+          <span class="trend new">✦</span>
+          <div class="hname">Thea 1</div><div class="htrait">Wisdom of The Gods</div>
+        </button>
         <button class="hcard " data-id="bing_02" title="Creative Genius">
           <div class="portrait"><img src="/img/bing_02.webp" alt="Bing 2 Creative Genius" loading="lazy" width="72" height="72"></div>
           

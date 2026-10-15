@@ -78,7 +78,7 @@
   - Не учтены отдельно: DonTheCrown «TOP BUILDS» и ItsAdiar «Six Starters» — те же авторы, что уже в расчёте.
   - Патчноут перечитан: нерф ярости — только Rehan 2 (Seething Silhouette), поэтому поправка −0,5 у Rehan 1 убрана. Rosa 2 — Unsullied Blade, Selena 2 — Dance of the Deep, Sage — Licorice Note. В `changes` указаны трейты.
   - По формуле старт: S — Youga 3, Erika 1, Thea 1; Rosa 2 (3,48) и Selena 1 (3,40) — A. Эндгейм: Rehan 2 (3,20) — A, Rehan 1 (2,33) — B.
-  - **Решение владельца поверх формулы:** старт — Rosa 2 и Selena 1 остаются S, Selena 2 остаётся A, Moto 2 остаётся B (по формуле наоборот — 2,19 и 2,65); эндгейм — Rehan 2 остаётся S, Rehan 1 → A (билд через Spell Burst). Остальное — по формуле: старт — Thea 1 A → S, Moto 2 B → A, Rehan 2 и Sage S → A, Carino 1, Carino 3, Erika 2, Erika 3, Selena 2 A → B, Gemma 1 и Thea 2 B → C; эндгейм — Erika 3 A → B, Thea 2 B → C.
+  - **Решение владельца поверх формулы:** старт — Rosa 2 и Selena 1 остаются S, Selena 2 и Thea 1 остаются A (Thea 1 по формуле — S), Moto 2 остаётся B (по формуле наоборот — 2,19 и 2,65); эндгейм — Rehan 2 остаётся S, Rehan 1 → A (билд через Spell Burst). Остальное — по формуле: старт — Moto 2 B → A, Rehan 2 и Sage S → A, Carino 1, Carino 3, Erika 2, Erika 3, Selena 2 A → B, Gemma 1 и Thea 2 B → C; эндгейм — Erika 3 A → B, Thea 2 B → C.
   - UncleJay упоминает свежие правки патча (бафф Youga 3, нерф Bing) — в патчноуте на 15.10 не нашёл, проверить после старта.
 
 ## Проверенные страницы
