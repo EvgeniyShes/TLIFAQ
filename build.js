@@ -18,7 +18,7 @@ const VERIFY = {
 
 const write = (rel, html) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); };
 // Заметка в подвале: доступ из России и отсутствие финансирования
-const fnote = lang => `<p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://pay.cloudtips.ru/p/1d7ab283" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
+const fnote = lang => `<p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
 const fillId = (h, id, html) => {
   const re = new RegExp(`(id="${id}"[^>]*>)(</)`);
   if (!re.test(h)) throw new Error("в шаблоне нет пустого #" + id);
