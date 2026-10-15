@@ -296,7 +296,6 @@ window.DATA = {
       cons: { ru: "Хрупкая, частые смерти у новичков. Farewell Desire до старта стоила 90+ FE — цена на живом рынке будет другой", en: "Fragile, frequent deaths for new players. Farewell Desire cost 90+ FE pre-season — live market price will differ" },
       src: { ru: "TreyexGaming, тест игрока на Reddit", en: "TreyexGaming, player test on Reddit" },
       links: [
-        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
         [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"],
         [{ ru: "Видео satu1kaa: Thunder Spike в первый день — прокачка через Spider Tank, дерево, скиллы, шмот, Pedigree (YouTube)", en: "satu1kaa's video: Thunder Spike on day one — Spider Tank leveling, tree, skills, gear, Pedigree (YouTube)" }, "https://www.youtube.com/watch?v=43hFTRuzWe4", "satu1kaa"],
@@ -310,7 +309,6 @@ window.DATA = {
       cons: { ru: "Один непроверенный отзыв до старта; Carino 2 остаётся надёжнее", en: "A single unverified pre-season report; Carino 2 is still more reliable" },
       src: { ru: "тест игрока на Reddit", en: "player test on Reddit" },
       links: [
-        [{ ru: "Тесты стартеров игроками (Reddit)", en: "Players' starter tests (Reddit)" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/", "Reddit"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
       ],
       codes: [
