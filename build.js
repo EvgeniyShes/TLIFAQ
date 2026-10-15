@@ -17,6 +17,8 @@ const VERIFY = {
 };
 
 const write = (rel, html) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); };
+// Заметка в подвале: доступ из России и отсутствие финансирования
+const fnote = lang => `<p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://pay.cloudtips.ru/p/1d7ab283" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
 const fillId = (h, id, html) => {
   const re = new RegExp(`(id="${id}"[^>]*>)(</)`);
   if (!re.test(h)) throw new Error("в шаблоне нет пустого #" + id);
@@ -120,6 +122,7 @@ function heroPage(lang, id) {
   <h3 class="idx-title">${t("heroesIdx")}</h3>
   <div class="heroes-idx">${TLI.heroIndexHTML(lang)}</div>
   <span>${t("footer")}</span>
+  ${fnote(lang)}
 </footer>`;
   return template.slice(0, template.indexOf("<body>") + 6).replace("{{lang}}", lang).replace("{{head}}", head(lang, id, title, desc)) +
     "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
@@ -141,7 +144,7 @@ function changelogPage() {
 <main class="wrap clog">
 ${D.changelog.map(([d, items]) => `  <section><h2>${day(d)}</h2><ul>${items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></section>`).join("\n")}
 </main>
-<footer class="wrap"><span>${T("en", "footer")}</span></footer>`;
+<footer class="wrap"><span>${T("en", "footer")}</span>${fnote("en")}</footer>`;
   return template.slice(0, template.indexOf("<body>") + 6).replace("{{lang}}", "en").replace("{{head}}", meta) +
     "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
 }

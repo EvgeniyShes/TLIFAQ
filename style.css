@@ -465,3 +465,6 @@ main{flex:1 0 auto}
 tr.more td{position:relative;top:-6px;padding:18px 20px;background:#1d1a21;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px}
 @media (max-width:760px){.lgrid{grid-template-columns:1fr}.clist{grid-template-columns:minmax(0,1fr) auto}.clist .cl{grid-column:1/-1;margin-top:4px}
   .bc-head,.bc-body{padding-left:14px;padding-right:14px}tr.more td{top:0}}
+/* Заметка в подвале о доступе из России — неброская */
+.fnote{max-width:640px;margin:14px auto 0;padding:10px 14px;border-radius:10px;background:#ffffff06;border:1px solid var(--line);font-size:12.5px;line-height:1.5;color:var(--muted)}
+.fnote a{color:var(--fire2);white-space:nowrap}
