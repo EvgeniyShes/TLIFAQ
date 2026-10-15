@@ -429,3 +429,39 @@ main section > h2{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid
 body{min-height:100vh;display:flex;flex-direction:column}
 body > .wrap{width:100%}
 main{flex:1 0 auto}
+
+/* Карточка билда: шапка цвета тира, плитки ссылок, коды крупно, без левых бордеров */
+.bcard{padding:0;margin-bottom:28px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 10px 30px #0007}
+.bc-head{padding:16px 20px 14px;border-top:4px solid var(--tc);border-bottom:1px solid var(--line);background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 16%,transparent),transparent 75%)}
+.bc-head h3{font-size:20px;margin:0 0 8px}
+.bc-head .bmeta{margin:0}
+.bc-body{padding:18px 20px 16px}
+.bh{display:block;margin-bottom:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.glinks{margin-bottom:16px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.ltile{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);
+  color:var(--text);text-decoration:none;font-size:15px;font-weight:600;line-height:1.35;transition:border-color .15s,background .15s,transform .15s}
+.ltile:hover{border-color:var(--fire);background:#ff8a2b14;transform:translateY(-1px)}
+.ltile .li{flex:none;width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:#ff8a2b1f;font-size:18px}
+.ltile.vid .li{background:#ff4d4d24;color:#ff6b6b}
+.ltile .lt{flex:1;min-width:0}
+.ltile small{display:block;margin-top:2px;font-size:13px;font-weight:500;color:var(--muted)}
+.ltile .la{flex:none;color:var(--muted);font-size:16px}
+.ltile:hover .la{color:var(--fire2)}
+.codes{gap:2px;margin:0 0 16px;padding:14px 16px;border-radius:12px}
+.codes .bh{margin:0;font-size:15px;text-transform:none;letter-spacing:0;color:var(--text)}
+.codes small{margin-bottom:10px;font-size:14px}
+.clist{display:grid;grid-template-columns:auto minmax(0,max-content) auto;gap:8px 12px;align-items:center;justify-content:start}
+.clist .bcode{display:contents}
+.clist .cl{font-size:14px;color:var(--muted)}
+.clist code{font-size:14px;padding:6px 10px}
+.clist .copy{font-size:14px;padding:6px 12px}
+.pc .p,.pc .c{border:0;border-radius:12px}
+.bc-body .srcline,tr.more .srcline{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+/* Таблица: раскрытая строка и её панель — один блок */
+.tbl tr.row.open td{background:#1d1a21;border-top:2px solid var(--tc);border-bottom-color:transparent}
+.tbl tr.row.open td:first-child{border-radius:12px 0 0 0}
+.tbl tr.row.open td:last-child{border-radius:0 12px 0 0}
+tr.more td{position:relative;top:-6px;padding:18px 20px;background:#1d1a21;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px}
+@media (max-width:760px){.lgrid{grid-template-columns:1fr}.clist{grid-template-columns:minmax(0,1fr) auto}.clist .cl{grid-column:1/-1;margin-top:4px}
+  .bc-head,.bc-body{padding-left:14px;padding-right:14px}tr.more td{top:0}}

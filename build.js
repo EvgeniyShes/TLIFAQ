@@ -88,11 +88,11 @@ function heroPage(lang, id) {
   const tierCard = (x, cap) => `<div class="tcard" style="--tc:var(--${x.t})"><span class="tb" style="background:var(--${x.t})">${x.t}</span>
       <div><b>${cap}</b>${trendMark(x.r[1])}<p>${esc(L(lang, x.r[2]))}</p></div></div>`;
   const buildCard = b => `<article class="bcard" style="--tc:var(--${b.tier})">
-      <h3><span class="tb" style="background:var(--${b.tier})">${b.tier}</span>${esc(L(lang, b.name))}</h3>
+      <div class="bc-head"><h3><span class="tb" style="background:var(--${b.tier})">${b.tier}</span>${esc(L(lang, b.name))}</h3>
       <div class="bmeta"><span>${t("thSkill")}: <b>${esc(L(lang, b.skill))}</b></span><span class="tag">${t(b.stage)}</span>
         <span>${t("thBudget")}: <span class="dots">${dots(b.budget)}</span></span><span class="tag">${t("diff")[b.diff]}</span>
-        ${b.trend === "up" ? `<span class="tr-up">▲ ${t("buff")}</span>` : b.trend === "down" ? `<span class="tr-down">▼ ${t("nerf")}</span>` : ""}</div>
-      ${TLI.moreHTML(lang, b)}
+        ${b.trend === "up" ? `<span class="tr-up">▲ ${t("buff")}</span>` : b.trend === "down" ? `<span class="tr-down">▼ ${t("nerf")}</span>` : ""}</div></div>
+      <div class="bc-body">${TLI.moreHTML(lang, b)}</div>
     </article>`;
   const others = Object.keys(H).filter(x => H[x].hero === hero.hero && x !== id);
   const body = `
