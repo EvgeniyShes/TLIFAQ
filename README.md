@@ -13,6 +13,7 @@
 - `data.js` — все данные: герои, тир-листы, билды, ссылки на гайды, изменения сезона, источники. **Тиры правятся здесь.**
 - `img/` — портреты героев (cdn.tlidb.com)
 - `functions/api/stats.js` — лайки и уникальные просмотры (Cloudflare Pages Function + база D1, привязка `DB`)
+- `functions/api/contact.js` — форма «Сотрудничество и реклама» (`/contact/`, `/ru/contact/`): Turnstile, лимит 3 сообщения в час с IP, сохранение в D1 (таблица `contacts`) и пересылка в Telegram. Секреты в Cloudflare Pages: `TURNSTILE_SECRET`, `TG_BOT_TOKEN`, `TG_CHAT_ID`; публичный ключ Turnstile — `TURNSTILE_SITEKEY` в `build.js`
 - `SOURCES.md` — журнал проверенных источников
 - `guide.js` — текст гайда tlicompendium по slug (`node guide.js <slug>`)
 

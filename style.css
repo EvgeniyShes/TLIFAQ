@@ -467,3 +467,16 @@ tr.more td{position:relative;top:-6px;padding:18px 20px;background:#1d1a21;borde
 /* Заметка в подвале о доступе из России — неброская */
 .fnote{max-width:640px;margin:14px auto 0;padding:10px 14px;border-radius:10px;background:#ffffff06;border:1px solid var(--line);font-size:12.5px;line-height:1.5;color:var(--muted)}
 .fnote a{color:var(--fire2);white-space:nowrap}
+/* Подвал: ссылка на форму связи */
+.flinks{margin:12px 0 0}.flinks a{color:var(--fire2);font-weight:600;text-decoration:none}.flinks a:hover{text-decoration:underline}
+/* Форма «Сотрудничество и реклама» */
+.cform{max-width:560px;margin:8px auto 0;display:grid;gap:16px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.cform label{display:grid;gap:6px;font-size:14px;font-weight:600}
+.cform select,.cform textarea,.cform input{width:100%;font:15px Inter;box-sizing:border-box}
+.cform textarea{resize:vertical;min-height:120px;background:var(--bg2);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:10px}
+.cform select:focus,.cform textarea:focus,.cform input:focus{outline:2px solid var(--fire);outline-offset:1px}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cbtn{justify-self:start;padding:12px 26px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--fire2),var(--fire) 45%,#d9531e);color:#1a0d05;font:700 15px Inter;cursor:pointer}
+.cbtn:hover{filter:brightness(1.08)}
+.cst{max-width:560px;margin:14px auto 0;font-size:15px;text-align:center;min-height:1.5em}
+.cst.ok{color:var(--up)}.cst.err{color:var(--down)}

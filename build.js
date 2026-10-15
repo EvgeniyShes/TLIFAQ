@@ -17,8 +17,13 @@ const VERIFY = {
 };
 
 const write = (rel, html) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); };
-// Заметка в подвале: доступ из России и отсутствие финансирования
-const fnote = lang => `<p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
+// Ключ Turnstile для формы связи (публичный; секрет — в настройках Cloudflare Pages).
+// Пока пусто — стоит тестовый ключ Cloudflare, который пропускает всех: только для локальной проверки.
+const TURNSTILE_SITEKEY = "1x00000000000000000000AA";
+const contactUrl = lang => lang === "ru" ? "/ru/contact/" : "/contact/";
+// Подвал: ссылка на форму связи и заметка о доступе из России и отсутствии финансирования
+const fnote = lang => `<p class="flinks"><a href="${contactUrl(lang)}">${esc(T(lang, "contactLink"))}</a></p>
+  <p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
 const fillId = (h, id, html) => {
   const re = new RegExp(`(id="${id}"[^>]*>)(</)`);
   if (!re.test(h)) throw new Error("в шаблоне нет пустого #" + id);
@@ -55,6 +60,7 @@ function indexPage(lang) {
   let h = template.replace("{{lang}}", lang).replace("{{head}}", head(lang, null, t("title"), t("desc")));
   h = h.replace(/(data-i="(\w+)"[^>]*>)(<\/)/g, (_, a, k, b) => a + esc(t(k)) + b);
   h = h.replace(`id="logLink"`, `id="logLink" title="${esc(t("changelogTip"))}"`);
+  h = h.replace(`id="contactLink" href="/contact/"`, `id="contactLink" href="${contactUrl(lang)}"`);
   h = h.replace(`<input id="q" type="search">`, `<input id="q" type="search" placeholder="${esc(t("search"))}">`);
     const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
@@ -146,14 +152,68 @@ ${D.changelog.map(([d, items]) => `  <section><h2>${day(d)}</h2><ul>${items.map(
     "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
 }
 
+// Форма «Сотрудничество и реклама»: /contact/ и /ru/contact/, закрыта от поисковиков; отправка — functions/api/contact.js
+function contactPage(lang) {
+  const t = k => T(lang, k), other = lang === "ru" ? "en" : "ru";
+  const meta = [`<title>${esc(t("contactTitle"))} — TLI FAQ</title>`, `<meta name="robots" content="noindex">`].join("\n");
+  const M = Object.fromEntries(["cSending", "cOk", "cErr", "cErrCaptcha", "cErrLimit", "cMsgShort", "cContactShort"].map(k => [k, t(k)]));
+  const body = `
+<header class="hp-head"><div class="wrap">
+  <div class="hp-nav"><a href="${pageUrl(lang, null)}">${t("backToList")}</a><a href="${contactUrl(other)}">${other.toUpperCase()}</a></div>
+  <h1>${esc(t("contactTitle"))}</h1>
+  <p class="sub">${esc(t("contactLead"))}</p>
+</div></header>
+<main class="wrap">
+  <form class="cform" id="cf" method="post" action="/api/contact">
+    <label>${t("cTopic")}<select name="topic" required>
+      <option value="collab">${t("cTopicCollab")}</option><option value="ads">${t("cTopicAds")}</option><option value="bug">${t("cTopicBug")}</option></select></label>
+    <label>${t("cMessage")}<textarea name="message" rows="6" maxlength="2000" required placeholder="${esc(t("cMessagePh"))}"></textarea></label>
+    <label>${t("cContact")}<input name="contact" maxlength="200" required placeholder="${esc(t("cContactPh"))}"></label>
+    <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+    <div class="cf-turnstile" data-sitekey="${TURNSTILE_SITEKEY}" data-theme="dark" data-language="${lang}"></div>
+    <button type="submit" class="cbtn">${t("cSend")}</button>
+  </form>
+  <p class="cst" id="cst" role="status"></p>
+</main>
+<footer class="wrap"><span>${t("footer")}</span></footer>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+const M = ${JSON.stringify(M)}, f = document.getElementById("cf"), st = document.getElementById("cst"), btn = f.querySelector("button");
+const say = (txt, cls) => { st.textContent = txt; st.className = "cst " + (cls || ""); };
+// Свои подсказки — до встроенной проверки браузера; сбрасываются при вводе
+btn.addEventListener("click", () => {
+  f.message.setCustomValidity(f.message.value.trim().length < 20 ? M.cMsgShort : "");
+  f.contact.setCustomValidity(f.contact.value.trim().length < 3 ? M.cContactShort : "");
+});
+[f.message, f.contact].forEach(el => el.addEventListener("input", () => el.setCustomValidity("")));
+f.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (btn.dataset.busy) return;
+  btn.dataset.busy = "1"; say(M.cSending);
+  const token = (f.querySelector('[name="cf-turnstile-response"]') || {}).value || "";
+  try {
+    const r = await fetch("/api/contact", { method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ topic: f.topic.value, message: f.message.value, contact: f.contact.value, website: f.website.value, token, lang: "${lang}" }) });
+    if (r.ok) { f.hidden = true; say(M.cOk, "ok"); return; }
+    say(r.status === 403 ? M.cErrCaptcha : r.status === 429 ? M.cErrLimit : M.cErr, "err");
+    if (window.turnstile) turnstile.reset();
+  } catch { say(M.cErr, "err"); }
+  finally { delete btn.dataset.busy; }
+});
+</script>`;
+  return template.slice(0, template.indexOf("<body>") + 6).replace("{{lang}}", lang).replace("{{head}}", meta) +
+    "\n<!-- Сгенерировано build.js — не править вручную -->" + body + "\n</body>\n</html>\n";
+}
+
 // Сборка
-for (const dir of ["hero", "en", "ru", "changelog"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
+for (const dir of ["hero", "en", "ru", "changelog", "contact"]) fs.rmSync(path.join(root, dir), { recursive: true, force: true });
 const urls = [];
 for (const lang of LANGS) {
   write(lang === "ru" ? "ru/index.html" : "index.html", indexPage(lang));
   for (const id of Object.keys(H)) write(pageUrl(lang, id).slice(1) + "index.html", heroPage(lang, id));
 }
 write("changelog/index.html", changelogPage());
+for (const lang of LANGS) write(contactUrl(lang).slice(1) + "index.html", contactPage(lang));
 for (const id of [null, ...Object.keys(H)]) urls.push(id);
 const lastmod = D.season.updatedAt.slice(0, 10);
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
