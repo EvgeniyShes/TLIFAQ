@@ -18,8 +18,8 @@ const VERIFY = {
 
 const write = (rel, html) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); };
 // Ключ Turnstile для формы связи (публичный; секрет — в настройках Cloudflare Pages).
-// Пока пусто — стоит тестовый ключ Cloudflare, который пропускает всех: только для локальной проверки.
-const TURNSTILE_SITEKEY = "1x00000000000000000000AA";
+// Для локальной проверки можно временно поставить тестовый ключ Cloudflare 1x00000000000000000000AA.
+const TURNSTILE_SITEKEY = "0x4AAAAAAFX2ByHhIvQ5wOG9";
 // Подвал: ссылка на форму связи и заметка о доступе из России и отсутствии финансирования
 const fnote = lang => `${contactBlock(lang)}
   <p class="fnote">${esc(T(lang, "ruAccess"))} <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">${esc(T(lang, "supportLink"))}</a></p>`;
