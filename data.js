@@ -19,7 +19,7 @@ window.DATA = {
   // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
   changelog: [
     ["2026-10-15", [
-      "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Thea 1 up to S, Moto 2 up to A; Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3, Selena 2 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
+      "Tiers recalculated with 7 new tier lists: UncleJay, Bmlegolas, FrostLex, Yamatsy, ItsAdiar, BagashTorchlite, 파밍너드. League start: Thea 1 up to S; Rehan 2 and Sage down to A; Carino 1, Carino 3, Erika 2, Erika 3 down to B; Gemma 1, Thea 2 down to C. Endgame: Rehan 1 up to A (Spell Burst build); Erika 3 down to B, Thea 2 down to C.",
       "SS14 changes now name the exact trait: the Rage nerf hits Rehan 2 only (Rehan 1 unchanged), the elemental nerf hits Rosa 2, the Terra nerf hits Selena 2.",
       "New builds: Selena 1 Wilting Beam starter (CrimsonDead), Youga 3 cold Hound's Fangs (Nirtas), Selena 2 Frost Terra → Tidewell (Nirtas), Youga 1 Chain Lightning 8B → SS20 (Fragmentations), Bing 2 Splitting Lightning Bolt (CoffeeBns).",
       "Selena 1 Scorching Beam: added CrimsonDead's SS14 guide. New videos: ShadyBroker (Youga 2 Mind Control), MinMaxedARPG (Gemma 2), DonTheCrown and Marcus Nordstrom (Selena 1), Francissss (Rosa 2)."
@@ -93,7 +93,7 @@ window.DATA = {
           ["bing_01", "", { ru: "Недорогой билд против боссов, по картам можно автобегом", en: "Cheap bossing build, maps can be auto-run" }],
           ["rehan_02", "down", { ru: "Ярость понерфлена, но DonTheCrown ждёт его в числе самых популярных", en: "Rage was nerfed, but DonTheCrown expects it among the most popular" }],
           ["sage_01", "down", { ru: "«Главная жертва» блюпоста SS14: нерф эликсиров и саммонов", en: "Biggest loser of the SS14 blue post: elixirs and summons nerfed" }],
-          ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }]
+          ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }]
         ],
         B: [
           ["rehan_01", "", { ru: "Трейт в SS14 не менялся (нерф ярости — у Rehan 2); подробный гайд Travic — от кампании до 250M урона через Whirlwind", en: "Trait unchanged in SS14 (the Rage nerf hit Rehan 2); Travic has a detailed guide — campaign to 250M damage with Whirlwind" }],
@@ -106,7 +106,7 @@ window.DATA = {
           ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
           ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
           ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
-          ["selena_02", "down", { ru: "Была S в SS13; ground-скиллы −20% и нерф Thorns/Tidal", en: "Was S in SS13; ground skills −20%, Thorns/Tidal nerfed" }]
+          ["moto_02", "down", { ru: "Самоподрыв войск; задет нерфами SS14", en: "Self-destructing troops; hit by SS14 nerfs" }]
         ],
         C: [
           ["moto_01", "", { ru: "Слабее Moto 2", en: "Weaker than Moto 2" }],
