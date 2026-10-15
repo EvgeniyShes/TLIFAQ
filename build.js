@@ -56,7 +56,8 @@ function indexPage(lang) {
   h = h.replace(`<input id="q" type="search">`, `<input id="q" type="search" placeholder="${esc(t("search"))}">`);
     const seg = (opts, cur) => opts.map(([k, txt]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${esc(txt)}</button>`).join("");
   const fills = {
-    sBadge: `${t("season")} ${D.season.code} · ${D.season.name}`,
+    sBadge: `${t("season")} ${D.season.code}`,
+    sLeague: t("leagueName")(esc(D.season.name)),
     sUpd: updText(lang),
     sStart: esc(L(lang, D.season.startLabel)),
     sNote: esc(L(lang, D.season.note)),
