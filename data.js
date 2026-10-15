@@ -18,6 +18,10 @@ window.DATA = {
   // Журнал крупных обновлений содержимого (страница /changelog/): только EN, кратко, новые сверху.
   // Техническое (вёрстка, SEO, кнопки) не писать — только тиры, билды, гайды, источники.
   changelog: [
+    ["2026-10-15", [
+      "New builds: Selena 1 Wilting Beam starter (CrimsonDead), Youga 3 cold Hound's Fangs (Nirtas), Selena 2 Frost Terra → Tidewell (Nirtas), Youga 1 Chain Lightning 8B → SS20 (Fragmentations), Bing 2 Splitting Lightning Bolt (CoffeeBns).",
+      "Selena 1 Scorching Beam: added CrimsonDead's SS14 guide. New videos: ShadyBroker (Youga 2 Mind Control), MinMaxedARPG (Gemma 2), DonTheCrown and Marcus Nordstrom (Selena 1), Francissss (Rosa 2)."
+    ]],
     ["2026-10-14", [
       "New builds: Youga 3 Splitting Lightning Bolt (VacaAlpha, BmLegolas) and Stasis Vault campaign (DonTheCrown), Youga 2 Fallen Star Ignite (Corealis), Rehan 2 Frost Spike campaign → Profound with build codes (ExileMind) and Spectral Slash SS14 endgame.",
       "Erika 1 Corrosive Throw: added Shad0ws' SS14 video guide.",
@@ -198,6 +202,13 @@ window.DATA = {
       links: [
         [{ ru: "Гайд DonTheCrown: кампания Youga 3, 3 варианта (tlicompendium)", en: "DonTheCrown's guide: Youga 3 campaign, 3 variants (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-campaign-guide-3-variations", "DonTheCrown"]
       ] },
+    { hero: "youga_03", name: { ru: "Hound's Fangs в холод: кампания → Profound", en: "Cold Hound's Fangs: campaign → Profound" }, skill: { ru: "Hound's Fangs (до него — Chromatic Shot или Splitting Lightning Bolt)", en: "Hound's Fangs (Chromatic Shot or Splitting Lightning Bolt before it)" }, tier: "S", stage: "both", budget: 2, diff: 3, trend: "up",
+      pros: { ru: "Семь этапов: кампания, TM4, TM7, TM8, Profound. Физический урон конвертируется в холод через Prophet (Extreme Coldness), дальше Marksman (Gale) — скорость снарядов становится уроном. Разобраны все четыре ветки трейта, приоритеты легендарных талантов для плит, бюджетные уники (Blind Vision, Old Grudge, Undying Faith) и печать аур 4 × 50% через Lich", en: "Seven stages: campaign, TM4, TM7, TM8, Profound. Physical damage is converted to cold via Prophet (Extreme Coldness), then Marksman (Gale) turns projectile speed into damage. Covers all four trait branches, legendary talent priorities for slates, budget uniques (Blind Vision, Old Grudge, Undying Faith) and sealing 4 × 50% auras via Lich" },
+      cons: { ru: "Автор сам пишет «в работе, может оказаться байтом». По словам разработчиков, Hound's Fangs даёт только 1 стак за каст — автор допускает, что Blazing Meteor окажется лучше. Malign Embrace и Dawn Break дорогие", en: "The author says it's a work in progress and \"could be 100% bait\". Per the devs, Hound's Fangs only gives 1 stack per cast — the author thinks Blazing Meteor might be better. Malign Embrace and Dawn Break are expensive" },
+      src: { ru: "гайд Nirtas (tlicompendium, 15.10.2026)", en: "Nirtas' guide (tlicompendium, Oct 15, 2026)" },
+      links: [
+        [{ ru: "Гайд Nirtas: Youga 3 (tlicompendium)", en: "Nirtas' guide: Youga 3 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/nirtas-youga-3-guide", "Nirtas"]
+      ] },
     { hero: "youga_01", name: "Chain Lightning", skill: "Chain Lightning", tier: "B", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Популярный гайд на minmaxed, три стартовых варианта", en: "Popular minmaxed guide, three starter versions" },
       cons: { ru: "Youga 2/3 сильнее на старте", en: "Youga 2/3 are stronger starters" },
@@ -206,12 +217,28 @@ window.DATA = {
         [{ ru: "Гайд: Chain Lightning", en: "Guide: Chain Lightning" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusion-chain-lightning-vpun6p", "fragmentations"],
         [{ ru: "Гайд: 3 стартовых варианта", en: "Guide: 3 starter versions" }, "https://minmaxedarpg.com/guides/youga-1-starters-4w5cuw", "fragmentations"]
       ] },
+    { hero: "youga_01", name: { ru: "Chain Lightning: от 8B до SS20", en: "Chain Lightning: 8B to SS20" }, skill: "Chain Lightning", tier: "B", stage: "end", budget: 3, diff: 3, trend: "",
+      pros: { ru: "Продолжение стартового гайда: пошаговые апгрейды по бюджету — 8B, T8 (20B), SS12, SS14, SS16, комфортный фарм Profound (1T), SS18 и SS20 (15T). Для каждого этапа — гир, таланты, плиты, призмы, кисметы. Сюда же переходят с Ice Lances и Chromatic Shot. По словам автора, билд проходит весь эндгейм, есть видео боссов", en: "Follow-up to the starter guide: step-by-step upgrades by budget — 8B, T8 (20B), SS12, SS14, SS16, comfy Profound farming (1T), SS18 and SS20 (15T). Gear, talents, slates, prisms and kismets for each step. Also the swap target from Ice Lances and Chromatic Shot. The author says it clears all endgame content, with boss videos" },
+      cons: { ru: "Дорогой: верхние этапы — триллионы. Видео боссов сняты в SS13", en: "Expensive: the top steps cost trillions. Boss videos were recorded in SS13" },
+      src: { ru: "гайд Fragmentations (minmaxed, 14.10.2026)", en: "Fragmentations' guide (minmaxed, Oct 14, 2026)" },
+      links: [
+        [{ ru: "Гайд Fragmentations: Chain Lightning, мид → эндгейм (minmaxed)", en: "Fragmentations' guide: Chain Lightning, mid → endgame (minmaxed)" }, "https://minmaxedarpg.com/guides/youga-1-spacetime-illusions-middle-to-endgame-hhs8em", "fragmentations"]
+      ] },
     { hero: "selena_01", name: "Howling Gale", skill: { ru: "Howling Gale, заморозка", en: "Howling Gale, freeze" }, tier: "S", stage: "start", budget: 1, diff: 1, trend: "",
       pros: { ru: "Безопасный и комфортный старт: с 20 уровня автоматизация прямо в наборе умений, замораживающий клир на весь экран", en: "Safe, comfy start: built-in automation from level 20, screen-wide freezing clear" },
       cons: { ru: "Тяжело заходит в Profound, TM 8 придётся фармить дольше, чем другими героями", en: "Struggles to break into Profound; you'll farm TM 8 longer than with other heroes" },
       src: { ru: "R3plic (tlicompendium), гайд ItsAdiar (SS12)", en: "R3plic (tlicompendium), ItsAdiar's guide (SS12)" },
       links: [
         [{ ru: "Гайд ItsAdiar: Howling Gale, стартер (SS12, tlicompendium)", en: "ItsAdiar's guide: Howling Gale starter (SS12, tlicompendium)" }, "https://tlicompendium.com/en/build-guides/itsadiar-selena-howling-gale-league-starter-s12", "ItsAdiar"]
+      ] },
+    { hero: "selena_01", name: { ru: "Wilting Beam: старт до T8", en: "Wilting Beam: league start to T8" }, skill: { ru: "Wilting Beam (эрозия, DoT, Reap)", en: "Wilting Beam (Erosion DoT, Reap)" }, tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
+      pros: { ru: "По словам автора, приятнее и быстрее Howling Gale: урон DoT дешевле набрать до T8, комфортный урон на Traveler T7 — 200M. Цель — дойти до T8 и накопить на Scorching Beam (переход без нового персонажа). Две прокачки на выбор: сразу в луч или Howling Gale до скипетров. Разобраны точки апгрейда по актам и тирам, стаки поддержания и Reap, саппорты, уники, таланты Pedigree of Gods и питомцы", en: "The author says it's smoother and faster than Howling Gale: DoT damage is cheaper to build up to T8, comfy damage for the T7 Traveler is 200M. The goal is to reach T8 and farm for Scorching Beam (swap without a new character). Two leveling options: straight into the beam, or Howling Gale until scepters. Covers upgrade points by act and tier, sustain stacks and Reap, supports, uniques, Pedigree of Gods talents and pact spirits" },
+      cons: { ru: "В эндгейм не масштабируется (автор пробовал). Control Spell больше не работает на Wilting Beam. Нужно докупить Malevolent Hand и Decaying Blessing", en: "Doesn't scale into endgame (the author tried). Control Spell no longer works on Wilting Beam. You'll need to buy Malevolent Hand and Decaying Blessing" },
+      src: { ru: "гайд CrimsonDead (tlicompendium, обновлён 14.10.2026), видео DonTheCrown и Marcus Nordstrom", en: "CrimsonDead's guide (tlicompendium, updated Oct 14, 2026), DonTheCrown's and Marcus Nordstrom's videos" },
+      links: [
+        [{ ru: "Гайд CrimsonDead: Wilting Beam, стартер (tlicompendium, на русском)", en: "CrimsonDead's guide: Wilting Beam starter (tlicompendium, in Russian)" }, "https://tlicompendium.com/en/build-guides/crimsondead-selena-1-wilting-beam-starter", "CrimsonDead"],
+        [{ ru: "Видео DonTheCrown: бюджетный старт Selena на Wilting Beam (YouTube)", en: "DonTheCrown's video: budget F2P Selena start with Wilting Beam (YouTube)" }, "https://www.youtube.com/watch?v=ukjygagwrmo", "DonTheCrown"],
+        [{ ru: "Видео Marcus Nordstrom: план Selena 1 — Howling Gale → Wilting Beam (T4–T7) → Scorching Beam (T8+) (YouTube)", en: "Marcus Nordstrom's video: Selena 1 plan — Howling Gale → Wilting Beam (T4–T7) → Scorching Beam (T8+) (YouTube)" }, "https://www.youtube.com/watch?v=ctD1ZOmLsjM", "Marcus Nordstrom"]
       ] },
     { hero: "erika_01", name: "Corrosive Throw", skill: "Corrosive Throw", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Как Thunder Spike от BmLegolas, но с дистанции; билд не понерфили в SS14", en: "Like BmLegolas' Thunder Spike but ranged; the build was not nerfed in SS14" },
@@ -234,7 +261,9 @@ window.DATA = {
       cons: { ru: "Позже съедает слот саппорта", en: "Costs a support slot later" },
       src: { ru: "гайд ShadyBroker (tlicompendium)", en: "ShadyBroker's guide (tlicompendium)" },
       links: [
-        [{ ru: "Гайд ShadyBroker: Mind Control, стартер (tlicompendium)", en: "ShadyBroker's guide: Mind Control starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/mind-control-youga-2-league-starter", "ShadyBroker"]
+        [{ ru: "Гайд ShadyBroker: Mind Control, стартер (tlicompendium)", en: "ShadyBroker's guide: Mind Control starter (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/mind-control-youga-2-league-starter", "ShadyBroker"],
+        [{ ru: "Видео ShadyBroker: Mind Control под SS14 — прокачка, после кампании, изменения Tartarus (YouTube)", en: "ShadyBroker's video: Mind Control for SS14 — leveling, post-campaign, Tartarus changes (YouTube)" }, "https://www.youtube.com/watch?v=evySCx9zis4", "ShadyBroker"],
+        [{ ru: "Планер ShadyBroker: прокачка и TM1–7 (minmaxed)", en: "ShadyBroker's planner: leveling and TM1–7 (minmaxed)" }, "https://minmaxedarpg.com/guides/youga-2-mind-control-leveling-timemark-1-7-guide-4ac45z", "ShadyBroker"]
       ] },
     { hero: "youga_02", name: "Fallen Star Ignite", skill: { ru: "Fallen Star, поджог (автобомбер)", en: "Fallen Star, Ignite (auto-bomber)" }, tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
       pros: { ru: "Сводка по 5 видео Corealis (в SS13 убил босса на SS20): старт, ранние карты и середина игры. Подробно: легендарки с лучшими модами, рарки по слотам, кисметы, pedigree, таблички и питомцы", en: "A summary of Corealis' 5 videos (SS20 boss kill in SS13): league start, early mapping and mid game. Detailed legendaries with best mods, rares per slot, kismets, pedigree, slates and pact spirits" },
@@ -274,7 +303,8 @@ window.DATA = {
       src: "minmaxed, Bilibili, 233leyuan",
       links: [
         [{ ru: "Гайд: кампания на Frost Core", en: "Guide: Frost Core campaign" }, "https://minmaxedarpg.com/guides/campaign-gemma-2-frostbitten-heart-frost-core-guide-5ujbsm", "minmaxed"],
-        [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl", "minmaxed"]
+        [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl", "minmaxed"],
+        [{ ru: "Видео: лёгкий и дешёвый старт Gemma 2 на Tangle (YouTube)", en: "Video: easy and cheap Gemma 2 Tangle league start (YouTube)" }, "https://www.youtube.com/watch?v=IjQJswgxxTY", "MinMaxedARPG"]
       ] },
     { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" }, skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" }, tier: "A", stage: "both", budget: 3, diff: 3, trend: "",
       pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее", en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
@@ -302,6 +332,13 @@ window.DATA = {
       links: [
         [{ ru: "Гайд Crazycaps: Frost Terra до раннего Profound (tlicompendium)", en: "Crazycaps' guide: Frost Terra to early Profound (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/selena-2-frost-terra-guide-season-starter-till-early-profound", "Crazycaps"]
       ] },
+    { hero: "selena_02", name: { ru: "Frost Terra → Tidewell: до SS20 и DA35", en: "Frost Terra → Tidewell: up to SS20 and DA35" }, skill: { ru: "Frost Terra на прокачке, затем Tidewell", en: "Frost Terra for leveling, then Tidewell" }, tier: "B", stage: "both", budget: 3, diff: 3, trend: "down",
+      pros: { ru: "Самый полный гайд по Selena 2: 10 сборок от кампании через TM4, Traveler 7, TM8 и Profound до эндгейма 5T+, точных копий SS20 и Divine Ascent 35 и дешёвого Profound. Для каждой ветки трейта — плюсы и минусы, точки перехода на Tidewell. Разработчики говорят, что трейт хорошо масштабируется от Followers", en: "The most complete Selena 2 guide: 10 setups from the campaign through TM4, Traveler 7, TM8 and Profound to 5T+ endgame, exact SS20 and Divine Ascent 35 copies, and a cheap Profound. Pros and cons for every trait branch, when to swap to Tidewell. The devs say the trait scales well with Followers" },
+      cons: { ru: "Сборки — прошлого сезона. В SS14 Tidewell ослаблен примерно на 27%, а Dance of the Deep на 1 уровне трейта даёт −20% урона: ранняя прогрессия станет тяжелее. Переход на Tidewell сначала даёт потерю урона, нужно хорошее оружие", en: "Setups are from last season. In SS14 Tidewell is nerfed by ~27% and Dance of the Deep has −20% damage at trait level 1: early progression gets harder. Swapping to Tidewell costs damage at first and needs a good weapon" },
+      src: { ru: "гайд Nirtas (tlicompendium, SS13, заметки о SS14 — 14.10.2026)", en: "Nirtas' guide (tlicompendium, SS13, SS14 notes — Oct 14, 2026)" },
+      links: [
+        [{ ru: "Гайд Nirtas: Selena 2 (tlicompendium)", en: "Nirtas' guide: Selena 2 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/nirtas-selena-guide", "Nirtas"]
+      ] },
     { hero: "selena_02", name: "Ground Autowalk", skill: "Thorns Domain / Tidal Spring / Meteor", tier: "A", stage: "both", budget: 1, diff: 1, trend: "down",
       pros: { ru: "Дешёвый «автобег» по картам; Meteor в SS14 бафнут", en: "Cheap auto-walk map clearing; Meteor buffed in SS14" },
       cons: { ru: "Трейт: ground-урон +0–20% → −20–0%, Thorns и Tidal понерфлены", en: "Trait: ground damage +0–20% → −20–0%, Thorns and Tidal nerfed" },
@@ -323,7 +360,8 @@ window.DATA = {
       cons: { ru: "Гайд на португальском (последняя заметка продублирована на английском). Profound-комбо не закончено; из-за бага планера оружие в нём показано кинжалами и когтями — на деле нужны мечи", en: "The guide is in Portuguese (the final note is duplicated in English). The Profound combo setup is unfinished; due to a planner bug the weapons show as daggers and claws — you actually need swords" },
       src: { ru: "гайд Lucas (tlicompendium, 13.10.2026)", en: "Lucas' guide (tlicompendium, Oct 13, 2026)" },
       links: [
-        [{ ru: "Гайд Lucas: Rosa 2 Frost Spike (tlicompendium, на португальском)", en: "Lucas' guide: Rosa 2 Frost Spike (tlicompendium, in Portuguese)" }, "https://tlicompendium.com/en/build-guides/minha-build-ss14", "Lucas"]
+        [{ ru: "Гайд Lucas: Rosa 2 Frost Spike (tlicompendium, на португальском)", en: "Lucas' guide: Rosa 2 Frost Spike (tlicompendium, in Portuguese)" }, "https://tlicompendium.com/en/build-guides/minha-build-ss14", "Lucas"],
+        [{ ru: "Видео Francissss: Frost Spike от кампании до Traveler TM7 (YouTube, на португальском)", en: "Francissss' video: Frost Spike from campaign to Traveler TM7 (YouTube, in Portuguese)" }, "https://youtu.be/40MpTkuOdjo", "Francissss"]
       ] },
     { hero: "rosa_02", name: "Unsullied Blade", skill: "Mana stacking", tier: "S", stage: "end", budget: 3, diff: 3, trend: "down",
       pros: { ru: "Один из самых высоких потолков в игре", en: "One of the highest ceilings in the game" },
@@ -351,12 +389,21 @@ window.DATA = {
         [{ ru: "~900B урона", en: "~900B damage" }, "KUGqvrj3EfGcUAAAAAAAFQ=="]
       ] },
     { hero: "selena_01", name: "Scorching Beam (Ignite)", skill: "Scorching Beam", tier: "S", stage: "both", budget: 2, diff: 2, trend: "",
-      pros: { ru: "Гайд с фармом Deep Space; satu1kaa рекомендует Selena как стартер", en: "Guide that goes up to Deep Space farming; satu1kaa recommends Selena as a starter" },
-      cons: { ru: "Гайд обновлён 05.09.2026 (прошлый сезон) — сверяйте с патчем SS14", en: "Guide last updated Sep 5, 2026 (previous season) — check against the SS14 patch" },
-      src: { ru: "гайд Smith (tlicompendium), рекомендация satu1kaa", en: "Smith's guide (tlicompendium), satu1kaa's recommendation" },
+      pros: { ru: "Гайд с фармом Deep Space; satu1kaa рекомендует Selena как стартер. У CrimsonDead (под SS14) — переход из Wilting Beam и этапы до Deep Space: два канвас-саппорта Immolate и Supercharge (взрыв каждые 3 стака), базовый урон поджога на скипетрах, Starfire на Pedigree of Gods, затем Torturer's Touch с Broken Sun Ring и Valerie's Night Stroll", en: "Guide that goes up to Deep Space farming; satu1kaa recommends Selena as a starter. CrimsonDead (for SS14) covers the swap from Wilting Beam and steps to Deep Space: two canvas supports, Immolate and Supercharge (a blast every 3 stacks), base ignite damage on scepters, Starfire on Pedigree of Gods, then Torturer's Touch with Broken Sun Ring and Valerie's Night Stroll" },
+      cons: { ru: "Сам себя не фармит — основной гир добывают другим билдом (Wilting Beam). Без мода на базовый урон поджога на скипетрах урона не будет. Гайд Smith — прошлого сезона (05.09.2026)", en: "Can't farm its own gear — get the core items with another build (Wilting Beam). Without base ignite damage on the scepters there's no damage. Smith's guide is from last season (Sep 5, 2026)" },
+      src: { ru: "гайды Smith и CrimsonDead (tlicompendium), рекомендация satu1kaa", en: "Smith's and CrimsonDead's guides (tlicompendium), satu1kaa's recommendation" },
       links: [
+        [{ ru: "Гайд CrimsonDead: Scorching Beam под SS14 (tlicompendium, на русском)", en: "CrimsonDead's guide: Scorching Beam for SS14 (tlicompendium, in Russian)" }, "https://tlicompendium.com/en/build-guides/crimsondead-selena-1-scorching-beam", "CrimsonDead"],
         [{ ru: "Гайд Smith: Scorching Beam, фарм Deep Space (tlicompendium)", en: "Smith's guide: Scorching Beam, Deep Space farming (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/scorching-ignite-deep-space-mapping", "Smith"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
+      ] },
+    { hero: "bing_02", name: { ru: "Splitting Lightning Bolt: гир до Profound", en: "Splitting Lightning Bolt: gearing to Profound" }, skill: { ru: "Splitting Lightning Bolt (с 14 уровня), подходит любой снарядный скилл", en: "Splitting Lightning Bolt (from level 14), any projectile skill works" }, tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "Стартер автора на SS14. Список нужных модов для любого снарядного Bing: благословения Focus и Agility, Frail, паралич, Blur, +1 к уровню скилла на плитах. Порядок покупок: 30–100 FE в первый день хватает до T8 (коррапт-версия вещи — до Deep Space), первая покупка за 1000+ FE — для урона и автоматизации. Есть ветки трейта, прокачка и варианты на Blazing Meteor, Fire Burst и Lightning Beam", en: "The author's SS14 starter. A list of mods every projectile Bing needs: Focus and Agility blessings, Frail, Paralysis, Blur, +1 skill level slates. A shopping order: 30–100 FE on day one gets you to T8 (a corrupted version carries you to Deep Space), the first 1000+ FE purchase is for damage and automation. Trait choices, leveling, and Blazing Meteor, Fire Burst and Lightning Beam variants" },
+      cons: { ru: "Вещи из сокровищниц кампании все под огонь — для молнии придётся обходиться без них. Гайд — видео и таблица, без пошагового текста", en: "Campaign trove items are all fire-based — the lightning version has to do without them. The guide is a video plus a spreadsheet, no step-by-step text" },
+      src: { ru: "видео и таблица CoffeeBns (15.10.2026)", en: "CoffeeBns' video and spreadsheet (Oct 15, 2026)" },
+      links: [
+        [{ ru: "Видео CoffeeBns: Bing 2, стартер SS14 (YouTube)", en: "CoffeeBns' video: Bing 2 SS14 starter (YouTube)" }, "https://www.youtube.com/watch?v=TNzOALQ-XUQ", "CoffeeBns"],
+        [{ ru: "Таблица CoffeeBns: гайды SS14, Bing 2 и коды билдов (Google Sheets)", en: "CoffeeBns' spreadsheet: SS14 guides, Bing 2 and build codes (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1u0wFwTbKT35XlwHf0D5VDur67d-Nl7SsnQ9C41lqgJk/edit?usp=sharing", "CoffeeBns"]
       ] },
     { hero: "carino_02", name: "Lethal Flash", skill: { ru: "Проджектайлы, Deflection", en: "Projectiles, Deflection" }, tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
       pros: { ru: "Надёжный и удобный", en: "Reliable and comfortable" },
@@ -449,6 +496,11 @@ window.DATA = {
     ManMauzer: { youtube: "https://www.youtube.com/@ManMauzer", twitch: "https://twitch.tv/manmauzer" },
     Crazycaps: { youtube: "https://www.youtube.com/@crazycaps3934", twitch: "https://twitch.tv/crazycaps" },
     Lucas: { twitch: "https://www.twitch.tv/lucasgattii" },
+    CrimsonDead: { youtube: "https://www.youtube.com/@Cr1msonDead", twitch: "https://twitch.tv/cr1msondead" },
+    Nirtas: { youtube: "https://www.youtube.com/@Nirtas", twitch: "https://twitch.tv/N1rtas" },
+    ShadyBroker: { twitch: "https://www.twitch.tv/shadybroker" },
+    Francissss: { youtube: "https://www.youtube.com/@Yfrancissss", twitch: "https://www.twitch.tv/yfrancissss" },
+    fragmentations: { url: "https://minmaxedarpg.com/author/fragmentations" },
     // без найденного канала — ссылка на сам материал
     "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
     // площадки, а не авторы — в список авторов не выводятся

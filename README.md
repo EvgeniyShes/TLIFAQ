@@ -14,6 +14,7 @@
 - `img/` — портреты героев (cdn.tlidb.com)
 - `functions/api/stats.js` — лайки и уникальные просмотры (Cloudflare Pages Function + база D1, привязка `DB`)
 - `SOURCES.md` — журнал проверенных источников
+- `guide.js` — текст гайда tlicompendium по slug (`node guide.js <slug>`)
 
 ## Правила
 
@@ -47,7 +48,7 @@
 - `https://api.tlicompendium.com/api/buildguides/creator?sortBy=newest&page=1&pageSize=20` — гайды авторов
 - `https://api.tlicompendium.com/api/buildguides/by-slug/<slug>` — полный гайд (в списке текст бывает пустым)
 
-Поля: `title, slug, publishDate, lastEditedDate, patchVersion` (SS14), `userDisplayName`, `creatorInfo` (YouTube/Twitch), `youtubeLink`, `inGameBuildCode`, `cost, damage`, тексты в HTML: `introduction, heroTraitsText, skillsText, talentTreeText, gearText, divinityText, pactspiritsText, statsPriorityText, faqItems`. **Пустые текстовые поля в API ещё не значат пустой гайд**: в новом формате (вкладки «Build Version», этапы) весь текст лежит в сжатом `compressedBuildData`. Такие гайды открывать в браузере и читать `main.innerText` до блока «Helmet / Chest Armor»; «Start writing…» — значит, текста правда нет. `heroId` — UUID; героя и трейт видно по `<title>` страницы гайда в браузере («Erika (Wind Stalker) …») или по названию.
+Поля: `title, slug, publishDate, lastEditedDate, patchVersion` (SS14), `userDisplayName`, `creatorInfo` (YouTube/Twitch), `youtubeLink`, `inGameBuildCode`, `cost, damage`, тексты в HTML: `introduction, heroTraitsText, skillsText, talentTreeText, gearText, divinityText, pactspiritsText, statsPriorityText, faqItems`. **Пустые текстовые поля в API ещё не значат пустой гайд**: в новом формате текст лежит в `contentJson` (html-блоки), а сжатый `compressedBuildData` — только сборка (lz-string, без текста автора). Текст гайда: `node guide.js <slug>`, браузер не нужен. `heroId` — UUID; героя и трейт видно по `<title>` страницы гайда в браузере («Erika (Wind Stalker) …») или по названию.
 Новости — только в браузере: `https://tlicompendium.com/en/news`.
 
 ### Другие площадки
@@ -55,6 +56,8 @@
 - minmaxed: `https://minmaxedarpg.com/games/tli/seasons/s14` — в браузере, ссылки `/guides/…`.
 - Reddit: встроенный браузер его не открывает → Claude in Chrome или RSS `https://www.reddit.com/r/TorchlightInfinite/new/.rss` через `curl` с браузерным User-Agent (при частых запросах 429).
 - Автор и название YouTube-видео: `https://www.youtube.com/oembed?url=<ссылка>&format=json`.
+- Свежие видео и их описания (ссылки, коды) — `curl` с браузерным User-Agent: поиск `https://www.youtube.com/results?search_query=torchlight+infinite+ss14+build&sp=CAISBAgCEAE%253D` (за сегодня; `ytInitialData` → `videoRenderer`), описание — `ytInitialPlayerResponse.videoDetails.shortDescription` на странице `watch?v=…`.
+- Google Docs/Sheets: `…/export?format=txt`, `…/export?format=csv&gid=<лист>`; список листов — в `…/htmlview`.
 
 ## Открытые задачи
 
