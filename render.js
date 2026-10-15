@@ -22,7 +22,7 @@ const I18N = {
     diff: ["","Легко","Средне","Сложно"], buff: "бафф", nerf: "нерф", pros: "Плюсы", cons: "Минусы", source: "Источник", ytVideos: "Искать видео на YouTube", showAll: "показать все билды", buildCode: "Код билда для игры", guidesVideos: "Гайды и видео", hasCode: "код", copy: "Копировать", codeHint: "Скопируйте код и вставьте его в игре в окно импорта билда", thCode: "Код в игру", credits: "Авторы", navGuides: "Гайды", guidesTitle: "Гайды по билдам", guidesLead: "Прямые ссылки на гайды. Все права на гайды принадлежат их авторам — каналы авторов указаны рядом с именем.", thGuide: "Гайд", thAuthor: "Автор", authorsTitle: "Используемые материалы авторов", authorsNote: "Гайды, тир-листы и видео этих авторов использованы на сайте. Все права на материалы принадлежат авторам.", sourcesSub: "Откуда взяты данные", noBuildsShort: "Отдельных билдов пока нет — смотрите страницу героя", close: "Закрыть", openInTable: "подробнее в таблице", heroPageHint: "все билды, гайды, плюсы и минусы",
     like: "Нравится", tip: "Поддержать проект: чаевые через CloudTips (карты РФ)", ruAccess: "Из России сайт может открываться не у всех: часть провайдеров блокирует адреса *.pages.dev. Решение — свой домен, но у проекта нет финансирования: он делается на добровольных началах.", supportLink: "Помочь проекту", boosty: "Поддержать проект на Boosty", views: "уникальных просмотров", empty: "Ничего не найдено",
     changesTitle: "Что изменилось в SS14", changesLead: "Ключевые правки по официальному патчноуту и превью сезона", sourcesTitle: "Источники",
-    heroPage: "Страница героя", heroesIdx: "Все герои и трейты", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
+    heroPage: "Страница героя", backToList: "← Все тир-листы", heroBuilds: "Билды", otherTraits: "Другие трейты",
     noBuilds: "Отдельных разборов билда пока нет — смотрите видео:", tierStart: "Старт лиги — первая валюта", tierEnd: "Эндгейм — Profound, Deep Space", phaseArrow: "накопил валюту — пересел", phasePick: "Выберите этап игры",
     footer: "Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры."
   },
@@ -41,7 +41,7 @@ const I18N = {
     diff: ["","Easy","Medium","Hard"], buff: "buff", nerf: "nerf", pros: "Pros", cons: "Cons", source: "Source", ytVideos: "Search YouTube for videos", showAll: "show all builds", buildCode: "In-game build code", guidesVideos: "Guides & videos", hasCode: "code", copy: "Copy", codeHint: "Copy the code and paste it into the in-game build import window", thCode: "In-game code", credits: "Authors", navGuides: "Guides", guidesTitle: "Build guides", guidesLead: "Direct links to the guides. All rights belong to their authors — the authors' channels are listed next to their names.", thGuide: "Guide", thAuthor: "Author", authorsTitle: "Creators whose materials are used", authorsNote: "Guides, tier lists and videos by these creators are used on this site. All rights to the materials belong to their authors.", sourcesSub: "Where the data comes from", noBuildsShort: "No dedicated builds yet — see the hero page", close: "Close", openInTable: "details in the table", heroPageHint: "all builds, guides, pros and cons",
     like: "Like", tip: "Support the project: tip via CloudTips (Russian cards)", ruAccess: "In Russia the site may not open for everyone: some ISPs block *.pages.dev addresses. A custom domain would fix it, but the project has no funding — it is run on a volunteer basis.", supportLink: "Support the project", boosty: "Support the project on Boosty", views: "unique views", empty: "Nothing found",
     changesTitle: "What changed in SS14", changesLead: "Key changes from the official patch notes and season preview", sourcesTitle: "Sources",
-    heroPage: "Hero page", heroesIdx: "All heroes and traits", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
+    heroPage: "Hero page", backToList: "← All tier lists", heroBuilds: "Builds", otherTraits: "Other traits",
     noBuilds: "No dedicated build breakdown yet — check the videos:", tierStart: "League start — first currency", tierEnd: "Endgame — Profound, Deep Space", phaseArrow: "farm currency, then switch", phasePick: "Choose the game stage",
     footer: "Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners."
   }
@@ -166,8 +166,7 @@ const phaseTabsHTML = (lang, mode) => {
     <div class="ph-switch ${mode}" role="tablist">${Object.entries(D.tiers).map(tab).join("")}<span class="ph-arrow" title="${esc(T(lang, "phaseArrow"))}">→</span></div>
     <div class="ph-panel ${mode}">${phasePanelHTML(lang, mode)}</div>`;
 };
-const heroIndexHTML = lang => Object.keys(H).map(id => `<a href="${pageUrl(lang, id)}">${label(id)} · ${esc(H[id].trait)}</a>`).join("");
 
 g.TLI = { D, H, SITE, I18N, TREND, esc, label, img, dots, T, L, pageUrl, ytSearch, tierOf, tiersHTML, buildRows, moreHTML, buildsHTML,
-  changesHTML, sourcesHTML, heroOptionsHTML, heroIndexHTML, phaseTabsHTML, phasePanelHTML, guidesHTML, authorsListHTML };
+  changesHTML, sourcesHTML, heroOptionsHTML, phaseTabsHTML, phasePanelHTML, guidesHTML, authorsListHTML };
 })(typeof window !== "undefined" ? window : globalThis);

@@ -71,7 +71,6 @@ function indexPage(lang) {
     tbody: TLI.buildsHTML(lang, TLI.buildRows(lang)),
     chList: TLI.changesHTML(lang),
     srcList: TLI.sourcesHTML(lang),
-    heroIdx: TLI.heroIndexHTML(lang),
     guidesBody: TLI.guidesHTML(lang),
     authorsList: TLI.authorsListHTML()
   };
@@ -119,8 +118,6 @@ function heroPage(lang, id) {
   ${others.length ? `<section><h2>${t("otherTraits")}</h2><div class="heroes-idx">${others.map(x => `<a href="${pageUrl(lang, x)}">${label(x)} · ${esc(H[x].trait)}</a>`).join("")}</div></section>` : ""}
 </main>
 <footer class="wrap">
-  <h3 class="idx-title">${t("heroesIdx")}</h3>
-  <div class="heroes-idx">${TLI.heroIndexHTML(lang)}</div>
   <span>${t("footer")}</span>
   ${fnote(lang)}
 </footer>`;
