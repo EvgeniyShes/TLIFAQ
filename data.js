@@ -104,7 +104,7 @@ window.DATA = {
           ["youga_01", "", { ru: "Играбельно, но Youga 2/3 делают то же лучше", en: "Playable, but Youga 2/3 do it better" }],
           ["gemma_03", "", { ru: "Нужны вложения", en: "Needs investment" }],
           ["rosa_01", "", { ru: "Быстро валит боссов, но требует скилла", en: "Kills bosses fast but demands skill" }],
-          ["carino_01", "", { ru: "Игрок на Reddit до старта убивал Traveler на ~T2 через Ice Lances; Lao Ke пока наблюдает", en: "A Reddit player killed the Traveler on ~T2 with Ice Lances pre-season; Lao Ke is still watching" }],
+          ["carino_01", "", { ru: "Мнения авторов расходятся (от C до S); Lao Ke пока наблюдает", en: "Creators disagree (from C to S); Lao Ke is still watching" }],
           ["carino_03", "", { ru: "Lao Ke: уровень «демон»; на ПК силён, на телефоне нет автобега", en: "Lao Ke: \"demon\" tier; strong on PC, no auto-run on mobile" }],
           ["erika_02", "", { ru: "Очень плавная игра и скорость; главный минус — дорогая", en: "Very smooth play and speed; the main downside is cost" }],
           ["erika_03", "", { ru: "Lao Ke: «демон»; холодный старт слабее из-за нерфа колец на заморозку", en: "Lao Ke: \"demon\"; the cold start is weaker due to the freeze ring nerf" }],
@@ -292,9 +292,9 @@ window.DATA = {
         [{ ru: "Таблица Corealis: таланты Youga 2 (Google Sheets)", en: "Corealis' sheet: Youga 2 talents (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1U4kyxoi4XxH8xay8IjsjoKXy_YNbz_GF2Xmb6D0gy1Y/edit", "Corealis"]
       ] },
     { hero: "erika_01", name: "Wind Stalker", skill: "Lightning Shot / Thunder Spike", tier: "S", stage: "both", budget: 2, diff: 3, trend: "",
-      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. По тесту игрока до старта: с Thunder Jawbone Thunder Spike — быстрый стартер, а Farewell Desire примерно удваивает урон", en: "Very fast, no respec needed for endgame. A pre-season player test: Thunder Spike with Thunder Jawbone is a fast starter, and Farewell Desire roughly doubles damage" },
-      cons: { ru: "Хрупкая, частые смерти у новичков. Farewell Desire до старта стоила 90+ FE — цена на живом рынке будет другой", en: "Fragile, frequent deaths for new players. Farewell Desire cost 90+ FE pre-season — live market price will differ" },
-      src: { ru: "TreyexGaming, тест игрока на Reddit", en: "TreyexGaming, player test on Reddit" },
+      pros: { ru: "Очень быстрая, не нужно пересобираться к эндгейму. Подробный гайд BmLegolas от 1 уровня до эндгейма, план первого дня и таблица от satu1kaa, код билда", en: "Very fast, no respec needed for endgame. BmLegolas' detailed guide from level 1 to endgame, satu1kaa's day-one plan and spreadsheet, a build code" },
+      cons: { ru: "Хрупкая, частые смерти у новичков", en: "Fragile, frequent deaths for new players" },
+      src: { ru: "TreyexGaming, гайд BmLegolas, satu1kaa", en: "TreyexGaming, BmLegolas' guide, satu1kaa" },
       links: [
         [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"],
@@ -303,16 +303,6 @@ window.DATA = {
       ],
       codes: [
         [{ ru: "~15T урона (Мия / BmLegolas)", en: "~15T damage (Mia / BmLegolas)" }, "fDE/Q5s2EfG78gAAAAAAMw=="]
-      ] },
-    { hero: "carino_01", name: "Ice Lances / Chromatic Shot", skill: "Ice Lances, Chromatic Shot", tier: "A", stage: "start", budget: 1, diff: 2, trend: "",
-      pros: { ru: "По тесту игрока до старта: Ice Lances с Marksman bracers, Grudge и Control Spell убивает Traveler примерно на T2-шмоте; Chromatic Shot может быть ещё лучше", en: "A pre-season player test: Ice Lances with Marksman bracers, Grudge and Control Spell kills the Traveler on roughly T2 gear; Chromatic Shot may be even better" },
-      cons: { ru: "Один непроверенный отзыв до старта; Carino 2 остаётся надёжнее", en: "A single unverified pre-season report; Carino 2 is still more reliable" },
-      src: { ru: "тест игрока на Reddit", en: "player test on Reddit" },
-      links: [
-        [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"]
-      ],
-      codes: [
-        [{ ru: "Tangles — общий код для Carino 1/2/3", en: "Tangles — shared code for Carino 1/2/3" }, "VKaEwoGiEfG27wAAAAAA6A=="]
       ] },
     { hero: "gemma_02", name: { ru: "Frost Core / ледяные осколки", en: "Frost Core / Ice Shards" }, skill: "Frost Core, Chromatic Shot (Cold Tangle)", tier: "A", stage: "both", budget: 1, diff: 1, trend: "up",
       pros: { ru: "Контроль заморозкой, «всё T2 — стабильные 200E», нерф freeze в SS14 не задел", en: "Freeze control, \"full T2 gear — stable 200E\", untouched by the SS14 freeze nerf" },
@@ -548,7 +538,7 @@ window.DATA = {
     // без найденного канала — ссылка на сам материал
     "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
     // площадки, а не авторы — в список авторов не выводятся
-    Reddit: { site: true }, "233leyuan": { site: true },
+    "233leyuan": { site: true },
     R3plic: { url: "https://tlicompendium.com/en/news/5-1-battle-tested-starters-for-season-14-tartarus" }
   },
 
@@ -590,7 +580,6 @@ window.DATA = {
     [{ ru: "DonTheCrown — прогноз тир-листа SS14 (YouTube)", en: "DonTheCrown — SS14 tier list prediction (YouTube)" }, "https://www.youtube.com/watch?v=WOTBgd06l2U"],
     [{ ru: "Lao Ke — тир-лист SS14 (Bilibili)", en: "Lao Ke — SS14 tier list (Bilibili)" }, "https://www.bilibili.com/video/BV1yqpL6kEYK/"],
     [{ ru: "DCInside — скриншоты тир-листа Lao Ke и статистика 4000-го этажа SS13", en: "DCInside — Lao Ke tier list screenshots and SS13 floor-4000 stats" }, "https://gall.dcinside.com/mgallery/board/view/?id=torchlightinfinite&no=142605"],
-    [{ ru: "Reddit — тесты стартеров SS14 игроками", en: "Reddit — players' SS14 starter tests" }, "https://www.reddit.com/r/TorchlightInfinite/comments/1wlfdhn/early_ss14_league_start_ideas_thread/"],
     [{ ru: "Qingzi Tan — первый геймплей Youga 3 (Bilibili)", en: "Qingzi Tan — Youga 3 first gameplay (Bilibili)" }, "https://www.bilibili.com/video/BV1BHHS6oEyh/"],
     [{ ru: "Neng Miao — разбор Sage на SS14 (Bilibili)", en: "Neng Miao — Sage SS14 breakdown (Bilibili)" }, "https://www.bilibili.com/video/BV1wnpj6VEvG/"],
     [{ ru: "Enzee5 — TLI Resource Links, каталог гайдов сообщества", en: "Enzee5 — TLI Resource Links, community guide index" }, "https://docs.google.com/spreadsheets/d/1Vg6PbMnkWC2K7FXL9ojFwK7RQ-28gkeDzPDnwcKhiwo/edit"],

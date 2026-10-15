@@ -102,7 +102,6 @@ const SOURCES = [
   { id: "instinct", old: true, name: "instinct, гайд Iris 2 (SS13)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02" } },
   { id: "travic", old: true, name: "Travic, гайд Rehan 1 от кампании до 250M (Twitch, ред. 1)", w: 1.5, lists: ["start"], votes: { A: "rehan_01" } },
   { id: "seph", name: "SephGoesGaming, гайды Iris 2 Erosion Magus и Youga 1 Ice Lances до Profound (SS14)", w: 1.5, lists: ["start", "end"], votes: { A: "iris_02 youga_01" } },
-  { id: "reddit", name: "Reddit, тесты стартеров до старта", w: 1, lists: ["start"], votes: { B: "carino_01", S: "erika_01" } },
   { id: "bili_titles", name: "Bilibili, заголовки про Youga 3", w: 0.5, lists: ["start", "end"], votes: { S: "youga_03" } },
   { id: "selena1_old", old: true, name: "Selena 1: тир SS7 и гайд maxroll до T7", w: 0.5, lists: ["start"], votes: { B: "selena_01" } },
   { id: "owner", name: "Владелец сайта: Selena 1 хороша на актах", w: 0.5, lists: ["start"], votes: { A: "selena_01" } }
