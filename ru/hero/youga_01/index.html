@@ -75,7 +75,23 @@
 </main>
 <footer class="wrap">
   <span>Фанатский проект, не связан с XD Inc. Портреты взяты с tlidb.com, права на них принадлежат правообладателям игры.</span>
-  <p class="flinks"><a href="/ru/contact/">Сотрудничество и реклама</a></p>
+  <p class="flinks"><button type="button" class="copen" data-contact>✉ Сотрудничество и реклама</button></p>
+<dialog class="cdlg" id="cdlg" data-sitekey="1x00000000000000000000AA" data-lang="ru" data-msg="{&quot;cSending&quot;:&quot;Отправляем…&quot;,&quot;cOk&quot;:&quot;Спасибо! Сообщение отправлено.&quot;,&quot;cErr&quot;:&quot;Не получилось отправить. Попробуйте позже.&quot;,&quot;cErrCaptcha&quot;:&quot;Не пройдена проверка «не робот». Обновите страницу и попробуйте снова.&quot;,&quot;cErrLimit&quot;:&quot;Слишком много сообщений. Попробуйте через час.&quot;,&quot;cMsgShort&quot;:&quot;Напишите хотя бы пару предложений (от 20 символов).&quot;,&quot;cContactShort&quot;:&quot;Укажите, как с вами связаться.&quot;}">
+  <button type="button" class="cx" data-close aria-label="✕">✕</button>
+  <h2>Сотрудничество и реклама</h2>
+  <p class="clead">Только по сотрудничеству и рекламе. Вопросы по билдам задавайте авторам гайдов — ссылки на них есть в карточках билдов. Ответ придёт на контакт, который вы укажете.</p>
+  <form class="cform" id="cf">
+    <label>Тема<select name="topic" required>
+      <option value="collab">Сотрудничество</option><option value="ads">Реклама</option><option value="bug">Ошибка на сайте</option></select></label>
+    <label>Сообщение<textarea name="message" rows="5" maxlength="2000" required placeholder="Кратко: кто вы и что предлагаете"></textarea></label>
+    <label>Как с вами связаться<input name="contact" maxlength="200" required placeholder="E-mail, Telegram или Discord"></label>
+    <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+    <div id="cts"></div>
+    <button type="submit" class="cbtn">Отправить</button>
+  </form>
+  <p class="cst" id="cst" role="status"></p>
+</dialog>
+<script src="/contact.js" defer></script>
   <p class="fnote">Из России сайт может открываться не у всех: часть провайдеров блокирует адреса *.pages.dev. Решение — свой домен, но у проекта нет финансирования: он делается на добровольных началах. <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">Помочь проекту</a></p>
 </footer>
 </body>

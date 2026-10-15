@@ -48,7 +48,23 @@
 </main>
 <footer class="wrap">
   <span>Fan project, not affiliated with XD Inc. Portraits from tlidb.com, all rights belong to the game's owners.</span>
-  <p class="flinks"><a href="/contact/">Partnerships &amp; ads</a></p>
+  <p class="flinks"><button type="button" class="copen" data-contact>✉ Partnerships &amp; ads</button></p>
+<dialog class="cdlg" id="cdlg" data-sitekey="1x00000000000000000000AA" data-lang="en" data-msg="{&quot;cSending&quot;:&quot;Sending…&quot;,&quot;cOk&quot;:&quot;Thank you! Your message has been sent.&quot;,&quot;cErr&quot;:&quot;Couldn't send. Please try again later.&quot;,&quot;cErrCaptcha&quot;:&quot;The \&quot;not a robot\&quot; check failed. Reload the page and try again.&quot;,&quot;cErrLimit&quot;:&quot;Too many messages. Please try again in an hour.&quot;,&quot;cMsgShort&quot;:&quot;Please write at least a couple of sentences (20+ characters).&quot;,&quot;cContactShort&quot;:&quot;Please tell us how to reach you.&quot;}">
+  <button type="button" class="cx" data-close aria-label="✕">✕</button>
+  <h2>Partnerships &amp; ads</h2>
+  <p class="clead">Partnerships and advertising only. Please ask build questions to the guide authors — their links are in the build cards. We'll reply to the contact you leave.</p>
+  <form class="cform" id="cf">
+    <label>Topic<select name="topic" required>
+      <option value="collab">Partnership</option><option value="ads">Advertising</option><option value="bug">Site bug</option></select></label>
+    <label>Message<textarea name="message" rows="5" maxlength="2000" required placeholder="Briefly: who you are and what you offer"></textarea></label>
+    <label>How to reach you<input name="contact" maxlength="200" required placeholder="E-mail, Telegram or Discord"></label>
+    <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+    <div id="cts"></div>
+    <button type="submit" class="cbtn">Send</button>
+  </form>
+  <p class="cst" id="cst" role="status"></p>
+</dialog>
+<script src="/contact.js" defer></script>
   <p class="fnote">In Russia the site may not open for everyone: some ISPs block *.pages.dev addresses. A custom domain would fix it, but the project has no funding — it is run on a volunteer basis. <a href="https://boosty.to/azzka/donate" target="_blank" rel="noopener">Support the project</a></p>
 </footer>
 </body>
