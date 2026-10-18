@@ -8,7 +8,7 @@ window.DATA = {
     name: "Tartarus",
     start: "2026-10-16T02:00:00Z", // 05:00 МСК
     startLabel: { ru: "16 октября, 05:00 МСК", en: "Oct 15, 7:00 PM PDT / Oct 16, 02:00 UTC" },
-    updatedAt: "2026-10-15T08:24:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
+    updatedAt: "2026-10-18T07:30:00Z", // время последнего обновления тиров (UTC) — менять при каждом обновлении
     note: {
       ru: "Сезон ещё не стартовал: оценки — сводный прогноз по итогам SS13, патчноутам SS14, тир-листам, гайдам и видео авторов.",
       en: "The season hasn't started yet: ratings are a combined forecast based on SS13 results, SS14 patch notes, tier lists, guides and creators' videos."
@@ -18,6 +18,10 @@ window.DATA = {
   // Журнал крупных обновлений содержимого (страница /changelog/): только EN, кратко, новые сверху.
   // Тиры, билды, гайды, источники; заметные посетителю улучшения удобства — тоже (решение владельца). SEO и мелкие правки вёрстки не писать.
   changelog: [
+    ["2026-10-18", [
+      "New builds: Thea 1 Split Lightning Bolt league start → endgame outline (ItsAdiar), Gemma 2 armor stacking Rain of Arrows endgame boss tank (LeoTheNPC).",
+      "Post-launch build codes: Youga 3 Hound's Fangs campaign → 3B (ManMauzer), cold Hound's Fangs TM7 → TM8 (Nirtas), Erika 1 Corrosive Throw early switch and 1B (Shad0ws). New: BmLegolas' Erika 1 Thunder Slash video, Shad0ws' spreadsheet."
+    ]],
     ["2026-10-15", [
       "Usability: a clear League start / Endgame switch for the tier lists; build cards with a tier-colored header, guides and videos as large tiles at the top, bigger build codes; an opened row in the builds table now reads as one block; removed the auto YouTube search links that showed random videos.",
       "New builds: Iris 2 Rock Magus swap from TM5 with build code (Wuxia), Carino 3 leveling → T7 → 8-1 → Profound (AgroMorph), Youga 3 Ice Lances Tangle (Beast_hearth, KakiGaming). New videos and guides: ManMauzer and Nirtas (Youga 3), satu1kaa (Erika 1 Thunder Spike day one), Bmlegolas (Bing 2 Lightning Beam 0 → SS20).",
@@ -184,11 +188,18 @@ window.DATA = {
       ] },
     { hero: "youga_03", name: { ru: "Hound's Fangs: физический урон через Trauma", en: "Hound's Fangs: physical Trauma" }, skill: { ru: "Hound's Fangs, ветка I Meet the Selves", en: "Hound's Fangs, I Meet the Selves branch" }, tier: "S", stage: "both", budget: 2, diff: 3, trend: "up",
       pros: { ru: "Подробный разбор механики: I Meet the Selves с +40% скорости кулдаунов даёт Hound's Fangs +80% урона за каждый стак Trauma (до 3 стаков через Open Wounds). Вместо дорогого Malign Embrace — шлем Ralph's Dreadcrest с Laceration: ещё до ~+477% физического урона. Версии билда на старт (огонь, физика, Shackles) и середину игры", en: "A detailed mechanics breakdown: I Meet the Selves with +40% cooldown recovery gives Hound's Fangs +80% damage per Trauma stack (up to 3 via Open Wounds). Instead of the pricey Malign Embrace — the Ralph's Dreadcrest helmet with Laceration: up to ~+477% more physical damage. Build versions for league start (fire, physical, Shackles) and mid game" },
-      cons: { ru: "Теорикрафт: Laceration — новый эффект, до сезона его не проверить. На 30 стаках билд получает ~3000 чистого урона в секунду — нужен большой запас здоровья, реген и Life Tonic для сброса стаков. Коды билдов — только в игре (Pro Builds → Creator → ManMauzer)", en: "Theorycraft: Laceration is a new effect that can't be tested before the season. At 30 stacks the build takes ~3000 true damage per second — needs a big life pool, regen and Life Tonic to clear stacks. Build codes are in-game only (Pro Builds → Creator → ManMauzer)" },
-      src: { ru: "гайд ManMauzer (tlicompendium, 12.10.2026)", en: "ManMauzer's guide (tlicompendium, Oct 12, 2026)" },
+      cons: { ru: "Теорикрафт: Laceration — новый эффект, до сезона его не проверить. На 30 стаках билд получает ~3000 чистого урона в секунду — нужен большой запас здоровья, реген и Life Tonic для сброса стаков", en: "Laceration is a new effect. At 30 stacks the build takes ~3000 true damage per second — needs a big life pool, regen and Life Tonic to clear stacks" },
+      src: { ru: "гайд ManMauzer (tlicompendium, 12.10.2026, коды — 17.10.2026)", en: "ManMauzer's guide (tlicompendium, Oct 12, 2026, codes — Oct 17, 2026)" },
       links: [
         [{ ru: "Гайд ManMauzer: Hound's Fangs, стартеры Youga 3 (tlicompendium)", en: "ManMauzer's guide: Hound's Fangs, Youga 3 starters (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/youga-3-manmauzer", "ManMauzer"],
         [{ ru: "Видео ManMauzer: чистая физика через Ralph's Dreadcrest — механики (YouTube)", en: "ManMauzer's video: pure physical via Ralph's Dreadcrest — mechanics (YouTube)" }, "https://www.youtube.com/watch?v=kPlzTOYL0ro", "ManMauzer"]
+      ],
+      codes: [
+        [{ ru: "конец кампании (ManMauzer)", en: "end of campaign (ManMauzer)" }, "XRnSBskREfGCHAAAAAAAtQ=="],
+        [{ ru: "переход на Hound's Fangs", en: "switch to Hound's Fangs" }, "cV65LskcEfGCHAAAAAAAtQ=="],
+        [{ ru: "T7", en: "T7" }, "oJJhs8ktEfGCHAAAAAAAtQ=="],
+        [{ ru: "после убийства Traveler T7", en: "after killing the T7 Traveler" }, "6wtWQck+EfGCHAAAAAAAtQ=="],
+        [{ ru: "~3B урона", en: "~3B damage" }, "LffItcl0EfGCHAAAAAAAtQ=="]
       ] },
     { hero: "youga_03", name: "Splitting Lightning Bolt", skill: "Splitting Lightning Bolt + Gale", tier: "S", stage: "start", budget: 1, diff: 2, trend: "up",
       pros: { ru: "Стартовое заклинание Youga 3, бюджет 0 FE. Ветка I Meet the Selves: чем больше снарядов, тем больше урона (до +120%), I Need Not Lift a Finger автоматизирует каст. Разобраны саппорты, таланты, таблички, питомцы и FAQ. Клир быстрее, чем у Hound's Fangs. У BmLegolas: кампания на Chromatic Shot, переход на Splitting Lightning Bolt с TM8", en: "Youga 3's starting spell, 0 FE budget. I Meet the Selves branch: more projectiles means more damage (up to +120%), I Need Not Lift a Finger automates casting. Supports, talents, slates, pact spirits and an FAQ are covered. Faster clear than Hound's Fangs. BmLegolas: Chromatic Shot in the campaign, switch to Splitting Lightning Bolt at TM8" },
@@ -209,12 +220,17 @@ window.DATA = {
       ] },
     { hero: "youga_03", name: { ru: "Hound's Fangs в холод: кампания → Profound", en: "Cold Hound's Fangs: campaign → Profound" }, skill: { ru: "Hound's Fangs (до него — Chromatic Shot или Splitting Lightning Bolt)", en: "Hound's Fangs (Chromatic Shot or Splitting Lightning Bolt before it)" }, tier: "S", stage: "both", budget: 2, diff: 3, trend: "up",
       pros: { ru: "Семь этапов: кампания, TM4, TM7, TM8, Profound. Физический урон конвертируется в холод через Prophet (Extreme Coldness), дальше Marksman (Gale) — скорость снарядов становится уроном. Разобраны все четыре ветки трейта, приоритеты легендарных талантов для плит, бюджетные уники (Blind Vision, Old Grudge, Undying Faith) и печать аур 4 × 50% через Lich", en: "Seven stages: campaign, TM4, TM7, TM8, Profound. Physical damage is converted to cold via Prophet (Extreme Coldness), then Marksman (Gale) turns projectile speed into damage. Covers all four trait branches, legendary talent priorities for slates, budget uniques (Blind Vision, Old Grudge, Undying Faith) and sealing 4 × 50% auras via Lich" },
-      cons: { ru: "Автор сам пишет «в работе, может оказаться байтом». По словам разработчиков, Hound's Fangs даёт только 1 стак за каст — автор допускает, что Blazing Meteor окажется лучше. Malign Embrace и Dawn Break дорогие", en: "The author says it's a work in progress and \"could be 100% bait\". Per the devs, Hound's Fangs only gives 1 stack per cast — the author thinks Blazing Meteor might be better. Malign Embrace and Dawn Break are expensive" },
-      src: { ru: "гайд Nirtas (tlicompendium, 15.10.2026)", en: "Nirtas' guide (tlicompendium, Oct 15, 2026)" },
+      cons: { ru: "Гайд всё ещё в работе (автор обновляет его по ходу сезона). По словам разработчиков, Hound's Fangs даёт только 1 стак за каст, но после старта автор пишет, что скилл «реально хорош». Malign Embrace и Dawn Break дорогие", en: "The guide is still a work in progress (the author updates it as the season goes). Per the devs, Hound's Fangs only gives 1 stack per cast, but after launch the author says the skill is \"really good\". Malign Embrace and Dawn Break are expensive" },
+      src: { ru: "гайд Nirtas (tlicompendium, 15.10.2026, коды — 17.10.2026)", en: "Nirtas' guide (tlicompendium, Oct 15, 2026, codes — Oct 17, 2026)" },
       links: [
         [{ ru: "Гайд Nirtas: Youga 3 (tlicompendium)", en: "Nirtas' guide: Youga 3 (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/nirtas-youga-3-guide", "Nirtas"],
         [{ ru: "Видео Nirtas: план старта на Youga 3 (YouTube)", en: "Nirtas' video: Youga 3 league start plan (YouTube)" }, "https://www.youtube.com/watch?v=oY4iAwHoRM8", "Nirtas"],
         [{ ru: "Письменные гайды Nirtas (Google Docs)", en: "Nirtas' written guides (Google Docs)" }, "https://docs.google.com/document/d/1FJsDClP6rImdOgeY_0mSwuREpJWnvvTL/edit", "Nirtas"]
+      ],
+      codes: [
+        [{ ru: "TM7 (Nirtas)", en: "TM7 (Nirtas)" }, "8TX6SsklEfG3SAAAAAAAeQ=="],
+        [{ ru: "Traveler T7", en: "T7 Traveler" }, "AenoJMkzEfG3SAAAAAAAeQ=="],
+        [{ ru: "TM8, ~2B урона", en: "TM8, ~2B damage" }, "1Evd4cl1EfG3SAAAAAAAeQ=="]
       ] },
     { hero: "youga_03", name: { ru: "Ice Lances + Tangle: с актов до Profound", en: "Ice Lances + Tangle: acts to Profound" }, skill: "Ice Lances (Tangle)", tier: "S", stage: "both", budget: 1, diff: 3, trend: "up",
       pros: { ru: "Ice Lances сразу с актов: у него больше базовый урон и эффективность добавленного урона (палка с +100 холода даёт ~229), встроенный +1 Jump. Нерф Chromatic Shot и нерф шотгана на Ice Lances этот билд не задевают. Автор ждёт 300–600M урона к Traveler T7 без вложений, выход в Profound — за несколько тысяч FE. Автор три сезона играл Gemma 2 Tangle Ice Lances (топ-1 Dragon на старте SS13, Traveler в топ-3) и считает, что у Youga 3 урона больше. В таблице — подробный разбор механик", en: "Ice Lances right from the acts: higher base damage and added-damage effectiveness (a staff with +100 cold gives ~229), built-in +1 Jump. The Chromatic Shot nerf and the Ice Lances shotgun nerf don't affect this build. The author expects 300–600M damage by the T7 Traveler with zero investment, Profound for a few thousand FE. The author played Gemma 2 Tangle Ice Lances for three seasons (top-1 Dragon at SS13 start, Traveler in the top 3) and says Youga 3 has more damage. The spreadsheet breaks down the mechanics in detail" },
@@ -258,12 +274,17 @@ window.DATA = {
         [{ ru: "Видео Marcus Nordstrom: план Selena 1 — Howling Gale → Wilting Beam (T4–T7) → Scorching Beam (T8+) (YouTube)", en: "Marcus Nordstrom's video: Selena 1 plan — Howling Gale → Wilting Beam (T4–T7) → Scorching Beam (T8+) (YouTube)" }, "https://www.youtube.com/watch?v=ctD1ZOmLsjM", "Marcus Nordstrom"]
       ] },
     { hero: "erika_01", name: "Corrosive Throw", skill: "Corrosive Throw", tier: "S", stage: "start", budget: 1, diff: 2, trend: "",
-      pros: { ru: "Как Thunder Spike от BmLegolas, но с дистанции; билд не понерфили в SS14", en: "Like BmLegolas' Thunder Spike but ranged; the build was not nerfed in SS14" },
-      cons: { ru: "Текстовый гайд автор пометил как незаконченный (WIP); полный разбор под SS14 — в его видео", en: "The written guide is marked work-in-progress by its author; the full SS14 breakdown is in the author's video" },
-      src: { ru: "Shad0ws, R3plic (tlicompendium)", en: "Shad0ws, R3plic (tlicompendium)" },
+      pros: { ru: "Как Thunder Spike от BmLegolas, но с дистанции; билд не понерфили в SS14. План автора: убить T7 на Thunder Spike по гайду BmLegolas, затем перейти на Corrosive Throw (до покупки Farewell Desire — Boss Rush или другая быстрая стратегия); держать ~400% шанса Multistrike — так скилл не теряет цель на одиночных врагах; на 5–10T урона — переход на Magus ради защиты", en: "Like BmLegolas' Thunder Spike but ranged; the build was not nerfed in SS14. The author's plan: kill T7 on Thunder Spike following BmLegolas' guide, then switch to Corrosive Throw (Boss Rush or another fast strategy until you can buy Farewell Desire); keep ~400% Multistrike chance so the skill doesn't lose single targets; at 5–10T damage switch to Magus for defenses" },
+      cons: { ru: "Гайд в работе: коды эндгейма автор выложит по ходу сезона, подробности — в его таблице и видео", en: "Work in progress: the author will post endgame codes during the season, details are in the spreadsheet and video" },
+      src: { ru: "Shad0ws (коды — 16.10.2026), R3plic (tlicompendium)", en: "Shad0ws (codes — Oct 16, 2026), R3plic (tlicompendium)" },
       links: [
         [{ ru: "Гайд Shad0ws: Corrosive Throw (tlicompendium)", en: "Shad0ws' guide: Corrosive Throw (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika-1-corrosive-throw-ss13", "Shad0ws"],
-        [{ ru: "Видео-гайд Shad0ws: Corrosive Throw под SS14 (YouTube)", en: "Shad0ws' video guide: Corrosive Throw for SS14 (YouTube)" }, "https://www.youtube.com/watch?v=TZAC-HcZuNk", "Shad0ws"]
+        [{ ru: "Видео-гайд Shad0ws: Corrosive Throw под SS14 (YouTube)", en: "Shad0ws' video guide: Corrosive Throw for SS14 (YouTube)" }, "https://www.youtube.com/watch?v=TZAC-HcZuNk", "Shad0ws"],
+        [{ ru: "Таблица Shad0ws: полный гайд и варианты эндгейма (Google Sheets)", en: "Shad0ws' spreadsheet: full guide and endgame options (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1Q8RGm_s0_zVUpZCZj7sQ-J9OWMFkiUmiE5to9-hu4Ac/edit", "Shad0ws"]
+      ],
+      codes: [
+        [{ ru: "ранний переход на Corrosive Throw (Shad0ws)", en: "early Corrosive Throw switch (Shad0ws)" }, "HjQoJsleEfG+lwAAAAAAUQ=="],
+        [{ ru: "~1B урона", en: "~1B damage" }, "S2RK5cmdEfGwiwAAAAAAjQ=="]
       ] },
     { hero: "youga_01", name: { ru: "Ice Lances: от кампании до Profound", en: "Ice Lances: campaign to Profound" }, skill: "Ice Lances", tier: "B", stage: "both", budget: 1, diff: 1, trend: "",
       pros: { ru: "Автокаст уже с 75 уровня за счёт трейта (I'm an Illusion) — удобно на телефоне, дорогие активаторы не нужны. Этапы до Profound, до ~5T урона", en: "Auto-cast from level 75 via the trait (I'm an Illusion) — great on mobile, no pricey activation mediums needed. Stages up to Profound, up to ~5T damage" },
@@ -297,6 +318,7 @@ window.DATA = {
       src: { ru: "TreyexGaming, гайд BmLegolas, satu1kaa", en: "TreyexGaming, BmLegolas' guide, satu1kaa" },
       links: [
         [{ ru: "Гайд BmLegolas: Thunder Spike от 1 уровня до эндгейма (tlicompendium)", en: "BmLegolas' guide: Thunder Spike from level 1 to endgame (tlicompendium)" }, "https://tlicompendium.com/en/build-guides/erika1-lvl1-to-ss20-ultimate-guide", "BmLegolas"],
+        [{ ru: "Видео BmLegolas: Thunder Slash / Thunder Spike, стартер (YouTube)", en: "BmLegolas' video: Thunder Slash / Thunder Spike starter (YouTube)" }, "https://www.youtube.com/watch?v=eN58E-wAAj0", "BmLegolas"],
         [{ ru: "Обзор стартеров SS14 с кодами билдов (YouTube)", en: "SS14 starters overview with build codes (YouTube)" }, "https://www.youtube.com/watch?v=CeWW7KZI9Co", "satu1kaa"],
         [{ ru: "Видео satu1kaa: Thunder Spike в первый день — прокачка через Spider Tank, дерево, скиллы, шмот, Pedigree (YouTube)", en: "satu1kaa's video: Thunder Spike on day one — Spider Tank leveling, tree, skills, gear, Pedigree (YouTube)" }, "https://www.youtube.com/watch?v=43hFTRuzWe4", "satu1kaa"],
         [{ ru: "Таблица satu1kaa: план Erika 1 на старт (Google Sheets)", en: "satu1kaa's spreadsheet: Erika 1 league start plan (Google Sheets)" }, "https://docs.google.com/spreadsheets/d/1o9lEwtiGqxzp4Fuuw6-0qG6XkpjzhMBnulFvAbVBgIg/edit", "satu1kaa"]
@@ -312,6 +334,20 @@ window.DATA = {
         [{ ru: "Гайд: кампания на Frost Core", en: "Guide: Frost Core campaign" }, "https://minmaxedarpg.com/guides/campaign-gemma-2-frostbitten-heart-frost-core-guide-5ujbsm", "minmaxed"],
         [{ ru: "Гайд: Cold Tangle Chromatic Shot (Tartarus)", en: "Guide: Cold Tangle Chromatic Shot (Tartarus)" }, "https://minmaxedarpg.com/guides/gemma-2-cold-tangle-chromatic-shot-tartarus-u3h9dl", "minmaxed"],
         [{ ru: "Видео: лёгкий и дешёвый старт Gemma 2 на Tangle (YouTube)", en: "Video: easy and cheap Gemma 2 Tangle league start (YouTube)" }, "https://www.youtube.com/watch?v=IjQJswgxxTY", "MinMaxedARPG"]
+      ] },
+    { hero: "gemma_02", name: { ru: "Rain of Arrows: стак брони, танк для боссов", en: "Rain of Arrows: armor stacking boss tank" }, skill: "Rain of Arrows (Activation Medium: Rhythm)", tier: "A", stage: "end", budget: 3, diff: 3, trend: "",
+      pros: { ru: "Автор играет билд три сезона и прошёл на нём почти весь эндгейм (Divine Ascent, Supreme Showdown). Очень танковый: ~3M брони, ~50K щита из брони через призму Unwavering Fortress, 550 Frostbite Rating. Отлично бьёт боссов. Скилл кастуется сам через Activation Medium: Rhythm. Разобраны приоритеты: коррозия Forlorn Crystal, Clenched Spring, Sacrifice в Pedigree, Sealed Mana, Tenacity Blessing, моды плит", en: "The author has played it for three seasons and cleared almost all endgame content with it (Divine Ascent, Supreme Showdown). Very tanky: ~3M armor, ~50K shield from armor via the Unwavering Fortress prism, 550 Frostbite Rating. Great bossing. The skill auto-casts via Activation Medium: Rhythm. Priorities covered: Forlorn Crystal corrosion, Clenched Spring, Sacrifice in Pedigree, Sealed Mana, Tenacity Blessings, slate mods" },
+      cons: { ru: "Не стартер: нужны дорогие обязательные вещи. Маппинг средний. Скорость атаки и каста не работают — в них не вкладываться. Гайд помечен как незаконченный (WIP)", en: "Not a league starter: needs expensive must-have items. Mapping is just okay. Attack and cast speed don't work — don't invest in them. The guide is marked work in progress" },
+      src: { ru: "гайд LeoTheNPC (minmaxed, 15.10.2026)", en: "LeoTheNPC's guide (minmaxed, Oct 15, 2026)" },
+      links: [
+        [{ ru: "Гайд LeoTheNPC: Rain of Arrows, стак брони (minmaxed)", en: "LeoTheNPC's guide: armor stacking Rain of Arrows (minmaxed)" }, "https://minmaxedarpg.com/guides/g2-armor-stack-rain-of-arrows-2kng6j", "LeoTheNPC"]
+      ] },
+    { hero: "thea_01", name: { ru: "Split Lightning Bolt: старт → эндгейм", en: "Split Lightning Bolt: league start → endgame" }, skill: "Splitting Lightning Bolt (Tangle → Spell Burst)", tier: "A", stage: "both", budget: 2, diff: 2, trend: "",
+      pros: { ru: "План автора на переработанный трейт: порядок трейтов 45 — Predicted Justice, 60 — Prophecy of Punishment (Lucky сглаживает большой разброс урона, брать как можно раньше), 75 — Predicted Reincarnation. Сначала играть на Tangle, затем автоматизировать Spell Burst (шлем Solid River, плита Netherking's Banishment или Activation Medium: Spell Burst); перечислены источники макс. Spell Burst. Два варианта эндгейма: стак сопротивления молнии (Legless Bird, Law of Greed, Fleeting Sky) или стак Tenacity через Cicada Shell", en: "The author's plan for the reworked trait: trait order 45 — Predicted Justice, 60 — Prophecy of Punishment (Lucky smooths out the huge damage range, get it ASAP), 75 — Predicted Reincarnation. Play Tangle first, then automate Spell Burst (Solid River helmet, Netherking's Banishment slate or Activation Medium: Spell Burst); sources of max Spell Burst are listed. Two endgame options: lightning resistance stacking (Legless Bird, Law of Greed, Fleeting Sky) or Tenacity stacking via Cicada Shell" },
+      cons: { ru: "Это набросок, а не пошаговый гайд: примеры вещей, деревьев и плит. Никаких модов на +Max Focus Blessing — они ломают трейт", en: "An outline, not a step-by-step guide: example items, trees and slates. No +Max Focus Blessing mods anywhere — they brick the trait" },
+      src: { ru: "гайд ItsAdiar (minmaxed, 16.10.2026)", en: "ItsAdiar's guide (minmaxed, Oct 16, 2026)" },
+      links: [
+        [{ ru: "Гайд ItsAdiar: Thea 1 Split Lightning Bolt (minmaxed)", en: "ItsAdiar's guide: Thea 1 Split Lightning Bolt (minmaxed)" }, "https://minmaxedarpg.com/guides/adiar-s-thea-1-split-lightning-bolt-league-start-outline-a23idr", "ItsAdiar"]
       ] },
     { hero: "iris_02", name: { ru: "Vigilant Breeze: от кампании до Deep Space", en: "Vigilant Breeze: campaign to Deep Space" }, skill: { ru: "Слияние с Магусом, ульта Магуса (Thunder или Fire Magus на актах)", en: "Merge with a Magus, Magus ultimate (Thunder or Fire Magus for acts)" }, tier: "A", stage: "both", budget: 3, diff: 3, trend: "",
       pros: { ru: "Быстрая, хорошая защита, стабильный урон по боссам. Проверенный путь до Profound и Deep Space: автор гайда был в топе Iris на прогрессии SS13. На актах два варианта: Thunder Magus быстрее, Fire Magus стабильнее", en: "Fast, solid defense, steady boss damage. Proven path to Profound and Deep Space: the guide author was a top Iris on SS13 progression. Two act variants: Thunder Magus is faster, Fire Magus is steadier" },
@@ -535,6 +571,8 @@ window.DATA = {
     ShadyBroker: { twitch: "https://www.twitch.tv/shadybroker" },
     Francissss: { youtube: "https://www.youtube.com/@Yfrancissss", twitch: "https://www.twitch.tv/yfrancissss" },
     fragmentations: { url: "https://minmaxedarpg.com/author/fragmentations" },
+    LeoTheNPC: { url: "https://minmaxedarpg.com/author/leothenpc" },
+    ItsAdiar: { twitch: "https://twitch.tv/itsadiar" },
     // без найденного канала — ссылка на сам материал
     "Lao Ke": { url: "https://www.bilibili.com/video/BV1yqpL6kEYK/" },
     // площадки, а не авторы — в список авторов не выводятся
